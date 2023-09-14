@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 1462965324}
   - component: {fileID: 1462965325}
   - component: {fileID: 1462965326}
+  - component: {fileID: 1462965327}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -935,9 +936,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 64
-    y: 75
-    width: 79.896904
+    x: 173.75606
+    y: 53.048786
+    width: 78.048775
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -966,11 +967,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 746.6999, y: 0.9960127}
+  scrollPos: {x: 910.81165, y: -30.136793}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.97
+  zoom: 0.8200002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -979,8 +980,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1462965307}
-  selectedCommands:
-  - {fileID: 1462965326}
+  selectedCommands: []
   variables: []
   description: My flowchart
   stepPause: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 53.70201
     y: 308.09882
-    width: 91.237114
+    width: 91.46341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1151,18 +1151,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 53.949463
-    y: 204.43892
-    width: 90.206184
+    x: 169.41336
+    y: 179.69661
+    width: 87.80487
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 3
   blockName: Hello 2
-  description: My second block
+  description: 'My second block
+
+    Conversation command syntax here: https://github.com/snozbot/fungus/wiki/conversation_system'
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1462965313}
+  - {fileID: 1462965327}
   - {fileID: 1462965323}
   suppressAllAutoSelections: 0
 --- !u!114 &1462965316
@@ -1312,7 +1315,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.91853
     y: 436.12964
-    width: 79.896904
+    width: 79.26829
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1339,7 +1342,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -65.65869
     y: 416.34616
-    width: 72.68041
+    width: 71.95122
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1433,7 +1436,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &1462965326
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1456,6 +1459,35 @@ MonoBehaviour:
   orthoSizeTweenType: 4
   posTweenType: 4
   rotTweenType: 4
+--- !u!114 &1462965327
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'alice coffee left: Narrative block.'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!1 &1494439428
 GameObject:
   m_ObjectHideFlags: 0
