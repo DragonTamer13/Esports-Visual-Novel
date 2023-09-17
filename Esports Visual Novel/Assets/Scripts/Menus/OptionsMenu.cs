@@ -49,34 +49,15 @@ public class OptionsMenu : MonoBehaviour
         SayPreviewMessage();
     }
 
-    // Call when opening the options menu, usually by pushing the "options" button.
-    public void OnOpenOptions()
-    {
-        gameObject.SetActive(true);
-
-        //previewWriter.Stop();
-        previewWriter.StopAllCoroutines();
-        //previewSayDialog.StopAllCoroutines();
-    }
-
     // Stop the preview running when the user exits the menu.
     public void OnBackButtonPressed()
     {
         if (previewWriter.IsWriting)
         {
-            previewWriter.Stop();
-            //previewWriter.StopAllCoroutines();
-            print("Shut up");
+            previewWriter.ResetWriter();
         }
-        StartCoroutine(Wait());
-        //previewSayDialog.StopAllCoroutines();
-    }
-
-    // TODO: Testing
-    public IEnumerator Wait()
-    {
-        yield return null;
         previewSayDialog.SetActive(false);
+        gameObject.SetActive(false);
     }
 
 
