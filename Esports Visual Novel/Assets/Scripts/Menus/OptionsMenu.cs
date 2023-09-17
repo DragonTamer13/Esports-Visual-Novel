@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using Fungus;
 
 public class OptionsMenu : MonoBehaviour
 {
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
+    private readonly int[] nameFontSizes = { 50, 60, 70 };
+    private readonly int[] storyFontSizes = { 45, 50, 55 };
 
     // Slider for setting the text speed.
     [SerializeField] private Slider messageSpeedSlider;
+    // Dropdown for font size options.
+    [SerializeField] private TMP_Dropdown fontSizeDropdown;
     // Character object used to modify to preview display.
     [SerializeField] private Character previewCharacter;
+
+    // Name text in the options menu preview.
+    [SerializeField] private Text previewNameText;
+    // Story text in the options menu preview.
+    [SerializeField] private Text previewStoryText;
 
     private SayDialog previewSayDialog;
     private CustomWriter previewWriter;
@@ -22,19 +32,53 @@ public class OptionsMenu : MonoBehaviour
         previewWriter = GetComponentInChildren<CustomWriter>();
 
         previewSayDialog.SetActive(true);
-
-        Parent p = GetComponent<Parent>();
-        if (p != null)
-        {
-            p.Function();
-        }
     }
 
+    // Call when message speed option is changed.
     public void OnMessageSpeedChanged()
     {
         previewWriter.SetWritingSpeed(messageSpeedSlider.value);
         SayPreviewMessage();
     }
+
+    // Call when font size option is changed.
+    public void OnFontSizeChanged()
+    {
+        previewNameText.fontSize = nameFontSizes[fontSizeDropdown.value];
+        previewStoryText.fontSize = storyFontSizes[fontSizeDropdown.value];
+        SayPreviewMessage();
+    }
+
+    // Call when opening the options menu, usually by pushing the "options" button.
+    public void OnOpenOptions()
+    {
+        gameObject.SetActive(true);
+
+        //previewWriter.Stop();
+        previewWriter.StopAllCoroutines();
+        //previewSayDialog.StopAllCoroutines();
+    }
+
+    // Stop the preview running when the user exits the menu.
+    public void OnBackButtonPressed()
+    {
+        if (previewWriter.IsWriting)
+        {
+            previewWriter.Stop();
+            //previewWriter.StopAllCoroutines();
+            print("Shut up");
+        }
+        StartCoroutine(Wait());
+        //previewSayDialog.StopAllCoroutines();
+    }
+
+    // TODO: Testing
+    public IEnumerator Wait()
+    {
+        yield return null;
+        previewSayDialog.SetActive(false);
+    }
+
 
     /// <summary>
     /// Use the preview SayDialog to show an example of the user's new options.
