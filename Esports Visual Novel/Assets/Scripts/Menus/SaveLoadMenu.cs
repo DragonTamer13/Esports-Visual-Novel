@@ -11,6 +11,13 @@ public class SaveLoadMenu : MonoBehaviour
     // The current page of the menu screen, zero-indexed.
     private int menuPage = 0;
 
+    // Zero-indexed page of the menu.
+    public void SetMenuPage(int value)
+    {
+        menuPage = value;
+        UpdateSaveSlots();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
