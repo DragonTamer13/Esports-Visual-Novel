@@ -29,6 +29,14 @@ namespace Fungus
         #region Public methods
 
         /// <summary>
+        /// Custom method to make last save point publicly accessible.
+        /// </summary>
+        public string GetLastSavePoint()
+        {
+            return savePoints[savePoints.Count - 1];
+        }
+
+        /// <summary>
         /// Returns the number of Save Points in the Save History.
         /// </summary>
         public int NumSavePoints { get { return savePoints.Count; } }

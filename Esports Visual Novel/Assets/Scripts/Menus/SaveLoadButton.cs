@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Fungus;
 
 /// <summary>
@@ -12,11 +13,45 @@ public class SaveLoadButton : MonoBehaviour
     private string saveDataKey = "";
     private MainMenuController mainMenuController;
     private bool isSaving; // True when button saves a game, false when button loads a game.
+    private Text saveNameText;
 
     // Set the slot this button saves or loads from the index of the save. 
     public void SetSaveDataKey(int saveIndex)
     {
         saveDataKey = "Slot" + saveIndex.ToString();
+        saveNameText = GetComponentInChildren<Text>();
+
+        var saveManager = FungusManager.Instance.SaveManager;
+        if (!saveManager.SaveDataExists(saveDataKey))
+        {
+            // TODO: Disable button.
+            saveNameText.text = "No save";
+            return;
+        }
+
+        // From SaveManager.ReadSaveHistory()
+        // TODO: Testing loading data
+        var historyData = string.Empty;
+
+#if UNITY_WEBPLAYER || UNITY_WEBGL
+            historyData = PlayerPrefs.GetString(saveDataKey);
+#else
+        var fullFilePath = SaveManager.STORAGE_DIRECTORY + saveDataKey + ".json";
+        if (System.IO.File.Exists(fullFilePath))
+        {
+            historyData = System.IO.File.ReadAllText(fullFilePath);
+        }
+#endif//UNITY_WEBPLAYER
+        if (!string.IsNullOrEmpty(historyData))
+        {
+            var tempSaveHistory = JsonUtility.FromJson<SaveHistory>(historyData);
+            if (tempSaveHistory != null)
+            {
+                // JSON of save data
+                var savePointData = JsonUtility.FromJson<SavePointData>(tempSaveHistory.GetLastSavePoint());
+                saveNameText.text = savePointData.SavePointKey + " (" + savePointData.SavePointDescription + ")";
+            }
+        }
     }
 
     public void SetIsSaving(bool value)
