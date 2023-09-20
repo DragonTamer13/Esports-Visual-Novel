@@ -8,6 +8,8 @@ public class SaveLoadMenu : MonoBehaviour
     private List<SaveLoadButton> buttons = new List<SaveLoadButton>();
     private CanvasGroup canvasGroup; // Use a CG to show/hide this menu or else the Buttons' save/load state isn't
                                      // set correctly the first time the menu is opened.
+    // The current page of the menu screen, zero-indexed.
+    private int menuPage = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,16 @@ public class SaveLoadMenu : MonoBehaviour
         canvasGroup.alpha = 1f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
+        UpdateSaveSlots();
+    }
+
+    // Change which save slots the buttons save/load from based on the current menu page.
+    private void UpdateSaveSlots()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            buttons[i].SetSaveDataKey(menuPage * buttons.Count + i);
+        }
     }
 
     /// <summary>

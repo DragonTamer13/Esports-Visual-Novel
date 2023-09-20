@@ -9,10 +9,15 @@ using Fungus;
 /// </summary>
 public class SaveLoadButton : MonoBehaviour
 {
-    // TODO: Make this unique for each save slot button.
-    private const string saveDataKey = "Slot0";
+    private string saveDataKey = "";
     private MainMenuController mainMenuController;
     private bool isSaving; // True when button saves a game, false when button loads a game.
+
+    // Set the slot this button saves or loads from the index of the save. 
+    public void SetSaveDataKey(int saveIndex)
+    {
+        saveDataKey = "Slot" + saveIndex.ToString();
+    }
 
     public void SetIsSaving(bool value)
     {
@@ -29,6 +34,12 @@ public class SaveLoadButton : MonoBehaviour
 
     public void OnClick()
     {
+        if (saveDataKey == "")
+        {
+            Debug.LogError("Attempting to save/load with empty saveDataKey");
+            return;
+        }
+
         var saveManager = FungusManager.Instance.SaveManager;
 
         // Save or load the game when this button is clicked
@@ -38,7 +49,7 @@ public class SaveLoadButton : MonoBehaviour
             {
                 saveManager.Save(saveDataKey);
             }
-            print("Saved the game");
+            print("Saved the game to " + saveDataKey);
         }
         else
         {
@@ -54,6 +65,10 @@ public class SaveLoadButton : MonoBehaviour
                     saveManager.Load(saveDataKey);
                     transform.parent.parent.gameObject.GetComponent<SaveLoadMenu>().Close();
                 }
+            }
+            else
+            {
+                Debug.LogError("Attemping to load from invalid save key: " + saveDataKey);
             }
         }
     }
