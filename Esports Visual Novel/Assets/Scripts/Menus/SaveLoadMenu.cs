@@ -21,6 +21,12 @@ public class SaveLoadMenu : MonoBehaviour
     // Zero-indexed page of the menu.
     public void SetMenuPage(int value)
     {
+        if (value < 0 || value >= pageButtons.Count)
+        {
+            Debug.LogError("Page " + value + " out of range.");
+            return;
+        }
+
         // Enable/disable page buttons based on which page the player switched to.
         pageButtons[menuPage].interactable = true;
         pageButtons[value].interactable = false;
