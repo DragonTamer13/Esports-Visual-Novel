@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SaveLoadMenu : MonoBehaviour
 {
+    // Parent object for the save and load UI buttons.
+    [SerializeField] private GameObject saveLoadButtonHolder;
+    // Parent object for the page UI buttons.
+    [SerializeField] private GameObject pageButtonHolder;
+
     // All SaveLoadButton components in the menu buttons.
     private List<SaveLoadButton> buttons = new List<SaveLoadButton>();
+    private List<Button> pageButtons = new List<Button>();
     private CanvasGroup canvasGroup; // Use a CG to show/hide this menu or else the Buttons' save/load state isn't
                                      // set correctly the first time the menu is opened.
     // The current page of the menu screen, zero-indexed.
@@ -14,6 +21,10 @@ public class SaveLoadMenu : MonoBehaviour
     // Zero-indexed page of the menu.
     public void SetMenuPage(int value)
     {
+        // Enable/disable page buttons based on which page the player switched to.
+        pageButtons[menuPage].interactable = true;
+        pageButtons[value].interactable = false;
+
         menuPage = value;
         UpdateSaveSlots();
     }
@@ -21,11 +32,21 @@ public class SaveLoadMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Transform t in transform.Find("SaveLoadButtons").transform)
+        canvasGroup = GetComponent<CanvasGroup>();
+
+        // Get all SaveLoadButtons
+        foreach (Transform t in saveLoadButtonHolder.transform)
         {
             buttons.Add(t.GetComponent<SaveLoadButton>());
         }
-        canvasGroup = GetComponent<CanvasGroup>();
+
+        // Get all page buttons
+        foreach (Transform t in pageButtonHolder.transform)
+        {
+            pageButtons.Add(t.GetComponent<Button>());
+        }
+
+        SetMenuPage(menuPage);
         Close();
     }
 
