@@ -14,19 +14,26 @@ public class SaveLoadButton : MonoBehaviour
     private MainMenuController mainMenuController;
     private bool isSaving; // True when button saves a game, false when button loads a game.
     private Text saveNameText;
+    private Button button;
 
     // Set the slot this button saves or loads from the index of the save. 
     public void SetSaveDataKey(int saveIndex)
     {
         saveDataKey = "Slot" + saveIndex.ToString();
-        saveNameText = GetComponentInChildren<Text>();
 
         var saveManager = FungusManager.Instance.SaveManager;
         if (!saveManager.SaveDataExists(saveDataKey))
         {
-            // TODO: Disable button.
+            if (!isSaving)
+            {
+                button.interactable = false;
+            }
             saveNameText.text = "No save";
             return;
+        }
+        else
+        {
+            button.interactable = true;
         }
 
         // From SaveManager.ReadSaveHistory()
@@ -57,10 +64,24 @@ public class SaveLoadButton : MonoBehaviour
     public void SetIsSaving(bool value)
     {
         isSaving = value;
+
+        // Set if the button is interactable based on isSaving and if save data exists for this slot already.
+        var saveManager = FungusManager.Instance.SaveManager;
+        if (!saveManager.SaveDataExists(saveDataKey) && !isSaving)
+        {
+            button.interactable = false;
+        }
+        else
+        {
+            button.interactable = true;
+        }
     }
 
     void Start()
     {
+        saveNameText = GetComponentInChildren<Text>();
+        button = GetComponent<Button>();
+
         if (GameObject.Find("MainMenu") != null)
         {
             mainMenuController = GameObject.Find("MainMenu").GetComponent<MainMenuController>();
