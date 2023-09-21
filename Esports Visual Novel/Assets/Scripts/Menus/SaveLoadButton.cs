@@ -21,44 +21,7 @@ public class SaveLoadButton : MonoBehaviour
     {
         saveDataKey = "Slot" + saveIndex.ToString();
 
-        var saveManager = FungusManager.Instance.SaveManager;
-        if (!saveManager.SaveDataExists(saveDataKey))
-        {
-            if (!isSaving)
-            {
-                button.interactable = false;
-            }
-            saveNameText.text = "No save";
-            return;
-        }
-        else
-        {
-            button.interactable = true;
-        }
-
-        // From SaveManager.ReadSaveHistory()
-        // TODO: Testing loading data
-        var historyData = string.Empty;
-
-#if UNITY_WEBPLAYER || UNITY_WEBGL
-            historyData = PlayerPrefs.GetString(saveDataKey);
-#else
-        var fullFilePath = SaveManager.STORAGE_DIRECTORY + saveDataKey + ".json";
-        if (System.IO.File.Exists(fullFilePath))
-        {
-            historyData = System.IO.File.ReadAllText(fullFilePath);
-        }
-#endif//UNITY_WEBPLAYER
-        if (!string.IsNullOrEmpty(historyData))
-        {
-            var tempSaveHistory = JsonUtility.FromJson<SaveHistory>(historyData);
-            if (tempSaveHistory != null)
-            {
-                // JSON of save data
-                var savePointData = JsonUtility.FromJson<SavePointData>(tempSaveHistory.GetLastSavePoint());
-                saveNameText.text = savePointData.SavePointKey + " (" + savePointData.SavePointDescription + ")";
-            }
-        }
+        UpdateButton();
     }
 
     public void SetIsSaving(bool value)
@@ -88,6 +51,51 @@ public class SaveLoadButton : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Set this button's interactability and text description.
+    /// </summary>
+    private void UpdateButton()
+    {
+        var saveManager = FungusManager.Instance.SaveManager;
+        if (!saveManager.SaveDataExists(saveDataKey))
+        {
+            if (!isSaving)
+            {
+                button.interactable = false;
+            }
+            saveNameText.text = "No save";
+            return;
+        }
+        else
+        {
+            button.interactable = true;
+        }
+
+        // Update the text on the button to show a description of the save.
+        // From SaveManager.ReadSaveHistory()
+        var historyData = string.Empty;
+
+#if UNITY_WEBPLAYER || UNITY_WEBGL
+            historyData = PlayerPrefs.GetString(saveDataKey);
+#else
+        var fullFilePath = SaveManager.STORAGE_DIRECTORY + saveDataKey + ".json";
+        if (System.IO.File.Exists(fullFilePath))
+        {
+            historyData = System.IO.File.ReadAllText(fullFilePath);
+        }
+#endif//UNITY_WEBPLAYER
+        if (!string.IsNullOrEmpty(historyData))
+        {
+            var tempSaveHistory = JsonUtility.FromJson<SaveHistory>(historyData);
+            if (tempSaveHistory != null)
+            {
+                // JSON of save data
+                var savePointData = JsonUtility.FromJson<SavePointData>(tempSaveHistory.GetLastSavePoint());
+                saveNameText.text = savePointData.SavePointKey + " (" + savePointData.SavePointDescription + ")";
+            }
+        }
+    }
+
     public void OnClick()
     {
         if (saveDataKey == "")
@@ -106,6 +114,8 @@ public class SaveLoadButton : MonoBehaviour
                 saveManager.Save(saveDataKey);
             }
             print("Saved the game to " + saveDataKey);
+            // Show new save name on button.
+            UpdateButton();
         }
         else
         {
