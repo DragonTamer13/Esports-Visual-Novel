@@ -13,7 +13,7 @@ public class SaveLoadMenu : MonoBehaviour
     // All SaveLoadButton components in the menu buttons.
     private List<SaveLoadButton> buttons = new List<SaveLoadButton>();
     private List<Button> pageButtons = new List<Button>();
-    private CanvasGroup canvasGroup; // Use a CG to show/hide this menu or else the Buttons' save/load state isn't
+    private CanvasGroup canvasGroup; // Use a CanvasGroup to show/hide this menu or else the Buttons' save/load state isn't
                                      // set correctly the first time the menu is opened.
     // The current page of the menu screen, zero-indexed.
     private int menuPage = 0;

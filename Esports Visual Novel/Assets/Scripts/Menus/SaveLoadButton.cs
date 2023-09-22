@@ -57,6 +57,8 @@ public class SaveLoadButton : MonoBehaviour
     private void UpdateButton()
     {
         var saveManager = FungusManager.Instance.SaveManager;
+
+        // Update button interactability
         if (!saveManager.SaveDataExists(saveDataKey))
         {
             if (!isSaving)
@@ -113,10 +115,10 @@ public class SaveLoadButton : MonoBehaviour
             if (saveManager.NumSavePoints > 0)
             {
                 saveManager.Save(saveDataKey);
+
+                // Show new save name on button.
+                UpdateButton();
             }
-            print("Saved the game to " + saveDataKey);
-            // Show new save name on button.
-            UpdateButton();
         }
         else
         {
