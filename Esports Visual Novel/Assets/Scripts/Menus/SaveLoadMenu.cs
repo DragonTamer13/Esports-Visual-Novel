@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
+/// <summary>
+/// The main controller for saving and loading the game.
+/// </summary>
 public class SaveLoadMenu : MonoBehaviour
 {
     // Parent object for the save and load UI buttons.
@@ -17,6 +21,7 @@ public class SaveLoadMenu : MonoBehaviour
                                      // set correctly the first time the menu is opened.
     // The current page of the menu screen, zero-indexed.
     private int menuPage = 0;
+    private bool isSaving;
 
     // Zero-indexed page of the menu.
     public void SetMenuPage(int value)
@@ -60,21 +65,12 @@ public class SaveLoadMenu : MonoBehaviour
         Close();
     }
 
-    // Enable and show the menu.
-    private void Open()
-    {
-        canvasGroup.alpha = 1f;
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-        UpdateSaveSlots();
-    }
-
     // Change which save slots the buttons save/load from based on the current menu page.
     private void UpdateSaveSlots()
     {
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].SetSaveDataKey(menuPage * buttons.Count + i);
+            buttons[i].SetButtonValues(menuPage * buttons.Count + i, isSaving);
         }
     }
 
@@ -88,27 +84,59 @@ public class SaveLoadMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// Open the menu to save game data.
+    /// Enable and show the menu.
     /// </summary>
-    public void OpenSave()
+    /// <param name="isSaving">True if opening the save menu, false if opening the load menu.</param>
+    public void Open(bool isSaving)
     {
-        foreach (SaveLoadButton b in buttons)
-        {
-            b.SetIsSaving(true);
-        }
-        Open();
+        this.isSaving = isSaving;
+        canvasGroup.alpha = 1f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+        UpdateSaveSlots();
     }
 
     /// <summary>
-    /// Open the menu to load game data.
+    /// Saves or loads game data. Call when a SaveLoadButton is clicked.
     /// </summary>
-    public void OpenLoad()
+    /// <param name="saveDataKey">The clicked save slot key.</param>
+    /// <param name="saveLoadButton">The button that was clicked.</param>
+    public void OnButtonClick(string saveDataKey, SaveLoadButton saveLoadButton)
     {
-        foreach (SaveLoadButton b in buttons)
+        var saveManager = FungusManager.Instance.SaveManager;
+
+        // Save or load the game when this button is clicked
+        if (isSaving)
         {
-            b.SetIsSaving(false);
+            if (saveManager.NumSavePoints > 0)
+            {
+                saveManager.Save(saveDataKey);
+
+                // Show new save name on button.
+                saveLoadButton.UpdateButton();
+            }
         }
-        Open();
+        else
+        {
+            if (saveManager.SaveDataExists(saveDataKey))
+            {
+                // Do a fade transition if we're on the main menu. Otherwise, just load the game.
+                GameObject mainMenu = GameObject.Find("MainMenu");
+                if (mainMenu != null)
+                {
+                    mainMenu.GetComponent<MainMenuController>().LoadGame(saveDataKey);
+                }
+                else
+                {
+                    saveManager.Load(saveDataKey);
+                    Close();
+                }
+            }
+            else
+            {
+                Debug.LogError("Attemping to load from invalid save key: " + saveDataKey);
+            }
+        }
     }
 
     /// <summary>

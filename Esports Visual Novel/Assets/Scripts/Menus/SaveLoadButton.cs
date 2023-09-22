@@ -10,51 +10,47 @@ using Fungus;
 /// </summary>
 public class SaveLoadButton : MonoBehaviour
 {
+    // The menu controller script associated with this button.
+    [SerializeField] private SaveLoadMenu saveLoadMenu;
+
     private string saveDataKey = "";
-    private MainMenuController mainMenuController;
     private bool isSaving; // True when button saves a game, false when button loads a game.
     private Text saveNameText;
     private Button button;
-
-    // Set the slot this button saves or loads from the index of the save. 
-    public void SetSaveDataKey(int saveIndex)
-    {
-        saveDataKey = "Slot" + saveIndex.ToString();
-
-        UpdateButton();
-    }
-
-    public void SetIsSaving(bool value)
-    {
-        isSaving = value;
-
-        // Set if the button is interactable based on isSaving and if save data exists for this slot already.
-        var saveManager = FungusManager.Instance.SaveManager;
-        if (!saveManager.SaveDataExists(saveDataKey) && !isSaving)
-        {
-            button.interactable = false;
-        }
-        else
-        {
-            button.interactable = true;
-        }
-    }
 
     void Start()
     {
         saveNameText = GetComponentInChildren<Text>();
         button = GetComponent<Button>();
+    }
 
-        if (GameObject.Find("MainMenu") != null)
+    public void OnClick()
+    {
+        if (saveDataKey == "")
         {
-            mainMenuController = GameObject.Find("MainMenu").GetComponent<MainMenuController>();
+            Debug.LogError("Attempting to save/load with empty saveDataKey");
+            return;
         }
+
+        saveLoadMenu.OnButtonClick(saveDataKey, this);
+    }
+
+    /// <summary>
+    /// Update the save slot index and isSaving value of this button.
+    /// Sets button text and interactability to match new values.
+    /// </summary>
+    public void SetButtonValues(int saveIndex, bool isSaving)
+    {
+        this.isSaving = isSaving;
+        saveDataKey = "Slot" + saveIndex.ToString();
+
+        UpdateButton();
     }
 
     /// <summary>
     /// Set this button's interactability and text description.
     /// </summary>
-    private void UpdateButton()
+    public void UpdateButton()
     {
         var saveManager = FungusManager.Instance.SaveManager;
 
@@ -95,49 +91,6 @@ public class SaveLoadButton : MonoBehaviour
                 // JSON of save data
                 var savePointData = JsonUtility.FromJson<SavePointData>(tempSaveHistory.GetLastSavePoint());
                 saveNameText.text = savePointData.SavePointKey + " (" + savePointData.SavePointDescription + ")";
-            }
-        }
-    }
-
-    public void OnClick()
-    {
-        if (saveDataKey == "")
-        {
-            Debug.LogError("Attempting to save/load with empty saveDataKey");
-            return;
-        }
-
-        var saveManager = FungusManager.Instance.SaveManager;
-
-        // Save or load the game when this button is clicked
-        if (isSaving)
-        {
-            if (saveManager.NumSavePoints > 0)
-            {
-                saveManager.Save(saveDataKey);
-
-                // Show new save name on button.
-                UpdateButton();
-            }
-        }
-        else
-        {
-            if (saveManager.SaveDataExists(saveDataKey))
-            {
-                // Do a fade transition if we're on the main menu. Otherwise, just load the game.
-                if (mainMenuController != null)
-                {
-                    mainMenuController.LoadGame(saveDataKey);
-                }
-                else
-                {
-                    saveManager.Load(saveDataKey);
-                    transform.parent.parent.gameObject.GetComponent<SaveLoadMenu>().Close();
-                }
-            }
-            else
-            {
-                Debug.LogError("Attemping to load from invalid save key: " + saveDataKey);
             }
         }
     }
