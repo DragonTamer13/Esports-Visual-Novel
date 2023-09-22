@@ -15,6 +15,8 @@ public class SaveLoadMenu : MonoBehaviour
     [SerializeField] private GameObject pageButtonHolder;
     // Menu for confirming if the player wants to overwrite an existing save.
     [SerializeField] private GameObject overwriteConfirmMenu;
+    // Text object on the overwrite menu displaying the name of the save to be overwritten.
+    [SerializeField] private Text overwriteConfirmMenuText;
 
     // All SaveLoadButton components in the menu buttons.
     private List<SaveLoadButton> buttons = new List<SaveLoadButton>();
@@ -129,6 +131,7 @@ public class SaveLoadMenu : MonoBehaviour
                 {
                     storedKey = saveDataKey;
                     storedSaveLoadButton = saveLoadButton;
+                    overwriteConfirmMenuText.text = "Are you sure you want to overwrite \"" + saveLoadButton.GetSaveName() + "\"?";
                     overwriteConfirmMenu.SetActive(true);
                 }
                 else

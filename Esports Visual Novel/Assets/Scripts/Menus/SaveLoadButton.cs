@@ -24,6 +24,14 @@ public class SaveLoadButton : MonoBehaviour
         button = GetComponent<Button>();
     }
 
+    /// <summary>
+    /// The name of the save displayed on the button.
+    /// </summary>
+    public string GetSaveName()
+    {
+        return saveNameText.text;
+    }
+
     public void OnClick()
     {
         if (saveDataKey == "")
