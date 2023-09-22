@@ -13,6 +13,8 @@ public class SaveLoadMenu : MonoBehaviour
     [SerializeField] private GameObject saveLoadButtonHolder;
     // Parent object for the page UI buttons.
     [SerializeField] private GameObject pageButtonHolder;
+    // Menu for confirming if the player wants to overwrite an existing save.
+    [SerializeField] private GameObject overwriteConfirmMenu;
 
     // All SaveLoadButton components in the menu buttons.
     private List<SaveLoadButton> buttons = new List<SaveLoadButton>();
@@ -22,6 +24,8 @@ public class SaveLoadMenu : MonoBehaviour
     // The current page of the menu screen, zero-indexed.
     private int menuPage = 0;
     private bool isSaving;
+    private string storedKey = ""; // Store saveDataKey, to be used when confirming overwriting a save.
+    private SaveLoadButton storedSaveLoadButton;
 
     // Zero-indexed page of the menu.
     public void SetMenuPage(int value)
@@ -60,6 +64,7 @@ public class SaveLoadMenu : MonoBehaviour
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        overwriteConfirmMenu.SetActive(false);
 
         SetMenuPage(menuPage);
         Close();
@@ -72,6 +77,15 @@ public class SaveLoadMenu : MonoBehaviour
         {
             buttons[i].SetButtonValues(menuPage * buttons.Count + i, isSaving);
         }
+    }
+
+    private void Save(string saveDataKey, SaveLoadButton saveLoadButton)
+    {
+        var saveManager = FungusManager.Instance.SaveManager;
+        saveManager.Save(saveDataKey);
+
+        // Show new save name on button.
+        saveLoadButton.UpdateButton();
     }
 
     /// <summary>
@@ -110,10 +124,17 @@ public class SaveLoadMenu : MonoBehaviour
         {
             if (saveManager.NumSavePoints > 0)
             {
-                saveManager.Save(saveDataKey);
-
-                // Show new save name on button.
-                saveLoadButton.UpdateButton();
+                // Confirm if player wants to save if data already exists for this save slot.
+                if (saveManager.SaveDataExists(saveDataKey))
+                {
+                    storedKey = saveDataKey;
+                    storedSaveLoadButton = saveLoadButton;
+                    overwriteConfirmMenu.SetActive(true);
+                }
+                else
+                {
+                    Save(saveDataKey, saveLoadButton);
+                }
             }
         }
         else
@@ -137,6 +158,15 @@ public class SaveLoadMenu : MonoBehaviour
                 Debug.LogError("Attemping to load from invalid save key: " + saveDataKey);
             }
         }
+    }
+
+    /// <summary>
+    /// Saves the game to a slot that already has data. Should only be called by the OverwriteConfirmMenu.
+    /// </summary>
+    public void ConfirmOverwrite()
+    {
+        // NOTE: This should probably be done using delegates or UnityEvents or callbacks, something like that. Maybe we can change it to work like that later.
+        Save(storedKey, storedSaveLoadButton);
     }
 
     /// <summary>

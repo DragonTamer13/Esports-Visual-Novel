@@ -22,11 +22,9 @@ public class ContinueButton : MonoBehaviour
             mainMenuController = GameObject.Find("MainMenu").GetComponent<MainMenuController>();
         }
 
-        // TODO: I sure hope there's no race condition.
         DateTime latestWriteTime = DateTime.MinValue;
         DateTime writeTime;
         int slots = GameObject.Find("SaveLoadMenu").GetComponent<SaveLoadMenu>().GetNumSaveSlots();
-        print(slots);
 
         for (int i = 0; i < slots; i++)
         {
