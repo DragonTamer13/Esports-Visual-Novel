@@ -75,6 +75,7 @@ public class SaveLoadButton : MonoBehaviour
         // From SaveManager.ReadSaveHistory()
         var historyData = string.Empty;
 
+        // NOTE: Not giving much thought to the web saving option.
 #if UNITY_WEBPLAYER || UNITY_WEBGL
             historyData = PlayerPrefs.GetString(saveDataKey);
 #else

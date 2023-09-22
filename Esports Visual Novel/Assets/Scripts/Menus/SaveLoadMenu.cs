@@ -35,11 +35,9 @@ public class SaveLoadMenu : MonoBehaviour
         UpdateSaveSlots();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
-
+        // Counting children here to prevent race condition when calling GetNumSaveSlots().
         // Get all SaveLoadButtons
         foreach (Transform t in saveLoadButtonHolder.transform)
         {
@@ -51,6 +49,12 @@ public class SaveLoadMenu : MonoBehaviour
         {
             pageButtons.Add(t.GetComponent<Button>());
         }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
 
         SetMenuPage(menuPage);
         Close();
@@ -72,6 +76,15 @@ public class SaveLoadMenu : MonoBehaviour
         {
             buttons[i].SetSaveDataKey(menuPage * buttons.Count + i);
         }
+    }
+
+    /// <summary>
+    /// Returns the total number of save slots, which is equal to the number of SaveLoadButtons times the number of pages.
+    /// </summary>
+    /// <returns></returns>
+    public int GetNumSaveSlots()
+    {
+        return buttons.Count * pageButtons.Count;
     }
 
     /// <summary>
