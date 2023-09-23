@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuitButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // The parent menu object.
+    [SerializeField] private GameObject saveMenu;
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Return to the main menu.
+    /// </summary>
+    public void OnClick()
     {
-        
+        SceneManager.LoadScene("MainMenu");
+        Destroy(saveMenu);
     }
 }
