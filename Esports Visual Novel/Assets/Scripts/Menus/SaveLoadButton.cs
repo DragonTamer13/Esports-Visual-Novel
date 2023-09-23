@@ -18,7 +18,7 @@ public class SaveLoadButton : MonoBehaviour
     private Text saveNameText;
     private Button button;
 
-    void Start()
+    void Awake()
     {
         saveNameText = GetComponentInChildren<Text>();
         button = GetComponent<Button>();
