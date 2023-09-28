@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 3533629553814354307}
   - component: {fileID: 3533629553814354306}
   - component: {fileID: 3533629553814354305}
+  - component: {fileID: 476276035}
   m_Layer: 5
   m_Name: CompositionButton
   m_TagString: Untagged
@@ -536,9 +537,49 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3533629553814354305}
-        m_MethodName: set_interactable
-        m_Mode: 6
+      - m_Target: {fileID: 0}
+        m_MethodName: SwitchToPreview
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3533629553814354305}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &476276035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533629553814354311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695ebae6df3ab6a4b8122103b3b5bbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PointerEnter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3533629553814354305}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pointerExitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PointerExit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
