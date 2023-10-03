@@ -36,6 +36,22 @@ public class VODReviewMenuController : MonoBehaviour
     }
 
     /// <summary>
+    /// Shows the VOD Review menu.
+    /// </summary>
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    /// <summary>
+    /// Hides the VOD Review menu.
+    /// </summary>
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    /// <summary>
     /// Displays a preview associated with a button while hovering over a button, but does not change the selection. 
     /// Call when pointer starts hovering over a composition button.
     /// </summary>
