@@ -116,7 +116,9 @@ namespace Fungus
             // Hide the Save and Load buttons if autosave is on
 
             bool showSaveAndLoad = !autoSave;
-            if (saveButton.IsActive() != showSaveAndLoad)
+            // By Alex G: Added save and load button null checks so that these fields can be blank. Might redo this all later
+            //            to work with the save and load menu.
+            if ((saveButton != null && loadButton != null) && saveButton.IsActive() != showSaveAndLoad)
             {
                 saveButton.gameObject.SetActive(showSaveAndLoad);
                 loadButton.gameObject.SetActive(showSaveAndLoad);

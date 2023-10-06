@@ -99,7 +99,12 @@ namespace Fungus
             {
                 if (descriptionMode == DescriptionMode.Timestamp)
                 {
-                    return System.DateTime.UtcNow.ToString("HH:mm dd MMMM, yyyy");
+                    /*
+                     * By Alex Grams: 
+                     * Modified the way timestamp descriptions work. Default is: 
+                     * System.DateTime.UtcNow.ToString("HH:mm dd MMMM, yyyy")
+                     */
+                    return System.DateTime.Now.ToString("HH:mm:ss dd MMMM, yyyy");
                 }
                 else
                 {
