@@ -20,10 +20,17 @@ Now to add the main part of the dialogue, editing the Flowchart:
 	  the nodes that the player can load the game from and that have different characters on the screen. It's annoying, I know. Will try
 	  to figure out a better way to do this.
 6. Set up dialogue flow: Create a new node, or use the default one that comes with a new Flowchart object. Set "Execute On Event" to 
-   "Game Started". Change the name of the node to something clean, descriptive, and concise. The node name is displayed to the player when
+   "None". Change the name of the node to something clean, descriptive, and concise. The node name is displayed to the player when
    they save the game, and can be fairly long if need be. I've gone with the template "Day # - [Location/Time/Action]".
-7. Add a "Save Point" command to the node. These nodes allow the player to save their game at that point in the flowchart. You should place
-   a Save Point command at every node that you want to allow the player to resume their game from. I don't think every node needs a Save
-   Point, just ones that preceed decisions or long dialogue segments.
+7. Add a "Save Point" command to the node. Make sure "Is Start Point" is checked for this first node only. Uncheck "Fire Event" for this
+   node and all subsequent Save Point commands you create. We don't want Save Points to fire events with the way we're setting up our 
+   save/load system.
+   A. These nodes allow the player to save their game at that point in the flowchart. You should place a Save Point command at every node 
+      that you want to allow the player to resume their game from. I don't think every node needs a Save Point, just ones that preceed 
+	  decisions or long dialogue segments.
 8. Add Characters to the scene: Every person that appears in this scene needs a Character GameObject. Add the prefabs for each Character
    from Assets/Prefabs/Characters, or create a new prefab if it doesn't exist already.
+9. Make it look nice: Add a "Fade to View" command. Click the command, then uncheck the "Fade Out" property so that we fade into the scene.
+10. Add dialogue: Add a "Conversation" command and implement your dialogue. More on Convesations at 
+    https://github.com/snozbot/fungus/wiki/conversation_system.
+11. To transition to a new node, add a "Call" command.
