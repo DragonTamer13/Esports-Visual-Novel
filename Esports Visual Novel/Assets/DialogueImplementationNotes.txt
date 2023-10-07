@@ -1,0 +1,29 @@
+Documenting here how to set up an empty scene with all the necessary VN elements and stuff.
+
+1. Add "SaveMenu" and "SayDialogue" prefabs from Assets/Prefabs/VNCoreObjects.
+2. Add "SaveData", "Flowchart", "Stage", and "View" objects from Tools(at the top of the editor) > Fungus > Create. In the hierarchy, select
+   the SaveData object. Add the flowchart object you created to the "Flowcharts" property in the inspector window.
+3. Add a background: Create a GameObject with only Transform and Sprite Renderer components. Set the Sprite of the Sprite Renderer to your
+   background image. In the Scene View, place the "View" object over the background sprite.
+   TODO: The background is messed up because the viewport can be different sizes. Need some way for the background to appear the same no 
+   matter the screen size.
+
+Now to add the main part of the dialogue, editing the Flowchart:
+4. In the hierarchy, select the flowchart GameObject. If you don't have it open already, open the Flowchart editor window by clicking 
+   Window > Windows > Flowchart.
+5. Set up loading: In the Flowchart editor, add a new node (right click > Add Block). Change the "Execute On Event" property to "Save Point
+   Loaded".
+   A. The "Save Point Keys" properties mean that "Whenever the player loads a game from these nodes, execute this Save Point Loaded node".
+	  A Save Point Loaded node will set up the scene (placing characters, changing the background) when the player loads the game.
+	  Character sprites won't appear if the game is loaded and a Save Point Loaded node doesn't create those character sprites on the
+	  screen, even if they appear when playing though the game normally. Therefore, it is key to create a Save Point Loaded node for all
+	  the nodes that the player can load the game from and that have different characters on the screen. It's annoying, I know. Will try
+	  to figure out a better way to do this.
+6. Set up dialogue flow: Create a new node, or use the default one that comes with a new Flowchart object. Set "Execute On Event" to 
+   "Game Started". Change the name of the node to something clean, descriptive, and concise. The node name is displayed to the player when
+   they save the game, and can be fairly long if need be. I've gone with the template "Day # - [Location/Time/Action]".
+7. Add a "Save Point" command to the node. These nodes allow the player to save their game at that point in the flowchart. You should place
+   a Save Point command at every node that you want to allow the player to resume their game from. I don't think every node needs a Save
+   Point, just ones that preceed decisions or long dialogue segments.
+8. Add Characters to the scene: Every person that appears in this scene needs a Character GameObject. Add the prefabs for each Character
+   from Assets/Prefabs/Characters, or create a new prefab if it doesn't exist already.
