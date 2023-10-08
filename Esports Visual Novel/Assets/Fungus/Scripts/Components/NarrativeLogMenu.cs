@@ -74,6 +74,8 @@ namespace Fungus
             if (!narrativeLogActive)
             {
                 narrativeLogMenuGroup.alpha = 0f;
+                // By Alex G: prevent the narrative log from blocking the mouse when turned off.
+                narrativeLogMenuGroup.blocksRaycasts = false;
             }
 
             //Clear up the lorem ipsum
@@ -176,6 +178,8 @@ namespace Fungus
                     narrativeLogMenuGroup.alpha = t;
                 }).setOnComplete(() => {
                     narrativeLogMenuGroup.alpha = 0f;
+                    // By Alex G: prevent the narrative log from blocking the mouse when turned off.
+                    narrativeLogMenuGroup.blocksRaycasts = false;
                 });
                 
             }
@@ -188,6 +192,8 @@ namespace Fungus
                     narrativeLogMenuGroup.alpha = t;
                 }).setOnComplete(() => {
                     narrativeLogMenuGroup.alpha = 1f;
+                    // By Alex G: prevent the narrative log from blocking the mouse when turned off.
+                    narrativeLogMenuGroup.blocksRaycasts = true;
                 });
                 
             }

@@ -681,6 +681,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 672638923874600585, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 672638923874600585, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672638923874600585, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1262029697}
+    - target: {fileID: 672638923874600585, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 672638923994729249, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -854,7 +874,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.299999
+      value: 14.30003
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -1158,6 +1178,86 @@ Transform:
   - {fileID: 109635861}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &462526611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462526615}
+  - component: {fileID: 462526614}
+  - component: {fileID: 462526613}
+  - component: {fileID: 462526612}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &462526612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462526611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d49b7c1bcd2e07499844da127be038d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ForceModuleActive: 0
+--- !u!114 &462526613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462526611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &462526614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462526611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &462526615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462526611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545214886
 GameObject:
@@ -1802,6 +1902,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255369056}
   m_CullTransparentMesh: 0
+--- !u!1 &1262029697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 672638924941631898, guid: 5659f40e860e21040af61c1dd18893dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 331824689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286675089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +2100,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 55.03093
     y: 77
-    width: 129.99997
+    width: 132.35294
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2021,11 +2127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -499.39273, y: 180.2792}
+  scrollPos: {x: -848.55194, y: 183.55652}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.7000003
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2081,7 +2187,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 71.03093
     y: 235
-    width: 137.14282
+    width: 138.23529
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2223,19 +2329,19 @@ MonoBehaviour:
       The hastily hidden piles of energy drink cans and takeout boxes certifies that
       this is definitely a home full of gamers.
 
-      
 
-      Eventually, you
-      two enter the training room, a moderately sized room lined with giant PC towers,
-      sleek monitors, and gaudy gaming chairs. The people inside don''t immediately
-      notice you, all engrossed watching a match VOD on a large flatscreen on the
-      opposite wall from you. Boiga whistles to get their attention.
 
-      
+      Eventually, you two enter
+      the training room, a moderately sized room lined with giant PC towers, sleek
+      monitors, and gaudy gaming chairs. The people inside don''t immediately notice
+      you, all engrossed watching a match VOD on a large flatscreen on the opposite
+      wall from you. Boiga whistles to get their attention.
 
-      boiga
-      boiga: "Yo! New coach in the building!", he announces, elbowing you to introduce
-      yourself to the team.'
+
+
+      boiga boiga:
+      "Yo! New coach in the building!", he announces, elbowing you to introduce yourself
+      to the team.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2343,7 +2449,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 874.5542
     y: 80.591675
-    width: 182.85709
+    width: 185.2941
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2373,7 +2479,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 673.2203
     y: 40.174133
-    width: 125.71426
+    width: 124.11764
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2474,11 +2580,11 @@ MonoBehaviour:
     stringRef: {fileID: 0}
     stringVal: 'coach: He lets out a hearty laugh.
 
-      
 
-      boiga boiga:
-      Ha! Just kiddin'' with ya, I''m Gabe! If that doesn''t ring a bell, the roster
-      info might''ve put me down as Boiga!'
+
+      boiga boiga: Ha! Just
+      kiddin'' with ya, I''m Gabe! If that doesn''t ring a bell, the roster info
+      might''ve put me down as Boiga!'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2561,7 +2667,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 669.2203
     y: 230.1103
-    width: 125.71426
+    width: 124.11764
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2642,7 +2748,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 670.2203
     y: 124.17413
-    width: 125.71426
+    width: 124.11764
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2773,7 +2879,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 674.2203
     y: -79.82587
-    width: 125.71426
+    width: 124.11764
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2804,10 +2910,10 @@ MonoBehaviour:
     stringVal: 'boiga boiga: Great! I''m Boiga...uhh, well, my tag is Boiga. I''m
       also Gabe!
 
-      
 
-      coach: You introduce yourself and extend out for
-      a handshake, which he does with great strength.'
+
+      coach: You introduce yourself and extend out for a handshake,
+      which he does with great strength.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2886,7 +2992,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 501.3689
     y: 171.87622
-    width: 117.14283
+    width: 115.88234
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2915,7 +3021,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 500.24146
     y: -19.570568
-    width: 117.14283
+    width: 115.88234
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2996,7 +3102,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 264.13513
     y: 77.36575
-    width: 158.57138
+    width: 160.58823
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3068,7 +3174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 55.92456
     y: 349.8298
-    width: 181.42851
+    width: 180.58821
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3103,10 +3209,10 @@ MonoBehaviour:
       The fourth player, wearing a sweatshirt far too oversized for them, stares
       in awkward silence, their face blank.
 
-      
 
-      boiga boiga: Welp, how
-      about you go ''round introducing yourself one-on-one, Coach?
+
+      boiga boiga: Welp, how about
+      you go ''round introducing yourself one-on-one, Coach?
 
       boiga hide:'
   clearPrevious:
@@ -3137,7 +3243,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1116.7351
     y: 83.091675
-    width: 179.99995
+    width: 181.76468
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3249,7 +3355,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1419.6862
     y: 195.24632
-    width: 124.28568
+    width: 120.58823
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3302,7 +3408,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1424.6862
     y: 120.52469
-    width: 109.99998
+    width: 108.82352
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3355,7 +3461,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1422.6796
     y: 48.215393
-    width: 127.14282
+    width: 124.11764
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3408,7 +3514,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1432.3098
     y: -40.89733
-    width: 111.42854
+    width: 107.64705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4586,7 +4692,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1590.903
     y: 45.810303
-    width: 104.28569
+    width: 102.94116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4618,7 +4724,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1201.598
     y: 312.37546
-    width: 88.57141
+    width: 86.47058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4756,7 +4862,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1939.5565
     y: 75.94868
-    width: 139.99997
+    width: 142.94116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4789,11 +4895,11 @@ MonoBehaviour:
       get back to practice? Or am I the only one that remembers that playoffs begin
       *tonight*?!" Kerfa says abruptly, looking displeased.
 
-      
 
-      boiga
-      boiga middle: "Yeahhh, I suppose Kerfa''s right, we should probably get some
-      more practice in before the first match," Boiga says, "let''s put your coaching
+
+      boiga boiga
+      middle: "Yeahhh, I suppose Kerfa''s right, we should probably get some more
+      practice in before the first match," Boiga says, "let''s put your coaching
       to the test then!"'
   clearPrevious:
     booleanRef: {fileID: 0}
@@ -5379,10 +5485,9 @@ MonoBehaviour:
     stringVal: 'coach: You walk over to the quiet player, who slightly recoils from
       you before relaxing.
 
-      
 
-      atropos atropos: "Umm...hi," they chirp
-      out quietly.
+
+      atropos atropos: "Umm...hi," they chirp out quietly.
 
 '
   clearPrevious:
@@ -5720,7 +5825,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1751.3765
     y: 117.0392
-    width: 88.57141
+    width: 88.823524
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5815,10 +5920,10 @@ MonoBehaviour:
     stringVal: 'coach: You walk up to the...*luxurious* player, who looks up from
       his phone to size you up, smirking all the while.
 
-      
 
-      noob noob:
-      "Eh, boring look, but we can deal with that later. ''Sup Coach," he says, giving
+
+      noob noob: "Eh,
+      boring look, but we can deal with that later. ''Sup Coach," he says, giving
       you a fist bump before returning to his phone.'
   clearPrevious:
     booleanRef: {fileID: 0}
@@ -7002,12 +7107,12 @@ MonoBehaviour:
     stringVal: 'coach: The female player lets out an aggravated sigh before turning
       towards you smiling. She reaches out to shake your hand.
 
-      
 
-      maeday
-      maeday: "I apologize for Kerfa, he''s being a brat as always," she says, giving
-      a menacing glare out of the corner of her eye towards him, "I''m Maeve, AKA
-      Maeday the tank, nice meeting you!"'
+
+      maeday maeday:
+      "I apologize for Kerfa, he''s being a brat as always," she says, giving a menacing
+      glare out of the corner of her eye towards him, "I''m Maeve, AKA Maeday the
+      tank, nice meeting you!"'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -7515,7 +7620,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1597.4971
     y: -45.398315
-    width: 88.57141
+    width: 86.47058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8982,7 +9087,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1597.2858
     y: 118.17557
-    width: 87.14284
+    width: 87.64705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9012,10 +9117,10 @@ MonoBehaviour:
     stringRef: {fileID: 0}
     stringVal: 'coach: He looks shocked that you needed to ask.
 
-      
 
-      noob
-      noob: "You kidding? xX_NoobHunter69_Xx! The one and only! 300,000 monthly subscribers
+
+      noob noob:
+      "You kidding? xX_NoobHunter69_Xx! The one and only! 300,000 monthly subscribers
       to his name!" he says with confidence, before sinking into his chair upon seeing
       your blank expression, "...Nathaniel. My name''s Nathaniel. I''m one of the
       DPS''s, whatever..."'
@@ -9080,7 +9185,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1605.2388
     y: 197.72092
-    width: 101.42855
+    width: 99.41176
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
