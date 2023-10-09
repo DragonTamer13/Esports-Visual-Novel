@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace Fungus
 {
+    /// <summary>
+    /// Same as the default Fungus Writer, except you can call SetWritingSpeed to change the writing speed.
+    /// </summary>
     public class CustomWriter : Writer
     {
         public void SetWritingSpeed(float newValue)
