@@ -135,6 +135,15 @@ public class OptionsMenu : MonoBehaviour
 
     /// <summary>
     /// Show the Options menu
+    /// 
+    /// NOTE: How this should be done:
+    /// - Load options from disk when opening the menu, and set UI elements to match.
+    /// - Write options to disk when closing the menu, and set the in-game SayDialog properties to match.
+    /// - When loading a scene with a SayDialog, read options from disk and set SayDialog properties to match.
+    /// - The Main Menu Options Menu shouldn't be DontDestroyOnLoad. Instead, just use the saved options from disk
+    ///   to set the in-game properties.
+    /// - It should be fine if the in-game options menu is DontDestroyOnLoad as a child of the Save Menu, just unbind 
+    ///   the OnSceneLoaded functionality.
     /// </summary>
     public void OnShow()
     {
