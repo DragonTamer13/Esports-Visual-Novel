@@ -11,6 +11,9 @@ public class OptionsMenu : MonoBehaviour
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
     private readonly int[] nameFontSizes = { 50, 60, 70 };
     private readonly int[] storyFontSizes = { 45, 50, 55 };
+    // The keys for settings stored in PlayerPrefs
+    private const string MessageSpeedKey = "MessageSpeed";
+    private const string FontSizeKey = "FontSize";
 
     // Slider for setting the text speed.
     [SerializeField] private Slider messageSpeedSlider;
@@ -32,14 +35,11 @@ public class OptionsMenu : MonoBehaviour
 
     private void Awake()
     {
-        if (transform.parent != null && transform.parent.GetComponent<SaveMenu>() != null)
-        {
-            InitializeGameVariables();
-        }
-
         previewSayDialog = GetComponentInChildren<SayDialog>();
         previewWriter = GetComponentInChildren<CustomWriter>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void Start()
@@ -49,15 +49,21 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
 
         // If the Options Menu doesn't have a parent, then it comes from the Main Menu. Otherwise, it's from the in-game Save Menu.
-        if (transform.parent == null)
-        {
-            GameObject.DontDestroyOnLoad(this);
-            SceneManager.sceneLoaded += OnGameLoadedFromMainMenu;
-        }
-        else
-        {
-            SceneManager.sceneLoaded += OnGameLoadedFromGame;
-        }
+        // TODO: Clean this up
+        //if (transform.parent == null)
+        //{
+        //    GameObject.DontDestroyOnLoad(this);
+        //    SceneManager.sceneLoaded += OnGameLoadedFromMainMenu;
+        //}
+        //else
+        //{
+        //    SceneManager.sceneLoaded += OnGameLoadedFromGame;
+        //}
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     /// <summary>
@@ -74,6 +80,20 @@ public class OptionsMenu : MonoBehaviour
         writer = GameObject.Find("SayDialog").GetComponent<CustomWriter>();
         nameText = GameObject.Find("SayDialog").transform.Find("Panel").Find("NameText").GetComponent<Text>();
         storyText = GameObject.Find("SayDialog").transform.Find("Panel").Find("StoryText").GetComponent<Text>();
+    }
+
+    /// <summary>
+    /// Set the SayDialog properties when we load into a new scene. Set references to key SayDialog components if 
+    /// they exist in the scene.
+    /// </summary>
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (transform.parent != null && transform.parent.GetComponent<SaveMenu>() != null)
+        {
+            InitializeGameVariables();
+        }
+
+        ApplyOptions();
     }
 
     /// <summary>
@@ -110,10 +130,6 @@ public class OptionsMenu : MonoBehaviour
         {
             previewWriter.SetWritingSpeed(messageSpeedSlider.value);
         }
-        if (writer != null)
-        {
-            writer.SetWritingSpeed(messageSpeedSlider.value);
-        }
         SayPreviewMessage();
     }
 
@@ -125,10 +141,9 @@ public class OptionsMenu : MonoBehaviour
             previewNameText.fontSize = nameFontSizes[fontSizeDropdown.value];
             previewStoryText.fontSize = storyFontSizes[fontSizeDropdown.value];
         }
-        if (nameText != null && storyText != null)
+        else
         {
-            nameText.fontSize = nameFontSizes[fontSizeDropdown.value];
-            storyText.fontSize = storyFontSizes[fontSizeDropdown.value];
+            print("Couldn't change preview font size");
         }
         SayPreviewMessage();
     }
@@ -137,7 +152,7 @@ public class OptionsMenu : MonoBehaviour
     /// Show the Options menu
     /// 
     /// NOTE: How this should be done:
-    /// - Load options from disk when opening the menu, and set UI elements to match.
+    /// - Load options from disk when opening the menu, and set UI slider and dropdown values to match.
     /// - Write options to disk when closing the menu, and set the in-game SayDialog properties to match.
     /// - When loading a scene with a SayDialog, read options from disk and set SayDialog properties to match.
     /// - The Main Menu Options Menu shouldn't be DontDestroyOnLoad. Instead, just use the saved options from disk
@@ -160,6 +175,10 @@ public class OptionsMenu : MonoBehaviour
         previewNameText = previewGO.transform.Find("Panel").Find("NameText").GetComponent<Text>();
         previewStoryText = previewGO.transform.Find("Panel").Find("StoryText").GetComponent<Text>();
         previewGO.GetComponent<Canvas>().sortingOrder = GetComponent<Canvas>().sortingOrder + 1;
+
+        // Load user settings and update Options Menu UI to match.
+        messageSpeedSlider.value = PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value);
+        fontSizeDropdown.value = PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value);
     }
 
     // Stop the preview running when the user exits the menu.
@@ -173,6 +192,33 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        // Save options to PlayerPrefs
+        PlayerPrefs.SetFloat(MessageSpeedKey, messageSpeedSlider.value);
+        PlayerPrefs.SetInt(FontSizeKey, fontSizeDropdown.value);
+        PlayerPrefs.Save();
+        print("Saved the options");
+
+        ApplyOptions();
+    }
+
+    /// <summary>
+    /// Apply the user's options to the SayDialog if one exists in the scene. Should be called after the options could have been
+    /// changed, such as when closing the Options Menu or when loading into a new scene.
+    /// </summary>
+    public void ApplyOptions()
+    {
+        // There isn't a writer in this scene, so there isn't a SayDialog. Don't try changing any settings.
+        if (writer == null)
+        {
+            print("NO writer");
+            return;
+        }
+
+        writer.SetWritingSpeed(PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value));
+        nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
+        storyText.fontSize = storyFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
+        print("Set the options");
     }
 
     /// <summary>
