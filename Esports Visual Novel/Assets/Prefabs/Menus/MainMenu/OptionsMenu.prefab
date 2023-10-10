@@ -2889,56 +2889,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &1436749820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1436749822}
-  - component: {fileID: 1436749821}
-  m_Layer: 0
-  m_Name: PreviewCharacter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1436749822
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436749820}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435.0501, y: -229, z: 0}
-  m_LocalScale: {x: 0.9978213, y: 0.9978213, z: 0.9978213}
-  m_Children: []
-  m_Father: {fileID: 1162313117583981058}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1436749821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436749820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Preview
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
-  soundEffect: {fileID: 0}
-  portraits: []
-  portraitsFace: 0
-  setSayDialog: {fileID: 0}
-  description: 
 --- !u!1 &1542051834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,7 +4756,6 @@ RectTransform:
   - {fileID: 1542051835}
   - {fileID: 400662783}
   - {fileID: 1660372562}
-  - {fileID: 1436749822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4889,7 +4838,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageSpeedSlider: {fileID: 226077870}
   fontSizeDropdown: {fileID: 1571632275}
-  previewCharacter: {fileID: 1436749821}
+  previewCharacterPrefab: {fileID: 439546899700506756, guid: 0d317b8d50814204097cb8257ee6d9de,
+    type: 3}
   optionsSayDialogPrefab: {fileID: 2109153206094863843, guid: d8735b51633375445bf86c9676bbb982,
     type: 3}
 --- !u!225 &1392642047739150139

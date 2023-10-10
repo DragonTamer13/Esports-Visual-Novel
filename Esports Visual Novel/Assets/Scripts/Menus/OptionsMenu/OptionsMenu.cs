@@ -21,7 +21,7 @@ public class OptionsMenu : MonoBehaviour
     // Dropdown for font size options.
     [SerializeField] private TMP_Dropdown fontSizeDropdown;
     // Character object used to modify to preview display.
-    [SerializeField] private Character previewCharacter;
+    [SerializeField] private GameObject previewCharacterPrefab;
     // The SayDialog object to instantiate to show a preview of the current options.
     [SerializeField] private GameObject optionsSayDialogPrefab;
 
@@ -33,6 +33,7 @@ public class OptionsMenu : MonoBehaviour
     private CustomWriter writer;
     private Text nameText;
     private Text storyText;
+    private Character previewCharacter;
 
     private void Awake()
     {
@@ -140,7 +141,9 @@ public class OptionsMenu : MonoBehaviour
         {
             previewWriter.ResetWriter();
         }
+        // Preview objects cause problems if they're DontDestroyOnLoad, so destroy them when closing the Menu.
         Destroy(previewSayDialog.gameObject);
+        Destroy(previewCharacter.gameObject);
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -199,6 +202,12 @@ public class OptionsMenu : MonoBehaviour
         if (!previewSayDialog.gameObject.activeInHierarchy)
         {
             previewSayDialog.SetActive(true);
+            if (previewCharacter == null)
+            {
+                GameObject preview = Instantiate(previewCharacterPrefab);
+                preview.transform.parent = transform;
+                previewCharacter = preview.GetComponent<Character>();
+            }
             previewSayDialog.SetCharacter(previewCharacter);
         }
 
