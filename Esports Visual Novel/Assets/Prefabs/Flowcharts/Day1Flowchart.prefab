@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 1033724812}
   - component: {fileID: 1033724813}
   - component: {fileID: 1033724814}
-  - component: {fileID: 783854224}
   - component: {fileID: 783854225}
   - component: {fileID: 783854226}
   - component: {fileID: 783854227}
@@ -192,9 +191,8 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 5379299805334510198}
   selectedCommands:
-  - {fileID: 783854228}
-  variables:
-  - {fileID: 783854224}
+  - {fileID: 783854225}
+  variables: []
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1320,8 +1318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2946.8037
-    y: 89.278275
+    x: 2945.6272
+    y: 86.92534
     width: 110.227264
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1348,7 +1346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1682.0027
+    x: 1678.4731
     y: 84.54333
     width: 124.99999
     height: 40
@@ -2059,7 +2057,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 2624.7764
-    y: 85.60991
+    y: 86.78638
     width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2145,7 +2143,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 3509.094
-    y: 89.19343
+    y: 90.369896
     width: 147.72726
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3302,7 +3300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2188.1692
+    x: 2186.9927
     y: 82.35358
     width: 161.36363
     height: 40
@@ -3832,21 +3830,6 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
---- !u!114 &783854224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 1
-  key: Day1Win
-  value: 0
 --- !u!114 &783854225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3862,7 +3845,7 @@ MonoBehaviour:
   itemId: 208
   indentLevel: 0
   anyVar:
-    variable: {fileID: 783854224}
+    variable: {fileID: 0}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -4014,7 +3997,7 @@ MonoBehaviour:
   itemId: 207
   indentLevel: 0
   anyVar:
-    variable: {fileID: 783854224}
+    variable: {fileID: 0}
     data:
       animatorData:
         animatorRef: {fileID: 0}

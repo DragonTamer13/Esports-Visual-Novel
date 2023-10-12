@@ -1,6 +1,6 @@
 Documenting here how to set up an empty scene with all the necessary VN elements and stuff.
 
-1. Add "SaveMenu" and "SayDialogue" prefabs from Assets/Prefabs/VNCoreObjects.
+1. Add "SaveMenu", "SayDialogue", DatastoreFlowchart, and DatastoreLink prefabs from Assets/Prefabs/VNCoreObjects.
 2. Add "SaveData", "Flowchart", "Stage", and "View" objects from Tools(at the top of the editor) > Fungus > Create. In the hierarchy, select
    the SaveData object. Add the flowchart object you created to the "Flowcharts" property in the inspector window.
 3. Add a background: Create a GameObject with only Transform and Sprite Renderer components. Set the Sprite of the Sprite Renderer to your
@@ -34,3 +34,4 @@ Now to add the main part of the dialogue, editing the Flowchart:
 10. Add dialogue: Add a "Conversation" command and implement your dialogue. More on Convesations at 
     https://github.com/snozbot/fungus/wiki/conversation_system.
 11. To transition to a new node, add a "Call" command.
+12. Before loading a new scene, call DatastoreLink.LoadNextScene.
