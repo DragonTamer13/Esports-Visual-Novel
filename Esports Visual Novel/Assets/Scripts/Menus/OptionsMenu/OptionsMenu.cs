@@ -143,7 +143,6 @@ public class OptionsMenu : MonoBehaviour
         }
         // Preview objects cause problems if they're DontDestroyOnLoad, so destroy them when closing the Menu.
         Destroy(previewSayDialog.gameObject);
-        Destroy(previewCharacter.gameObject);
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
