@@ -22,6 +22,11 @@ namespace Fungus
             writingSpeed = newValue;
         }
 
+        public void SetAutoDelay(float newValue)
+        {
+            autoDelayPerCharacter = newValue;
+        }
+
         protected override void Awake()
         {
             base.Awake();

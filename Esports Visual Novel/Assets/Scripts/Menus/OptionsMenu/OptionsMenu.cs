@@ -14,10 +14,13 @@ public class OptionsMenu : MonoBehaviour
 
     // The keys for settings stored in PlayerPrefs
     private const string MessageSpeedKey = "MessageSpeed";
+    private const string AutoDelayKey = "AutoDelay";
     private const string FontSizeKey = "FontSize";
 
     // Slider for setting the text speed.
     [SerializeField] private Slider messageSpeedSlider;
+    // Slider for setting the auto continue speed.
+    [SerializeField] private Slider autoDelaySlider;
     // Dropdown for font size options.
     [SerializeField] private TMP_Dropdown fontSizeDropdown;
     // Character object used to modify to preview display.
@@ -131,6 +134,7 @@ public class OptionsMenu : MonoBehaviour
 
         // Load user settings and update Options Menu UI to match.
         messageSpeedSlider.value = PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value);
+        autoDelaySlider.value = PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value);
         fontSizeDropdown.value = PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value);
     }
 
@@ -149,6 +153,7 @@ public class OptionsMenu : MonoBehaviour
 
         // Save options to PlayerPrefs
         PlayerPrefs.SetFloat(MessageSpeedKey, messageSpeedSlider.value);
+        PlayerPrefs.SetFloat(AutoDelayKey, autoDelaySlider.value);
         PlayerPrefs.SetInt(FontSizeKey, fontSizeDropdown.value);
         PlayerPrefs.Save();
 
@@ -168,6 +173,7 @@ public class OptionsMenu : MonoBehaviour
         }
 
         writer.SetWritingSpeed(PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value));
+        writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
         storyText.fontSize = storyFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
     }
@@ -178,6 +184,7 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void SetAllOptions(float messageSpeed, int fontSize)
     {
+        Debug.LogError("SetAllOptions called. Might be obsolete.");
         messageSpeedSlider.value = messageSpeed;
         fontSizeDropdown.value = fontSize;
 
