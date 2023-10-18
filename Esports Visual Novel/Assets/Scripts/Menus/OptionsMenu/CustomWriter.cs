@@ -13,8 +13,9 @@ namespace Fungus
         // true to have text continue automatically after a delay
         protected bool autoText = false;
         // How long to delay auto continuing per character in the most recent story text.
-        protected float autoDelayPerCharacter = 0.01f;
+        protected float autoDelayPerCharacter = 0.03f;
         protected DialogInput dialogInput;
+        protected Coroutine autoCoroutine;
 
         public void SetWritingSpeed(float newValue)
         {
@@ -29,11 +30,20 @@ namespace Fungus
         }
 
         /// <summary>
-        /// Change dialog automatically progressing on/off.
+        /// Change dialog automatically progressing on/off. Continue immediately if we have finished writing.
         /// </summary>
         public void ToggleAutoText()
         {
             autoText = !autoText;
+
+            if (autoText && isWaitingForInput)
+            {
+                dialogInput.SetNextLineFlag();
+            }
+            else if (!autoText && autoCoroutine != null)
+            {
+                StopCoroutine(autoCoroutine);
+            }
         }
 
         /// <summary>
@@ -64,8 +74,7 @@ namespace Fungus
             // Continue after some time if auto is on
             if (autoText)
             {
-                // TODO: Calculate wait time. textAdapter.Text.Length * autoDelayPerCharacter
-                StartCoroutine(AutoContinue(1.0f));
+                autoCoroutine = StartCoroutine(AutoContinue(textAdapter.Text.Length * autoDelayPerCharacter));
             }
 
             while (!inputFlag && !exitFlag)
@@ -75,6 +84,12 @@ namespace Fungus
 
             isWaitingForInput = false;
             inputFlag = false;
+
+            // Prevent automatic continue if the mouse was clicked instead.
+            if (autoCoroutine != null)
+            {
+                StopCoroutine(autoCoroutine);
+            }
 
             if (clear)
             {
@@ -87,8 +102,6 @@ namespace Fungus
 
         protected virtual IEnumerator AutoContinue(float waitTime)
         {
-            // TODO: Stop the coroutine if we click to continue instead.
-            // TODO: Continue automatically if auto is set after the text finishes printing on the screen.
             yield return new WaitForSeconds(waitTime);
             if (autoText)
             {
