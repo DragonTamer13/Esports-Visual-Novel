@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Fungus;
@@ -13,10 +14,19 @@ public class OptionsMenu : MonoBehaviour
     private readonly int[] storyFontSizes = { 45, 50, 55 };
 
     // The keys for settings stored in PlayerPrefs
+    private const string MasterVolumeKey = "MasterVolume";
+    private const string MusicVolumeKey = "MusicVolume";
+    private const string SFXVolumeKey = "SFXVolume";
     private const string MessageSpeedKey = "MessageSpeed";
     private const string AutoDelayKey = "AutoDelay";
     private const string FontSizeKey = "FontSize";
 
+    // Slider for setting the text speed.
+    [SerializeField] private Slider masterVolumeSlider;
+    // Slider for setting the text speed.
+    [SerializeField] private Slider musicVolumeSlider;
+    // Slider for setting the text speed.
+    [SerializeField] private Slider sfxVolumeSlider;
     // Slider for setting the text speed.
     [SerializeField] private Slider messageSpeedSlider;
     // Slider for setting the auto continue speed.
@@ -27,6 +37,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private GameObject previewCharacterPrefab;
     // The SayDialog object to instantiate to show a preview of the current options.
     [SerializeField] private GameObject optionsSayDialogPrefab;
+    // The main game audio mixer.
+    [SerializeField] private AudioMixer audioMixer;
 
     private SayDialog previewSayDialog;
     private CustomWriter previewWriter;
@@ -89,6 +101,27 @@ public class OptionsMenu : MonoBehaviour
         ApplyOptions();
     }
 
+    // Call after changing the master volume option.
+    public void OnMasterVolumeChanged()
+    {
+        audioMixer.SetFloat("MasterVolume", masterVolumeSlider.value);
+        SayPreviewMessage();
+    }
+
+    // Call after changing the music volume option.
+    public void OnMusicVolumeChanged()
+    {
+        audioMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
+        SayPreviewMessage();
+    }
+
+    // Call after changing the SFX volume option.
+    public void OnSFXVolumeChanged()
+    {
+        audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
+        SayPreviewMessage();
+    }
+
     // Call when message speed option is changed.
     public void OnMessageSpeedChanged()
     {
@@ -133,6 +166,9 @@ public class OptionsMenu : MonoBehaviour
         previewGO.GetComponent<Canvas>().sortingOrder = GetComponent<Canvas>().sortingOrder + 1;
 
         // Load user settings and update Options Menu UI to match.
+        masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey, masterVolumeSlider.value);
+        musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value);
+        sfxVolumeSlider.value = PlayerPrefs.GetFloat(SFXVolumeKey, sfxVolumeSlider.value);
         messageSpeedSlider.value = PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value);
         autoDelaySlider.value = PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value);
         fontSizeDropdown.value = PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value);
@@ -152,6 +188,9 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
 
         // Save options to PlayerPrefs
+        PlayerPrefs.SetFloat(MasterVolumeKey, masterVolumeSlider.value);
+        PlayerPrefs.SetFloat(MusicVolumeKey, musicVolumeSlider.value);
+        PlayerPrefs.SetFloat(SFXVolumeKey, sfxVolumeSlider.value);
         PlayerPrefs.SetFloat(MessageSpeedKey, messageSpeedSlider.value);
         PlayerPrefs.SetFloat(AutoDelayKey, autoDelaySlider.value);
         PlayerPrefs.SetInt(FontSizeKey, fontSizeDropdown.value);
@@ -172,6 +211,9 @@ public class OptionsMenu : MonoBehaviour
             return;
         }
 
+        audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat(MasterVolumeKey, masterVolumeSlider.value));
+        audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value));
+        audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat(SFXVolumeKey, sfxVolumeSlider.value));
         writer.SetWritingSpeed(PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value));
         writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];

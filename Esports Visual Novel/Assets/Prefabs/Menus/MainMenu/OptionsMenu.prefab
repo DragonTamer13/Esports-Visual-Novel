@@ -905,7 +905,7 @@ RectTransform:
   - {fileID: 1105865125}
   - {fileID: 796906435}
   m_Father: {fileID: 1542051835}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1332,7 +1332,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1542051835}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2922,10 +2922,10 @@ RectTransform:
   m_Children:
   - {fileID: 1947656989}
   - {fileID: 2026779333}
-  - {fileID: 1731493563}
-  - {fileID: 1920237326}
   - {fileID: 753327858}
   - {fileID: 535671674}
+  - {fileID: 1731493563}
+  - {fileID: 1920237326}
   m_Father: {fileID: 1162313117583981058}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3509,7 +3509,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1542051835}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3840,7 +3840,7 @@ RectTransform:
   - {fileID: 474669403}
   - {fileID: 241523443}
   m_Father: {fileID: 1542051835}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4836,6 +4836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed43cad509add4d4f9b09c024e1d6731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterVolumeSlider: {fileID: 0}
+  musicVolumeSlider: {fileID: 535671675}
+  sfxVolumeSlider: {fileID: 1920237327}
   messageSpeedSlider: {fileID: 226077870}
   autoDelaySlider: {fileID: 0}
   fontSizeDropdown: {fileID: 1571632275}
@@ -4843,6 +4846,7 @@ MonoBehaviour:
     type: 3}
   optionsSayDialogPrefab: {fileID: 2109153206094863843, guid: d8735b51633375445bf86c9676bbb982,
     type: 3}
+  audioMixer: {fileID: 0}
 --- !u!225 &1392642047739150139
 CanvasGroup:
   m_ObjectHideFlags: 0
