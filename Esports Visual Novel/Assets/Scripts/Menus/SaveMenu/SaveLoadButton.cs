@@ -65,10 +65,7 @@ public class SaveLoadButton : MonoBehaviour
         // Update button interactability
         if (!saveManager.SaveDataExists(saveDataKey))
         {
-            if (!isSaving)
-            {
-                button.interactable = false;
-            }
+            button.interactable = isSaving;
             saveNameText.text = "No save";
             return;
         }
