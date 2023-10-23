@@ -388,70 +388,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &288932718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5379299805334510533, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-    type: 3}
-  m_PrefabInstance: {fileID: 5379299806486954324}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &288932719
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288932718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 213
-  indentLevel: 0
-  targetObject: {fileID: 1121917600}
-  methodName: LoadNextScene
-  delay: 0
---- !u!114 &288932720 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 783854228, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-    type: 3}
-  m_PrefabInstance: {fileID: 5379299806486954324}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288932718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &288932721
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288932718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 212
-  indentLevel: 0
-  targetObject: {fileID: 1121917600}
-  methodName: LoadNextScene
-  delay: 0
---- !u!114 &288932725 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 783854227, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-    type: 3}
-  m_PrefabInstance: {fileID: 5379299806486954324}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288932718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &331824689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -927,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0000019073486
+      value: 14.2999735
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -2283,7 +2219,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5379299806486954324}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288932718}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
@@ -2710,21 +2646,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 61675341, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
-      propertyPath: conversationText.stringVal
-      value: 'coach: She frowns and looks away, contemplating the idea. After a few
-        seconds, she gives a frustrated sigh and relents.
-
-
-
-        maeday sad:
-        "Fine, I''ll go. But I''m not gonna perform as well as I would by myself,
-        just saying," Maeve says before walking back to the kitchen pantry.
-
-
-        maeday
-        hide:'
-      objectReference: {fileID: 0}
     - target: {fileID: 61675343, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
       propertyPath: targetView
       value: 
@@ -2733,6 +2654,14 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 1938611745}
+    - target: {fileID: 288932719, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1121917600}
+    - target: {fileID: 288932721, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1121917600}
     - target: {fileID: 783854225, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
       propertyPath: anyVar.variable
       value: 
@@ -2755,88 +2684,11 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 537909463}
-    - target: {fileID: 5379299805334510162, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: conversationText.stringVal
-      value: 'coach: He grumbles a response as he swipes on his phone in mild frustration.
-        Another player enters the living room from the nearby kitchen, holding several
-        different snacks and drinks.
-
-
-
-        noob noob left:
-
-        maeday neutral:
-        "Ignore him," she says, "the only things that can keep Nate''s attention
-        are new overpriced clothes and watching his sub count go up. Well, and this-"
-
-
-
-        coach:
-        She grabs a bag of chips from her stash and lobs it straight at Nate''s head,
-        who throws his arms up in disbelief.
-
-
-
-        noob noob: "Why do people
-        keep throwing stuff at me?!" he shouts.
-
-        noob hide:
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510166, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: conversationText.stringVal
-      value: 'coach: You two shake hands, but your comment confuses her.
-
-
-
-        maeday
-        confused: "These? Oh, no. These are just for me, I don''t practice with the
-        others. I play better alone, so I''m gonna train for a couple hours up in
-        my room," she says.'
-      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510170, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetView
       value: 
       objectReference: {fileID: 1466004160}
-    - target: {fileID: 5379299805334510193, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510193, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.data[4]
-      value: 
-      objectReference: {fileID: 288932721}
-    - target: {fileID: 5379299805334510193, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.data[5]
-      value: 
-      objectReference: {fileID: 288932725}
-    - target: {fileID: 5379299805334510198, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510198, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.data[4]
-      value: 
-      objectReference: {fileID: 288932719}
-    - target: {fileID: 5379299805334510198, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.data[5]
-      value: 
-      objectReference: {fileID: 288932720}
-    - target: {fileID: 5379299805334510198, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: commandList.Array.data[6]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510201, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetView
@@ -2847,57 +2699,6 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 537909463}
-    - target: {fileID: 5379299805334510474, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: conversationText.stringVal
-      value: 'coach: The other players begin entering the training room, the last
-        one being a begruding Maeve with her pile of snacks, which she fans out on
-        an empty desk.
-
-
-
-        boiga right:
-
-        maeday neutral left: "Alright,
-        let''s get to it then, playoffs start tonight," she says while setting up
-        at a dusty station.
-
-
-
-        boiga boiga: "Mae''s right," Boiga says, "let''s
-        put your coaching to the test!"
-
-
-        maeday hide:
-
-        boiga hide:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510487, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: nodeRect.y
-      value: 79.085075
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510499, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: conversationText.stringVal
-      value: 'coach: The female player shakes her head at Nate and turns towards
-        you, shifting her pile of snacks and drinks to extend her hand.
-
-
-
-        maeday
-        happy: "Thanks. I''m Maeve, AKA Maeday the tank, nice meeting you!"'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510529, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: m_RootOrder
@@ -2978,11 +2779,6 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 1466004160}
-    - target: {fileID: 5379299805334510580, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-        type: 3}
-      propertyPath: nodeRect.x
-      value: 872.5733
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
 --- !u!1001 &5695896635405401472

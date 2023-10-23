@@ -143,6 +143,8 @@ GameObject:
   - component: {fileID: 783854226}
   - component: {fileID: 783854227}
   - component: {fileID: 783854228}
+  - component: {fileID: 288932719}
+  - component: {fileID: 288932721}
   m_Layer: 0
   m_Name: Day1Flowchart
   m_TagString: Untagged
@@ -177,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -3680.7517, y: 86.61477}
+  scrollPos: {x: -3552.56, y: 81.56698}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -188,8 +190,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 5379299805334510154}
+  selectedCommands:
+  - {fileID: 5379299805334510196}
   variables: []
   description: 
   stepPause: 0
@@ -399,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 871.2575
+    x: 872.5733
     y: 80.236145
     width: 182.95454
     height: 40
@@ -501,7 +505,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,8 +541,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 264.13513
-    y: 77.36575
+    x: 265.35464
+    y: 75.00988
     width: 159.09091
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -604,7 +608,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,7 +653,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 501.3689
-    y: 171.87622
+    y: 170.73985
     width: 115.90909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -747,7 +751,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1161,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,8 +1320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2945.6272
-    y: 86.92534
+    x: 2943.3542
+    y: 83.51626
     width: 110.227264
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1373,7 +1377,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1247.8711
-    y: 80.085075
+    y: 79.085075
     width: 85.22727
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1450,7 +1454,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,7 +1470,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 3297.1353
-    y: 90.60235
+    y: 89.46599
     width: 140.90909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1529,14 +1533,14 @@ MonoBehaviour:
 
       boiga right:
 
-      maeday maeday left: "Alright, let''s
-      get to it then, playoffs start tonight," she says while setting up at a dusty
-      station.
+      maeday neutral left: "Alright,
+      let''s get to it then, playoffs start tonight," she says while setting up at
+      a dusty station.
 
 
 
-      boiga boiga: "Mae''s right," Boiga says, "let''s put your
-      coaching to the test!"
+      boiga boiga: "Mae''s right," Boiga says, "let''s
+      put your coaching to the test!"
 
 
       maeday hide:
@@ -1576,7 +1580,7 @@ MonoBehaviour:
 
 
       maeday
-      maeday: "Thanks. I''m Maeve, AKA Maeday the tank, nice meeting you!"'
+      happy: "Thanks. I''m Maeve, AKA Maeday the tank, nice meeting you!"'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -1588,7 +1592,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1624,7 +1628,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1660,7 +1664,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1701,7 +1705,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 3118.5693
-    y: 90.04045
+    y: 88.90409
     width: 87.5
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1753,7 +1757,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,9 +1807,9 @@ MonoBehaviour:
 
 
       maeday
-      maeday: "These? Oh, no. These are just for me, I don''t practice with the others.
-      I play better alone, so I''m gonna train for a couple hours up in my room,"
-      she says.'
+      confused: "These? Oh, no. These are just for me, I don''t practice with the
+      others. I play better alone, so I''m gonna train for a couple hours up in my
+      room," she says.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -1817,7 +1821,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1907,7 +1911,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,7 +1964,7 @@ MonoBehaviour:
 
       noob noob left:
 
-      maeday maeday:
+      maeday neutral:
       "Ignore him," she says, "the only things that can keep Nate''s attention are
       new overpriced clothes and watching his sub count go up. Well, and this-"
 
@@ -1989,7 +1993,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2054,7 +2058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2624.7764
+    x: 2623.64
     y: 86.78638
     width: 100
     height: 40
@@ -2100,7 +2104,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,7 +2144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3509.094
+    x: 3510.2305
     y: 90.369896
     width: 147.72726
     height: 40
@@ -2244,7 +2248,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 3733.233
-    y: 86.39126
+    y: 89.80034
     width: 153.40909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2468,7 +2472,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,7 +2565,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,7 +2606,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 4151.4033
-    y: 83.64376
+    y: 82.15122
     width: 193.18181
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2674,7 +2678,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &5379299805334510197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2754,6 +2758,7 @@ MonoBehaviour:
   - {fileID: 783854226}
   - {fileID: 5379299805334510194}
   - {fileID: 5379299805334510204}
+  - {fileID: 288932721}
   - {fileID: 783854227}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510198
@@ -2785,6 +2790,7 @@ MonoBehaviour:
   - {fileID: 783854225}
   - {fileID: 5379299805334510199}
   - {fileID: 5379299805334510195}
+  - {fileID: 288932719}
   - {fileID: 783854228}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510194
@@ -3139,7 +3145,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &61675336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3265,7 +3271,7 @@ MonoBehaviour:
 
 
 
-      maeday maeday:
+      maeday sad:
       "Fine, I''ll go. But I''m not gonna perform as well as I would by myself, just
       saying," Maeve says before walking back to the kitchen pantry.
 
@@ -3283,7 +3289,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &61675346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3298,8 +3304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2186.9927
-    y: 82.35358
+    x: 2185.8562
+    y: 81.21722
     width: 161.36363
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3416,7 +3422,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &61675347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,7 +3601,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &61675355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4170,3 +4176,37 @@ MonoBehaviour:
     stringVal: Day2
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &288932719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 213
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  methodName: LoadNextScene
+  delay: 0
+--- !u!114 &288932721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 212
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  methodName: LoadNextScene
+  delay: 0
