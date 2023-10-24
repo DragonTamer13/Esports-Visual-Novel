@@ -50,33 +50,9 @@ GameObject:
   - component: {fileID: 5379299805334510575}
   - component: {fileID: 5379299805334510574}
   - component: {fileID: 5379299805334510573}
-  - component: {fileID: 5379299805334510570}
-  - component: {fileID: 5379299805334510483}
-  - component: {fileID: 5379299805334510481}
-  - component: {fileID: 5379299805334510487}
-  - component: {fileID: 5379299805334510485}
-  - component: {fileID: 5379299805334510489}
   - component: {fileID: 5379299805334510473}
   - component: {fileID: 5379299805334510475}
   - component: {fileID: 5379299805334510474}
-  - component: {fileID: 5379299805334510499}
-  - component: {fileID: 5379299805334510527}
-  - component: {fileID: 5379299805334510518}
-  - component: {fileID: 5379299805334510507}
-  - component: {fileID: 5379299805334510506}
-  - component: {fileID: 5379299805334510505}
-  - component: {fileID: 5379299805334510466}
-  - component: {fileID: 5379299805334510166}
-  - component: {fileID: 5379299805334510488}
-  - component: {fileID: 5379299805334510163}
-  - component: {fileID: 5379299805334510172}
-  - component: {fileID: 5379299805334510515}
-  - component: {fileID: 5379299805334510162}
-  - component: {fileID: 5379299805334510525}
-  - component: {fileID: 5379299805334510514}
-  - component: {fileID: 5379299805334510174}
-  - component: {fileID: 5379299805334510173}
-  - component: {fileID: 5379299805334510479}
   - component: {fileID: 5379299805334510149}
   - component: {fileID: 5379299805334510148}
   - component: {fileID: 5379299805334510171}
@@ -90,15 +66,6 @@ GameObject:
   - component: {fileID: 5379299805334510147}
   - component: {fileID: 5379299805334510151}
   - component: {fileID: 5379299805334510150}
-  - component: {fileID: 5379299805334510158}
-  - component: {fileID: 5379299805334510159}
-  - component: {fileID: 5379299805334510152}
-  - component: {fileID: 5379299805334510155}
-  - component: {fileID: 5379299805334510154}
-  - component: {fileID: 5379299805334510153}
-  - component: {fileID: 5379299805334510196}
-  - component: {fileID: 5379299805334510197}
-  - component: {fileID: 5379299805334510192}
   - component: {fileID: 5379299805334510193}
   - component: {fileID: 5379299805334510198}
   - component: {fileID: 5379299805334510194}
@@ -111,27 +78,13 @@ GameObject:
   - component: {fileID: 5379299805334510202}
   - component: {fileID: 5379299805334510201}
   - component: {fileID: 5379299805334510200}
-  - component: {fileID: 61675335}
-  - component: {fileID: 61675337}
-  - component: {fileID: 61675336}
-  - component: {fileID: 61675338}
-  - component: {fileID: 61675339}
-  - component: {fileID: 61675340}
-  - component: {fileID: 61675341}
   - component: {fileID: 61675346}
   - component: {fileID: 61675350}
   - component: {fileID: 61675349}
-  - component: {fileID: 61675345}
   - component: {fileID: 61675348}
-  - component: {fileID: 61675347}
   - component: {fileID: 61675342}
   - component: {fileID: 61675343}
   - component: {fileID: 61675344}
-  - component: {fileID: 61675353}
-  - component: {fileID: 61675352}
-  - component: {fileID: 61675351}
-  - component: {fileID: 61675355}
-  - component: {fileID: 61675354}
   - component: {fileID: 4402292917966985730}
   - component: {fileID: 6739979745383366321}
   - component: {fileID: 1033724809}
@@ -145,6 +98,11 @@ GameObject:
   - component: {fileID: 783854228}
   - component: {fileID: 288932719}
   - component: {fileID: 288932721}
+  - component: {fileID: 1248239844}
+  - component: {fileID: 1248239956}
+  - component: {fileID: 1248239845}
+  - component: {fileID: 1177388482156523088}
+  - component: {fileID: 1248239843}
   m_Layer: 0
   m_Name: Day1Flowchart
   m_TagString: Untagged
@@ -179,11 +137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -3552.56, y: 81.56698}
+  scrollPos: {x: 3.8242364, y: 245.12086}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.88000005
+  zoom: 0.52000046
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -191,9 +149,15 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 5379299805334510154}
-  selectedCommands:
-  - {fileID: 5379299805334510196}
+  - {fileID: 5379299805334510473}
+  - {fileID: 1033724809}
+  - {fileID: 5379299805334510202}
+  - {fileID: 5379299805334510198}
+  - {fileID: 5379299805334510193}
+  - {fileID: 5379299805334510156}
+  - {fileID: 5379299805334510168}
+  - {fileID: 5379299805334510149}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -219,16 +183,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 55.03093
+    x: 57.984936
     y: 77
-    width: 131.81818
+    width: 136.53839
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
   blockName: Day 1 - Arrival
   description: 
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 1248239956}
   commandList:
   - {fileID: 5379299805334510541}
   - {fileID: 5379299805334510540}
@@ -251,7 +215,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 57.43634
     y: 255.44383
-    width: 136.36363
+    width: 144.23068
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -319,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  isStartPoint: 1
+  isStartPoint: 0
   keyMode: 0
   customKey: 
   keySeparator: _
@@ -368,7 +332,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "coach coach: Your cab pulls up to the house, your team's logo proudly
+    stringVal: "narrator: Your cab pulls up to the house, your team's logo proudly
       displayed on a flag flowing in the breeze, albeit a little tattered from the
       elements. The front lawn could use a mow, but it otherwise looks quite nice.
       Now to meet the players inside.\nUnloading your suitcases from the trunk, you
@@ -403,9 +367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 872.5733
-    y: 80.236145
-    width: 182.95454
+    x: 870.3731
+    y: 79.099785
+    width: 194.23064
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -417,7 +381,7 @@ MonoBehaviour:
   - {fileID: 5379299805334510538}
   - {fileID: 5379299805334510537}
   - {fileID: 5379299805334510536}
-  - {fileID: 5379299805334510570}
+  - {fileID: 1248239844}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510538
 MonoBehaviour:
@@ -482,8 +446,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: Boiga helps bring in your luggage and gives you a brief tour
-      of the house. It''s not the most furnished home, but it feels comfortable.
+    stringVal: 'narrator: Boiga helps bring in your luggage and gives you a brief
+      tour of the house. It''s not the most furnished home, but it feels comfortable.
       The hastily hidden piles of energy drink cans and takeout boxes certifies that
       this is definitely a home full of gamers.
 
@@ -492,6 +456,156 @@ MonoBehaviour:
       living room adjacent to the front door, where a player, wearing a loud outfit
       comprised of several different name brands, is too distracted scrolling on
       his phone to notice you. You try calling out to him.
+
+
+      coach: Uh, hello?
+
+
+      narrator:
+      The player still doesn''t seem to notice you.
+
+
+
+      boiga boiga: "Ah don''t
+      worry, I got this," Boiga says confidently, before picking up a nearby throw
+      pillow and throwing it at the player, squarely hitting his phone and knocking
+      it onto the carpet. The glitzy player jolts up in frustration.
+
+      boiga
+      hide:
+
+
+      noob noob: "What the heck Boiga?! You could''ve broken it! Do
+      you know how much-," he barks before seeing you and composing himself, "oh,
+      hey."
+
+
+      coach: ...Hi.
+
+
+      narrator: You walk up to the...*luxurious*
+      player, who sizes you up as you approach, smirking all the while.
+
+
+
+      noob
+      noob: "Eh, boring look, but we can deal with that later. ''Sup Coach," he says,
+      giving you a fist bump before reaching down to grab his phone.
+
+
+      coach:
+      And you must be..?
+
+
+      narrator: He looks shocked that you needed to ask.
+
+
+
+
+
+      noob
+      noob: "You kidding? xX_NoobHunter69_Xx! The one and only! 5,000 monthly subscribers
+      to his name!" he says with confidence, before sinking into his chair upon seeing
+      your blank expression, "...Nathaniel. My name''s Nathaniel. I''m one of the
+      DPS''s, whatever..."
+
+
+
+      coach: Nice meeting you.
+
+
+
+      narrator: He
+      grumbles a response as he swipes on his phone in mild frustration. Another
+      player enters the living room from the nearby kitchen, holding several different
+      snacks and drinks.
+
+
+
+
+
+      noob noob left:
+
+      maeday neutral: "Ignore
+      him," she says, "the only things that can keep Nate''s attention are new overpriced
+      clothes and watching his sub count go up. Well, and this-"
+
+
+
+
+
+      coach:
+      She grabs a bag of chips from her stash and lobs it straight at Nate''s head,
+      who throws his arms up in disbelief.
+
+
+
+
+
+      noob noob: "Why do people keep
+      throwing stuff at me?!" he shouts.
+
+      noob hide:
+
+
+
+      coach: Nice shot.
+
+
+
+      narrator:
+      The female player shakes her head at Nate and turns towards you, shifting her
+      pile of snacks and drinks to extend her hand.
+
+
+
+
+
+      maeday happy: "Thanks.
+      I''m Maeve, AKA Maeday the tank, nice meeting you!"
+
+
+
+      coach: Nice meeting
+      you as well, those snacks for group practice?
+
+
+
+      narrator: You two shake
+      hands, but your comment confuses her.
+
+
+
+
+
+      maeday confused: "These? Oh,
+      no. These are just for me, I don''t practice with the others. I play better
+      alone, so I''m gonna train for a couple hours up in my room," she says.
+
+
+
+      Coach:
+      Oh, um...do you think you can try going to practice with the rest of us today?
+      Just this once?
+
+
+
+      narrator: She frowns and looks away, contemplating
+      the idea. After a few seconds, she gives a frustrated sigh and relents.
+
+
+
+
+
+      maeday
+      sad: "Fine, I''ll go. But I''m not gonna perform as well as I would by myself,
+      just saying," Maeve says before walking back to the kitchen pantry.
+
+
+
+      maeday
+      hide:
+
 
 '
   clearPrevious:
@@ -505,7 +619,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 0
+    booleanVal: 1
 --- !u!114 &5379299805334510543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +657,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265.35464
     y: 75.00988
-    width: 159.09091
+    width: 167.30759
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -625,7 +739,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 500.24146
     y: -19.570568
-    width: 115.90909
+    width: 119.230705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -652,9 +766,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 501.3689
-    y: 170.73985
-    width: 115.90909
+    x: 503.49658
+    y: 169.67603
+    width: 119.230705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -738,7 +852,7 @@ MonoBehaviour:
 
 
 
-      coach: You introduce yourself and extend out for a handshake,
+      narrator: You introduce yourself and extend out for a handshake,
       which he does with great strength.'
   clearPrevious:
     booleanRef: {fileID: 0}
@@ -768,7 +882,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 674.2203
     y: -79.82587
-    width: 123.86363
+    width: 126.92301
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -899,7 +1013,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 673.2203
     y: 40.174133
-    width: 123.86363
+    width: 126.92301
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -980,7 +1094,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 670.2203
     y: 124.17413
-    width: 123.86363
+    width: 126.92301
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1061,7 +1175,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 669.2203
     y: 230.1103
-    width: 123.86363
+    width: 126.92301
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1143,7 +1257,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: He lets out a hearty laugh.
+    stringVal: 'narrator: He lets out a hearty laugh.
 
 
 
@@ -1228,7 +1342,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 866.5632
     y: 185.74817
-    width: 178.40909
+    width: 190.38449
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1281,180 +1395,6 @@ MonoBehaviour:
   suppressBlockAutoSelect: 0
   savePointKeys:
   - Day 1 - House Entrance
---- !u!114 &5379299805334510570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 42
-  indentLevel: 0
-  text: Uh, hello?
-  description: 
-  targetBlock: {fileID: 61675335}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 2943.3542
-    y: 83.51626
-    width: 110.227264
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 50
-  blockName: MeetKerfa
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510489}
-  - {fileID: 5379299805334510507}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1678.4731
-    y: 84.54333
-    width: 124.99999
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 53
-  blockName: MeetMaeday
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510499}
-  - {fileID: 5379299805334510488}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1247.8711
-    y: 79.085075
-    width: 85.22727
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 54
-  blockName: Noob1
-  description: lol noob
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510527}
-  - {fileID: 5379299805334510525}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 2439.224
-    y: 83.135315
-    width: 122.727264
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 55
-  blockName: MeetAtropos
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510518}
-  - {fileID: 5379299805334510479}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 63
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: Walking to the short-haired player, he still ignores you until
-      finally relenting and slowly turning back towards you. He''s clearly unimpressed.
-
-
-      kerfa
-      kerfa: ...This is it? Arctic leaves us without warning and *you''re* what we
-      get instead? We''d be better off coachless at this point.
-
-'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
 --- !u!114 &5379299805334510473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,9 +1409,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3297.1353
-    y: 89.46599
-    width: 140.90909
+    x: 1418.5648
+    y: 82.323135
+    width: 148.07684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1525,9 +1465,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: The other players begin entering the training room, the last
-      one being a begruding Maeve with her pile of snacks, which she fans out on
-      an empty desk.
+    stringVal: 'narrator: The other players begin entering the training room, the
+      last one being a begruding Maeve with her pile of snacks, which she fans out
+      on an empty desk.
 
 
 
@@ -1558,578 +1498,6 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
---- !u!114 &5379299805334510499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 87
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: The female player shakes her head at Nate and turns towards
-      you, shifting her pile of snacks and drinks to extend her hand.
-
-
-
-      maeday
-      happy: "Thanks. I''m Maeve, AKA Maeday the tank, nice meeting you!"'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 94
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: You walk up to the...*luxurious* player, who sizes you up
-      as you approach, smirking all the while.
-
-
-
-      noob noob: "Eh, boring look,
-      but we can deal with that later. ''Sup Coach," he says, giving you a fist bump
-      before reaching down to grab his phone.'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 101
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: You walk over to the quiet player, who slightly recoils from
-      you before relaxing.
-
-
-
-      atropos atropos: "Umm...hi," they chirp out quietly.
-
-'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 107
-  indentLevel: 0
-  text: ...Nice meeting you too, and you are?
-  description: 
-  targetBlock: {fileID: 5379299805334510506}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 3118.5693
-    y: 88.90409
-    width: 87.5
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 108
-  blockName: Kerfa2
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510505}
-  - {fileID: 61675354}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 109
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'kerfa kerfa: "Kerfa, DPS, call me Ji-hyun if you want. Or don''t,
-      not like you''ll be here more than a few days," he says bluntly before returning
-      to setting up the flat screen. Boiga nudges you to walk away, which you do.
-
-      kerfa
-      hide:
-
-
-
-      boiga boiga: "Sorry about him, he''s *really* wants to win,
-      and our old coach, Arctic, leaving this close to playoffs really soured his
-      mood."'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1870.5381
-    y: 83.921074
-    width: 102.27272
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 115
-  blockName: Maeday2
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510166}
-  - {fileID: 61675339}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 116
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: You two shake hands, but your comment confuses her.
-
-
-
-      maeday
-      confused: "These? Oh, no. These are just for me, I don''t practice with the
-      others. I play better alone, so I''m gonna train for a couple hours up in my
-      room," she says.'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 122
-  indentLevel: 0
-  text: Nice meeting you as well, those snacks for group practice?
-  description: 
-  targetBlock: {fileID: 5379299805334510466}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1381.9031
-    y: 81.911865
-    width: 86.36363
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 123
-  blockName: Noob2
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510172}
-  - {fileID: 5379299805334510514}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 124
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: He looks shocked that you needed to ask.
-
-
-
-      noob noob:
-      "You kidding? xX_NoobHunter69_Xx! The one and only! 5,000 monthly subscribers
-      to his name!" he says with confidence, before sinking into his chair upon seeing
-      your blank expression, "...Nathaniel. My name''s Nathaniel. I''m one of the
-      DPS''s, whatever..."'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1537.0935
-    y: 82.973305
-    width: 87.5
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 143
-  blockName: Noob3
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510162}
-  - {fileID: 61675338}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 126
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: He grumbles a response as he swipes on his phone in mild frustration.
-      Another player enters the living room from the nearby kitchen, holding several
-      different snacks and drinks.
-
-
-
-      noob noob left:
-
-      maeday neutral:
-      "Ignore him," she says, "the only things that can keep Nate''s attention are
-      new overpriced clothes and watching his sub count go up. Well, and this-"
-
-
-
-      coach:
-      She grabs a bag of chips from her stash and lobs it straight at Nate''s head,
-      who throws his arms up in disbelief.
-
-
-
-      noob noob: "Why do people keep
-      throwing stuff at me?!" he shouts.
-
-      noob hide:
-
-'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 132
-  indentLevel: 0
-  text: And you must be..?
-  description: 
-  targetBlock: {fileID: 5379299805334510163}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 133
-  indentLevel: 0
-  text: Nice meeting you.
-  description: 
-  targetBlock: {fileID: 5379299805334510515}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 2623.64
-    y: 86.78638
-    width: 100
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 134
-  blockName: Atropos2
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510173}
-  - {fileID: 61675353}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 135
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'atropos atropos: "Atropos, a support like Boiga...you can also call
-      me Avery, if you want," they mumble, maintaining that blank look, as if they''re
-      unsure of what to make of you yet.
-
-'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 141
-  indentLevel: 0
-  text: Hi there, who might you be?
-  description: 
-  targetBlock: {fileID: 5379299805334510174}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
 --- !u!114 &5379299805334510149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2144,9 +1512,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3510.2305
-    y: 90.369896
-    width: 147.72726
+    x: 1645.9462
+    y: 86.79846
+    width: 153.84607
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2174,7 +1542,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: [Implement traning segment here]'
+    stringVal: 'narrator: [Implement traning segment here]'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2247,9 +1615,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3733.233
-    y: 89.80034
-    width: 153.40909
+    x: 1871.4159
+    y: 84.85904
+    width: 161.53836
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2263,7 +1631,8 @@ MonoBehaviour:
   - {fileID: 5379299805334510144}
   - {fileID: 5379299805334510151}
   - {fileID: 5379299805334510150}
-  - {fileID: 5379299805334510158}
+  - {fileID: 1177388482156523088}
+  - {fileID: 1248239843}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510157
 MonoBehaviour:
@@ -2349,7 +1718,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: With a few hours of practice under your belt, you and the
+    stringVal: 'narrator: With a few hours of practice under your belt, you and the
       team head out to the arena. Filing in from the staff entrance, you catch a
       few glimpses of the rapidly growing croud outside...next to none holding any
       signs cheering your team on.'
@@ -2379,9 +1748,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 4168.855
-    y: 189.52855
-    width: 165.90909
+    x: 2164.8462
+    y: 231.16249
+    width: 176.92297
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2451,7 +1820,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "coach: In the backstage area, you see all your future opponents,
+    stringVal: "narrator: In the backstage area, you see all your future opponents,
       decked out in new jerseys covered in sponsors. \nOne team, a group of serious
       looking, well-manicured players pose against a wall with a large trophy, taking
       photos for media. You presume they must be last year's champions, and your
@@ -2460,100 +1829,21 @@ MonoBehaviour:
       handshake.\r\n\r\nmeaty meaty: \"Welcome! You must be [TEAM NAME]'s new coach!
       Good on ya for taking on the responsibility on short notice!\" he says with
       a jolly chuckle, \"I'm Coach Meaty for the Orlando Everglades! I'm certain
-      you'll do great!\""
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 157
-  indentLevel: 0
-  text: Nice to meet you, and thanks for the encouragement.
-  description: 
-  targetBlock: {fileID: 5379299805334510159}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 3944.4036
-    y: 86.81546
-    width: 143.18182
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 158
-  blockName: TalkingToMeaty
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510152}
-  - {fileID: 5379299805334510155}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 159
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'meaty meaty: "Of course! My team and I love playing against all you
-      guys, ain''t that right?" he says behind him toward a group of players in similarly
-      colored jerseys near the refreshments table, who turn to wave at you eagerly.
-
-      "''Course,
-      free snacks are always a nice bonus too, ha!"
-
-
-
-      coach: The backstage
+      you'll do great!\"\n\ncoach: Nice to meet you, and thanks for the encouragement.\n\nmeaty
+      meaty: \"Of course! My team and I love playing against all you guys, ain't
+      that right?\" he says behind him toward a group of players in similarly colored
+      jerseys near the refreshments table, who turn to wave at you eagerly.\n\"'Course,
+      free snacks are always a nice bonus too, ha!\"\n\n\nnarrator: The backstage
       intercom blares on to announce the next two teams to come onto the stage: the
-      Orlando Everglades...and your team.'
+      Orlando Everglades...and your team.\n\ncoach: Oh wow, already?\n\nmeaty meaty:
+      \"Yup! Trial by fire and all that, welp, best of luck to your team!\" Coach
+      Meaty says before giving a strong pat on the shoulder and turning to round
+      up his team. \nmeaty hide:\nnarrator: You gather your team to send them off
+      onto the stage as well.\r\n\r\nThe crowd cheers as the Everglades take the
+      stage, their players doing a synchronized hand gesture that kicks off a cheer
+      around the arena. \nWhen your team is called, the reaction is...let's say,
+      moderate. With shaky confidence, your team enters the stage and begins setting
+      up.\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2564,169 +1854,6 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 0
   fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 160
-  indentLevel: 0
-  text: Oh wow, already?
-  description: 
-  targetBlock: {fileID: 5379299805334510154}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 4151.4033
-    y: 82.15122
-    width: 193.18181
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 161
-  blockName: Day 1 - Before the Match
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 5379299805334510153}
-  - {fileID: 5379299805334510196}
-  - {fileID: 5379299805334510192}
-  - {fileID: 5379299805334510197}
-  suppressAllAutoSelections: 0
---- !u!114 &5379299805334510153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b115619cb83b4d6ab8047d0e9407403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 162
-  indentLevel: 0
-  isStartPoint: 0
-  keyMode: 0
-  customKey: 
-  keySeparator: _
-  descriptionMode: 0
-  customDescription: 
-  fireEvent: 0
-  resumeOnLoad: 1
---- !u!114 &5379299805334510196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 163
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: "meaty meaty: \"Yup! Trial by fire and all that, welp, best of luck
-      to your team!\" Coach Meaty says before giving a strong pat on the shoulder
-      and turning to round up his team. \nmeaty hide:\ncoach: You gather your team
-      to send them off onto the stage as well.\r\n\r\nThe crowd cheers as the Everglades
-      take the stage, their players doing a synchronized hand gesture that kicks
-      off a cheer around the arena. \nWhen your team is called, the reaction is...let's
-      say, moderate. With shaky confidence, your team enters the stage and begins
-      setting up."
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 164
-  indentLevel: 0
-  text: '[Lose the match]'
-  description: 
-  targetBlock: {fileID: 5379299805334510198}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &5379299805334510192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 165
-  indentLevel: 0
-  text: '[Win the match]'
-  description: 
-  targetBlock: {fileID: 5379299805334510193}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
 --- !u!114 &5379299805334510193
@@ -2743,9 +1870,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 4491.7617
-    y: -9.421665
-    width: 134.09091
+    x: 2161.7236
+    y: -2.0341897
+    width: 140.38454
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2775,9 +1902,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 4502.673
-    y: 145.52338
-    width: 124.99999
+    x: 2172.6353
+    y: 152.91081
+    width: 130.76917
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2809,7 +1936,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: Against the crowd''s expectations, your team pulls through
+    stringVal: 'narrator: Against the crowd''s expectations, your team pulls through
       and defeats the Everglades, The crowd applauds [TEAM NAME]''s performance,
       who seem dumbfounded themselves.
 
@@ -2821,15 +1948,15 @@ MonoBehaviour:
 
 
 
-      coach:
+      narrator:
       Meaty claps for his players as they exit the stage, redirecting them towards
       the snack table for post-match munchies, which seems to instantly uplift their
       mood.
 
       meaty hide:
 
-      coach: Your team exits the stage, still surprised
-      by their victory.
+      narrator: Your team exits the stage, still
+      surprised by their victory.
 
       END DAY 1'
   clearPrevious:
@@ -2860,7 +1987,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: The crowd cheers loudly for the Everglades, who seem relieved
+    stringVal: 'narrator: The crowd cheers loudly for the Everglades, who seem relieved
       by their first win of the playoffs. Your own team, however, don''t look nearly
       as joyful.
 
@@ -2873,15 +2000,15 @@ MonoBehaviour:
 
 
 
-      coach: Meaty walks off to congratualte his overjoyed
-      players, while your team leaves the stage in a stupor.
+      narrator: Meaty walks off to congratualte his
+      overjoyed players, while your team leaves the stage in a stupor.
 
-      meaty hide:
+      meaty
+      hide:
 
 
 
-      END
-      DAY 1'
+      END DAY 1'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3017,9 +2144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3719.62
-    y: 202.60286
-    width: 187.49998
+    x: 1855.3346
+    y: 199.03143
+    width: 196.15372
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3071,225 +2198,6 @@ MonoBehaviour:
   suppressBlockAutoSelect: 0
   savePointKeys:
   - Day 1 - Backstage
---- !u!114 &61675335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1097.2979
-    y: 78.282074
-    width: 109.090904
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 178
-  blockName: MeetNoob
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 61675337}
-  - {fileID: 61675336}
-  suppressAllAutoSelections: 0
---- !u!114 &61675337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 179
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: The player still doesn''t seem to notice you.
-
-
-
-      boiga
-      boiga: "Ah don''t worry, I got this," Boiga says confidently, before picking
-      up a nearby throw pillow and throwing it at the player, squarely hitting his
-      phone and knocking it onto the carpet. The glitzy player jolts up in frustration.
-
-      boiga
-      hide:
-
-
-      noob noob: "What the heck Boiga?! You could''ve broken it! Do
-      you know how much-," he barks before seeing you and composing himself, "oh,
-      hey."
-
-
-'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 180
-  indentLevel: 0
-  text: ...Hi.
-  description: 
-  targetBlock: {fileID: 5379299805334510487}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 181
-  indentLevel: 0
-  text: Nice shot.
-  description: 
-  targetBlock: {fileID: 5379299805334510481}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 182
-  indentLevel: 0
-  text: Oh, um...do you think you can try going to practice with the rest of us today?
-    Just this once?
-  description: 
-  targetBlock: {fileID: 61675340}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 2023.0554
-    y: 81.882706
-    width: 103.40909
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 183
-  blockName: Maeday3
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 61675341}
-  - {fileID: 61675345}
-  suppressAllAutoSelections: 0
---- !u!114 &61675341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 184
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: She frowns and looks away, contemplating the idea. After a
-      few seconds, she gives a frustrated sigh and relents.
-
-
-
-      maeday sad:
-      "Fine, I''ll go. But I''m not gonna perform as well as I would by myself, just
-      saying," Maeve says before walking back to the kitchen pantry.
-
-
-      maeday
-      hide:'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
 --- !u!114 &61675346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,9 +2212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2185.8562
-    y: 81.21722
-    width: 161.36363
+    x: 1138.1215
+    y: 83.54279
+    width: 167.30759
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3318,7 +2226,7 @@ MonoBehaviour:
   - {fileID: 61675350}
   - {fileID: 61675349}
   - {fileID: 61675348}
-  - {fileID: 61675347}
+  - {fileID: 1248239845}
   suppressAllAutoSelections: 0
 --- !u!114 &61675350
 MonoBehaviour:
@@ -3367,27 +2275,6 @@ MonoBehaviour:
   orthoSizeTweenType: 4
   posTweenType: 4
   rotTweenType: 4
---- !u!114 &61675345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 189
-  indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 61675346}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
 --- !u!114 &61675348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3410,7 +2297,31 @@ MonoBehaviour:
       is by the large flatscreen on the opposite wall from you, not seeming to notice
       your entrance.\r\n\r\nIn a chair far from the TV is a player wearing a sweatshirt
       far too big for them, who makes eye contact with you for a moment before quickly
-      looking away, saying nothing.\r\n"
+      looking away, saying nothing.\r\n\nnarrator: After a few more tour stops, you
+      and Boiga eventually enter the training room, a moderately sized room lined
+      with giant PC towers, sleek monitors, and gaudy gaming chairs. \r\nA short-haired
+      player wearing a team jersey is by the large flatscreen on the opposite wall
+      from you, not seeming to notice your entrance.\r\n\r\nIn a chair far from the
+      TV is a player wearing a sweatshirt far too big for them, who makes eye contact
+      with you for a moment before quickly looking away, saying nothing.\r\n\r\nnarrator:
+      You walk over to the quiet player, who slightly recoils from you before relaxing.\r\n\r\n\r\natropos
+      atropos: \"Umm...hi,\" they chirp out quietly.\r\n\r\nCoach: Hi there, who
+      might you be?\r\n\r\natropos atropos: \"Atropos, a support like Boiga...you
+      can also call me Avery, if you want,\" they mumble, maintaining that blank
+      look, as if they're unsure of what to make of you yet.\r\n\r\nCoach: Nice meeting
+      you Avery, I'm the team's new coach.\r\n\r\natropos atropos: They give a slight
+      nod before turning their attention towards the flat screen. Guess this conversation
+      is over.\r\natropos hide:\r\n\r\nnarrator: Walking to the short-haired player,
+      he still ignores you until finally relenting and slowly turning back towards
+      you. He's clearly unimpressed.\r\n\r\nkerfa kerfa: ...This is it? Arctic leaves
+      us without warning and *you're* what we get instead? We'd be better off coachless
+      at this point.\r\n\r\nCoach: ...Nice meeting you too, and you are?\r\n\r\nkerfa
+      kerfa: \"Kerfa, DPS, call me Ji-hyun if you want. Or don't, not like you'll
+      be here more than a few days,\" he says bluntly before returning to setting
+      up the flat screen. Boiga nudges you to walk away, which you do.\r\nkerfa hide:\r\n\r\n\r\nboiga
+      boiga: \"Sorry about him, he's *really* wants to win, and our old coach, Arctic,
+      leaving this close to playoffs really soured his mood.\"\r\n\r\nCoach: That's
+      alright, I understand.\r\n\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3421,31 +2332,6 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 0
   fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 191
-  indentLevel: 0
-  text: Walk towards this player
-  description: 
-  targetBlock: {fileID: 5379299805334510485}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
 --- !u!114 &61675342
@@ -3462,9 +2348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2181.4758
-    y: 217.24623
-    width: 170.45453
+    x: 1127.5789
+    y: 189.19206
+    width: 178.84604
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3473,7 +2359,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 61675344}
   commandList:
-  - {fileID: 0}
   - {fileID: 61675343}
   suppressAllAutoSelections: 0
 --- !u!114 &61675343
@@ -3517,141 +2402,6 @@ MonoBehaviour:
   suppressBlockAutoSelect: 0
   savePointKeys:
   - Day 1 - Team Room
---- !u!114 &61675353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 194
-  indentLevel: 0
-  text: Nice meeting you Avery, I'm the team's new coach.
-  description: 
-  targetBlock: {fileID: 61675352}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 2782.075
-    y: 88.56942
-    width: 101.13636
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 195
-  blockName: Atropos3
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 61675351}
-  - {fileID: 61675355}
-  suppressAllAutoSelections: 0
---- !u!114 &61675351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 196
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'atropos atropos: They give a slight nod before turning their attention
-      towards the flat screen. Guess this conversation is over.
-
-      atropos hide:'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 197
-  indentLevel: 0
-  text: Go to the player by the TV
-  description: 
-  targetBlock: {fileID: 5379299805334510483}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &61675354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 198
-  indentLevel: 0
-  text: That's alright, I understand.
-  description: 
-  targetBlock: {fileID: 5379299805334510473}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
 --- !u!114 &4402292917966985730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3726,9 +2476,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3285.5486
-    y: 309.43842
-    width: 153.40909
+    x: 1421.2645
+    y: 305.867
+    width: 163.46144
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4210,3 +2960,110 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   methodName: LoadNextScene
   delay: 0
+--- !u!114 &1248239844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 214
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 61675346}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1248239956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 5379299805334510535}
+  suppressBlockAutoSelect: 0
+  targetButton: {fileID: 0}
+--- !u!114 &1248239845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 215
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 5379299805334510473}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1177388482156523088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 216
+  indentLevel: 0
+  text: '[Win the match]'
+  description: 
+  targetBlock: {fileID: 5379299805334510193}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1248239843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 217
+  indentLevel: 0
+  text: '[Lose the match]'
+  description: 
+  targetBlock: {fileID: 5379299805334510198}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
