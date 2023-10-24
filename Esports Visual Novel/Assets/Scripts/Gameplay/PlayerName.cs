@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 /// <summary>
 /// Sets the player name for the Character this script is attached to.
@@ -18,12 +19,14 @@ public class PlayerName : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<PlayerCharacter>().SetNameText(GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>().GetStringVariable("PlayerName"));
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Manually update NameText if it gets changed after Start().
+    /// </summary>
+    public void SetPlayerName()
     {
-        
+        GetComponent<PlayerCharacter>().SetNameText(GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>().GetStringVariable("PlayerName"));
     }
 }
