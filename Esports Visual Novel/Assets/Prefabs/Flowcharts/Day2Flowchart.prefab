@@ -97,13 +97,8 @@ GameObject:
   - component: {fileID: 6291432230539876188}
   - component: {fileID: 6291432230539876187}
   - component: {fileID: 6291432230539876177}
-  - component: {fileID: 6291432230539876194}
-  - component: {fileID: 6291432230539876193}
-  - component: {fileID: 6291432230539876192}
-  - component: {fileID: 6291432230539876201}
   - component: {fileID: 6291432230539876200}
   - component: {fileID: 6291432230539876199}
-  - component: {fileID: 6291432230539876198}
   - component: {fileID: 6291432230539876197}
   - component: {fileID: 6291432230539876196}
   - component: {fileID: 6291432230539876195}
@@ -116,9 +111,6 @@ GameObject:
   - component: {fileID: 6291432230539876097}
   - component: {fileID: 6291432230539876096}
   - component: {fileID: 6291432230539876223}
-  - component: {fileID: 6291432230539876222}
-  - component: {fileID: 6291432230539876221}
-  - component: {fileID: 6291432230539876219}
   - component: {fileID: 6291432230539876218}
   - component: {fileID: 6291432230539876217}
   - component: {fileID: 6291432230539876216}
@@ -134,7 +126,6 @@ GameObject:
   - component: {fileID: 6291432230539876206}
   - component: {fileID: 6291432230539876205}
   - component: {fileID: 6291432230539876204}
-  - component: {fileID: 6291432230539876203}
   - component: {fileID: 6291432230539876103}
   - component: {fileID: 6291432230539876104}
   - component: {fileID: 6291432230539876106}
@@ -149,6 +140,9 @@ GameObject:
   - component: {fileID: 6291432230618945732}
   - component: {fileID: 6291432230618945738}
   - component: {fileID: 6291432230618945731}
+  - component: {fileID: 1019369508}
+  - component: {fileID: 1019369509}
+  - component: {fileID: 1019369507}
   m_Layer: 0
   m_Name: Day2Flowchart
   m_TagString: Untagged
@@ -183,11 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 486.83755, y: 137.105}
+  scrollPos: {x: 268.09918, y: -78.84704}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.76000017
+  zoom: 0.6700003
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -195,9 +189,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 6291432230539876225}
+  - {fileID: 6291432230539876191}
   selectedCommands:
-  - {fileID: 6291432230539876349}
+  - {fileID: 6291432230539876204}
   variables: []
   description: 
   stepPause: 0
@@ -224,8 +218,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 68
-    y: 70
-    width: 136.84209
+    y: 68.630135
+    width: 144.02982
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -517,7 +511,7 @@ MonoBehaviour:
   indentLevel: 1
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: The team is in high spirits after yesterday''s match, their
+    stringVal: 'narrator: The team is in high spirits after yesterday''s match, their
       first win of the playoffs being a huge bolster to their shaky confidence. Nonetheless,
       it''s up to you to help maintain that performance if you want any chance of
       winning the championship.'
@@ -585,7 +579,7 @@ MonoBehaviour:
   indentLevel: 1
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: Yesterday''s loss was a big blow to the team''s confidence,
+    stringVal: 'narrator: Yesterday''s loss was a big blow to the team''s confidence,
       but you''re not out just yet. Get the team''s spirits up as best you can, and
       don''t underestimate tonight''s team.
 
@@ -668,7 +662,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: DAY 2'
+    stringVal: 'narrator: DAY 2'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -697,7 +691,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 311.7478
     y: 67.00499
-    width: 173.68417
+    width: 182.83575
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -728,7 +722,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.953293
     y: 183.49988
-    width: 148.68419
+    width: 158.95517
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -796,7 +790,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 317.31464
     y: 181.43802
-    width: 182.89471
+    width: 194.77605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -961,7 +955,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 700.4066
     y: 350.28384
-    width: 110.526306
+    width: 115.67161
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -993,7 +987,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 713.8085
     y: -89.69619
-    width: 90.78946
+    width: 93.28356
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1129,7 +1123,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1260.4238
     y: -595.9412
-    width: 192.10522
+    width: 205.2238
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1160,7 +1154,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1013.38776
     y: -255.88026
-    width: 177.63156
+    width: 188.80591
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1188,7 +1182,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1012.5918
     y: -176.75868
-    width: 177.63156
+    width: 188.80591
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1216,7 +1210,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1013.8963
     y: -86.911255
-    width: 190.78944
+    width: 202.23874
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1244,7 +1238,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1018.8826
     y: 2.7011776
-    width: 178.94734
+    width: 190.29845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1372,7 +1366,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1017.6305
     y: 83.4983
-    width: 128.94736
+    width: 136.56712
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1566,7 +1560,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1532.0114
     y: -733.9032
-    width: 148.68419
+    width: 157.46265
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1595,7 +1589,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1791.7645
     y: -592.9686
-    width: 127.63156
+    width: 135.07458
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1627,7 +1621,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1800.1945
     y: -447.90863
-    width: 124.999985
+    width: 130.59698
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1737,7 +1731,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1796.3148
     y: -736.6935
-    width: 156.57892
+    width: 164.92532
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1765,7 +1759,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1799.1257
     y: -664.3887
-    width: 156.57892
+    width: 164.92532
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2298,9 +2292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1528.549
-    y: -451.31714
-    width: 117.10525
+    x: 1531.674
+    y: -452.87964
+    width: 123.13429
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2359,7 +2353,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1800.831
     y: -522.1811
-    width: 124.999985
+    width: 130.59698
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2796,7 +2790,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 919.78015
     y: 603.96643
-    width: 165.78946
+    width: 176.86562
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2863,9 +2857,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 929.16
-    y: 285.2334
-    width: 217.10522
+    x: 937.16
+    y: 280.2334
+    width: 230.59692
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2877,7 +2871,8 @@ MonoBehaviour:
   - {fileID: 6291432230539876183}
   - {fileID: 6291432230539876181}
   - {fileID: 6291432230539876177}
-  - {fileID: 6291432230539876194}
+  - {fileID: 1019369509}
+  - {fileID: 1019369508}
   suppressAllAutoSelections: 0
 --- !u!114 &6291432230539876191
 MonoBehaviour:
@@ -2893,9 +2888,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 929.0774
-    y: 471.78903
-    width: 176.31577
+    x: 927.58484
+    y: 470.78903
+    width: 182.83575
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2907,7 +2902,7 @@ MonoBehaviour:
   - {fileID: 6291432230539876190}
   - {fileID: 6291432230539876189}
   - {fileID: 6291432230539876204}
-  - {fileID: 6291432230539876203}
+  - {fileID: 1019369507}
   suppressAllAutoSelections: 0
 --- !u!114 &6291432230539876183
 MonoBehaviour:
@@ -3061,7 +3056,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "coach: As your team enters the arena, you are immediately confronted
+    stringVal: "narrator: As your team enters the arena, you are immediately confronted
       by tonight's opponents: the bizarrely-named Lord Dynamite Rising Z. \nTheir
       players seem beyond cocky, as if they can't believe //you're// who they have
       to go against. \nThe coach, equally smarmy, walks up to you and gives an overbearing
@@ -3069,103 +3064,13 @@ MonoBehaviour:
       to be fake diamonds.\r\n\r\ntanzanite blank: \"Coach Tanzanite, at your service,\"
       he says, his breath reeking of tobacco, \"kind of you to step up at the last
       second for ol' Arctic, not like it'll make much of a difference though.\" His
-      players laugh at the remark."
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &6291432230539876194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 121
-  indentLevel: 0
-  text: '"...Thanks for the vote of confidence."'
-  description: 
-  targetBlock: {fileID: 6291432230539876193}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &6291432230539876193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1259.4331
-    y: 283.11978
-    width: 82.89473
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 122
-  blockName: vs2-2
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 6291432230539876192}
-  - {fileID: 6291432230539876198}
-  - {fileID: 6291432230539876201}
-  suppressAllAutoSelections: 0
---- !u!114 &6291432230539876192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 123
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'tanzanite blank: "''Course! Alright, time for photo ops before our
-      win, toodles!" Tanzanite says snidely before walking away with his team, the
-      players snickering to each other and glancing back at your team as they walk
-      off.
-
-      tanzanite hide:
-
-
-
-      maeday angry: "//God//, can they be more
-      insufferable?" Maeday mutters, "Whatever, they''re gonna do that stupid off-meta
-      comp anyways, we''ve got this." Boiga nods in agreement.
-
-      maeday hide:'
+      players laugh at the remark.\n\ncoach: \"...Thanks for the vote of confidence.\"\n\ntanzanite
+      blank: \"'Course! Alright, time for photo ops before our win, toodles!\" Tanzanite
+      says snidely before walking away with his team, the players snickering to each
+      other and glancing back at your team as they walk off.\ntanzanite hide:\n\n\nmaeday
+      angry: \"//God//, can they be more insufferable?\" Maeday mutters, \"Whatever,
+      they're gonna do that stupid off-meta comp anyways, we've got this.\" Boiga
+      nods in agreement.\nmaeday hide:"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3178,27 +3083,6 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
---- !u!114 &6291432230539876201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 124
-  indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 6291432230539876200}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
 --- !u!114 &6291432230539876200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,9 +3097,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1446.8137
-    y: 282.54996
-    width: 105.263145
+    x: 1230.917
+    y: 283.02756
+    width: 108.20892
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3244,7 +3128,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: [Match time]'
+    stringVal: 'narrator: [Match time]'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3257,31 +3141,6 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 0
---- !u!114 &6291432230539876198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 127
-  indentLevel: 0
-  duration: 1
-  fadeOut: 1
-  targetView: {fileID: 0}
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  targetCamera: {fileID: 0}
-  fadeTweenType: 4
-  orthoSizeTweenType: 4
-  posTweenType: 4
-  rotTweenType: 4
 --- !u!114 &6291432230539876197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3346,9 +3205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1644.8159
-    y: 238.96513
-    width: 236.84206
+    x: 1423.9192
+    y: 243.44275
+    width: 240
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3604,9 +3463,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1653.1444
-    y: 325.37897
-    width: 230.26312
+    x: 1432.2477
+    y: 329.85657
+    width: 240
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3848,105 +3707,6 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
---- !u!114 &6291432230539876222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1237.1523
-    y: 465.66638
-    width: 82.89473
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 174
-  blockName: vs8-2
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 6291432230539876221}
-  - {fileID: 6291432230539876219}
-  suppressAllAutoSelections: 0
---- !u!114 &6291432230539876221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 141
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'coach: He yawns as he gives a weak handshake.
-
-
-
-      henry blank:
-      "Sorry, don''t mean to be rude," Henry mumbles, "we stayed up all night practicing,
-      should be worth it...probably."
-
-
-
-      henry hide:
-
-      coach: He stumbles
-      over to his team to round them up to go onstage.
-
-
-
-      kerfa kerfa: "That''s
-      pathetic," Kerfa says bluntly, "if we lose, I''m looking for a new team." He
-      doesn''t seem to be kidding in the slightest.
-
-      kerfa hide:'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
---- !u!114 &6291432230539876219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 143
-  indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 6291432230539876218}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
 --- !u!114 &6291432230539876218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3961,9 +3721,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1454.2295
-    y: 472.1941
-    width: 105.263145
+    x: 1233.3328
+    y: 475.6717
+    width: 108.20892
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3992,7 +3752,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach: [Match time]'
+    stringVal: 'narrator: [Match time]'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -4069,9 +3829,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1648.364
-    y: 429.8288
-    width: 231.5789
+    x: 1427.4673
+    y: 434.3064
+    width: 240
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4327,9 +4087,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1652.1259
-    y: 519.58966
-    width: 224.99995
+    x: 1431.2291
+    y: 524.06726
+    width: 235.07454
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4587,11 +4347,17 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "coach: Entering the arena, you see your opponents, Kinesis Esports,
+    stringVal: "narrator: Entering the arena, you see your opponents, Kinesis Esports,
       laying haggardly on one of the couches backstage. It's unclear how much sleep
       they got last night, considering half of them look asleep. \nTheir coach notices
       you and, begrudgingly, gets up to greet you.\r\n\r\nhenry blank: \"Hey,\" he
-      says in a stupor, \"uh...oh yeah, I'm these guys' coach, Henry.\""
+      says in a stupor, \"uh...oh yeah, I'm these guys' coach, Henry.\"\n\ncoach:
+      \"Nice to meet you.\"\n\nnarrator: He yawns as he gives a weak handshake.\n\n\nhenry
+      blank: \"Sorry, don't mean to be rude,\" Henry mumbles, \"we stayed up all
+      night practicing, should be worth it...probably.\"\n\n\nhenry hide:\nnarrator:
+      He stumbles over to his team to round them up to go onstage.\n\n\nkerfa kerfa:
+      \"That's pathetic,\" Kerfa says bluntly, \"if we lose, I'm looking for a new
+      team.\" He doesn't seem to be kidding in the slightest.\nkerfa hide:"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -4603,32 +4369,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &6291432230539876203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6291432230539876345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 159
-  indentLevel: 0
-  text: '"Nice to meet you."'
-  description: 
-  targetBlock: {fileID: 6291432230539876222}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
 --- !u!114 &6291432230539876103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4685,7 +4426,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1030.5115
     y: -587.5032
-    width: 119.736824
+    width: 126.11937
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4962,6 +4703,73 @@ MonoBehaviour:
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 6291432230539876255}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1019369508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 193
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 6291432230539876200}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1019369509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 194
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &1019369507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 195
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 6291432230539876218}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6387954688776927454}
   - component: {fileID: 6387954688776927453}
   - component: {fileID: 829209645245301372}
+  - component: {fileID: 568945787}
   m_Layer: 0
   m_Name: DatastoreFlowchart
   m_TagString: Datastore
@@ -62,6 +63,7 @@ MonoBehaviour:
   variables:
   - {fileID: 6387954688776927453}
   - {fileID: 829209645245301372}
+  - {fileID: 568945787}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -102,3 +104,18 @@ MonoBehaviour:
   scope: 1
   key: Day2Win
   value: 0
+--- !u!114 &568945787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387954688776927452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: PlayerName
+  value: Coach

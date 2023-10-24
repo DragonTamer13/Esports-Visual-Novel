@@ -9,11 +9,6 @@ public class PlayerNameMenu : MonoBehaviour
     [SerializeField] private Flowchart datastoreFlowchart;
     [SerializeField] private Text nameInputField;
 
-    private void Start()
-    {
-        gameObject.SetActive(true);
-    }
-
     /// <summary>
     /// Set value for player name in the datastore flowchart.
     /// </summary>
