@@ -50,7 +50,8 @@ namespace Fungus
         [Tooltip("A scrollable text field used for debugging the save data. The text field should be disabled in normal use.")]
         [SerializeField] protected ScrollRect debugView;
 
-        protected static bool saveMenuActive = false;
+        // By Alex G: Start with the save menu visible instead of disabled.
+        protected static bool saveMenuActive = true;
 
         protected AudioSource clickAudioSource;
 
