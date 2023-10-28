@@ -137,11 +137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 767.28516, y: 93.197914}
+  scrollPos: {x: 37.53769, y: 138.84256}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 0.52000046
+  blockViewHeight: 280
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -149,9 +149,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 5379299805334510572}
-  selectedCommands:
-  - {fileID: 5379299805334510562}
+  - {fileID: 5379299805334510580}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -177,9 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 57.984936
-    y: 77
-    width: 136.53839
+    x: 56.06186
+    y: 75.07693
+    width: 130
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -209,7 +208,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 57.43634
     y: 255.44383
-    width: 144.23068
+    width: 137
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -329,12 +328,12 @@ MonoBehaviour:
     stringVal: "narrator: Your cab pulls up to the house, your team's logo proudly
       displayed on a flag flowing in the breeze, albeit a little tattered from the
       elements. The front lawn could use a mow, but it otherwise looks quite nice.
-      Now to meet the players inside.\nUnloading your suitcases from the trunk, you
-      thank the driver and walk up to the front door. You knock on the door and hear
-      muffled yelling for someone to answer. A few stompy footsteps later, the front
-      door swings open.\r\n\rA large young man now stands in the doorway, a bit out
-      of breath from likely sprinting halfway across the house. A big, doofy grin
-      fills his face upon seeing you.\r"
+      Now to meet the new players inside.\nUnloading your suitcases from the trunk,
+      you thank the driver and walk up to the front door. You knock on the door and
+      hear muffled yelling for someone to answer. A few stompy footsteps later, the
+      front door swings open.\r\n\rA large young man now stands in the doorway, a
+      bit out of breath from likely sprinting halfway across the house. A big, doofy
+      grin fills his face upon seeing you.\r"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -363,7 +362,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 870.3731
     y: 79.099785
-    width: 194.23064
+    width: 183
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -651,7 +650,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265.35464
     y: 75.00988
-    width: 167.30759
+    width: 158
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -731,9 +730,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 500.24146
-    y: -19.570568
-    width: 119.230705
+    x: 499.24146
+    y: -21.570568
+    width: 115
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -762,7 +761,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 503.49658
     y: 169.67603
-    width: 119.230705
+    width: 115
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -841,7 +840,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'boiga boiga: Great! I''m Boiga...uhh, well, my tag is Boiga. I''m
+    stringVal: 'boiga happy: Great! I''m Boiga...uhh, well, my tag is Boiga. I''m
       also Gabe!
 
 
@@ -876,7 +875,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 674.2203
     y: -79.82587
-    width: 126.92301
+    width: 123
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -904,8 +903,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'boiga boiga: Good guess! Nah, me and Atropos are our supports. Speaking
-      of, lemme introduce you to the rest of the team!
+    stringVal: 'boiga neutral: Good guess! Nah, me and Atropos are our supports.
+      Speaking of, lemme introduce you to the rest of the team!
 
       boiga hide:'
   clearPrevious:
@@ -934,7 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 22
   indentLevel: 0
-  text: I take it your our tank?
+  text: I take it you're our tank?
   description: 
   targetBlock: {fileID: 5379299805334510564}
   hideIfVisited: 0
@@ -1007,7 +1006,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 673.2203
     y: 40.174133
-    width: 126.92301
+    width: 123
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1035,8 +1034,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'boiga boiga: Yeah actually! I know I don''t really look like it,
-      haha. Let''s get you introduced to the rest of us!
+    stringVal: 'boiga neutral: Yeah actually! I know I don''t really look like it,
+      haha. Let''s get you introduced to everyone else!
 
       boiga hide:'
   clearPrevious:
@@ -1088,7 +1087,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 670.2203
     y: 124.17413
-    width: 126.92301
+    width: 123
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1116,7 +1115,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'boiga boiga: Yeah! Man, you''re like the third person ever to get
+    stringVal: 'boiga happy: Yeah! Man, you''re like the third person ever to get
       that. Anyways, let''s get you moved in!
 
       boiga hide:'
@@ -1167,9 +1166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 669.2203
+    x: 672.2203
     y: 230.1103
-    width: 126.92301
+    width: 123
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1197,7 +1196,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'boiga boiga: Thanks! People say that a lot, dunno what they mean
+    stringVal: 'boiga happy: Thanks! People say that a lot, dunno what they mean
       by it, but I take it as a compliment! Anyways, let''s get you inside!
 
       boiga
@@ -1251,13 +1250,15 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'narrator: He lets out a hearty laugh.
+    stringVal: 'boiga happy:
+
+      narrator: He lets out a hearty laugh.
 
 
 
-      boiga boiga: Ha! Just
-      kiddin'' with ya, I''m Gabe! If that doesn''t ring a bell, the roster info
-      might''ve put me down as Boiga!'
+      boiga
+      neutral: Ha! Just kiddin'' with ya, I''m Gabe! If that doesn''t ring a bell,
+      the roster info might''ve put me down as Boiga!'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -1336,7 +1337,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 866.5632
     y: 185.74817
-    width: 190.38449
+    width: 180
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1405,7 +1406,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1418.5648
     y: 82.323135
-    width: 148.07684
+    width: 140
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1508,7 +1509,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1645.9462
     y: 86.79846
-    width: 153.84607
+    width: 147
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1611,7 +1612,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1871.4159
     y: 84.85904
-    width: 161.53836
+    width: 154
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1744,7 +1745,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2164.8462
     y: 231.16249
-    width: 176.92297
+    width: 168
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1866,7 +1867,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2161.7236
     y: -2.0341897
-    width: 140.38454
+    width: 133
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1898,7 +1899,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2172.6353
     y: 152.91081
-    width: 130.76917
+    width: 125
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2140,7 +2141,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1855.3346
     y: 199.03143
-    width: 196.15372
+    width: 187
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2208,7 +2209,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1138.1215
     y: 83.54279
-    width: 167.30759
+    width: 161
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2344,7 +2345,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1127.5789
     y: 189.19206
-    width: 178.84604
+    width: 172
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2472,7 +2473,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1421.2645
     y: 305.867
-    width: 163.46144
+    width: 154
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
