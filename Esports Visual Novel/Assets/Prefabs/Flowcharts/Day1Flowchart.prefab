@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 5379299805334510576}
   - component: {fileID: 5379299805334510583}
   - component: {fileID: 5379299805334510575}
-  - component: {fileID: 5379299805334510574}
   - component: {fileID: 5379299805334510573}
   - component: {fileID: 5379299805334510473}
   - component: {fileID: 5379299805334510475}
@@ -103,6 +102,12 @@ GameObject:
   - component: {fileID: 1248239845}
   - component: {fileID: 1177388482156523088}
   - component: {fileID: 1248239843}
+  - component: {fileID: 1111672683}
+  - component: {fileID: 1111672686}
+  - component: {fileID: 1111672687}
+  - component: {fileID: 1111672688}
+  - component: {fileID: 1111672689}
+  - component: {fileID: 1111672690}
   m_Layer: 0
   m_Name: Day1Flowchart
   m_TagString: Untagged
@@ -137,11 +142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 37.53769, y: 138.84256}
+  scrollPos: {x: -202.87311, y: 200.02303}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 280
-  zoom: 1
+  blockViewHeight: 400
+  zoom: 0.5800004
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -149,7 +154,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 5379299805334510580}
+  - {fileID: 5379299805334510198}
   selectedCommands: []
   variables: []
   description: 
@@ -176,9 +181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 56.06186
-    y: 75.07693
-    width: 130
+    x: 58.693436
+    y: 73.76114
+    width: 129.31029
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -208,7 +213,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 57.43634
     y: 255.44383
-    width: 137
+    width: 134.4827
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -219,6 +224,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 5379299805334510542}
   - {fileID: 6739979745383366321}
+  - {fileID: 1111672687}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510531
 MonoBehaviour:
@@ -360,9 +366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 870.3731
+    x: 866.1713
     y: 79.099785
-    width: 183
+    width: 179.31026
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -459,7 +465,7 @@ MonoBehaviour:
 
 
 
-      boiga boiga: "Ah don''t
+      boiga neutral: "Ah don''t
       worry, I got this," Boiga says confidently, before picking up a nearby throw
       pillow and throwing it at the player, squarely hitting his phone and knocking
       it onto the carpet. The glitzy player jolts up in frustration.
@@ -476,7 +482,7 @@ MonoBehaviour:
       coach: ...Hi.
 
 
-      narrator: You walk up to the...*luxurious*
+      narrator: You walk up to the...<i>luxurious</i>
       player, who sizes you up as you approach, smirking all the while.
 
 
@@ -497,7 +503,7 @@ MonoBehaviour:
 
 
       noob
-      noob: "You kidding? xX_NoobHunter69_Xx! The one and only! 5,000 monthly subscribers
+      noob: "You kidding? NoobHunter69! The one and only! 5,000 monthly subscribers
       to his name!" he says with confidence, before sinking into his chair upon seeing
       your blank expression, "...Nathaniel. My name''s Nathaniel. I''m one of the
       DPS''s, whatever..."
@@ -650,7 +656,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265.35464
     y: 75.00988
-    width: 158
+    width: 156.89648
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -703,7 +709,7 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: 'boiga neutral: Howdy! You must be the new coach! That or they''re
-      *really* letting anyone into the Girl Scouts nowadays.'
+      <i>really</i> letting anyone into the Girl Scouts nowadays.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -732,7 +738,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 499.24146
     y: -21.570568
-    width: 115
+    width: 115.5172
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -761,7 +767,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 503.49658
     y: 169.67603
-    width: 115
+    width: 115.5172
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -875,7 +881,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 674.2203
     y: -79.82587
-    width: 123
+    width: 124.13788
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1006,7 +1012,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 673.2203
     y: 40.174133
-    width: 123
+    width: 124.13788
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1087,7 +1093,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 670.2203
     y: 124.17413
-    width: 123
+    width: 124.13788
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1168,7 +1174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 672.2203
     y: 230.1103
-    width: 123
+    width: 124.13788
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1335,9 +1341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 866.5632
+    x: 870.40936
     y: 185.74817
-    width: 180
+    width: 175.86198
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1346,34 +1352,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 5379299805334510573}
   commandList:
-  - {fileID: 5379299805334510574}
   - {fileID: 4402292917966985730}
+  - {fileID: 1111672686}
   suppressAllAutoSelections: 0
---- !u!114 &5379299805334510574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 41
-  indentLevel: 0
-  duration: 1
-  fadeOut: 1
-  targetView: {fileID: 0}
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  targetCamera: {fileID: 0}
-  fadeTweenType: 4
-  orthoSizeTweenType: 4
-  posTweenType: 4
-  rotTweenType: 4
 --- !u!114 &5379299805334510573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,7 +1387,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1418.5648
     y: 82.323135
-    width: 140
+    width: 139.65512
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1461,21 +1442,21 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: 'narrator: The other players begin entering the training room, the
-      last one being a begruding Maeve with her pile of snacks, which she fans out
+      last one being a begrudging Maeve with her pile of snacks, which she fans out
       on an empty desk.
 
 
 
-      boiga right:
+      boiga neutral right:
 
-      maeday neutral left: "Alright,
-      let''s get to it then, playoffs start tonight," she says while setting up at
-      a dusty station.
+      maeday neutral left:
+      "Alright, let''s get to it then, playoffs start tonight," she says while setting
+      up at a dusty station.
 
 
 
-      boiga boiga: "Mae''s right," Boiga says, "let''s
-      put your coaching to the test!"
+      boiga neutral: "Mae''s right," Boiga says,
+      "let''s put your coaching to the test!"
 
 
       maeday hide:
@@ -1507,9 +1488,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1645.9462
-    y: 86.79846
-    width: 147
+    x: 1647.262
+    y: 85.48267
+    width: 146.55167
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1610,9 +1591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1871.4159
-    y: 84.85904
-    width: 154
+    x: 1897.2777
+    y: 88.30731
+    width: 151.72406
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1745,7 +1726,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2164.8462
     y: 231.16249
-    width: 168
+    width: 165.51715
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1755,6 +1736,7 @@ MonoBehaviour:
   eventHandler: {fileID: 5379299805334510147}
   commandList:
   - {fileID: 5379299805334510207}
+  - {fileID: 1111672688}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510147
 MonoBehaviour:
@@ -1818,27 +1800,26 @@ MonoBehaviour:
     stringVal: "narrator: In the backstage area, you see all your future opponents,
       decked out in new jerseys covered in sponsors. \nOne team, a group of serious
       looking, well-manicured players pose against a wall with a large trophy, taking
-      photos for media. You presume they must be last year's champions, and your
-      biggest hurdle in the playoffs.\r\n\r\nA man sporting a green jersey and a
-      dad cap with \"MEATY\" emblazened on it approaches you, giving you a vigorous
-      handshake.\r\n\r\nmeaty meaty: \"Welcome! You must be [TEAM NAME]'s new coach!
-      Good on ya for taking on the responsibility on short notice!\" he says with
-      a jolly chuckle, \"I'm Coach Meaty for the Orlando Everglades! I'm certain
-      you'll do great!\"\n\ncoach: Nice to meet you, and thanks for the encouragement.\n\nmeaty
-      meaty: \"Of course! My team and I love playing against all you guys, ain't
-      that right?\" he says behind him toward a group of players in similarly colored
-      jerseys near the refreshments table, who turn to wave at you eagerly.\n\"'Course,
-      free snacks are always a nice bonus too, ha!\"\n\n\nnarrator: The backstage
-      intercom blares on to announce the next two teams to come onto the stage: the
-      Orlando Everglades...and your team.\n\ncoach: Oh wow, already?\n\nmeaty meaty:
-      \"Yup! Trial by fire and all that, welp, best of luck to your team!\" Coach
-      Meaty says before giving a strong pat on the shoulder and turning to round
-      up his team. \nmeaty hide:\nnarrator: You gather your team to send them off
-      onto the stage as well.\r\n\r\nThe crowd cheers as the Everglades take the
-      stage, their players doing a synchronized hand gesture that kicks off a cheer
-      around the arena. \nWhen your team is called, the reaction is...let's say,
-      moderate. With shaky confidence, your team enters the stage and begins setting
-      up.\n"
+      photos for media. You recognize them as last year's champions, and your biggest
+      hurdle in the playoffs.\r\n\r\nA man sporting a green jersey and a dad cap
+      with \"MEATY\" emblazoned on it approaches you, giving you a vigorous handshake.\r\n\r\nmeaty
+      meaty: \"Welcome! You must be {$TeamName}'s new coach! Good on ya for taking
+      on the responsibility on short notice!\" he says with a jolly chuckle, \"I'm
+      Coach Meaty for the Team XLR8! I'm certain you'll do great!\"\n\ncoach: Nice
+      to meet you, and thanks for the encouragement.\n\nmeaty meaty: \"Of course!
+      My team and I love playing against all you guys, ain't that right?\" he says
+      behind him toward a group of players in similarly colored jerseys near the
+      refreshments table, who turn to wave at you eagerly.\n\"'Course, free snacks
+      are always a nice bonus too, ha!\"\n\n\nnarrator: The backstage intercom blares
+      on to announce the next two teams to come onto the stage: Team XLR8... and
+      your team.\n\ncoach: Oh wow, already?\n\nmeaty meaty: \"Yup! Trial by fire
+      and all that, welp, good luck and have fun!\" Coach Meaty says before giving
+      a strong pat on the shoulder and turning to round up his team. \nmeaty hide:\nnarrator:
+      You gather your team to send them off onto the stage as well.\r\n\r\nThe crowd
+      cheers as XLR8 take the stage, their players doing a synchronized hand gesture
+      that kicks off a cheer around the arena. \nWhen your team is called, the reaction
+      is...let's say, moderate. With shaky confidence, your team enters the stage
+      and begins setting up.\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -1867,7 +1848,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2161.7236
     y: -2.0341897
-    width: 133
+    width: 131.03442
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1897,9 +1878,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2172.6353
+    x: 2174.3594
     y: 152.91081
-    width: 125
+    width: 122.41374
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1932,14 +1913,14 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: 'narrator: Against the crowd''s expectations, your team pulls through
-      and defeats the Everglades, The crowd applauds [TEAM NAME]''s performance,
-      who seem dumbfounded themselves.
+      and defeats Team XLR8, The crowd applauds {$TeamName}''s performance, who seem
+      dumbfounded themselves.
 
 
 
-      meaty meaty: "Well done!" Coach Meaty
-      yells from behind, giving another slap on your shoulder, "Guess you proved
-      the crowd wrong, haha! Ah well, hopefully we''ll see you in the grand finals!"
+      meaty meaty: "Well done!" Coach Meaty yells
+      from behind, giving another slap on your shoulder, "Guess you got us good,
+      haha! Ah well, hopefully we''ll see you in the grand finals!"
 
 
 
@@ -1982,20 +1963,20 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'narrator: The crowd cheers loudly for the Everglades, who seem relieved
+    stringVal: 'narrator: The crowd cheers loudly for the XLR8, who seem relieved
       by their first win of the playoffs. Your own team, however, don''t look nearly
       as joyful.
 
 
 
       meaty meaty: "Don''t beat yourself up kid, you''re not
-      our yet," says Coach Meaty, walking up from behind, "I''m sure you guys can
+      out yet," says Coach Meaty, walking up from behind, "I''m sure you guys can
       climb up from the losers'' bracket in no time, we''ll see you guys in a later
       match, guaranteed!"
 
 
 
-      narrator: Meaty walks off to congratualte his
+      narrator: Meaty walks off to congratulate his
       overjoyed players, while your team leaves the stage in a stupor.
 
       meaty
@@ -2140,8 +2121,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1855.3346
-    y: 199.03143
-    width: 187
+    y: 197.39209
+    width: 184.48267
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2151,6 +2132,7 @@ MonoBehaviour:
   eventHandler: {fileID: 5379299805334510200}
   commandList:
   - {fileID: 5379299805334510201}
+  - {fileID: 1111672683}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510201
 MonoBehaviour:
@@ -2207,9 +2189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1138.1215
-    y: 83.54279
-    width: 161
+    x: 1133.2034
+    y: 80.50287
+    width: 162.06888
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2291,8 +2273,8 @@ MonoBehaviour:
       monitors, and gaudy gaming chairs. \nA short-haired player wearing a team jersey
       is by the large flatscreen on the opposite wall from you, not seeming to notice
       your entrance.\r\n\r\nIn a chair far from the TV is a player wearing a sweatshirt
-      far too big for them, who makes eye contact with you for a moment before quickly
-      looking away, saying nothing.\r\n\nnarrator: After a few more tour stops, you
+      far too big for them. They make eye contact with you for a moment before quickly
+      looking away, saying nothing.\n\nnarrator: After a few more tour stops, you
       and Boiga eventually enter the training room, a moderately sized room lined
       with giant PC towers, sleek monitors, and gaudy gaming chairs. \r\nA short-haired
       player wearing a team jersey is by the large flatscreen on the opposite wall
@@ -2309,12 +2291,12 @@ MonoBehaviour:
       is over.\r\natropos hide:\r\n\r\nnarrator: Walking to the short-haired player,
       he still ignores you until finally relenting and slowly turning back towards
       you. He's clearly unimpressed.\r\n\r\nkerfa kerfa: ...This is it? Arctic leaves
-      us without warning and *you're* what we get instead? We'd be better off coachless
-      at this point.\r\n\r\nCoach: ...Nice meeting you too, and you are?\r\n\r\nkerfa
+      us without warning and <i>you're</i> what we get instead? We'd be better off
+      coachless at this point.\r\n\r\nCoach: ...Nice meeting you too, and you are?\r\n\r\nkerfa
       kerfa: \"Kerfa, DPS, call me Ji-hyun if you want. Or don't, not like you'll
       be here more than a few days,\" he says bluntly before returning to setting
       up the flat screen. Boiga nudges you to walk away, which you do.\r\nkerfa hide:\r\n\r\n\r\nboiga
-      boiga: \"Sorry about him, he's *really* wants to win, and our old coach, Arctic,
+      sad: \"Sorry about him, he <i>really</i> wants to win, and our old coach, Arctic,
       leaving this close to playoffs really soured his mood.\"\r\n\r\nCoach: That's
       alright, I understand.\r\n\n"
   clearPrevious:
@@ -2345,7 +2327,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1127.5789
     y: 189.19206
-    width: 172
+    width: 172.41371
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2355,6 +2337,7 @@ MonoBehaviour:
   eventHandler: {fileID: 61675344}
   commandList:
   - {fileID: 61675343}
+  - {fileID: 1111672690}
   suppressAllAutoSelections: 0
 --- !u!114 &61675343
 MonoBehaviour:
@@ -2413,7 +2396,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'coach:'
+    stringVal: 'narrator:'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2472,8 +2455,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1421.2645
-    y: 305.867
-    width: 154
+    y: 304.22766
+    width: 153.44821
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2485,6 +2468,7 @@ MonoBehaviour:
   - {fileID: 1033724812}
   - {fileID: 1033724811}
   - {fileID: 1033724814}
+  - {fileID: 1111672689}
   suppressAllAutoSelections: 0
 --- !u!114 &1033724811
 MonoBehaviour:
@@ -3062,3 +3046,129 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &1111672683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 223
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1111672686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 220
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1111672687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 219
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1111672688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 224
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1111672689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 222
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1111672690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 221
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
