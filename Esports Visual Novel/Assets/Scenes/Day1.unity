@@ -420,7 +420,7 @@ RectTransform:
   - {fileID: 1663892506}
   - {fileID: 898849055}
   m_Father: {fileID: 1346807015}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -481,7 +481,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1346807016}
-        m_MethodName: SetPlayerName
+        m_MethodName: SetTeamName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1244,7 +1244,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000002861023
+      value: 14.300008
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1286675092}
+  selectedFlowchart: {fileID: 48011}
 --- !u!4 &873189501
 Transform:
   m_ObjectHideFlags: 1
@@ -3081,7 +3081,7 @@ RectTransform:
   m_Children:
   - {fileID: 477263803}
   m_Father: {fileID: 1346807015}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3118,7 +3118,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1346807015}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3273,9 +3273,9 @@ RectTransform:
   - {fileID: 1963373576}
   - {fileID: 1369457226}
   - {fileID: 318282363}
-  - {fileID: 1217684687}
   - {fileID: 1231668394}
   - {fileID: 229920831}
+  - {fileID: 1217684687}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3298,6 +3298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datastoreFlowchart: {fileID: 48011}
   nameInputField: {fileID: 1668933788}
+  teamNameInputField: {fileID: 898849056}
 --- !u!1 &1369457225
 GameObject:
   m_ObjectHideFlags: 0

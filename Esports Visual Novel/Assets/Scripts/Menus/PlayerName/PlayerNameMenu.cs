@@ -8,6 +8,7 @@ public class PlayerNameMenu : MonoBehaviour
 {
     [SerializeField] private Flowchart datastoreFlowchart;
     [SerializeField] private Text nameInputField;
+    [SerializeField] private Text teamNameInputField;
 
     /// <summary>
     /// Set value for player name in the datastore flowchart.
@@ -15,5 +16,13 @@ public class PlayerNameMenu : MonoBehaviour
     public void SetPlayerName()
     {
         datastoreFlowchart.SetStringVariable("PlayerName", "Coach " + nameInputField.text);
+    }
+
+    /// <summary>
+    /// Set value for team name in the datastore flowchart.
+    /// </summary>
+    public void SetTeamName()
+    {
+        datastoreFlowchart.SetStringVariable("TeamName", teamNameInputField.text);
     }
 }
