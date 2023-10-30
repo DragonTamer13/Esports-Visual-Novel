@@ -524,8 +524,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 775007736}
-  selectedCommands:
-  - {fileID: 775007735}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -590,7 +589,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 60
     y: 80
-    width: 80
+    width: 77
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -837,7 +836,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1561764694}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6360974
+  m_Size: 0.64510506
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1570,6 +1569,7 @@ MonoBehaviour:
   showLog: 1
   previousLines: 1
   narrativeLogView: {fileID: 2145754941}
+  maxCharacters: 10000
   narrativeLogMenuGroup: {fileID: 1444340991}
 --- !u!224 &1825306311
 RectTransform:
