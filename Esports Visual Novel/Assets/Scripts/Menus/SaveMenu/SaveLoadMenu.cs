@@ -86,6 +86,9 @@ public class SaveLoadMenu : MonoBehaviour
         var saveManager = FungusManager.Instance.SaveManager;
         saveManager.Save(saveDataKey);
 
+        // Save an screenshot for the save file
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + saveDataKey + ".png");
+
         // Show new save name on button.
         saveLoadButton.UpdateButton();
     }

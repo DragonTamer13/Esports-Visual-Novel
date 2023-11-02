@@ -12,6 +12,8 @@ public class SaveLoadButton : MonoBehaviour
 {
     // The menu controller script associated with this button.
     [SerializeField] private SaveLoadMenu saveLoadMenu;
+    // The image component associated with this save file.
+    [SerializeField] private Image saveGameImage;
 
     private string saveDataKey = "";
     private bool isSaving; // True when button saves a game, false when button loads a game.
@@ -67,6 +69,7 @@ public class SaveLoadButton : MonoBehaviour
         {
             button.interactable = isSaving;
             saveNameText.text = "No save";
+            saveGameImage.sprite = null;
             return;
         }
         else
@@ -97,6 +100,23 @@ public class SaveLoadButton : MonoBehaviour
                 var savePointData = JsonUtility.FromJson<SavePointData>(tempSaveHistory.GetLastSavePoint());
                 saveNameText.text = savePointData.SavePointKey + " (" + savePointData.SavePointDescription + ")";
             }
+        }
+
+        // Load the image for this save slot if it exists.
+        string imagePath = Application.persistentDataPath + "/" + saveDataKey + ".png";
+        if (System.IO.File.Exists(imagePath))
+        {
+            Texture2D texture = new Texture2D(2, 2);
+            byte[] imageData = System.IO.File.ReadAllBytes(imagePath);
+            texture.LoadImage(imageData);
+            Sprite image = Sprite.Create(texture,
+                                         new Rect(0f, 0f, texture.width, texture.height),
+                                         new Vector2(0.5f, 0.5f));
+            saveGameImage.sprite = image;
+        }
+        else
+        {
+            saveGameImage.sprite = null;
         }
     }
 }
