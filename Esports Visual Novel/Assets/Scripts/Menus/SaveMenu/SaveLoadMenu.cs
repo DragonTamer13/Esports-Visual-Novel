@@ -86,10 +86,27 @@ public class SaveLoadMenu : MonoBehaviour
         var saveManager = FungusManager.Instance.SaveManager;
         saveManager.Save(saveDataKey);
 
-        // Save an screenshot for the save file
-        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + saveDataKey + ".png");
+        StartCoroutine(TakeSaveScreenshot(saveDataKey, saveLoadButton));
 
         // Show new save name on button.
+        saveLoadButton.UpdateButton();
+    }
+
+    /// <summary>
+    /// Captures a screenshot of the game to display to the player for a save slot.
+    /// 
+    /// TODO: To fix the flicker, possibly save a temp image when the "Save Game" button is clicked, then create copies of that
+    /// image when saving to a save slot and rename the file. Delete the temp image when the menu is closed.
+    /// </summary>
+    private IEnumerator TakeSaveScreenshot(string saveDataKey, SaveLoadButton saveLoadButton)
+    {
+        canvasGroup.alpha = 0;
+        yield return new WaitForEndOfFrame();
+
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + saveDataKey + ".png");
+        canvasGroup.alpha = 1;
+        yield return new WaitForEndOfFrame();
+
         saveLoadButton.UpdateButton();
     }
 
