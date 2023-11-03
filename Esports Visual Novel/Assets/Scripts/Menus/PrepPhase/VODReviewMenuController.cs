@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using Fungus;
 
 /// <summary>
 /// Allows the Player to select a team composition for the upcoming game. Shows a preview of the players' positions
@@ -10,21 +11,26 @@ using UnityEngine.Events;
 /// </summary>
 public class VODReviewMenuController : MonoBehaviour
 {
+    // The flowchart for this day.
+    [SerializeField] private Flowchart dayFlowchart;
     // Parent GameObject of this menu's composition choice buttons.
     [SerializeField] private GameObject compositionButtonHolder;
     // The composition preview is shown by enabling different parent objects, each containing a unique arrangement 
     // of the characters for the composition that the preview represents. This GameObject holds the parent objects.
     [SerializeField] private GameObject compositionPreviewHolder;
-    [SerializeField] private GameObject compositionButtonPrefab;
  
     // The currently selected composition button.
     private int selection = -1;
     // The preview that is currently being shown. Might not be the same as the current selection.
     private int displayedPreview = -1;
+    // Number of composition options.
+    private int activeButtons = 0;
     // Composition button components 
     private List<Button> buttons = new List<Button>();
     // Composition preview objects
     private List<GameObject> previews = new List<GameObject>();
+    // isWinning[i] == true when button[i] is for a winning composition.
+    private List<bool> isWinning = new List<bool>();
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +41,23 @@ public class VODReviewMenuController : MonoBehaviour
             previews.Add(t.gameObject);
             t.gameObject.SetActive(false);
         }
-        // TODO: Testing
-        CreateCompositionOption("Something", "Something", true);
+        foreach (Button b in buttons)
+        {
+            b.gameObject.SetActive(false);
+        }
+
+        // Attempt to find the day flowchart if it wasn't set in the inspector.
+        if (dayFlowchart == null)
+        {
+            foreach (Flowchart f in GameObject.FindObjectsOfType<Flowchart>())
+            {
+                if (f.gameObject.name != "DatastoreFlowchart")
+                {
+                    dayFlowchart = f;
+                    break;
+                }
+            }
+        }
     }
 
     /// <summary>
@@ -108,24 +129,11 @@ public class VODReviewMenuController : MonoBehaviour
     /// <summary>
     /// Makes a button for a composition that the player can choose for this day.
     /// </summary>
-    public void CreateCompositionOption(string name, string description, bool isWinning)
+    public void CreateCompositionOption(string name, string description, bool winning)
     {
-        GameObject buttonObject = Instantiate(compositionButtonPrefab);
-        buttons.Add(buttonObject.GetComponent<Button>());
-        buttonObject.transform.SetParent(compositionButtonHolder.transform);
-        buttonObject.transform.localScale = Vector3.one;
-        UnityAction<Button> clickAction = new UnityAction<Button>(SwitchToPreview);
-        //clickAction += SwitchToPreview(buttonObject.GetComponent<Button>());
-        //buttonObject.GetComponent<Button>().//onClick.AddListener(clickAction(buttonObject.GetComponent<Button>()));
-        ButtonEvent b = new ButtonEvent();
-        b.AddListener(TempFunc);
-        buttonObject.GetComponent<CompositionButton>().SetOnClickEvent(b);
-
-    }
-
-    //TODO: Testing
-    public void TempFunc(Button b)
-    {
-        print(b.gameObject.name);
+        buttons[activeButtons].GetComponent<CompositionButton>().SetText(name, description);
+        buttons[activeButtons].gameObject.SetActive(true);
+        isWinning.Add(winning);
+        activeButtons++;
     }
 }
