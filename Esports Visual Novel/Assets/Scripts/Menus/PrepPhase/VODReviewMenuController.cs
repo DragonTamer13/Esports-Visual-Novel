@@ -32,31 +32,45 @@ public class VODReviewMenuController : MonoBehaviour
     // isWinning[i] == true when button[i] is for a winning composition.
     private List<bool> isWinning = new List<bool>();
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        buttons.AddRange(compositionButtonHolder.transform.GetComponentsInChildren<Button>());
-        foreach (Transform t in compositionPreviewHolder.transform) 
-        { 
-            previews.Add(t.gameObject);
-            t.gameObject.SetActive(false);
-        }
-        foreach (Button b in buttons)
+        if (buttons.Count <= 0)
         {
-            b.gameObject.SetActive(false);
+            FindCompositionButtons();
         }
-
         // Attempt to find the day flowchart if it wasn't set in the inspector.
         if (dayFlowchart == null)
         {
             foreach (Flowchart f in GameObject.FindObjectsOfType<Flowchart>())
             {
-                if (f.gameObject.name != "DatastoreFlowchart")
+                if (f.gameObject.name.Contains("Day"))
                 {
                     dayFlowchart = f;
                     break;
                 }
             }
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        foreach (Transform t in compositionPreviewHolder.transform) 
+        { 
+            previews.Add(t.gameObject);
+            t.gameObject.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Shouldn't be called if "buttons" is already set.
+    /// </summary>
+    private void FindCompositionButtons()
+    {
+        buttons.AddRange(compositionButtonHolder.transform.GetComponentsInChildren<Button>());
+        foreach (Button b in buttons)
+        {
+            b.gameObject.SetActive(false);
         }
     }
 
@@ -124,6 +138,16 @@ public class VODReviewMenuController : MonoBehaviour
         previews[selection].SetActive(true);
         buttons[selection].interactable = false;
         displayedPreview = selection;
+
+        // Update the flowchart variable for the composition wincon.
+        if (isWinning[selection])
+        {
+            dayFlowchart.SendFungusMessage("SetWinningComp");
+        }
+        else
+        {
+            dayFlowchart.SendFungusMessage("SetLosingComp");
+        }
     }
 
     /// <summary>
@@ -131,8 +155,13 @@ public class VODReviewMenuController : MonoBehaviour
     /// </summary>
     public void CreateCompositionOption(string name, string description, bool winning)
     {
-        buttons[activeButtons].GetComponent<CompositionButton>().SetText(name, description);
+        if (buttons.Count <= 0)
+        {
+            FindCompositionButtons();
+        }
+
         buttons[activeButtons].gameObject.SetActive(true);
+        buttons[activeButtons].GetComponent<CompositionButton>().SetText(name, description);
         isWinning.Add(winning);
         activeButtons++;
     }
