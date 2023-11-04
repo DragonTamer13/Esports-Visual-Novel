@@ -271,6 +271,8 @@ GameObject:
   - component: {fileID: 6291432230618945763}
   - component: {fileID: 6291432230618945764}
   - component: {fileID: 6291432230618945765}
+  - component: {fileID: 162609252}
+  - component: {fileID: 162609513}
   m_Layer: 0
   m_Name: Day2Flowchart
   m_TagString: Untagged
@@ -840,6 +842,8 @@ MonoBehaviour:
   - {fileID: 6291432230618945758}
   - {fileID: 6291432230618945757}
   - {fileID: 6291432230618945756}
+  - {fileID: 162609513}
+  - {fileID: 162609252}
   - {fileID: 6291432230539876236}
   - {fileID: 6291432230618945746}
   suppressAllAutoSelections: 0
@@ -9853,3 +9857,36 @@ MonoBehaviour:
   indentLevel: 0
   commenterName: 
   commentText: Social media posts for this day
+--- !u!114 &162609252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e4c082f762243f6943909a4272096d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 339
+  indentLevel: 0
+  images:
+  - {fileID: 0}
+  sprite: {fileID: 21300000, guid: 75a58c9c4f37d7443b2d74dc8082b9aa, type: 3}
+--- !u!114 &162609513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 340
+  indentLevel: 0
+  commenterName: 
+  commentText: Set the bracket image for today
