@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1295,7 +1295,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.299989
+      value: -0.000014305115
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -4539,6 +4539,12 @@ PrefabInstance:
       propertyPath: _targetGameObject.gameObjectVal
       value: 
       objectReference: {fileID: 1636055300}
+    - target: {fileID: 5187663810651035557, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: conversationText.stringVal
+      value: 'Maeday middle bored: "I think my Helios was pretty good today, what
+        do you think?"'
+      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510145, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetView
@@ -4744,6 +4750,32 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 537909463}
+    - target: {fileID: 5379299805334510474, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: conversationText.stringVal
+      value: 'narrator: The other players begin entering the training room, the last
+        one being a begrudging Maeve with her pile of snacks, which she fans out
+        on an empty desk.
+
+
+
+        boiga neutral right:
+
+        maeday bored left:
+        "Alright, let''s get to it then, playoffs start tonight," she says while
+        setting up at a dusty station.
+
+
+
+        boiga neutral: "Mae''s right,"
+        Boiga says, "let''s put your coaching to the test!"
+
+
+        maeday hide:
+
+        boiga
+        hide:'
+      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: selectedBlocks.Array.size
@@ -4957,7 +4989,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2546.7478
     y: 645.877
-    width: 208.2089
+    width: 222
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5524,7 +5556,7 @@ MonoBehaviour:
     booleanVal: 1
 --- !u!114 &5379299806486954340
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5707,7 +5739,7 @@ MonoBehaviour:
     booleanVal: 1
 --- !u!114 &5379299806486954350
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5972,7 +6004,7 @@ MonoBehaviour:
   rotTweenType: 4
 --- !u!114 &5379299806486954530
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
