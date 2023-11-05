@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1244,7 +1244,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000051498413
+      value: 14.299969
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -4148,6 +4148,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2909751682858551425, guid: 6dad5ef7ba4a1704ba325aba402ab1e0,
+        type: 3}
+      propertyPath: portraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 321d8e36e7202a545a022980afb20398,
+        type: 3}
     - target: {fileID: 2909751682858551426, guid: 6dad5ef7ba4a1704ba325aba402ab1e0,
         type: 3}
       propertyPath: m_Name
@@ -4305,6 +4311,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atropos
       objectReference: {fileID: 0}
+    - target: {fileID: 4778179611612059486, guid: 93f1510c53758784996c715ed1fa19ce,
+        type: 3}
+      propertyPath: portraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 94ec07edf97313c44bc17657f15b5dbb,
+        type: 3}
     - target: {fileID: 4778179611612059487, guid: 93f1510c53758784996c715ed1fa19ce,
         type: 3}
       propertyPath: m_RootOrder
@@ -4462,6 +4474,16 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 537909463}
+    - target: {fileID: 5379299805334510473, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 1411.8314
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379299805334510473, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 74.74957
+      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: selectedBlocks.Array.size
@@ -4532,6 +4554,174 @@ PrefabInstance:
       propertyPath: m_Name
       value: Day1Flowchart
       objectReference: {fileID: 0}
+    - target: {fileID: 5379299805334510536, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: conversationText.stringVal
+      value: 'narrator: Boiga helps bring in your luggage and gives you a brief tour
+        of the house. It''s not the most furnished home, but it feels comfortable.
+        The hastily hidden piles of energy drink cans and takeout boxes certifies
+        that this is definitely a home full of gamers.
+
+
+        You start the tour
+        in the living room adjacent to the front door, where a player, wearing a
+        loud outfit comprised of several different name brands, is too distracted
+        scrolling on his phone to notice you. You try calling out to him.
+
+
+        coach:
+        Uh, hello?
+
+
+        narrator: The player still doesn''t seem to notice you.
+
+
+
+        boiga
+        neutral: "Ah don''t worry, I got this," Boiga says confidently, before picking
+        up a nearby throw pillow and throwing it at the player, squarely hitting
+        his phone and knocking it onto the carpet. The glitzy player jolts up in
+        frustration.
+
+        boiga hide:
+
+
+        noob noob: "What the heck Boiga?!
+        You could''ve broken it! Do you know how much-," he barks before seeing you
+        and composing himself, "oh, hey."
+
+
+        coach: ...Hi.
+
+
+        narrator:
+        You walk up to the... {i}luxurious{/i} player, who sizes you up as you approach,
+        smirking all the while.
+
+
+
+        noob noob: "Eh, boring look, but we can
+        deal with that later. ''Sup Coach," he says, giving you a fist bump before
+        reaching down to grab his phone.
+
+
+        coach: And you must be..?
+
+
+        narrator:
+        He looks shocked that you needed to ask.
+
+
+
+
+
+        noob noob: "You kidding?
+        NoobHunter69! The one and only! 5,000 monthly subscribers to his name!" he
+        says with confidence, before sinking into his chair upon seeing your blank
+        expression, "...Nathaniel. My name''s Nathaniel. I''m one of the DPS''s,
+        whatever..."
+
+
+
+        coach: Nice meeting you.
+
+
+
+        narrator: He
+        grumbles a response as he swipes on his phone in mild frustration. Another
+        player enters the living room from the nearby kitchen, holding several different
+        snacks and drinks.
+
+
+
+
+
+        noob noob left:
+
+        maeday neutral:
+        "Ignore him," she says, "the only things that can keep Nate''s attention
+        are new overpriced clothes and watching his sub count go up. Well, and this-"
+
+
+
+
+
+        coach:
+        She grabs a bag of chips from her stash and lobs it straight at Nate''s head,
+        who throws his arms up in disbelief.
+
+
+
+
+
+        noob noob: "Why do people
+        keep throwing stuff at me?!" he shouts.
+
+        noob hide:
+
+
+
+        coach:
+        Nice shot.
+
+
+
+        narrator: The female player shakes her head at Nate
+        and turns towards you, shifting her pile of snacks and drinks to extend her
+        hand.
+
+
+
+
+
+        maeday happy: "Thanks. I''m Maeve, AKA Maeday the tank,
+        nice meeting you!"
+
+
+
+        coach: Nice meeting you as well, those snacks
+        for group practice?
+
+
+
+        narrator: You two shake hands, but your comment
+        confuses her.
+
+
+
+
+
+        maeday confused: "These? Oh, no. These are just
+        for me, I don''t practice with the others. I play better alone, so I''m gonna
+        train for a couple hours up in my room," she says.
+
+
+
+        Coach: Oh,
+        um...do you think you can try going to practice with the rest of us today?
+        Just this once?
+
+
+
+        narrator: She frowns and looks away, contemplating
+        the idea. After a few seconds, she gives a frustrated sigh and relents.
+
+
+
+
+
+        maeday
+        sad: "Fine, I''ll go. But I''m not gonna perform as well as I would by myself,
+        just saying," Maeve says before walking back to the kitchen pantry.
+
+
+
+        maeday
+        hide:
+
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510537, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetView
@@ -4592,6 +4782,17 @@ PrefabInstance:
       propertyPath: _targetGameObject.gameObjectVal
       value: 
       objectReference: {fileID: 1346807011}
+    - target: {fileID: 6813739205133435334, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: conversationText.stringVal
+      value: 'noob noob: "Did you see those trick shots I got on Athena? Ha! They
+        never saw it comin''!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843940477119117401, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: conversationText.stringVal
+      value: 'atropos atropos: "I think I did okay..."'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
 --- !u!1001 &5695896635405401472
@@ -4813,6 +5014,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noob
       objectReference: {fileID: 0}
+    - target: {fileID: 8048383127045554720, guid: 14e1ec5cd9ad5fb4a9b3173b6ab3846b,
+        type: 3}
+      propertyPath: portraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 58c20397c574b764ebd84de74b5113d1,
+        type: 3}
     - target: {fileID: 8048383127045554721, guid: 14e1ec5cd9ad5fb4a9b3173b6ab3846b,
         type: 3}
       propertyPath: m_RootOrder
