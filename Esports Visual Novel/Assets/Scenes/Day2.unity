@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -771,7 +771,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0000371933
+      value: 14.300006
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -3446,6 +3446,11 @@ PrefabInstance:
       propertyPath: conditions.Array.data[0].anyVar.variable
       value: 
       objectReference: {fileID: 804675777}
+    - target: {fileID: 3031933496851927064, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: itemId
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 4116813454554287329, guid: 0132458292ccc114ca21ced5455835a0,
         type: 3}
       propertyPath: conditions.Array.data[0].anyVar.variable
@@ -3537,7 +3542,12 @@ PrefabInstance:
     - target: {fileID: 6291432230539876226, guid: 0132458292ccc114ca21ced5455835a0,
         type: 3}
       propertyPath: selectedBlocks.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291432230539876226, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6291432230539876227, guid: 0132458292ccc114ca21ced5455835a0,
         type: 3}
