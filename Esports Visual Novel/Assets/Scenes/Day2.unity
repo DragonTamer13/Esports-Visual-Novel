@@ -771,7 +771,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.300006
+      value: 14.300037
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -2785,6 +2785,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ff3f1c8df8ae74a96992997d197209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1847128031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6780162298623957699, guid: 2cd48535cc8f4b145b2957178fdf0b94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1847128026}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1847128032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5043627287279516258, guid: 2cd48535cc8f4b145b2957178fdf0b94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1847128026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938611744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,7 +3145,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6291432230618945728}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
@@ -3619,6 +3637,41 @@ PrefabInstance:
       propertyPath: targetView
       value: 
       objectReference: {fileID: 1466004160}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.data[15]
+      value: 
+      objectReference: {fileID: 6291432230618945740}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.data[16]
+      value: 
+      objectReference: {fileID: 6291432230618945739}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.data[17]
+      value: 
+      objectReference: {fileID: 6291432230618945738}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.data[18]
+      value: 
+      objectReference: {fileID: 6291432230618945737}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.data[19]
+      value: 
+      objectReference: {fileID: 6291432230618945736}
+    - target: {fileID: 6291432230539876234, guid: 0132458292ccc114ca21ced5455835a0,
+        type: 3}
+      propertyPath: commandList.Array.data[20]
+      value: 
+      objectReference: {fileID: 6291432230618945735}
     - target: {fileID: 6291432230539876236, guid: 0132458292ccc114ca21ced5455835a0,
         type: 3}
       propertyPath: targetView
@@ -3725,8 +3778,429 @@ PrefabInstance:
       propertyPath: conditions.Array.data[0].anyVar.variable
       value: 
       objectReference: {fileID: 804675777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4116813454554287329, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+    - {fileID: 2757652430659330558, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+    - {fileID: 3486500164759388887, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+    - {fileID: 7049323205820571637, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+    - {fileID: 1885681767292178518, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+    - {fileID: 6463453592644598594, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+    - {fileID: 4502024933034075273, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0132458292ccc114ca21ced5455835a0, type: 3}
+--- !u!1 &6291432230618945729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6291432230539876345, guid: 0132458292ccc114ca21ced5455835a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6291432230618945728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6291432230618945730
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 603.9499
+    y: 71.00983
+    width: 121.875015
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 242
+  blockName: Scrim results
+  description: 
+  eventHandler: {fileID: 6291432230618945734}
+  commandList:
+  - {fileID: 6291432230618945733}
+  - {fileID: 6291432230618945732}
+  - {fileID: 6291432230618945731}
+  suppressAllAutoSelections: 0
+--- !u!114 &6291432230618945731
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 384
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1847128028}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &6291432230618945732
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 383
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "narrator: //Maeday//\r Helios mechanics are solid. Still has a bad
+      habit of overextending and playing split from the team.\r\n\r\n//Kerfa//\r
+      No flaws mechanically. Is a strong shotcaller, but doesn\u2019t really listen
+      to others\u2019 input.\r\n\r\n//xXNoobHunter69Xx//\r Mechanics are improving.
+      Communication is off-topic at times, and caused some slight tilt amongst the
+      team. Emoted after kills twice.\r\n\r\n//Atropos//\r Relatively passive Hermes
+      gameplay, but does well in supporting Kerfa.\r\n\r\n//Boiga//\r Great at recognizing
+      win conditions during team fights, but isn\u2019t always being supported by
+      the team."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &6291432230618945733
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 382
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1847128028}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &6291432230618945734
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 6291432230618945730}
+  suppressBlockAutoSelect: 0
+  targetButton: {fileID: 1847128031}
+--- !u!114 &6291432230618945735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6291432230618945746, guid: 0132458292ccc114ca21ced5455835a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6291432230618945728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6291432230618945736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6291432230539876236, guid: 0132458292ccc114ca21ced5455835a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6291432230618945728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6291432230618945737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 388
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1847128032}
+  targetComponentAssemblyName: VODReviewMenuController, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: VODReviewMenuController
+  targetMethod: CreateCompositionOption
+  targetMethodText: 'CreateCompositionOption (String, String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Korean Style
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: "A new composition that has recently been gaining popularity in
+        Korea\u2019s lower tiers. Players surround the enemy, then focus on a target
+        for the kill."
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &6291432230618945738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 389
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1847128032}
+  targetComponentAssemblyName: VODReviewMenuController, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: VODReviewMenuController
+  targetMethod: CreateCompositionOption
+  targetMethodText: 'CreateCompositionOption (String, String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Current Meta - Underworld Style
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Similar to the current meta, but it swaps in Hades and Persephone,
+        taking advantage of their bonus synergy passive. A trickier to play, but
+        harder to counter variation.
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &6291432230618945739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 387
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1847128032}
+  targetComponentAssemblyName: VODReviewMenuController, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: VODReviewMenuController
+  targetMethod: CreateCompositionOption
+  targetMethodText: 'CreateCompositionOption (String, String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Current Meta
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: This is the current most popular composition. The team splits
+        into two groups, then gets into position to initiate a pincer attack. Solid
+        strategy, but often leads to mirror matches.
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &6291432230618945740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230618945729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 386
+  indentLevel: 0
+  commenterName: 
+  commentText: 'Composition options
+
+'
 --- !u!1001 &6387954689519949852
 PrefabInstance:
   m_ObjectHideFlags: 0

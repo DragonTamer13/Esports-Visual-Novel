@@ -65,9 +65,7 @@ GameObject:
   - component: {fileID: 5379299805334510193}
   - component: {fileID: 5379299805334510198}
   - component: {fileID: 5379299805334510194}
-  - component: {fileID: 5379299805334510199}
   - component: {fileID: 5379299805334510204}
-  - component: {fileID: 5379299805334510195}
   - component: {fileID: 5379299805334510205}
   - component: {fileID: 5379299805334510206}
   - component: {fileID: 5379299805334510207}
@@ -194,6 +192,32 @@ GameObject:
   - component: {fileID: 1379363840}
   - component: {fileID: 1379363841}
   - component: {fileID: 1379363842}
+  - component: {fileID: 5379299806486954329}
+  - component: {fileID: 5379299806486954330}
+  - component: {fileID: 5849075846858280249}
+  - component: {fileID: 4094118170613424782}
+  - component: {fileID: 7693495525637039823}
+  - component: {fileID: 2274703370258839815}
+  - component: {fileID: 2119644874908934644}
+  - component: {fileID: 2242161591491944883}
+  - component: {fileID: 5379299806486954344}
+  - component: {fileID: 5379299806486954345}
+  - component: {fileID: 5379299806486954348}
+  - component: {fileID: 5379299806486954349}
+  - component: {fileID: 5452813490179842938}
+  - component: {fileID: 6151011689988182251}
+  - component: {fileID: 5676575577404731064}
+  - component: {fileID: 6662621898573738556}
+  - component: {fileID: 7418197168107430221}
+  - component: {fileID: 709785525861421369}
+  - component: {fileID: 2663512329581313984}
+  - component: {fileID: 6331356651925576271}
+  - component: {fileID: 5379299806486954521}
+  - component: {fileID: 5379299806486954522}
+  - component: {fileID: 5379299806486954523}
+  - component: {fileID: 5379299806486954529}
+  - component: {fileID: 5379299806486954530}
+  - component: {fileID: 5379299806486954531}
   m_Layer: 0
   m_Name: Day1Flowchart
   m_TagString: Untagged
@@ -228,11 +252,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1567.6427, y: -147.37003}
+  scrollPos: {x: -161.2272, y: 248.91476}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 401
-  zoom: 0.67000026
+  zoom: 0.5200004
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -240,9 +264,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 5379299805334510149, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
+  - {fileID: 5379299805334510473}
   selectedCommands:
-  - {fileID: 5379299806486954343, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
+  - {fileID: 709785525861421369}
   variables:
   - {fileID: 5379299806486954333}
   - {fileID: 5379299806486954332}
@@ -274,7 +298,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 58.693436
     y: 73.76114
-    width: 132.08952
+    width: 136.53839
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -304,7 +328,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 57.43634
     y: 255.44383
-    width: 141.04474
+    width: 144.2307
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -459,7 +483,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 866.1713
     y: 79.099785
-    width: 188.80592
+    width: 194.23065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -747,7 +771,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265.35464
     y: 75.00988
-    width: 160.44772
+    width: 167.3076
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -829,7 +853,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 499.24146
     y: -21.570568
-    width: 117.164154
+    width: 119.23071
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -858,7 +882,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 503.49658
     y: 169.67603
-    width: 117.164154
+    width: 119.23071
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -972,7 +996,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 674.2203
     y: -79.82587
-    width: 124.62684
+    width: 126.92302
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1103,7 +1127,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 673.2203
     y: 40.174133
-    width: 124.62684
+    width: 126.92302
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1184,7 +1208,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 670.2203
     y: 124.17413
-    width: 124.62684
+    width: 126.92302
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1265,7 +1289,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 672.2203
     y: 231.48016
-    width: 124.62684
+    width: 126.92302
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1434,7 +1458,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 870.40936
     y: 185.74817
-    width: 187.31339
+    width: 190.3845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1476,9 +1500,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1410.6119
-    y: 75.969086
-    width: 142.53728
+    x: 1406.7657
+    y: 74.04601
+    width: 148.07684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1493,8 +1517,11 @@ MonoBehaviour:
   - {fileID: 5379299805334510474}
   - {fileID: 5379299805334510170}
   - {fileID: 1379363842}
+  - {fileID: 6331356651925576271}
   - {fileID: 1379363837}
   - {fileID: 1379363836}
+  - {fileID: 2663512329581313984}
+  - {fileID: 709785525861421369}
   - {fileID: 5379299805334510171}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510475
@@ -1543,14 +1570,14 @@ MonoBehaviour:
 
       boiga neutral right:
 
-      maeday neutral left:
-      "Alright, let''s get to it then, playoffs start tonight," she says while setting
-      up at a dusty station.
+      maeday bored left: "Alright,
+      let''s get to it then, playoffs start tonight," she says while setting up at
+      a dusty station.
 
 
 
-      boiga neutral: "Mae''s right," Boiga says,
-      "let''s put your coaching to the test!"
+      boiga neutral: "Mae''s right," Boiga says, "let''s
+      put your coaching to the test!"
 
 
       maeday hide:
@@ -1583,8 +1610,7 @@ MonoBehaviour:
   itemId: 147
   indentLevel: 0
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 5379299805334510149, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-    type: 3}
+  targetBlock: {fileID: 0}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -1631,7 +1657,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2257.17
     y: 563.4438
-    width: 157.46265
+    width: 161.53838
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1648,8 +1674,10 @@ MonoBehaviour:
   - {fileID: 5379299805334510150}
   - {fileID: 5379299806486954342}
   - {fileID: 5379299806486954341}
-  - {fileID: 5379299806486954340}
+  - {fileID: 5849075846858280249}
   - {fileID: 5379299806486954339}
+  - {fileID: 5379299806486954340}
+  - {fileID: 5379299806486954329}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299805334510146
 MonoBehaviour:
@@ -1746,7 +1774,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2525.916
     y: 707.47534
-    width: 173.88055
+    width: 176.92297
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1866,9 +1894,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2522.7935
-    y: 473.1801
-    width: 135.07458
+    x: 2521.301
+    y: 474.67264
+    width: 140.38455
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1879,6 +1907,10 @@ MonoBehaviour:
   commandList:
   - {fileID: 5379299805334510205}
   - {fileID: 783854226}
+  - {fileID: 4094118170613424782}
+  - {fileID: 7418197168107430221}
+  - {fileID: 2119644874908934644}
+  - {fileID: 5452813490179842938}
   - {fileID: 5379299805334510194}
   - {fileID: 5379299805334510204}
   - {fileID: 288932721}
@@ -1898,21 +1930,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2535.4292
-    y: 629.22375
-    width: 127.61191
+    x: 2542.752
+    y: 549.62946
+    width: 196.15373
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 167
-  blockName: Day 1 - Loser
+  blockName: Day 1 - Loser (Standard)
   description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 5379299805334510206}
   - {fileID: 783854225}
-  - {fileID: 5379299805334510199}
-  - {fileID: 5379299805334510195}
+  - {fileID: 5379299806486954523}
+  - {fileID: 5379299806486954531}
+  - {fileID: 5379299806486954522}
+  - {fileID: 5379299806486954530}
+  - {fileID: 5379299806486954349}
+  - {fileID: 5379299806486954348}
   - {fileID: 288932719}
   - {fileID: 783854228}
   suppressAllAutoSelections: 0
@@ -1967,56 +2003,6 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
---- !u!114 &5379299805334510199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 169
-  indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: 'narrator: The crowd cheers loudly for the XLR8, who seem relieved
-      by their first win of the playoffs. Your own team, however, don''t look nearly
-      as joyful.
-
-
-
-      meaty meaty: "Don''t beat yourself up kid, you''re not
-      out yet," says Coach Meaty, walking up from behind, "I''m sure you guys can
-      climb up from the losers'' bracket in no time, we''ll see you guys in a later
-      match, guaranteed!"
-
-
-
-      narrator: Meaty walks off to congratulate his
-      overjoyed players, while your team leaves the stage in a stupor.
-
-      meaty
-      hide:
-
-
-
-      narrator: END DAY 1'
-  clearPrevious:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForInput:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
 --- !u!114 &5379299805334510204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,26 +2016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 170
-  indentLevel: 0
-  duration: 1
-  targetAlpha: 1
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  fadeTweenType: 4
---- !u!114 &5379299805334510195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 171
   indentLevel: 0
   duration: 1
   targetAlpha: 1
@@ -2142,7 +2108,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2216.401
     y: 673.70496
-    width: 193.28352
+    width: 196.15373
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2211,7 +2177,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1132.1045
     y: 80.50287
-    width: 163.4328
+    width: 167.3076
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2347,7 +2313,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1127.5789
     y: 189.19206
-    width: 176.86563
+    width: 178.84605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2476,7 +2442,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1398.2645
     y: 290.73514
-    width: 158.95518
+    width: 163.46146
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3158,7 +3124,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2271.2554
     y: -538.8574
-    width: 158.95518
+    width: 165.38452
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3187,7 +3153,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2275.9492
     y: -361.46835
-    width: 142.53728
+    width: 146.15378
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3216,7 +3182,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2286.4688
     y: -149.52023
-    width: 142.53728
+    width: 148.07684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3245,7 +3211,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2292.237
     y: 42.47096
-    width: 155.97011
+    width: 159.6153
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3274,7 +3240,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2319.2554
     y: 250.8847
-    width: 144.02982
+    width: 149.99992
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3303,7 +3269,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1966.9596
     y: 64.99446
-    width: 124.62684
+    width: 124.99994
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3369,8 +3335,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Maeday middle neutral: "I think my Helios was pretty good today,
-      what do you think?"'
+    stringVal: 'Maeday middle bored: "I think my Helios was pretty good today, what
+      do you think?"'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3772,7 +3738,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2496.4016
     y: -580.4203
-    width: 67.91044
+    width: 69.23076
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3801,7 +3767,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2497.77
     y: -486.13416
-    width: 67.91044
+    width: 69.23076
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3914,7 +3880,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2487.2832
     y: -407.6479
-    width: 64.92537
+    width: 65.384605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3973,7 +3939,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2481.8726
     y: -302.29788
-    width: 64.92537
+    width: 65.384605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4034,7 +4000,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2478.6023
     y: -191.75964
-    width: 66.41791
+    width: 67.30768
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4094,7 +4060,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2475.577
     y: -111.75958
-    width: 66.41791
+    width: 67.30768
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4154,7 +4120,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2483.472
     y: -1.4605284
-    width: 64.92537
+    width: 65.384605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4214,7 +4180,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2485.1719
     y: 97.11588
-    width: 64.92537
+    width: 65.384605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4273,7 +4239,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2524.4773
     y: 209.13896
-    width: 64.92537
+    width: 65.384605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4332,7 +4298,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2524.7488
     y: 303.0313
-    width: 64.92537
+    width: 65.384605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4392,7 +4358,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -110.44884
     y: 69.73279
-    width: 78.3582
+    width: 76.92306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5644,7 +5610,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1928.9497
     y: -157.48369
-    width: 151.4925
+    width: 155.76915
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5702,7 +5668,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1714.7006
     y: -158.54457
-    width: 169.40294
+    width: 169.23068
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6377,7 +6343,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1698.1256
     y: -332.08356
-    width: 142.53728
+    width: 144.2307
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6404,7 +6370,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1689.9402
     y: -414.20724
-    width: 149.99997
+    width: 153.84607
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6647,3 +6613,1145 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &5379299806486954329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 354
+  indentLevel: 1
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 5379299806486954330}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &5379299806486954330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 2546.7478
+    y: 645.877
+    width: 211.53835
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 355
+  blockName: Day 1 - Loser (Underworld)
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2274703370258839815}
+  - {fileID: 7693495525637039823}
+  - {fileID: 5379299806486954521}
+  - {fileID: 5379299806486954529}
+  - {fileID: 5379299806486954345}
+  - {fileID: 2242161591491944883}
+  - {fileID: 6662621898573738556}
+  - {fileID: 5676575577404731064}
+  - {fileID: 6151011689988182251}
+  - {fileID: 5379299806486954344}
+  suppressAllAutoSelections: 0
+--- !u!114 &5849075846858280249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 353
+  indentLevel: 0
+  anyOrAllConditions: 1
+  conditions:
+  - compareOperator: 0
+    anyVar:
+      variable: {fileID: 5379299806486954338}
+      data:
+        animatorData:
+          animatorRef: {fileID: 0}
+          animatorVal: {fileID: 0}
+        audioSourceData:
+          audioSourceRef: {fileID: 0}
+          audioSourceVal: {fileID: 0}
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        collider2DData:
+          collider2DRef: {fileID: 0}
+          collider2DVal: {fileID: 0}
+        colliderData:
+          colliderRef: {fileID: 0}
+          colliderVal: {fileID: 0}
+        colorData:
+          colorRef: {fileID: 0}
+          colorVal: {r: 0, g: 0, b: 0, a: 0}
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 0
+        gameObjectData:
+          gameObjectRef: {fileID: 0}
+          gameObjectVal: {fileID: 0}
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        materialData:
+          materialRef: {fileID: 0}
+          materialVal: {fileID: 0}
+        matrix4x4Data:
+          matrix4x4Ref: {fileID: 0}
+          matrix4x4Val:
+            e00: 0
+            e01: 0
+            e02: 0
+            e03: 0
+            e10: 0
+            e11: 0
+            e12: 0
+            e13: 0
+            e20: 0
+            e21: 0
+            e22: 0
+            e23: 0
+            e30: 0
+            e31: 0
+            e32: 0
+            e33: 0
+        objectData:
+          objectRef: {fileID: 0}
+          objectVal: {fileID: 0}
+        quaternionData:
+          quaternionRef: {fileID: 0}
+          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+        rigidbody2DData:
+          rigidbody2DRef: {fileID: 0}
+          rigidbody2DVal: {fileID: 0}
+        rigidbodyData:
+          rigidbodyRef: {fileID: 0}
+          rigidbodyVal: {fileID: 0}
+        spriteData:
+          spriteRef: {fileID: 0}
+          spriteVal: {fileID: 0}
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        textureData:
+          textureRef: {fileID: 0}
+          textureVal: {fileID: 0}
+        transformData:
+          transformRef: {fileID: 0}
+          transformVal: {fileID: 0}
+        vector2Data:
+          vector2Ref: {fileID: 0}
+          vector2Val: {x: 0, y: 0}
+        vector3Data:
+          vector3Ref: {fileID: 0}
+          vector3Val: {x: 0, y: 0, z: 0}
+        vector4Data:
+          vector4Ref: {fileID: 0}
+          vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  compareOperator: 0
+  anyVar:
+    variable: {fileID: 0}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &4094118170613424782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 358
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "primepoodle: Now {$TeamName} have rolled out on the Underworld comp.
+      We\u2019ve seen this from them only a few times before. Could it be enough
+      to take down Team XLR8?\r\n\ntybalt: It\u2019ll be an uphill battle for sure,
+      but you can never discount {$TeamName}. They\u2019ve always been fighters,
+      even now with the sudden change of coaches.\r\n\nprimepoodle: Absolutely, Tybalt.
+      This could be an exciting match. Let\u2019s see how it plays out!\r"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &7693495525637039823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 357
+  indentLevel: 0
+  anyVar:
+    variable: {fileID: 0}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  setOperator: 0
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &2274703370258839815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b115619cb83b4d6ab8047d0e9407403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 356
+  indentLevel: 0
+  isStartPoint: 0
+  keyMode: 0
+  customKey: 
+  keySeparator: _
+  descriptionMode: 0
+  customDescription: 
+  fireEvent: 0
+  resumeOnLoad: 1
+--- !u!114 &2119644874908934644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 360
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "tybalt: {$TeamName} are in an excellent position here, PrimePoodle.
+      So far, their Underworld composition plays have just been textbook.\r\n\nprimepoodle:
+      This really feels like a new team. We haven\u2019t seen them in this form in
+      a long time. Perhaps the new coaching style has really refreshed the team?
+      \r\n\ntybalt: It\u2019s definitely a possibility. However, this next fight
+      will be the big decider. \r\n\ntybalt: Team XLR8\u2019s flank is looking for
+      an opening, but Boiga and Noobhunter on the Persedes have everything locked
+      down.\r\n\nprimepoodle: The core of {$TeamName} are an unstoppable force right
+      now. Team XLR8 are under heavy pressure now!\n\nnarrator: [Casters start talking
+      faster]\r\n\nprimepoodle: Maeday on the Helios gets a huge strike against XLR8\u2019s
+      core, just as Boiga and Noobhunter barrage them with the Persedes turret combo.\n\nprimepoodle:
+      But Team XLR8\u2019s flank is about to close in!\r\n\natropos: Watch the flank!\r\n\r\nkerfa:
+      I got it\r\n\nnarrator: [Insert Match 1 CG here]\n\nprimepoodle: BUT KERFA
+      STOPS THEM DEAD IN THEIR TRACKS!\r\n\nprimepoodle:The Kerfa and Atropos duo
+      are there just in time! With the numbers advantage, it should be easy cleanup
+      for {$TeamName}. \r\n\r\ntybalt: XLR8 are falling one by one, and this is it!
+      With that last teamfight, XLR8 have no chance of coming back! We\u2019ve just
+      witnessed the first upset of the playoffs!\r"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &2242161591491944883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 377
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &5379299806486954344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 366
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: Day2
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
+--- !u!114 &5379299806486954345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 370
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "tybalt: {$TeamName} are in an excellent position here, PrimePoodle.
+      So far, their Underworld composition plays have just been textbook.\r\n\nprimepoodle:
+      This really feels like a new team. We haven\u2019t seen them in this form in
+      a long time. Perhaps the new coaching style has really refreshed the team?
+      \r\n\ntybalt: It\u2019s definitely a possibility. However, this next fight
+      will be the big decider. \r\n\ntybalt: Team XLR8\u2019s flank is looking for
+      an opening, but Boiga and Noobhunter on the Persedes have everything locked
+      down.\r\n\nprimepoodle: The core of {$TeamName} are an unstoppable force right
+      now. Team XLR8 are under heavy pressure now!\n\nnarrator: [Casters start talking
+      faster]\r\n\nprimepoodle: Maeday on the Helios gets a huge strike against XLR8\u2019s
+      core, just as Boiga and Noobhunter barrage them with the Persedes turret combo.\n\nprimepoodle:
+      But Team XLR8\u2019s flank closes in and gets a huge pick on Noobhunter!\r\n\r\nprimepoodle:
+      With the numbers disadvantage, {$TeamName} looks like they might crumble!\r\n\r\nprimepoodle:
+      Maeday is down! Boiga falls next! Kerfa and Atropos are not in any position
+      to help their team!\r\n\r\ntybalt: And the audience is going wild! Team XLR8
+      found a crack in the armor and showed {$TeamName} why they\u2019re a force
+      to be reckoned with!"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &5379299806486954348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 362
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &5379299806486954349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 361
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'narrator: The crowd cheers loudly for the XLR8, who seem relieved
+      by their first win of the playoffs. Your own team, however, don''t look nearly
+      as joyful.
+
+
+
+      meaty meaty: "Don''t beat yourself up kid, you''re not
+      out yet," says Coach Meaty, walking up from behind, "I''m sure you guys can
+      climb up from the losers'' bracket in no time, we''ll see you guys in a later
+      match, guaranteed!"
+
+
+
+      narrator: Meaty walks off to congratulate his
+      overjoyed players, while your team leaves the stage in a stupor.
+
+      meaty
+      hide:
+
+
+
+      narrator: END DAY 1'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &5452813490179842938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 375
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &6151011689988182251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 365
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  methodName: LoadNextScene
+  delay: 0
+--- !u!114 &5676575577404731064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 369
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &6662621898573738556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 371
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'narrator: The crowd cheers loudly for the XLR8, who seem relieved
+      by their first win of the playoffs. Your own team, however, don''t look nearly
+      as joyful.
+
+
+
+      meaty meaty: "Don''t beat yourself up kid, you''re not
+      out yet," says Coach Meaty, walking up from behind, "I''m sure you guys can
+      climb up from the losers'' bracket in no time, we''ll see you guys in a later
+      match, guaranteed!"
+
+
+
+      narrator: Meaty walks off to congratulate his
+      overjoyed players, while your team leaves the stage in a stupor.
+
+      meaty
+      hide:
+
+
+
+      narrator: END DAY 1'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &7418197168107430221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 372
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &709785525861421369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 380
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: CreatePost
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '@BigCoachMeaty: Looking forwards to the start of playoffs
+            tonight! XLR8''s gonna be the dark horse this year, just wait and see!'
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: CreatePost
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '@Persedes4ever: Finally got my Rising Z fan jersey in
+            the mail!!!!'
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: CreatePost
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '@Johnathan39835200: When is Kerfa gonna go LFT smh he
+            deserves better'
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2663512329581313984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 379
+  indentLevel: 0
+  commenterName: 
+  commentText: 'Social media posts
+
+'
+--- !u!114 &6331356651925576271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 378
+  indentLevel: 0
+  commenterName: 
+  commentText: Composition options
+--- !u!114 &5379299806486954521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 367
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "primepoodle: Now {$TeamName} have rolled out on the Underworld comp.
+      We\u2019ve seen this from them only a few times before. Could it be enough
+      to take down Team XLR8?\r\n\r\ntybalt: It\u2019ll be an uphill battle for sure,
+      but you can never discount {$TeamName}. They\u2019ve always been fighters,
+      even now with the sudden change of coaches.\r\n\r\nprimepoodle: Absolutely,
+      Tybalt. This could be an exciting match. Let\u2019s see how it plays out!\r"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &5379299806486954522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 364
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "primepoodle: {$TeamName} just haven\u2019t been able to find their
+      footing so far, Tybalt.\r\n\ntybalt: Indeed. Their engages have looked a little
+      sloppy so far in comparison to XLR8\u2019s crisp teamwork.\r\n\r\nprimepoodle:
+      And speak of the devil, Boiga is just a bit out of position and gets caught
+      by the flank!\r\n\r\nprimepoodle: XLR8 knows this is their cue and they\u2019re
+      hungry for more!\r\n\r\nprimepoodle: One by one the players of {$TeamName}
+      fall, and the audience is going wild! It\u2019s a clean victory for Team XLR8!\r\n\r\n"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &5379299806486954523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 363
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "primepoodle: We have a mirror matchup between Team XLR8 and {$TeamName}.
+      If I\u2019m a Team XLR8 fan, I am quite happy about this.\r\n\ntybalt: Absolutely,
+      we\u2019ve seen how comfortable XLR8 is when playing in the mirror. The only
+      other team able to match them is Event Horizon.\r\n\r\nprimepoodle: Well {$TeamName}
+      seems to believe that they\u2019re another exception. So let\u2019s see how
+      this plays out.\r"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &5379299806486954529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 374
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &5379299806486954530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 376
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &5379299806486954531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 373
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
