@@ -12,6 +12,7 @@ public class OptionsMenu : MonoBehaviour
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
     private readonly int[] nameFontSizes = { 50, 60, 70 };
     private readonly int[] storyFontSizes = { 45, 50, 55 };
+    private readonly ClickMode[] continueModeOptions = { ClickMode.ClickOnDialog, ClickMode.ClickAnywhere };
 
     // The keys for settings stored in PlayerPrefs
     private const string MasterVolumeKey = "MasterVolume";
@@ -20,6 +21,7 @@ public class OptionsMenu : MonoBehaviour
     private const string MessageSpeedKey = "MessageSpeed";
     private const string AutoDelayKey = "AutoDelay";
     private const string FontSizeKey = "FontSize";
+    private const string ContinueModeKey = "ContinueMode";
 
     // Slider for setting the text speed.
     [SerializeField] private Slider masterVolumeSlider;
@@ -33,6 +35,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private Slider autoDelaySlider;
     // Dropdown for font size options.
     [SerializeField] private TMP_Dropdown fontSizeDropdown;
+    // Dropdown for continue mode options.
+    [SerializeField] private TMP_Dropdown continueModeDropdown;
     // Character object used to modify to preview display.
     [SerializeField] private GameObject previewCharacterPrefab;
     // The SayDialog object to instantiate to show a preview of the current options.
@@ -46,6 +50,7 @@ public class OptionsMenu : MonoBehaviour
     private Text previewStoryText;
     private CanvasGroup canvasGroup;
     private CustomWriter writer;
+    private CustomDialogInput dialogInput;
     private Text nameText;
     private Text storyText;
     private Character previewCharacter;
@@ -78,15 +83,18 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     private void InitializeGameVariables()
     {
-        if (GameObject.Find("SayDialog") == null)
+        GameObject sayDialog = GameObject.Find("SayDialog");
+
+        if (sayDialog == null)
         {
-            print("TODO: Maybe fix why this is being called");
+            Debug.LogError("TODO: Maybe fix why this is being called");
             return;
         }
 
-        writer = GameObject.Find("SayDialog").GetComponent<CustomWriter>();
-        nameText = GameObject.Find("SayDialog").transform.Find("Panel").Find("NameText").GetComponent<Text>();
-        storyText = GameObject.Find("SayDialog").transform.Find("Panel").Find("StoryText").GetComponent<Text>();
+        writer = sayDialog.GetComponent<CustomWriter>();
+        nameText = sayDialog.transform.Find("Panel").Find("NameText").GetComponent<Text>();
+        storyText = sayDialog.transform.Find("Panel").Find("StoryText").GetComponent<Text>();
+        dialogInput = sayDialog.GetComponent<CustomDialogInput>();
     }
 
     /// <summary>
@@ -150,6 +158,12 @@ public class OptionsMenu : MonoBehaviour
         SayPreviewMessage();
     }
 
+    // Call when the dialogue continue mode option was changed.
+    public void OnContinueModeChanged()
+    {
+
+    }
+
     /// <summary>
     /// Show the Options menu
     /// </summary>
@@ -175,6 +189,7 @@ public class OptionsMenu : MonoBehaviour
         messageSpeedSlider.value = PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value);
         autoDelaySlider.value = PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value);
         fontSizeDropdown.value = PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value);
+        continueModeDropdown.value = PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value);
     }
 
     // Stop the preview running when the user exits the menu.
@@ -197,6 +212,7 @@ public class OptionsMenu : MonoBehaviour
         PlayerPrefs.SetFloat(MessageSpeedKey, messageSpeedSlider.value);
         PlayerPrefs.SetFloat(AutoDelayKey, autoDelaySlider.value);
         PlayerPrefs.SetInt(FontSizeKey, fontSizeDropdown.value);
+        PlayerPrefs.SetInt(ContinueModeKey, continueModeDropdown.value);
         PlayerPrefs.Save();
 
         ApplyOptions();
@@ -223,6 +239,7 @@ public class OptionsMenu : MonoBehaviour
         writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
         storyText.fontSize = storyFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
+        dialogInput.SetClickMode(continueModeOptions[PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value)]);
     }
 
     /// <summary>

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2109153206094863854}
   - component: {fileID: 2687110767560886605}
   - component: {fileID: 2109153206094863840}
-  - component: {fileID: 2109153206094863841}
+  - component: {fileID: 5874331231935479643}
   - component: {fileID: 2109153206094863842}
   m_Layer: 5
   m_Name: SayDialog
@@ -182,7 +182,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c53b7c20372e444c6bd7f2ac0729bbe2, type: 3}
   soundEffect: {fileID: 0}
   inputSound: {fileID: 8300000, guid: 14a396b1562834718b2d52b9c4639264, type: 3}
---- !u!114 &2109153206094863841
+--- !u!114 &5874331231935479643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2109153206094863843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b85556abd314f3f870c18c013fdcef, type: 3}
+  m_Script: {fileID: 11500000, guid: 62dfb5d804eb8014ca1914e7b968e538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clickMode: 2
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2109153206094863841}
+      - m_Target: {fileID: 0}
         m_MethodName: SetButtonClickedFlag
         m_Mode: 1
         m_Arguments:
@@ -534,7 +534,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2109153206094863841}
+        - m_Target: {fileID: 0}
           m_MethodName: SetDialogClickedFlag
           m_Mode: 1
           m_Arguments:
