@@ -55,8 +55,6 @@ public class OptionsMenu : MonoBehaviour
         previewSayDialog = GetComponentInChildren<SayDialog>();
         previewWriter = GetComponentInChildren<CustomWriter>();
         canvasGroup = GetComponent<CanvasGroup>();
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void Start()
@@ -64,6 +62,10 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        // Manually call OnSceneLoaded in Start because you can't set AudioMixer properties in Awake.
+        OnSceneLoaded();
     }
 
     void OnDestroy()
@@ -91,8 +93,9 @@ public class OptionsMenu : MonoBehaviour
     /// Set the SayDialog properties when we load into a new scene. Set references to key SayDialog components if 
     /// they exist in the scene.
     /// </summary>
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public void OnSceneLoaded(Scene scene=new Scene(), LoadSceneMode mode=LoadSceneMode.Single)
     {
+        print("Scene loaded");
         if (transform.parent != null && transform.parent.GetComponent<SaveMenu>() != null)
         {
             InitializeGameVariables();
@@ -205,11 +208,13 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void ApplyOptions()
     {
+        print("Applying options");
         // There isn't a writer in this scene, so there isn't a SayDialog. Don't try changing any settings.
         if (writer == null)
         {
             return;
         }
+        print("Have a writer");
 
         audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat(MasterVolumeKey, masterVolumeSlider.value));
         audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value));
@@ -223,6 +228,7 @@ public class OptionsMenu : MonoBehaviour
     /// <summary>
     /// Set the options in the menu and in the game to be consistent with the values of the Options Menu on
     /// the Main Menu.
+    /// TODO: See if still needed
     /// </summary>
     public void SetAllOptions(float messageSpeed, int fontSize)
     {
