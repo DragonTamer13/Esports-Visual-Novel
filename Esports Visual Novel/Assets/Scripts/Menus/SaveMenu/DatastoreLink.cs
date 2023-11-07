@@ -29,15 +29,12 @@ public class DatastoreLink : MonoBehaviour
     /// </summary>
     public void LoadNextScene()
     {
-        print("Encoded");
         Flowchart f = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
         flowchartData = FlowchartData.Encode(f);
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        print("Scene Loaded");
-
         // If there isn't a SayDialog, we are on the Main Menu and should destroy the datastore.
         // If flowchartData is null, DatastoreLink doesn't need to do anything.
         if (GameObject.Find("SayDialog") == null || flowchartData == null)
@@ -50,7 +47,6 @@ public class DatastoreLink : MonoBehaviour
         GameObject datastore = GameObject.FindGameObjectWithTag("Datastore");
         if (datastore != null)
         {
-            print("Found another datastore");
             FlowchartData.Decode(flowchartData);
         }
 
