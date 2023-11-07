@@ -12,7 +12,6 @@ public class OptionsMenu : MonoBehaviour
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
     private readonly int[] nameFontSizes = { 50, 60, 70 };
     private readonly int[] storyFontSizes = { 45, 50, 55 };
-    private readonly ClickMode[] continueModeOptions = { ClickMode.ClickOnDialog, ClickMode.ClickAnywhere };
 
     // The keys for settings stored in PlayerPrefs
     private const string MasterVolumeKey = "MasterVolume";
@@ -158,12 +157,6 @@ public class OptionsMenu : MonoBehaviour
         SayPreviewMessage();
     }
 
-    // Call when the dialogue continue mode option was changed.
-    public void OnContinueModeChanged()
-    {
-
-    }
-
     /// <summary>
     /// Show the Options menu
     /// </summary>
@@ -239,7 +232,7 @@ public class OptionsMenu : MonoBehaviour
         writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
         storyText.fontSize = storyFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
-        dialogInput.SetClickMode(continueModeOptions[PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value)]);
+        dialogInput.SwitchClickMode(PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value) == 1);
     }
 
     /// <summary>
