@@ -5,22 +5,46 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Contains main functionality to swap between pages in the About Menu.
+/// 
+/// Can be generalized to any menu, so long as each navigation button has events that call SwitchToPage and 
+/// the order of the page buttons in the hierarchy is the same as the order of the pages. ie. the ith child
+/// of buttonHolder corresponds to the ith child of pageHolder.
 /// </summary>
 public class AboutMenuController : MonoBehaviour
 {
     // Parent object of the menu's page buttons.
-    [SerializeField] private Transform pageButtonHolder;
+    [SerializeField] private Transform buttonHolder;
+    // Parent object of the menu's different pages.
+    [SerializeField] private Transform pageHolder;
 
     private List<Button> pageButtons = new List<Button>();
+    private List<GameObject> pages = new List<GameObject>();
     private Button currentButton = null;
+    private GameObject currentPage = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject g in pageButtonHolder)
+        foreach (Transform t in buttonHolder)
         {
-            pageButtons.Add(g.GetComponent<Button>());
+            pageButtons.Add(t.GetComponent<Button>());
         }
+        foreach (Transform t in pageHolder)
+        {
+            pages.Add(t.gameObject);
+        }
+
+        SwitchToPage(pageButtons[0]);
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -29,11 +53,17 @@ public class AboutMenuController : MonoBehaviour
     /// <param name="button">The button that was just clicked.</param>
     public void SwitchToPage(Button button)
     {
-        //pageButtons.FindIndex(b => b == button);
-        if (currentButton != null && currentButton != button)
+        if (currentButton != button)
         {
-            currentButton.interactable = true;
+            if (currentButton != null)
+            {
+                currentButton.interactable = true;
+                currentPage.SetActive(false);
+            }
+            button.interactable = false;
             currentButton = button;
+            currentPage = pages[pageButtons.FindIndex(b => b == button)];
+            currentPage.SetActive(true);
         }
     }
 }
