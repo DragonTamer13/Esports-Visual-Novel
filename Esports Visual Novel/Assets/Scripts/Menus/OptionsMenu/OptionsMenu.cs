@@ -9,6 +9,7 @@ using Fungus;
 
 public class OptionsMenu : MonoBehaviour
 {
+    private FullScreenMode[] fullScreenModes = { FullScreenMode.ExclusiveFullScreen, FullScreenMode.FullScreenWindow, FullScreenMode.Windowed };
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
     private readonly int[] nameFontSizes = { 50, 60, 70 };
     private readonly int[] storyFontSizes = { 45, 50, 55 };
@@ -22,6 +23,10 @@ public class OptionsMenu : MonoBehaviour
     private const string FontSizeKey = "FontSize";
     private const string ContinueModeKey = "ContinueMode";
 
+    // Dropdown for screen mode options.
+    [SerializeField] private TMP_Dropdown displayModeDropdown;
+    // Dropdown for resolution options.
+    [SerializeField] private TMP_Dropdown resolutionDropdown;
     // Slider for setting the text speed.
     [SerializeField] private Slider masterVolumeSlider;
     // Slider for setting the text speed.
@@ -109,6 +114,16 @@ public class OptionsMenu : MonoBehaviour
         }
 
         ApplyOptions();
+    }
+
+    public void OnDisplayModeChanged()
+    {
+        Screen.SetResolution(1920, 1080, fullScreenModes[displayModeDropdown.value]);
+    }
+
+    public void OnResolutionChanged()
+    {
+
     }
 
     // Call after changing the master volume option.
