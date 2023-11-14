@@ -9,12 +9,16 @@ using Fungus;
 
 public class OptionsMenu : MonoBehaviour
 {
-    private FullScreenMode[] fullScreenModes = { FullScreenMode.ExclusiveFullScreen, FullScreenMode.FullScreenWindow, FullScreenMode.Windowed };
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
+    private readonly FullScreenMode[] fullScreenModes = { FullScreenMode.ExclusiveFullScreen, FullScreenMode.FullScreenWindow, FullScreenMode.Windowed };
+    private readonly int[] resolutionWidth  = { 1024, 1152, 1280, 1280, 1280, 1280, 1360, 1440, 1440, 1600, 1600, 1680, 1920, 1920, 2560, 2560, 3200, 3840, 3840 };
+    private readonly int[] resolutionHeight = { 768,  864,  720,  800,  960,  1024, 768,  900,  1080, 900,  1024, 1050, 1080, 1200, 1440, 1600, 1800, 2160, 2400 };
     private readonly int[] nameFontSizes = { 50, 60, 70 };
     private readonly int[] storyFontSizes = { 45, 50, 55 };
 
     // The keys for settings stored in PlayerPrefs
+    private const string DisplayModeKey = "DisplayMode";
+    private const string ResolutionKey = "Resolution";
     private const string MasterVolumeKey = "MasterVolume";
     private const string MusicVolumeKey = "MusicVolume";
     private const string SFXVolumeKey = "SFXVolume";
@@ -102,6 +106,25 @@ public class OptionsMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Returns the index of the option in resolutionDropdown that matches the system's screen resolution, or 0 if no match is found.
+    /// </summary>
+    private int GetDefaultResolutionSetting()
+    {
+        int w = Screen.currentResolution.width;
+        int h = Screen.currentResolution.height;
+
+        for (int i = 0; i < resolutionWidth.Length; i++)
+        {
+            if (resolutionWidth[i] == w && resolutionHeight[i] == h)
+            {
+                return i;
+            }
+        }
+
+        return 0;
+    }
+
+    /// <summary>
     /// Set the SayDialog properties when we load into a new scene. Set references to key SayDialog components if 
     /// they exist in the scene.
     /// </summary>
@@ -118,12 +141,12 @@ public class OptionsMenu : MonoBehaviour
 
     public void OnDisplayModeChanged()
     {
-        Screen.SetResolution(1920, 1080, fullScreenModes[displayModeDropdown.value]);
+        Screen.SetResolution(resolutionWidth[resolutionDropdown.value], resolutionHeight[resolutionDropdown.value], fullScreenModes[displayModeDropdown.value]);
     }
 
     public void OnResolutionChanged()
     {
-
+        Screen.SetResolution(resolutionWidth[resolutionDropdown.value], resolutionHeight[resolutionDropdown.value], fullScreenModes[displayModeDropdown.value]);
     }
 
     // Call after changing the master volume option.
@@ -191,6 +214,8 @@ public class OptionsMenu : MonoBehaviour
         previewGO.GetComponent<Canvas>().sortingOrder = GetComponent<Canvas>().sortingOrder + 1;
 
         // Load user settings and update Options Menu UI to match.
+        displayModeDropdown.value = PlayerPrefs.GetInt(DisplayModeKey, displayModeDropdown.value);
+        resolutionDropdown.value = PlayerPrefs.GetInt(ResolutionKey, GetDefaultResolutionSetting());
         masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey, masterVolumeSlider.value);
         musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value);
         sfxVolumeSlider.value = PlayerPrefs.GetFloat(SFXVolumeKey, sfxVolumeSlider.value);
@@ -214,6 +239,8 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
 
         // Save options to PlayerPrefs
+        PlayerPrefs.SetInt(DisplayModeKey, displayModeDropdown.value);
+        PlayerPrefs.SetInt(ResolutionKey, resolutionDropdown.value);
         PlayerPrefs.SetFloat(MasterVolumeKey, masterVolumeSlider.value);
         PlayerPrefs.SetFloat(MusicVolumeKey, musicVolumeSlider.value);
         PlayerPrefs.SetFloat(SFXVolumeKey, sfxVolumeSlider.value);
