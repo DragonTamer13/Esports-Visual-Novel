@@ -11,21 +11,21 @@ public class InfoMenuController : MonoBehaviour
     private List<GameObject> covers = new List<GameObject>();
     int currentCover = -1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        foreach (Transform t in transform)
-        {
-            covers.Add(t.gameObject);
-            t.gameObject.SetActive(false);
-        }
-    }
-
     /// <summary>
     /// Highlight the next area of the screen.
     /// </summary>
     public void ShowNextCover()
     {
+        // Initialize covers 
+        if (covers.Count == 0)
+        {
+            foreach (Transform t in transform)
+            {
+                covers.Add(t.gameObject);
+                t.gameObject.SetActive(false);
+            }
+        }
+
         if (currentCover >= 0)
         {
             covers[currentCover].SetActive(false);
