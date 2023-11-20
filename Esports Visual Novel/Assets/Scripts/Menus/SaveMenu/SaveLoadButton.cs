@@ -14,7 +14,9 @@ public class SaveLoadButton : MonoBehaviour
     [SerializeField] private SaveLoadMenu saveLoadMenu;
     // The image component associated with this save file.
     [SerializeField] private Image saveGameImage;
-
+    // This button's smaller delete button.
+    [SerializeField] private Button deleteButton;
+ 
     private string saveDataKey = "";
     private bool isSaving; // True when button saves a game, false when button loads a game.
     private Text saveNameText;
@@ -45,6 +47,17 @@ public class SaveLoadButton : MonoBehaviour
         saveLoadMenu.OnButtonClick(saveDataKey, this);
     }
 
+    public void OnDeleteClick()
+    {
+        if (saveDataKey == "")
+        {
+            Debug.LogError("Attempting to delete an empty saveDataKey");
+            return;
+        }
+
+        saveLoadMenu.OnDeleteClick(saveDataKey, this);
+    }
+
     /// <summary>
     /// Update the save slot index and isSaving value of this button.
     /// Sets button text and interactability to match new values.
@@ -68,6 +81,7 @@ public class SaveLoadButton : MonoBehaviour
         if (!saveManager.SaveDataExists(saveDataKey))
         {
             button.interactable = isSaving;
+            deleteButton.interactable = false;
             saveNameText.text = "No save";
             saveGameImage.sprite = null;
             return;
@@ -75,6 +89,7 @@ public class SaveLoadButton : MonoBehaviour
         else
         {
             button.interactable = true;
+            deleteButton.interactable = true;
         }
 
         // Update the text on the button to show a description of the save.

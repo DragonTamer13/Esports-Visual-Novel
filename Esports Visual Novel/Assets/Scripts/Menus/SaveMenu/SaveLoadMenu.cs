@@ -13,6 +13,10 @@ public class SaveLoadMenu : MonoBehaviour
     [SerializeField] private GameObject saveLoadButtonHolder;
     // Parent object for the page UI buttons.
     [SerializeField] private GameObject pageButtonHolder;
+    // Menu for confirming if the player wants to delete a save.
+    [SerializeField] private GameObject deleteConfirmMenu;
+    // Text object displaying the save to be deleted.
+    [SerializeField] private Text deleteConfirmMenuText;
     // Menu for confirming if the player wants to overwrite an existing save.
     [SerializeField] private GameObject overwriteConfirmMenu;
     // Text object on the overwrite menu displaying the name of the save to be overwritten.
@@ -44,6 +48,11 @@ public class SaveLoadMenu : MonoBehaviour
 
         menuPage = value;
         UpdateSaveSlots();
+    }
+
+    private static string GetSaveImageName(string saveDataKey)
+    {
+        return Application.persistentDataPath + "/" + saveDataKey + ".png";
     }
 
     private void Awake()
@@ -103,7 +112,7 @@ public class SaveLoadMenu : MonoBehaviour
         canvasGroup.alpha = 0;
         yield return new WaitForEndOfFrame();
 
-        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + saveDataKey + ".png");
+        ScreenCapture.CaptureScreenshot(GetSaveImageName(saveDataKey));
         canvasGroup.alpha = 1;
         yield return new WaitForEndOfFrame();
 
@@ -184,12 +193,43 @@ public class SaveLoadMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Attempt to delete a save file.
+    /// </summary>
+    /// <param name="saveDataKey">The selected save slot key.</param>
+    /// <param name="saveLoadButton">The button that was clicked.</param>
+    public void OnDeleteClick(string saveDataKey, SaveLoadButton saveLoadButton)
+    {
+        var saveManager = FungusManager.Instance.SaveManager;
+
+        if (saveManager.SaveDataExists(saveDataKey))
+        {
+            storedKey = saveDataKey;
+            storedSaveLoadButton = saveLoadButton;
+            deleteConfirmMenuText.text = "Are you sure you want to permanently delete \"" + saveLoadButton.GetSaveName() + "\"?";
+            deleteConfirmMenu.SetActive(true);
+        }
+    }
+
+    /// <summary>
     /// Saves the game to a slot that already has data. Should only be called by the OverwriteConfirmMenu.
     /// </summary>
     public void ConfirmOverwrite()
     {
         // NOTE: This should probably be done using delegates or UnityEvents or callbacks, something like that. Maybe we can change it to work like that later.
         Save(storedKey, storedSaveLoadButton);
+    }
+
+    /// <summary>
+    /// Delete a save file.
+    /// </summary>
+    public void ConfirmDelete()
+    {
+        SaveManager.Delete(storedKey);
+        if (System.IO.File.Exists(GetSaveImageName(storedKey)))
+        {
+            System.IO.File.Delete(GetSaveImageName(storedKey));
+        }
+        storedSaveLoadButton.UpdateButton();
     }
 
     /// <summary>
