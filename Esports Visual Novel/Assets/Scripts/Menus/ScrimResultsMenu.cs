@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScrimResultsMenu : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup canvas;
     [SerializeField] private GameObject[] panels;
     private int curPanel;
 

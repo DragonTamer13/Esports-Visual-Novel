@@ -1226,7 +1226,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.29998
+      value: -0.000020980835
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -4567,22 +4567,22 @@ PrefabInstance:
     - target: {fileID: 2792659042120049914, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: nodeRect.x
-      value: 1906.0222
+      value: 1963.0531
       objectReference: {fileID: 0}
     - target: {fileID: 2792659042120049914, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: nodeRect.y
-      value: -561.56805
+      value: -558.6608
       objectReference: {fileID: 0}
     - target: {fileID: 3132229155888790290, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: nodeRect.x
-      value: 1777.2527
+      value: 1794.7778
       objectReference: {fileID: 0}
     - target: {fileID: 3132229155888790290, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: nodeRect.y
-      value: -621.745
+      value: -558.85864
       objectReference: {fileID: 0}
     - target: {fileID: 3132229155888790290, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
@@ -4598,7 +4598,7 @@ PrefabInstance:
         type: 3}
       propertyPath: commandList.Array.data[1]
       value: 
-      objectReference: {fileID: 5379299806486954339}
+      objectReference: {fileID: 0}
     - target: {fileID: 3665323003427916302, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetObject
@@ -4702,6 +4702,11 @@ PrefabInstance:
     - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5379299805334510529, guid: fe3aee5cf3b3ae2488a111121cb87c45,
@@ -5041,7 +5046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 455
+  itemId: 490
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -5288,11 +5293,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1616.9125
     y: -394.30115
-    width: 135.9375
+    width: 142.78351
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 454
+  itemId: 489
   blockName: PlayBracketInfo
   description: 
   eventHandler: {fileID: 5379299806486954337}
@@ -5314,7 +5319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 457
+  itemId: 491
   indentLevel: 0
 --- !u!114 &5379299806486954335
 MonoBehaviour:
@@ -5328,7 +5333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 456
+  itemId: 492
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 5379299806486954325}
@@ -5349,7 +5354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 458
+  itemId: 493
   indentLevel: 1
   anyVar:
     variable: {fileID: 5379299806486954327}
@@ -5525,62 +5530,6 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
---- !u!114 &5379299806486954339
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299806486954326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 486
-  indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 5379299806486954482}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
---- !u!114 &5379299806486954340
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299806486954326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 488
-  indentLevel: 1
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 5379299806486954482}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
---- !u!114 &5379299806486954341
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299806486954326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 487
-  indentLevel: 0
 --- !u!114 &5379299806486954342
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5593,7 +5542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 475
+  itemId: 494
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -5863,7 +5812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 472
+  itemId: 495
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 5379299806486954352}
@@ -5884,7 +5833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 471
+  itemId: 496
   indentLevel: 1
   anyVar:
     variable: {fileID: 5379299806486954329}
@@ -6295,7 +6244,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1610.9913
     y: -329.43298
-    width: 132.8125
+    width: 140.72165
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6376,7 +6325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 467
+  itemId: 497
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 5379299806486954355}
@@ -6549,7 +6498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 465
+  itemId: 498
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -6796,7 +6745,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1586.4026
     y: -718.6598
-    width: 114.06251
+    width: 120.10309
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6837,7 +6786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 463
+  itemId: 499
   indentLevel: 0
 --- !u!114 &5379299806486954362
 MonoBehaviour:
@@ -6851,7 +6800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 462
+  itemId: 500
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 5379299806486954349}
@@ -6872,7 +6821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 461
+  itemId: 501
   indentLevel: 1
   anyVar:
     variable: {fileID: 5379299806486954330}
@@ -7024,7 +6973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 460
+  itemId: 502
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -7271,7 +7220,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1589.363
     y: -558.9558
-    width: 125.00001
+    width: 130.41237
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7283,25 +7232,11 @@ MonoBehaviour:
   - {fileID: 5379299806486954364}
   - {fileID: 5379299806486954363}
   - {fileID: 5379299806486954362}
-  - {fileID: 5379299806486954341}
-  - {fileID: 5379299806486954340}
   - {fileID: 5379299806486954361}
   suppressAllAutoSelections: 0
 --- !u!114 &5379299806486954429 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5379299806486954356, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-    type: 3}
-  m_PrefabInstance: {fileID: 5379299806486954324}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299806486954326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5379299806486954482 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2792659042120049914, guid: fe3aee5cf3b3ae2488a111121cb87c45,
     type: 3}
   m_PrefabInstance: {fileID: 5379299806486954324}
   m_PrefabAsset: {fileID: 0}
@@ -7327,7 +7262,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1589.2809
     y: -469.5642
-    width: 126.56251
+    width: 133.50516
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7367,7 +7302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 477
+  itemId: 503
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 5379299806486954346}
@@ -7388,7 +7323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 476
+  itemId: 504
   indentLevel: 1
   anyVar:
     variable: {fileID: 5379299806486954328}
@@ -7555,7 +7490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 473
+  itemId: 505
   indentLevel: 0
 --- !u!114 &5379299806486954604
 MonoBehaviour:
