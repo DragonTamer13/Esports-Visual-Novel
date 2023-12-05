@@ -18,6 +18,8 @@ public class VODReviewMenuController : MonoBehaviour
     // The composition preview is shown by enabling different parent objects, each containing a unique arrangement 
     // of the characters for the composition that the preview represents. This GameObject holds the parent objects.
     [SerializeField] private GameObject compositionPreviewHolder;
+    // Button to leave the menu once a composition is selected.
+    [SerializeField] private Button doneButton;
  
     // The currently selected composition button.
     private int selection = -1;
@@ -60,6 +62,8 @@ public class VODReviewMenuController : MonoBehaviour
             previews.Add(t.gameObject);
             t.gameObject.SetActive(false);
         }
+
+        doneButton.interactable = false;
     }
 
     /// <summary>
@@ -123,8 +127,7 @@ public class VODReviewMenuController : MonoBehaviour
     }
 
     /// <summary>
-    /// Switch to a new composition preview for a given button. Call when showing a preview while hovering over a button
-    /// and for switching to a new preview after pressing a button.
+    /// Switch to a new composition preview for a given button. Call when switching to a new preview after pressing a button.
     /// </summary>
     /// <param name="selectedButton">The composition button associated with the preview to show.</param>
     public void SwitchToPreview(Button selectedButton)
@@ -148,6 +151,7 @@ public class VODReviewMenuController : MonoBehaviour
         {
             dayFlowchart.SendFungusMessage("SetLosingComp");
         }
+        doneButton.interactable = true;
     }
 
     /// <summary>
