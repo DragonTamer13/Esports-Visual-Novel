@@ -9,12 +9,10 @@ public class SocialMediaController : MonoBehaviour
     [SerializeField] private GameObject postContainer;
     [SerializeField] private GameObject postPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    /// <summary>
+    /// Create a new post on the social media screen. Intended to be called from a flowchart.
+    /// </summary>
+    /// <param name="text">First "word" is the poster name, rest is the post content.</param>
     public void CreatePost(string text)
     {
         int parseIndex = text.IndexOf(' ');
