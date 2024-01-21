@@ -21,7 +21,8 @@ namespace Fungus
 
         public static string STORAGE_DIRECTORY { get { return Application.persistentDataPath + "/FungusSaves/"; } }
 
-        private static string GetFullFilePath(string saveDataKey)
+        // By Alex G: Changed access from private to public.
+        public static string GetFullFilePath(string saveDataKey)
         {
             return STORAGE_DIRECTORY + saveDataKey + ".json";
         }

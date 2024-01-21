@@ -29,7 +29,7 @@ public class ContinueButton : MonoBehaviour
         for (int i = 0; i < slots; i++)
         {
             string keyToCheck = "Slot" + i;
-            var fullFilePath = SaveManager.STORAGE_DIRECTORY + keyToCheck + ".json";
+            var fullFilePath = SaveManager.GetFullFilePath(keyToCheck);
             if (System.IO.File.Exists(fullFilePath))
             {
                 writeTime = System.IO.File.GetLastWriteTime(fullFilePath);

@@ -100,7 +100,7 @@ public class SaveLoadButton : MonoBehaviour
 #if UNITY_WEBPLAYER || UNITY_WEBGL
             historyData = PlayerPrefs.GetString(saveDataKey);
 #else
-        var fullFilePath = SaveManager.STORAGE_DIRECTORY + saveDataKey + ".json";
+        var fullFilePath = SaveManager.GetFullFilePath(saveDataKey);
         if (System.IO.File.Exists(fullFilePath))
         {
             historyData = System.IO.File.ReadAllText(fullFilePath);
