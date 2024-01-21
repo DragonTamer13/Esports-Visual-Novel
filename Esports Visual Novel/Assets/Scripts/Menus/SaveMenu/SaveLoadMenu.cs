@@ -9,6 +9,11 @@ using Fungus;
 /// </summary>
 public class SaveLoadMenu : MonoBehaviour
 {
+    // Constants
+    private const int MaxAutosaves = 4;
+    private readonly string AutosavePrefix = "auto";
+
+
     // Parent object for the save and load UI buttons.
     [SerializeField] private GameObject saveLoadButtonHolder;
     // Parent object for the page UI buttons.
@@ -224,12 +229,58 @@ public class SaveLoadMenu : MonoBehaviour
     /// </summary>
     public void ConfirmDelete()
     {
-        SaveManager.Delete(storedKey);
-        if (System.IO.File.Exists(GetSaveImageName(storedKey)))
-        {
-            System.IO.File.Delete(GetSaveImageName(storedKey));
-        }
+        DeleteSave(storedKey);
         storedSaveLoadButton.UpdateButton();
+    }
+
+    /// <summary>
+    /// Delete a save file and its associated image.
+    /// </summary>
+    private void DeleteSave(string saveDataKey)
+    {
+        SaveManager.Delete(saveDataKey);
+        if (System.IO.File.Exists(GetSaveImageName(saveDataKey)))
+        {
+            System.IO.File.Delete(GetSaveImageName(saveDataKey));
+        }
+    }
+
+    /*
+    * How to autosave:
+    * 1. Shift existing autosave names down one by changing their names. Delete the last one if it exists already.
+    * 2. Also shift preview screenshot names and delete the last one if it exists.
+    * 3. Create a save and screenshot with the autosave name.
+    * 
+    * 1. Shifting names can be done anywhere, as any script can access SaveManager.Instance and change the file names.
+    * 2. Same goes for shifting the names.
+    * 3. Creating a screenshot is done in SaveLoadMenu, which disables the UI.
+    * Therefore, the problem is taking a screenshot, specifically disabling the menu UI.
+    * 
+    * New Idea: Sometimes the autosave should be done after the screen fades in. The SavePoint command comes before the Fade command.
+    * Therefore, there should be a separate command for autosaving. It should be a function call to SaveLoadMenu. Would solve a lot of problems,
+    * but forces you to make a new command after each node that has a save slot. Could maybe make a custom command to autosave later on.
+    */
+    /// <summary>
+    /// Create a new autosave file. The oldest autosave is deleted if there are too many saves.
+    /// Call this from a flowchart.
+    /// </summary>
+    public void Autosave()
+    {
+        var saveManager = FungusManager.Instance.SaveManager;
+        string lastAutosaveName = AutosavePrefix + (MaxAutosaves - 1).ToString();
+
+        if (saveManager.SaveDataExists(lastAutosaveName))
+        {
+            DeleteSave(lastAutosaveName);
+        }
+
+        // Shift the saves down
+        for (int i = MaxAutosaves - 2; i > -1; i--)
+        {
+
+        }
+
+        // Create the new autosave
     }
 
     /// <summary>
