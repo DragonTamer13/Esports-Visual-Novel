@@ -114,11 +114,13 @@ public class SaveLoadMenu : MonoBehaviour
     /// </summary>
     private IEnumerator TakeSaveScreenshot(string saveDataKey, SaveLoadButton saveLoadButton)
     {
+        float canvasAlpha = canvasGroup.alpha;
+
         canvasGroup.alpha = 0;
         yield return new WaitForEndOfFrame();
 
         ScreenCapture.CaptureScreenshot(GetSaveImageName(saveDataKey));
-        canvasGroup.alpha = 1;
+        canvasGroup.alpha = canvasAlpha;
         yield return new WaitForEndOfFrame();
 
         saveLoadButton.UpdateButton();
@@ -275,12 +277,21 @@ public class SaveLoadMenu : MonoBehaviour
         }
 
         // Shift the saves down
+        string toName = "";
+        string fromName = lastAutosaveName;
         for (int i = MaxAutosaves - 2; i > -1; i--)
         {
-
+            toName = fromName;
+            fromName = AutosavePrefix + i.ToString();
+            if (saveManager.SaveDataExists(fromName))
+            {
+                System.IO.File.Move(SaveManager.GetFullFilePath(fromName), SaveManager.GetFullFilePath(toName));
+                System.IO.File.Move(GetSaveImageName(fromName), GetSaveImageName(toName));
+            }
         }
 
         // Create the new autosave
+        //Save(AutosavePrefix + "0", null);
     }
 
     /// <summary>
