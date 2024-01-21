@@ -10,8 +10,8 @@ using Fungus;
 public class SaveLoadMenu : MonoBehaviour
 {
     // Constants
-    private const int MaxAutosaves = 4;
-    private readonly string AutosavePrefix = "auto";
+    public const int MaxAutosaves = 4;
+    public static readonly string AutosavePrefix = "auto";
 
 
     // Parent object for the save and load UI buttons.
@@ -32,6 +32,8 @@ public class SaveLoadMenu : MonoBehaviour
     private List<Button> pageButtons = new List<Button>();
     private CanvasGroup canvasGroup; // Use a CanvasGroup to show/hide this menu or else the Buttons' save/load state isn't
                                      // set correctly the first time the menu is opened.
+    // How many save menu pages are dedicated to autosave slots.
+    private int autosavePages;
     // The current page of the menu screen, zero-indexed.
     private int menuPage = 0;
     private bool isSaving;
@@ -68,6 +70,7 @@ public class SaveLoadMenu : MonoBehaviour
         {
             buttons.Add(t.GetComponent<SaveLoadButton>());
         }
+        autosavePages = MaxAutosaves / buttons.Count;
 
         // Get all page buttons
         foreach (Transform t in pageButtonHolder.transform)
@@ -95,7 +98,12 @@ public class SaveLoadMenu : MonoBehaviour
         }
     }
 
-    private void Save(string saveDataKey, SaveLoadButton saveLoadButton)
+    /// <summary>
+    /// Create the save data and take a screenshot.
+    /// </summary>
+    /// <param name="saveDataKey">Key of the save.</param>
+    /// <param name="saveLoadButton">Slot button to be updated after the save is made. Null if no button needs to be updated.</param>
+    private void Save(string saveDataKey, SaveLoadButton saveLoadButton=null)
     {
         var saveManager = FungusManager.Instance.SaveManager;
         saveManager.Save(saveDataKey);
@@ -103,7 +111,10 @@ public class SaveLoadMenu : MonoBehaviour
         StartCoroutine(TakeSaveScreenshot(saveDataKey, saveLoadButton));
 
         // Show new save name on button.
-        saveLoadButton.UpdateButton();
+        if (saveLoadButton != null)
+        {
+            saveLoadButton.UpdateButton();
+        }
     }
 
     /// <summary>
@@ -123,7 +134,10 @@ public class SaveLoadMenu : MonoBehaviour
         canvasGroup.alpha = canvasAlpha;
         yield return new WaitForEndOfFrame();
 
-        saveLoadButton.UpdateButton();
+        if (saveLoadButton != null)
+        {
+            saveLoadButton.UpdateButton();
+        }
     }
 
     /// <summary>
@@ -145,6 +159,17 @@ public class SaveLoadMenu : MonoBehaviour
         canvasGroup.alpha = 1f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
+
+        // Prevent saving to the autosave slots.
+        if (isSaving && menuPage < autosavePages)
+        {
+            SetMenuPage(autosavePages);
+        }
+        for (int i = 0; i < autosavePages; i++)
+        {
+            pageButtons[i].gameObject.SetActive(!isSaving);
+        }
+
         UpdateSaveSlots();
     }
 
@@ -285,13 +310,15 @@ public class SaveLoadMenu : MonoBehaviour
             fromName = AutosavePrefix + i.ToString();
             if (saveManager.SaveDataExists(fromName))
             {
+                // NOTE: There might be a race condition where a save file is overwritten before it is done being copied to the next save slot.
+                //       Didn't happen while testing.
                 System.IO.File.Move(SaveManager.GetFullFilePath(fromName), SaveManager.GetFullFilePath(toName));
                 System.IO.File.Move(GetSaveImageName(fromName), GetSaveImageName(toName));
             }
         }
 
         // Create the new autosave
-        //Save(AutosavePrefix + "0", null);
+        Save(AutosavePrefix + "0");
     }
 
     /// <summary>
