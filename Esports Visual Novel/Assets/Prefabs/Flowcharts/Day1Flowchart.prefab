@@ -313,8 +313,8 @@ GameObject:
   - component: {fileID: 5379299806486954629}
   - component: {fileID: 5379299806486954630}
   - component: {fileID: 5379299806486954631}
-  - component: {fileID: 744924466}
   - component: {fileID: 744924467}
+  - component: {fileID: 569941546}
   m_Layer: 0
   m_Name: Day1Flowchart
   m_TagString: Untagged
@@ -360,8 +360,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 5379299805334510535}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 5379299806486954333}
@@ -399,7 +398,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -531.6688
-    y: 73.69
+    y: 72.513535
     width: 132.35297
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -411,7 +410,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 5379299805334510541}
   - {fileID: 5379299805334510540}
-  - {fileID: 744924466}
+  - {fileID: 569941546}
   - {fileID: 5379299805334510534}
   - {fileID: 5379299805334510543}
   suppressAllAutoSelections: 0
@@ -12126,61 +12125,6 @@ MonoBehaviour:
   - {fileID: 5379299806486954627}
   - {fileID: 5379299806486954628}
   suppressAllAutoSelections: 0
---- !u!114 &744924466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379299805334510533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 535
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Autosave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &744924467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12236,3 +12180,17 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &569941546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379299805334510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b4eb787b6aa844ca0172f1948d99a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 537
+  indentLevel: 0

@@ -27,6 +27,11 @@ namespace Fungus
             return STORAGE_DIRECTORY + saveDataKey + ".json";
         }
 
+        protected static string GetSaveImageName(string saveDataKey)
+        {
+            return Application.persistentDataPath + "/" + saveDataKey + ".png";
+        }
+
         protected virtual bool ReadSaveHistory(string saveDataKey)
         {
             var historyData = string.Empty;
@@ -251,6 +256,17 @@ namespace Fungus
         }
 
         /// <summary>
+        /// Delete a save data screenshot.
+        /// </summary>
+        public static void DeleteScreenshot(string saveDataKey)
+        {
+            if (System.IO.File.Exists(GetSaveImageName(saveDataKey)))
+            {
+                System.IO.File.Delete(GetSaveImageName(saveDataKey));
+            }
+        }
+
+        /// <summary>
         /// Returns true if save data has previously been stored using this key.
         /// </summary>
         public bool SaveDataExists(string saveDataKey)
@@ -319,7 +335,39 @@ namespace Fungus
             return saveHistory.GetDebugInfo();
         }
 
-#endregion
+        /// <summary>
+        /// Captures a screenshot of the game to display to the player for a save slot.
+        /// 
+        /// By Alex G
+        /// </summary>
+        /// <param name="canvasGroup">UI to hide while taking the screenshot.</param>
+        /// <param name="onCompleteAction">Function to call when done taking the screenshot.</param>
+        public System.Collections.IEnumerator TakeSaveScreenshot(string saveDataKey, CanvasGroup canvasGroup = null, System.Action onCompleteAction = null)
+        {
+            float canvasAlpha = 0;
+
+            if (canvasGroup != null)
+            {
+                canvasAlpha = canvasGroup.alpha;
+                canvasGroup.alpha = 0;
+            }
+            yield return new WaitForEndOfFrame();
+
+            ScreenCapture.CaptureScreenshot(GetSaveImageName(saveDataKey));
+
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = canvasAlpha;
+            }
+            yield return new WaitForEndOfFrame();
+
+            if (onCompleteAction != null)
+            {
+                onCompleteAction();
+            }
+        }
+
+        #endregion
     }
 }
 

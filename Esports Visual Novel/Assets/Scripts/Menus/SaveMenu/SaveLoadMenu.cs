@@ -9,11 +9,6 @@ using Fungus;
 /// </summary>
 public class SaveLoadMenu : MonoBehaviour
 {
-    // Constants
-    public const int MaxAutosaves = 4;
-    public static readonly string AutosavePrefix = "auto";
-
-
     // Parent object for the save and load UI buttons.
     [SerializeField] private GameObject saveLoadButtonHolder;
     // Parent object for the page UI buttons.
@@ -70,7 +65,7 @@ public class SaveLoadMenu : MonoBehaviour
         {
             buttons.Add(t.GetComponent<SaveLoadButton>());
         }
-        autosavePages = MaxAutosaves / buttons.Count;
+        autosavePages = Autosave.MaxAutosaves / buttons.Count;
 
         // Get all page buttons
         foreach (Transform t in pageButtonHolder.transform)
@@ -108,12 +103,14 @@ public class SaveLoadMenu : MonoBehaviour
         var saveManager = FungusManager.Instance.SaveManager;
         saveManager.Save(saveDataKey);
 
-        StartCoroutine(TakeSaveScreenshot(saveDataKey, saveLoadButton));
-
-        // Show new save name on button.
+        //StartCoroutine(TakeSaveScreenshot(saveDataKey, saveLoadButton));
         if (saveLoadButton != null)
         {
-            saveLoadButton.UpdateButton();
+            StartCoroutine(saveManager.TakeSaveScreenshot(saveDataKey, canvasGroup, saveLoadButton.UpdateButton));
+        }
+        else
+        {
+            StartCoroutine(saveManager.TakeSaveScreenshot(saveDataKey));
         }
     }
 
@@ -270,55 +267,6 @@ public class SaveLoadMenu : MonoBehaviour
         {
             System.IO.File.Delete(GetSaveImageName(saveDataKey));
         }
-    }
-
-    /*
-    * How to autosave:
-    * 1. Shift existing autosave names down one by changing their names. Delete the last one if it exists already.
-    * 2. Also shift preview screenshot names and delete the last one if it exists.
-    * 3. Create a save and screenshot with the autosave name.
-    * 
-    * 1. Shifting names can be done anywhere, as any script can access SaveManager.Instance and change the file names.
-    * 2. Same goes for shifting the names.
-    * 3. Creating a screenshot is done in SaveLoadMenu, which disables the UI.
-    * Therefore, the problem is taking a screenshot, specifically disabling the menu UI.
-    * 
-    * New Idea: Sometimes the autosave should be done after the screen fades in. The SavePoint command comes before the Fade command.
-    * Therefore, there should be a separate command for autosaving. It should be a function call to SaveLoadMenu. Would solve a lot of problems,
-    * but forces you to make a new command after each node that has a save slot. Could maybe make a custom command to autosave later on.
-    */
-    /// <summary>
-    /// Create a new autosave file. The oldest autosave is deleted if there are too many saves.
-    /// Call this from a flowchart.
-    /// </summary>
-    public void Autosave()
-    {
-        var saveManager = FungusManager.Instance.SaveManager;
-        string lastAutosaveName = AutosavePrefix + (MaxAutosaves - 1).ToString();
-
-        if (saveManager.SaveDataExists(lastAutosaveName))
-        {
-            DeleteSave(lastAutosaveName);
-        }
-
-        // Shift the saves down
-        string toName = "";
-        string fromName = lastAutosaveName;
-        for (int i = MaxAutosaves - 2; i > -1; i--)
-        {
-            toName = fromName;
-            fromName = AutosavePrefix + i.ToString();
-            if (saveManager.SaveDataExists(fromName))
-            {
-                // NOTE: There might be a race condition where a save file is overwritten before it is done being copied to the next save slot.
-                //       Didn't happen while testing.
-                System.IO.File.Move(SaveManager.GetFullFilePath(fromName), SaveManager.GetFullFilePath(toName));
-                System.IO.File.Move(GetSaveImageName(fromName), GetSaveImageName(toName));
-            }
-        }
-
-        // Create the new autosave
-        Save(AutosavePrefix + "0");
     }
 
     /// <summary>

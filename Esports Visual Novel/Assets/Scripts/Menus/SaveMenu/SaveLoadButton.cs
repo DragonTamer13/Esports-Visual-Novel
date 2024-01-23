@@ -66,14 +66,14 @@ public class SaveLoadButton : MonoBehaviour
     {
         this.isSaving = isSaving;
 
-        if (saveIndex < SaveLoadMenu.MaxAutosaves)
+        if (saveIndex < Autosave.MaxAutosaves)
         {
-            saveDataKey = SaveLoadMenu.AutosavePrefix + saveIndex.ToString();
+            saveDataKey = Autosave.AutosavePrefix + saveIndex.ToString();
         }
         else
         {
             // The first save menu pages are reserved for autosaves, so change the indexing for later save slots.
-            saveDataKey = "Slot" + (saveIndex - SaveLoadMenu.MaxAutosaves).ToString();
+            saveDataKey = "Slot" + (saveIndex - Autosave.MaxAutosaves).ToString();
         }
 
         UpdateButton();
