@@ -399,6 +399,27 @@ GameObject:
   - component: {fileID: 4303788208432726386}
   - component: {fileID: 3569227489376831270}
   - component: {fileID: 6379805580977105773}
+  - component: {fileID: 4848946122119852200}
+  - component: {fileID: 1671538272704527020}
+  - component: {fileID: 8758763882768002481}
+  - component: {fileID: 7757253099587443674}
+  - component: {fileID: 4260466910732836645}
+  - component: {fileID: 5087680821086759426}
+  - component: {fileID: 6291432230618945747}
+  - component: {fileID: 9055562824717621902}
+  - component: {fileID: 4509723138145017126}
+  - component: {fileID: 6291432230618946129}
+  - component: {fileID: 6291432230618946130}
+  - component: {fileID: 6291432230618946131}
+  - component: {fileID: 6291432230618946132}
+  - component: {fileID: 6291432230618946133}
+  - component: {fileID: 6291432230618946134}
+  - component: {fileID: 6291432230618946135}
+  - component: {fileID: 6291432230618946136}
+  - component: {fileID: 6291432230618946137}
+  - component: {fileID: 6291432230618946138}
+  - component: {fileID: 6291432230618946139}
+  - component: {fileID: 6291432230618946140}
   m_Layer: 0
   m_Name: Day2Flowchart
   m_TagString: Untagged
@@ -444,10 +465,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 6291432230539876225}
-  selectedCommands:
-  - {fileID: 7763153559350171356}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 6291432230618945754}
   - {fileID: 7601688583889048841}
@@ -479,8 +498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 59.887558
-    y: 68.47502
+    x: -342.86853
+    y: 61.899635
     width: 141.42862
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -502,10 +521,19 @@ MonoBehaviour:
   - {fileID: 3569227489376831270}
   - {fileID: 4303788208432726386}
   - {fileID: 7763153559350171356}
+  - {fileID: 6379805580977105773}
   - {fileID: 6291432230539876347}
   - {fileID: 6291432230539876346}
+  - {fileID: 5087680821086759426}
+  - {fileID: 4260466910732836645}
+  - {fileID: 7757253099587443674}
+  - {fileID: 8758763882768002481}
+  - {fileID: 1671538272704527020}
+  - {fileID: 4848946122119852200}
+  - {fileID: 6291432230618946137}
+  - {fileID: 6291432230618946133}
+  - {fileID: 6291432230618946129}
   - {fileID: 6291432230539876350}
-  - {fileID: 6379805580977105773}
   suppressAllAutoSelections: 0
 --- !u!114 &6291432230539876351
 MonoBehaviour:
@@ -859,11 +887,17 @@ MonoBehaviour:
   indentLevel: 1
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'narrator: Yesterday''s loss was a big blow to the team''s confidence,
-      but you''re not out just yet. Get the team''s spirits up as best you can, and
-      don''t underestimate tonight''s team.
-
-'
+    stringVal: "narrator: Yesterday\u2019s loss was a blow to the team\u2019s confidence.
+      \n\nIt\u2019s too early to give up, though. As their coach, you can get the
+      team\u2019s spirits back up the best you can. \n\nThere\u2019s still a chance
+      to win the championship. The first step is to not underestimate your opponent
+      tonight.\n\nYou take a few moments to feel the bitterness of defeat. Perhaps
+      you should leave or\u2026\n\nYou hope the feeling of hot water on your back
+      can help wash away the feeling of hopelessness. \nYou just got your dream job
+      and now it might be gone in less than a week. The team is in disarray and you
+      curse whoever put you in this impossible situation.. \n\nOk, that\u2019s enough!
+      There\u2019s no point in quitting before everything is over. We can only play
+      the hands we are dealt.\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -992,8 +1026,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 51.953293
-    y: 183.49988
+    x: -352.4421
+    y: 168.77452
     width: 155.71436
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -17100,6 +17134,283 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 486
+  indentLevel: 1
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 6291432230539876234}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &4848946122119852200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 492
+  indentLevel: 1
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "narrator: You find everyone gathered in the same room. Despite the
+      rough start and tense atmosphere, the fact that the team had gathered early
+      was proof of their strong desire to win. \n\nHajoon is front and center talking
+      strategy to the rest of the team. He draws on the whiteboard with the same
+      vigor he expresses in game. The sound of Velocity\u2019s fingers tapping against
+      his phone screen contrast Hajoon\u2019s voice.\n\nKerfa neutral: \u201CAm I
+      the only one who even cares in this team?\u201D Hajoon slams the marker loudly
+      on the table. His eyebrows furrowed in deep frustration. \n\nkerfa right:\nNoob
+      neutral left : \u201CDon\u2019t sweat it. I\u2019m listening.\u201D Velocity
+      responds, refusing to look up from the screen. \u201CI care too, you know.
+      I mean, have you seen the posts on Deets? \u2018A makeshift team that got lucky
+      and is doomed to fail?\u2019 Really!?\u201D \nHis voice rises with his anger.
+      \u201CIf I didn\u2019t spend time dealing with this shit then we\u2019d have
+      no fans at all.\u201D\n\nNoob left:\nKerfa neutral right: \u201CWasting time,\u201D
+      Hajoon interjects, \u201Cthat\u2019s what you\u2019re doing. And I\u2019m left
+      to make up for your lack of damage.\u201D\n\nnarrator: The comment struck a
+      chord in Velocity as he tore his gaze towards Hajoon. \n\nYour job as the coach
+      is to mediate during these situations. The last few days have made you feel
+      more like a babysitter though. "
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1671538272704527020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 491
+  indentLevel: 1
+  duration: 1
+  fadeOut: 0
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &8758763882768002481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 490
+  indentLevel: 1
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &7757253099587443674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 489
+  indentLevel: 1
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'narrator: You enter the living room and see no occupant. The house
+      is quiet with the exception of muffled chatter coming from the practice room.
+
+
+      The
+      tips of the bagel end up burnt from the old toaster. You refuse to take this
+      as a bad omen.'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &4260466910732836645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 488
+  indentLevel: 1
+  duration: 1
+  fadeOut: 0
+  targetView: {fileID: 0}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &5087680821086759426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 487
+  indentLevel: 1
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &6291432230618945747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 504
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "coach: \u201CI know we\u2019ve had a rough start and we\u2019re all
+      adapting to new changes.\u201D You continue your speech hoping to motivate
+      everyone. \u201CThat just makes it more important to try and work together
+      as a team. Individually, everyone here is skilled and earned their place in
+      the playoffs. So think about just how much more you\u2019ll be able to achieve
+      when we\u2019re able to help each other.\u201D\n\nboiga middle happy: \u201CYeah
+      coach, you tell \u2018em!\u201D Boiga exclaims with enthusiasm before covering
+      his mouth., \u201COops, sorry. You can keep going.\u201D\nboiga middle neutral:\n\ncoach:
+      \u201COur next opponent is the Flying Grizzlies. Not to put any pressure, but
+      if we win this, then that trophy can still be ours.\u201D\n\nboiga hide:\natropos
+      sad middle: \u201CBut it\u2019s over if we don\u2019t, then...\u201D Atropos
+      mumbles in a far corner while rubbing the sleeve of their jacket. A dark expression
+      wears on their face, and their hands are slightly shaking.\n\nkerfa right:
+      \u201CWe just have to not lose,\u201D Hajoon scoffs. You can see the impatience
+      in his body as he taps his fingers against the table\u2019s surface. \u201CAre
+      we done with the pep talk? We\u2019re cutting into practice time.\u201D\n\natropos
+      hide:\nmaeday happy middle: \u201CEasier said than done.\u201D Maeday sighs,
+      but holds a rare smile, \u201CWe should be able to do this though, right coach?\u201D\n\nnoob
+      hide:\nboiga happy left: \u201CWhoa. A smile! Haven\u2019t seen that in awhile.\u201D
+      Boiga laughs heartily.\n\nmaeday angry: \u201CStop it! I do smile! It\u2019s
+      just that... Well, when Arctic was here... Nevermind.\u201D She shakes her
+      head, a little embarrassed at Boiga\u2019s pointed comment.\n\nmaeday hide:\nboiga
+      hide:\nnoob noob left: \u201CThe Flying Grizzlies, huh.\u201D Velocity gets
+      off his chair with an eager grin. \u201CShould be easy enough. They used to
+      be good like, what, two years ago? They\u2019re completely washed now.\u201D\n\nkerfa
+      kerfa: The frown on Hajoon\u2019s face deepens, \u201CWashed or not we shouldn\u2019t
+      underestimate them.\u201D\n\ncoach: \u201CExactly. Let\u2019s start practice
+      now.\u201D\n\nkerfa hide:\nnoob hide:\nboiga hide:"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &9055562824717621902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 108.11302
+    y: -87.54332
+    width: 151.42863
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 500
+  blockName: Morning - Talking
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 6291432230618945747}
+  - {fileID: 4509723138145017126}
+  suppressAllAutoSelections: 0
+--- !u!114 &4509723138145017126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 505
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 6291432230539876234}
@@ -17108,3 +17419,325 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &6291432230618946129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 494
+  indentLevel: 1
+  text: Scold both of them
+  description: 
+  targetBlock: {fileID: 6291432230618946130}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &6291432230618946130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -92.07524
+    y: -15.390928
+    width: 135.71434
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 496
+  blockName: Morning - Both
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 6291432230618946132}
+  - {fileID: 6291432230618946131}
+  suppressAllAutoSelections: 0
+--- !u!114 &6291432230618946131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 503
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 9055562824717621902}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &6291432230618946132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 499
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "coach: \u201CBoth of you make a good point.\u201D The entire team
+      turns their attention to you. \u201CThe best PR we can get is after winning.
+      But we won\u2019t be winning any matches if we keep arguing like this.\u201D"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &6291432230618946133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 495
+  indentLevel: 1
+  text: "Take Velocity\u2019s side"
+  description: 
+  targetBlock: {fileID: 6291432230618946134}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &6291432230618946134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -101.135315
+    y: -87.58521
+    width: 155.71436
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 506
+  blockName: Morning - Velocity
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 6291432230618946136}
+  - {fileID: 6291432230618946135}
+  suppressAllAutoSelections: 0
+--- !u!114 &6291432230618946135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 502
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 9055562824717621902}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &6291432230618946136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 498
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "coach: \u201CHajoon what you said was unnecessary,\u201D you scold
+      him and everyone turns to look at you. \u201CWe\u2019re a team, and a team
+      works together. You should be there to cover Velocity when he needs it and
+      Velocity should be there for you.\u201D\n\nnoob noob: \u201CHeh. I\u2019ll
+      be sure to help the king whenever he needs it.\u201D Velocity sticks his tongue
+      out in satisfaction. \n\nkerfa neutral: \u201CJust don\u2019t get in my way.\u201D
+      Hajoon rolls his eyes."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &6291432230618946137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 493
+  indentLevel: 1
+  text: "Take Hajoon\u2019s side"
+  description: 
+  targetBlock: {fileID: 6291432230618946138}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &6291432230618946138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -95.6232
+    y: -146.58331
+    width: 148.57149
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 507
+  blockName: Morning - Hajoon
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 6291432230618946140}
+  - {fileID: 6291432230618946139}
+  suppressAllAutoSelections: 0
+--- !u!114 &6291432230618946139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 501
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 9055562824717621902}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &6291432230618946140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 497
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "coach: \u201CHajoon has a point.\u201D The attention redirects to
+      you. \u201CFans will naturally come once we show results after winning. We
+      can\u2019t afford to waste the little time we have.\u201D\n\nnoob noob: Velocity
+      gawks at you in disbelief. He attempts to stammer out a few words, but decides
+      against it. Hajoon remains silent with a smug look on his face as if saying
+      \u201CI told you so.\u201D"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
