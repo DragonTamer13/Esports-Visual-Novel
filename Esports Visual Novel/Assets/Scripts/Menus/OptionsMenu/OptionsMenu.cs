@@ -130,7 +130,6 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void OnSceneLoaded(Scene scene=new Scene(), LoadSceneMode mode=LoadSceneMode.Single)
     {
-        print("Scene loaded");
         if (transform.parent != null && transform.parent.GetComponent<SaveMenu>() != null)
         {
             InitializeGameVariables();
@@ -259,13 +258,11 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void ApplyOptions()
     {
-        print("Applying options");
         // There isn't a writer in this scene, so there isn't a SayDialog. Don't try changing any settings.
         if (writer == null)
         {
             return;
         }
-        print("Have a writer");
 
         audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat(MasterVolumeKey, masterVolumeSlider.value));
         audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value));
