@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 1975295575747203189}
   - component: {fileID: 2354993962989935025}
   - component: {fileID: 7119408859416940343}
+  - component: {fileID: 1203180881766239995}
   m_Layer: 0
   m_Name: Day2Flowchart
   m_TagString: Untagged
@@ -467,9 +468,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 6291432230539876234}
+  - {fileID: 9055562824717621902}
   selectedCommands:
-  - {fileID: 2354993962989935025}
+  - {fileID: 1203180881766239995}
   variables:
   - {fileID: 6291432230618945754}
   - {fileID: 1975295575747203189}
@@ -17357,7 +17358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 108.11302
+    x: 106.79723
     y: -87.54332
     width: 144.73691
     height: 40
@@ -17370,6 +17371,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 6291432230618945747}
   - {fileID: 4509723138145017126}
+  - {fileID: 1203180881766239995}
   suppressAllAutoSelections: 0
 --- !u!114 &4509723138145017126
 MonoBehaviour:
@@ -17943,3 +17945,37 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1203180881766239995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291432230539876345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4591c01defd496586e9b7237c966c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 510
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 1
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _amount:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+  amountOLD: {x: 0, y: 0, z: 0}
