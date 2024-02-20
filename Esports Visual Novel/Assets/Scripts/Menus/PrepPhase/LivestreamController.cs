@@ -31,12 +31,12 @@ public class LivestreamController : MonoBehaviour
             GameObject newChatMessage = GameObject.Instantiate(chatMessage, chat);
             newChatMessage.GetComponent<TMP_Text>().text = "<color=red>Username</color>: Hello world!";
             curTime = 0.0f;
-
-            scroll.verticalNormalizedPosition = 0.0f;
         }
         else
         {
             curTime += Time.deltaTime;
+            // Force the latest message to always be fully visible in the chat window.
+            scroll.verticalNormalizedPosition = 0.0f;
         }
     }
 }
