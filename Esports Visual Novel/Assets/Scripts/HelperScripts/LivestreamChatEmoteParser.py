@@ -2,8 +2,7 @@ import csv;
 import os;
 
 ChatFileRelativePath = "\..\..\Resources\LivestreamMessages.csv"
-emotes = ["LUL", "OMEGALUL", "4Head", "ABOBA", "POG", "POGGERS", "widepepOMEGAKEKHappyChampHands"]
-# <sprite="assetName" name="spriteName">
+Emotes = ["LUL", "OMEGALUL", "4Head", "ABOBA", "POG", "POGGERS", "widepepOMEGAKEKHappyChampHands"]
 
 if __name__ == "__main__":
     print("Hello world")
@@ -21,7 +20,7 @@ if __name__ == "__main__":
         for row in reader:
             new_message = ""
             for word in row[1].split(" "):
-                if word in emotes:
+                if word in Emotes:
                     new_message += '<sprite="' + word + '" name="' + word + '"> '
                 else:
                     new_message += word + " "

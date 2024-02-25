@@ -65,7 +65,6 @@ public class LivestreamController : MonoBehaviour
                         {
                             // The message spans multiple lines
                             message = message.Substring(1);
-                            // TODO: improve condition
                             while (line != null)
                             {
                                 message += "\n";
