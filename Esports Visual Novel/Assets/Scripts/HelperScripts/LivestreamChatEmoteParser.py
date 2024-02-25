@@ -2,7 +2,7 @@ import csv;
 import os;
 
 ChatFileRelativePath = "\..\..\Resources\LivestreamMessages.csv"
-emotes = ("LUL")
+emotes = ["LUL", "OMEGALUL", "4Head", "ABOBA", "POG", "POGGERS", "widepepOMEGAKEKHappyChampHands"]
 # <sprite="assetName" name="spriteName">
 
 if __name__ == "__main__":

@@ -83,6 +83,8 @@ public class LivestreamController : MonoBehaviour
                                 }
                             }
                         }
+                        // Reading in a CSV will change quotes in the original text into double quotes, so change those back.
+                        message = message.Replace("\"\"", "\"");
                     }
 
                     if (message != "")
