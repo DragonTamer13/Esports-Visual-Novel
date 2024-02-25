@@ -2,11 +2,9 @@ import csv;
 import os;
 
 ChatFileRelativePath = "\..\..\Resources\LivestreamMessages.csv"
-Emotes = ["LUL", "OMEGALUL", "4Head", "ABOBA", "POG", "POGGERS", "widepepOMEGAKEKHappyChampHands"]
+Emotes = ["LUL", "OMEGALUL", "4Head", "ABOBA", "POG", "POGGERS", "widepepOMEGAKEKHappyChampHands", "PeepoHands", "PoggieWoggie"]
 
 if __name__ == "__main__":
-    print("Hello world")
-
     dirname = os.path.dirname(__file__)
     dirname = dirname.replace("Scripts\HelperScripts", "Resources\LivestreamMessages.csv")
     write_dirname = dirname.replace("Messages", "Messages_TMP")
