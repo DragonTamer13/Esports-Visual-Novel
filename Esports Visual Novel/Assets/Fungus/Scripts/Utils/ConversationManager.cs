@@ -34,6 +34,7 @@ namespace Fungus
             public bool ClearPrev { get; set; }
             public bool WaitForInput { get; set; }
             public bool FadeDone { get; set; }
+            public bool Jump { get; set; }
         }
 
         protected Character[] characters;
@@ -238,6 +239,11 @@ namespace Fungus
                 else if (string.Compare(sayParams[i], "nowait", true) == 0)
                 {
                     item.WaitForInput = false;
+                }
+                // By Alex G: Custom param to do small character animations
+                else if (string.Compare(sayParams[i], "jump", true) == 0)
+                {
+                    item.Jump = true;
                 }
             }
 
@@ -477,6 +483,22 @@ namespace Fungus
                 }
 
                 previousCharacter = currentCharacter;
+
+                if (item.Jump)
+                {
+                    Debug.Log("Jumping");
+                    Hashtable tweenParams = new Hashtable();
+                    tweenParams.Add("name", "Jump");
+                    tweenParams.Add("amount", new Vector3(0.0f, 100.0f, 0.0f));
+                    tweenParams.Add("space", Space.Self);
+                    tweenParams.Add("time", 2.0f);
+                    tweenParams.Add("easetype", iTween.EaseType.easeInOutQuad);
+                    tweenParams.Add("looptype", iTween.LoopType.none);
+                    tweenParams.Add("oncomplete", "OniTweenComplete");
+                    tweenParams.Add("oncompletetarget", currentCharacter.State.holder.gameObject);
+                    tweenParams.Add("oncompleteparams", this);
+                    iTween.PunchPosition(currentCharacter.State.holder.gameObject, tweenParams);
+                }
 
                 if (!string.IsNullOrEmpty(item.Text)) { 
                     exitSayWait = false;
