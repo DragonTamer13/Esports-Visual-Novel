@@ -486,18 +486,45 @@ namespace Fungus
 
                 if (item.Jump)
                 {
-                    Debug.Log("Jumping");
-                    Hashtable tweenParams = new Hashtable();
-                    tweenParams.Add("name", "Jump");
-                    tweenParams.Add("amount", new Vector3(0.0f, 100.0f, 0.0f));
-                    tweenParams.Add("space", Space.Self);
-                    tweenParams.Add("time", 2.0f);
-                    tweenParams.Add("easetype", iTween.EaseType.easeInOutQuad);
-                    tweenParams.Add("looptype", iTween.LoopType.none);
-                    tweenParams.Add("oncomplete", "OniTweenComplete");
-                    tweenParams.Add("oncompletetarget", currentCharacter.State.holder.gameObject);
-                    tweenParams.Add("oncompleteparams", this);
-                    iTween.PunchPosition(currentCharacter.State.holder.gameObject, tweenParams);
+                    //Debug.Log("Jumping");
+                    //Hashtable tweenParams = new Hashtable();
+                    //tweenParams.Add("name", "Jump");
+                    //tweenParams.Add("amount", new Vector3(0.0f, 1000.0f, 0.0f));
+                    //tweenParams.Add("space", Space.Self);
+                    //tweenParams.Add("time", 2.0f);
+                    //tweenParams.Add("easetype", iTween.EaseType.easeInOutQuad);
+                    //tweenParams.Add("looptype", iTween.LoopType.none);
+                    //tweenParams.Add("oncomplete", "OniTweenComplete");
+                    //tweenParams.Add("oncompletetarget", GameObject.FindObjectOfType<Flowchart>().gameObject);
+                    //tweenParams.Add("oncompleteparams", this);
+                    //iTween.PunchPosition(currentCharacter.State.holder.gameObject, tweenParams);
+                    //LeanTween.moveSpline
+
+                    //Hashtable tweenParams = new Hashtable();
+                    //tweenParams.Add("name", "Jump");
+                    //tweenParams.Add("amount", new Vector3(0.0f, 600.0f, 0.0f));
+                    //tweenParams.Add("space", Space.World);
+                    //tweenParams.Add("time", 1.0f);
+                    //tweenParams.Add("easetype", iTween.EaseType.easeOutSine);
+                    //tweenParams.Add("looptype", iTween.LoopType.none);
+                    //tweenParams.Add("oncomplete", "OniTweenComplete");
+                    //tweenParams.Add("oncompletetarget", currentCharacter.State.holder.gameObject);
+                    //tweenParams.Add("oncompleteparams", this);
+                    //iTween.MoveAdd(currentCharacter.State.holder.gameObject, tweenParams);
+
+                    //Vector3[] spline = { currentCharacter.State.holder.gameObject.transform.position,
+                    //    currentCharacter.State.holder.gameObject.transform.position,
+                    //    currentCharacter.State.holder.gameObject.transform.position + new Vector3(0.0f, 10.0f, 0.0f),
+                    //    currentCharacter.State.holder.gameObject.transform.position,
+                    //    currentCharacter.State.holder.gameObject.transform.position};
+                    //LeanTween.moveSpline(currentCharacter.State.holder.gameObject, spline, 0.5f)
+                    //    .setEase(LeanTweenType.easeSpring);
+
+                    Transform toTrans = currentCharacter.State.holder.gameObject.transform;
+                    //toTrans.position = toTrans.position + new Vector3(0.0f, 50.0f, 0.0f);
+                    LeanTween.move(currentCharacter.State.holder.gameObject, toTrans, 2.0f)
+                        .setEase(LeanTweenType.easeShake);
+
                 }
 
                 if (!string.IsNullOrEmpty(item.Text)) { 
