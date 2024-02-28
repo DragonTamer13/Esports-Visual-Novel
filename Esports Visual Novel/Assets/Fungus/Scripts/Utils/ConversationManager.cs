@@ -35,6 +35,7 @@ namespace Fungus
             public bool WaitForInput { get; set; }
             public bool FadeDone { get; set; }
             public bool Jump { get; set; }
+            public bool Shake { get; set; }
         }
 
         protected Character[] characters;
@@ -244,6 +245,10 @@ namespace Fungus
                 else if (string.Compare(sayParams[i], "jump", true) == 0)
                 {
                     item.Jump = true;
+                }
+                else if (string.Compare(sayParams[i], "shake", true) == 0)
+                {
+                    item.Shake = true;
                 }
             }
 
@@ -486,6 +491,14 @@ namespace Fungus
 
                 if (item.Jump)
                 {
+                    Vector3[] spline = { currentCharacter.State.holder.gameObject.transform.position,
+                        currentCharacter.State.holder.gameObject.transform.position,
+                        currentCharacter.State.holder.gameObject.transform.position + new Vector3(0.0f, 10.0f, 0.0f),
+                        currentCharacter.State.holder.gameObject.transform.position,
+                        currentCharacter.State.holder.gameObject.transform.position};
+                    LeanTween.moveSpline(currentCharacter.State.holder.gameObject, spline, 0.5f)
+                        .setEase(LeanTweenType.easeSpring);
+
                     //Debug.Log("Jumping");
                     //Hashtable tweenParams = new Hashtable();
                     //tweenParams.Add("name", "Jump");
@@ -504,7 +517,7 @@ namespace Fungus
                     //tweenParams.Add("name", "Jump");
                     //tweenParams.Add("amount", new Vector3(0.0f, 600.0f, 0.0f));
                     //tweenParams.Add("space", Space.World);
-                    //tweenParams.Add("time", 1.0f);
+                    //tweenParams.Add("time", 10.0f);
                     //tweenParams.Add("easetype", iTween.EaseType.easeOutSine);
                     //tweenParams.Add("looptype", iTween.LoopType.none);
                     //tweenParams.Add("oncomplete", "OniTweenComplete");
@@ -512,19 +525,24 @@ namespace Fungus
                     //tweenParams.Add("oncompleteparams", this);
                     //iTween.MoveAdd(currentCharacter.State.holder.gameObject, tweenParams);
 
-                    //Vector3[] spline = { currentCharacter.State.holder.gameObject.transform.position,
-                    //    currentCharacter.State.holder.gameObject.transform.position,
-                    //    currentCharacter.State.holder.gameObject.transform.position + new Vector3(0.0f, 10.0f, 0.0f),
-                    //    currentCharacter.State.holder.gameObject.transform.position,
-                    //    currentCharacter.State.holder.gameObject.transform.position};
-                    //LeanTween.moveSpline(currentCharacter.State.holder.gameObject, spline, 0.5f)
-                    //    .setEase(LeanTweenType.easeSpring);
+                    //Transform toTrans = currentCharacter.State.holder.gameObject.transform;
+                    //LeanTween.move(currentCharacter.State.holder.gameObject, toTrans, 2.0f)
+                    //    .setEase(LeanTweenType.easeShake);
+                }
 
-                    Transform toTrans = currentCharacter.State.holder.gameObject.transform;
-                    //toTrans.position = toTrans.position + new Vector3(0.0f, 50.0f, 0.0f);
-                    LeanTween.move(currentCharacter.State.holder.gameObject, toTrans, 2.0f)
-                        .setEase(LeanTweenType.easeShake);
-
+                if (item.Shake)
+                {
+                    Hashtable tweenParams = new Hashtable();
+                    tweenParams.Add("name", "shake");
+                    tweenParams.Add("amount", new Vector3(20f, 10f, 0f));
+                    tweenParams.Add("time", 0.25f);
+                    tweenParams.Add("easetype", iTween.EaseType.easeInOutQuad);
+                    tweenParams.Add("looptype", iTween.LoopType.none);
+                    tweenParams.Add("isLocal", false);
+                    tweenParams.Add("oncomplete", "OniTweenComplete");
+                    tweenParams.Add("oncompletetarget", currentCharacter.State.holder.gameObject);
+                    tweenParams.Add("oncompleteparams", this);
+                    iTween.ShakePosition(currentCharacter.State.holder.gameObject, tweenParams);
                 }
 
                 if (!string.IsNullOrEmpty(item.Text)) { 

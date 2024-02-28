@@ -3476,6 +3476,7 @@ GameObject:
   - component: {fileID: 1462965345}
   - component: {fileID: 1462965346}
   - component: {fileID: 1462965347}
+  - component: {fileID: 1462965348}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -4527,6 +4528,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1462965344}
   - {fileID: 1462965347}
+  - {fileID: 1462965348}
   - {fileID: 1462965343}
   - {fileID: 1462965346}
   suppressAllAutoSelections: 0
@@ -4569,14 +4571,22 @@ MonoBehaviour:
     stringRef: {fileID: 0}
     stringVal: 'atropos neutral left: Waiting for game to load.
 
-      middle: Moving
-      over.
+      jump: Jumping!
 
-      jump: Hello world while jumping!
+      jump:
+      Jump again!
+
+      shake: Shake!
+
+      shake: Shake again!
 
 
-      boiga neutral right:
-      Hello world!'
+      boiga neutral
+      right: Hello world!
+
+      jump: Jump
+
+      shake: Shake'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -4668,6 +4678,42 @@ MonoBehaviour:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 100, z: 0}
   space: 1
+  amountOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &1462965348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358f65040c3ef4327b70b2813cc197c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 1
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _amount:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+  isLocal: 0
+  axis: 0
   amountOLD: {x: 0, y: 0, z: 0}
 --- !u!1001 &1496064652
 PrefabInstance:
