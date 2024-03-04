@@ -28,7 +28,6 @@ public class ScrimResultsMenu : MonoBehaviour
         {
             numberText.Add(i.gameObject.GetComponentInChildren<TextMeshProUGUI>());
         }
-        SetupScrimResults(MatchDay.Day1);
     }
 
     /// <summary>
@@ -37,7 +36,7 @@ public class ScrimResultsMenu : MonoBehaviour
     /// <param name="matchDay">The day to display scrim results for.</param>
     public void SetupScrimResults(MatchDay matchDay)
     {
-
+        // TODO: Get the path based on the day
         using (StreamReader reader = File.OpenText(Application.dataPath + ScrimResultsCSVPath))
         {
             string line = reader.ReadLine();
