@@ -7,6 +7,8 @@ public class PrepPhaseMenuController : MonoBehaviour
     // The Save Menu UI in this scene.
     [SerializeField] private GameObject saveMenu;
 
+    private CanvasGroup canvasGroup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,9 @@ public class PrepPhaseMenuController : MonoBehaviour
         {
             saveMenu = GameObject.Find("SaveMenu");
         }
+
+        canvasGroup = GetComponent<CanvasGroup>();
+        Hide();
     }
 
     public void ShowSaveMenu()
@@ -24,5 +29,25 @@ public class PrepPhaseMenuController : MonoBehaviour
     public void HideSaveMenu()
     {
         saveMenu.SetActive(false);
+    }
+
+    /// <summary>
+    /// Show the prep phase menu.
+    /// </summary>
+    public void Show()
+    {
+        canvasGroup.alpha = 1.0f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    /// <summary>
+    /// Hide the prep phase menu.
+    /// </summary>
+    public void Hide()
+    {
+        canvasGroup.alpha = 0.0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 }

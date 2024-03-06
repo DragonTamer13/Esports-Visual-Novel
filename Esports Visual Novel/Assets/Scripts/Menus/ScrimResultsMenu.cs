@@ -19,6 +19,7 @@ public class ScrimResultsMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] notes;
 
     private List<TextMeshProUGUI> numberText = new List<TextMeshProUGUI>();
+    private CanvasGroup canvasGroup;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,29 @@ public class ScrimResultsMenu : MonoBehaviour
         {
             numberText.Add(i.gameObject.GetComponentInChildren<TextMeshProUGUI>());
         }
+
+        canvasGroup = GetComponent<CanvasGroup>();
+        Hide();
+    }
+
+    /// <summary>
+    /// Show the scrim results menu.
+    /// </summary>
+    public void Show()
+    {
+        canvasGroup.alpha = 1.0f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    /// <summary>
+    /// Hide the scrim results menu.
+    /// </summary>
+    public void Hide()
+    {
+        canvasGroup.alpha = 0.0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 
     /// <summary>
@@ -84,12 +108,4 @@ public class ScrimResultsMenu : MonoBehaviour
             }
         }
     }
-
-    /**
-     * Here's what's gonna happen:
-     * - New function here that takes in an enum. Each enum value corresponds to a match day. It uses the enum value to determine
-     *   which CSV to read in, then sets the values on the screen based on the CSV information.
-     * - A new Fungus command specifically sets up this menu for today. The only exposed variable is the day selector enum. 
-     *   When the command is run, call the above function with the value set in inspector.
-     */ 
 }

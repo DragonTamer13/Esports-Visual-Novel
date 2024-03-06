@@ -14,13 +14,11 @@ namespace Fungus
         [Tooltip("This day")]
         [SerializeField] protected ScrimResultsMenu.MatchDay scrimResultsDay;
 
-        [SerializeField] protected ScrimResultsMenu menu;
-
         #region Public members
         public override void OnEnter()
         {
             // TODO: Do this better
-            menu.SetupScrimResults(scrimResultsDay);
+            FindObjectOfType<ScrimResultsMenu>().SetupScrimResults(scrimResultsDay);
 
             Continue();
         }
