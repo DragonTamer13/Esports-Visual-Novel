@@ -41,4 +41,17 @@ public class InfoMenuController : MonoBehaviour
             currentCover = -1;
         }
     }
+
+    /// <summary>
+    /// Hide the currently enabled cover.
+    /// </summary>
+    public void HideCover()
+    {
+        if (currentCover < 0 || currentCover >= covers.Count)
+        {
+            return;
+        }
+
+        covers[currentCover].SetActive(false);
+    }
 }
