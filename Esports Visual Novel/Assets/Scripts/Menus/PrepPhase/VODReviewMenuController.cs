@@ -33,6 +33,7 @@ public class VODReviewMenuController : MonoBehaviour
     private List<GameObject> previews = new List<GameObject>();
     // isWinning[i] == true when button[i] is for a winning composition.
     private List<bool> isWinning = new List<bool>();
+    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
@@ -64,6 +65,8 @@ public class VODReviewMenuController : MonoBehaviour
         }
 
         doneButton.interactable = false;
+        canvasGroup = GetComponent<CanvasGroup>();
+        Hide();
     }
 
     /// <summary>
@@ -83,7 +86,9 @@ public class VODReviewMenuController : MonoBehaviour
     /// </summary>
     public void Show()
     {
-        gameObject.SetActive(true);
+        canvasGroup.alpha = 1.0f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 
     /// <summary>
@@ -91,7 +96,9 @@ public class VODReviewMenuController : MonoBehaviour
     /// </summary>
     public void Hide()
     {
-        gameObject.SetActive(false);
+        canvasGroup.alpha = 0.0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 
     /// <summary>
