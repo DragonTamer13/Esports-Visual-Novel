@@ -71,7 +71,7 @@ public class LivestreamController : MonoBehaviour
                                 line = reader.ReadLine();
                                 messageEnd = line.LastIndexOf("\"");
 
-                                if (messageEnd >= 0)
+                                if (messageEnd > 0)
                                 {
                                     message += line.Substring(0, messageEnd-1);
                                     break;
@@ -119,6 +119,7 @@ public class LivestreamController : MonoBehaviour
         chatMessages[currentChatMessageIndex].text = "<color=" + Colors[Random.Range(0, Colors.Length)] + ">" + 
                                                      usernames[Random.Range(0, usernames.Count)] + "</color>: " + 
                                                      messages[Random.Range(0, messages.Count)];
+        Canvas.ForceUpdateCanvases();
         chatMessages[currentChatMessageIndex].transform.SetSiblingIndex(chatMessages.Count - 1);
         currentChatMessageIndex = (currentChatMessageIndex + 1) % chatMessages.Count;
     }
