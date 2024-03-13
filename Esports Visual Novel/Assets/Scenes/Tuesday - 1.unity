@@ -1273,7 +1273,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
+      value: 14.299982
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -1294,6 +1294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672638925261826558, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1165063083594321923, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -2856,7 +2861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowcharts:
-  - {fileID: 1286675092}
+  - {fileID: 1012937910}
   - {fileID: 48011}
 --- !u!4 &703182877
 Transform:
@@ -2976,7 +2981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 48011}
+  selectedFlowchart: {fileID: 1012937910}
 --- !u!4 &873189501
 Transform:
   m_ObjectHideFlags: 1
@@ -3233,6 +3238,7 @@ GameObject:
   - component: {fileID: 1012938025}
   - component: {fileID: 1012938041}
   - component: {fileID: 1012938042}
+  - component: {fileID: 1012938043}
   m_Layer: 0
   m_Name: Tuesday1Flowchart
   m_TagString: Untagged
@@ -3381,7 +3387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1208.954, y: 380.18137}
+  scrollPos: {x: 1220.6244, y: 383.9396}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -3393,8 +3399,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012938018}
-  selectedCommands: []
+  - {fileID: 1012938030}
+  selectedCommands:
+  - {fileID: 1012938043}
   variables:
   - {fileID: 1012937922}
   - {fileID: 1012937926}
@@ -7952,7 +7959,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -561.26746
-    y: -233.86797
+    y: -232.86797
     width: 159
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -7965,9 +7972,9 @@ MonoBehaviour:
   - {fileID: 1012938023}
   - {fileID: 1012938024}
   - {fileID: 1012938022}
-  - {fileID: 1012938021}
   - {fileID: 1012938041}
   - {fileID: 1012938020}
+  - {fileID: 1012938021}
   - {fileID: 1012938019}
   - {fileID: 1012938039}
   suppressAllAutoSelections: 0
@@ -8074,7 +8081,7 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: "narrator: The rideshare driver smiles as you enter the car. She seems
-      eager to start and continue conversation, perhaps to pass the time. \r{$TeamName}\n\r\nDriver:
+      eager to start and continue conversation, perhaps to pass the time.\n\r\nDriver:
       \u201CSo where are you heading to?\u201D\r\n"
   clearPrevious:
     booleanRef: {fileID: 0}
@@ -8306,7 +8313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 68.54413
+    x: 71.54413
     y: -234.1553
     width: 173
     height: 40
@@ -8318,8 +8325,9 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1012938027}
-  - {fileID: 1012938026}
   - {fileID: 1012938025}
+  - {fileID: 1012938026}
+  - {fileID: 1012938043}
   suppressAllAutoSelections: 0
 --- !u!114 &1012938031
 MonoBehaviour:
@@ -8347,8 +8355,8 @@ MonoBehaviour:
       seems like a dream come true. If it wasn\u2019t for the catch: you only have
       a few days until the playoffs actually begin.\r\n\r\ndriver: \u201CThat\u2019s
       so cool. Mind if I get an autograph for my son after? Which team were you in
-      again?\u201D\r\n\r\nCoach: {TeamName}.\n\r\nDriver: \u201C...{TeamName}, huh..
-      Where did I hear that from again.. Oh. Right. I think he mentioned something
+      again?\u201D\r\n\r\nCoach: {$TeamName}.\n\r\nDriver: \u201C...{$TeamName},
+      huh.. Where did I hear that from again.. Oh. Right. I think he mentioned something
       the other night about a huge scandal happening with the coach. That\u2019s
       not you now is it?\u201D\r\n\r\nCoach: \u201CAfraid not. I\u2019m here as the
       replacement.\u201D\r\n\r\nDriver: \u201CLooks like you have your work cut out
@@ -8457,7 +8465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -150.01201
+    x: -151.01201
     y: -233.12428
     width: 145
     height: 40
@@ -8766,6 +8774,35 @@ MonoBehaviour:
   scope: 1
   key: MyString
   value: something
+--- !u!114 &1012938043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 572
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!114 &1033953707 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6780162298875237581, guid: 2cd48535cc8f4b145b2957178fdf0b94,
@@ -8904,6 +8941,28 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1582966487}
         m_MethodName: SetPlayerName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346807016}
+        m_MethodName: SetPlayerName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346807016}
+        m_MethodName: SetTeamName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9054,18 +9113,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231668393}
   m_CullTransparentMesh: 0
---- !u!114 &1286675092 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
-    type: 3}
-  m_PrefabInstance: {fileID: 5379299806486954324}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1346807011
 GameObject:
   m_ObjectHideFlags: 0
