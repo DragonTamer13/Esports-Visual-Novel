@@ -7,12 +7,14 @@ using TMPro;
 
 public class ScrimResultsMenu : MonoBehaviour
 {
-    private readonly string ScrimResultsCSVPath = "/Resources/ScrimResultsTest.csv";
+    private readonly string ScrimResultsCSVPath = "/Resources/ScrimResults.csv";
 
     public enum MatchDay
     {
-        Day1,
-        Day2
+        Tuesday_1,
+        Wednesday_2,
+        Thursday_3,
+        Friday_4_vs_3
     }
 
     [SerializeField] private Image[] numberBackgrounds;
@@ -60,16 +62,24 @@ public class ScrimResultsMenu : MonoBehaviour
     /// <param name="matchDay">The day to display scrim results for.</param>
     public void SetupScrimResults(MatchDay matchDay)
     {
-        // TODO: Get the path based on the day
         using (StreamReader reader = File.OpenText(Application.dataPath + ScrimResultsCSVPath))
         {
-            string line = reader.ReadLine();
+            string line = "";
+            int linesToSkip = 5 * ((int)matchDay);  // There are 5 rows for each match day.
             int numberCounter = 0;
             int notesCounter = 0;
 
-            while (line != null)
+            // The scrim results for this day will be 5 contiguous rows in the CSV. Skip all rows that come before the desired day.
+            for (int skip = 0; skip < linesToSkip; skip++)
             {
+                reader.ReadLine();
+            }
+
+            for (int dataLine = 0; dataLine < 5; dataLine++)
+            {
+                line = reader.ReadLine();
                 string[] parsedLine = line.Split(',');
+
                 for (int i = 0; i < parsedLine.Length; i++)
                 {
                     if (i < parsedLine.Length-1)
@@ -78,19 +88,19 @@ public class ScrimResultsMenu : MonoBehaviour
                         switch (parsedLine[i])
                         {
                             case "1":
-                                numberBackgrounds[numberCounter].color = new Color(1.0f, 0.227f, 0.227f, 1.0f);
+                                numberBackgrounds[numberCounter].color = new Color(0.902f, 0.486f, 0.451f, 1.0f);
                                 break;
                             case "2":
-                                numberBackgrounds[numberCounter].color = new Color(1.0f, 0.631f, 0.333f, 1.0f);
+                                numberBackgrounds[numberCounter].color = new Color(0.949f, 0.663f, 0.427f, 1.0f);
                                 break;
                             case "3":
-                                numberBackgrounds[numberCounter].color = new Color(1.0f, 1.0f, 0.376f, 1.0f);
+                                numberBackgrounds[numberCounter].color = new Color(1.0f, 0.839f, 0.400f, 1.0f);
                                 break;
                             case "4":
-                                numberBackgrounds[numberCounter].color = new Color(0.765f, 1.0f, 0.459f, 1.0f);
+                                numberBackgrounds[numberCounter].color = new Color(0.859f, 0.859f, 0.600f, 1.0f);
                                 break;
                             case "5":
-                                numberBackgrounds[numberCounter].color = new Color(0.353f, 1.0f, 0.353f, 1.0f);
+                                numberBackgrounds[numberCounter].color = new Color(0.718f, 0.882f, 0.804f, 1.0f);
                                 break;
                             default:
                                 numberBackgrounds[numberCounter].color = Color.white;
@@ -104,7 +114,6 @@ public class ScrimResultsMenu : MonoBehaviour
                         notesCounter++;
                     }
                 }
-                line = reader.ReadLine();
             }
         }
     }
