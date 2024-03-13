@@ -2534,7 +2534,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Monkey Simulator 2024
+  m_text: '<i>Esports Visual Novel</i>
+
+    <size=12>working title</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2567,7 +2569,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 3
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4190,6 +4192,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaveLoadMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7062608057379382730, guid: 7bc302b361af8ab49b17383bae5c54a4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062608057379382730, guid: 7bc302b361af8ab49b17383bae5c54a4,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062608057379382730, guid: 7bc302b361af8ab49b17383bae5c54a4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062608057379382730, guid: 7bc302b361af8ab49b17383bae5c54a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062608057379382730, guid: 7bc302b361af8ab49b17383bae5c54a4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc302b361af8ab49b17383bae5c54a4, type: 3}
 --- !u!114 &4519638867061394580 stripped
@@ -4213,24 +4240,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3440869452956023068, guid: 83d85e9cbd0c5234b8375fd4a07414b6,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3440869452956023068, guid: 83d85e9cbd0c5234b8375fd4a07414b6,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 95883875}
-    - target: {fileID: 3440869452956023068, guid: 83d85e9cbd0c5234b8375fd4a07414b6,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3440869452956023068, guid: 83d85e9cbd0c5234b8375fd4a07414b6,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Day1
-      objectReference: {fileID: 0}
     - target: {fileID: 3495352377919293045, guid: 83d85e9cbd0c5234b8375fd4a07414b6,
         type: 3}
       propertyPath: m_Name
@@ -4340,11 +4352,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226335588487216238, guid: 83d85e9cbd0c5234b8375fd4a07414b6,
-        type: 3}
-      propertyPath: m_Text
-      value: New Game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d85e9cbd0c5234b8375fd4a07414b6, type: 3}

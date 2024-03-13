@@ -7,7 +7,7 @@ using TMPro;
 
 public class ScrimResultsMenu : MonoBehaviour
 {
-    private readonly string ScrimResultsCSVPath = "/Resources/ScrimResults.csv";
+    private readonly string ScrimResultsCSVPath = "/ScrimResults.csv";
 
     public enum MatchDay
     {
@@ -62,7 +62,7 @@ public class ScrimResultsMenu : MonoBehaviour
     /// <param name="matchDay">The day to display scrim results for.</param>
     public void SetupScrimResults(MatchDay matchDay)
     {
-        using (StreamReader reader = File.OpenText(Application.dataPath + ScrimResultsCSVPath))
+        using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
             string line = "";
             int linesToSkip = 5 * ((int)matchDay);  // There are 5 rows for each match day.

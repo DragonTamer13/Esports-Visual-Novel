@@ -32,7 +32,7 @@ public class LivestreamController : MonoBehaviour
     {
         chatMessages = new List<TMP_Text>(chat.GetComponentsInChildren<TMP_Text>());
 
-        using (StreamReader reader = File.OpenText(Application.dataPath + "/Resources/LivestreamMessages.csv"))
+        using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + "/LivestreamMessages.csv"))
         {
             int deliminator = 0;
             string username = "";
