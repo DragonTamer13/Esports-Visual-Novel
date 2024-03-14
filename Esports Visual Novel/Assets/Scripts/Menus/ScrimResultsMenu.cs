@@ -78,42 +78,45 @@ public class ScrimResultsMenu : MonoBehaviour
             for (int dataLine = 0; dataLine < 5; dataLine++)
             {
                 line = reader.ReadLine();
-                string[] parsedLine = line.Split(',');
 
-                for (int i = 0; i < parsedLine.Length; i++)
+                for (int i = 0; i < 4; i++)
                 {
-                    if (i < parsedLine.Length-1)
+                    switch (line.Substring(i * 2, 1))
                     {
-                        numberText[numberCounter].text = parsedLine[i];
-                        switch (parsedLine[i])
-                        {
-                            case "1":
-                                numberBackgrounds[numberCounter].color = new Color(0.902f, 0.486f, 0.451f, 1.0f);
-                                break;
-                            case "2":
-                                numberBackgrounds[numberCounter].color = new Color(0.949f, 0.663f, 0.427f, 1.0f);
-                                break;
-                            case "3":
-                                numberBackgrounds[numberCounter].color = new Color(1.0f, 0.839f, 0.400f, 1.0f);
-                                break;
-                            case "4":
-                                numberBackgrounds[numberCounter].color = new Color(0.859f, 0.859f, 0.600f, 1.0f);
-                                break;
-                            case "5":
-                                numberBackgrounds[numberCounter].color = new Color(0.718f, 0.882f, 0.804f, 1.0f);
-                                break;
-                            default:
-                                numberBackgrounds[numberCounter].color = Color.white;
-                                break;
-                        }
-                        numberCounter++;
+                        case "1":
+                            numberText[numberCounter].text = "1";
+                            numberBackgrounds[numberCounter].color = new Color(0.902f, 0.486f, 0.451f, 1.0f);
+                            break;
+                        case "2":
+                            numberText[numberCounter].text = "2";
+                            numberBackgrounds[numberCounter].color = new Color(0.949f, 0.663f, 0.427f, 1.0f);
+                            break;
+                        case "3":
+                            numberText[numberCounter].text = "3";
+                            numberBackgrounds[numberCounter].color = new Color(1.0f, 0.839f, 0.400f, 1.0f);
+                            break;
+                        case "4":
+                            numberText[numberCounter].text = "4";
+                            numberBackgrounds[numberCounter].color = new Color(0.859f, 0.859f, 0.600f, 1.0f);
+                            break;
+                        case "5":
+                            numberText[numberCounter].text = "5";
+                            numberBackgrounds[numberCounter].color = new Color(0.718f, 0.882f, 0.804f, 1.0f);
+                            break;
+                        default:
+                            numberBackgrounds[numberCounter].color = Color.white;
+                            break;
                     }
-                    else
-                    {
-                        notes[notesCounter].text = parsedLine[i];
-                        notesCounter++;
-                    }
+                    numberCounter++;
                 }
+                notes[notesCounter].text = line.Substring(8);
+                // Trim off quotes if the string has them.
+                if (notes[notesCounter].text[0] == '"')
+                {
+                    notes[notesCounter].text = notes[notesCounter].text.Substring(1, notes[notesCounter].text.Length - 2);
+                }
+
+                notesCounter++;
             }
         }
     }
