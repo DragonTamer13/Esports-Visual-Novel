@@ -12,7 +12,7 @@ namespace Fungus
     public class SetScrimResults : Command
     {
         [Tooltip("This day")]
-        [SerializeField] protected ScrimResultsMenu.MatchDay scrimResultsDay;
+        [SerializeField] protected PrepPhaseMenuController.MatchDay scrimResultsDay;
 
         #region Public members
         public override void OnEnter()

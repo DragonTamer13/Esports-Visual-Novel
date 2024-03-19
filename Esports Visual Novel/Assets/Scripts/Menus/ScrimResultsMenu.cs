@@ -9,14 +9,6 @@ public class ScrimResultsMenu : MonoBehaviour
 {
     private readonly string ScrimResultsCSVPath = "/ScrimResults.csv";
 
-    public enum MatchDay
-    {
-        Tuesday_1,
-        Wednesday_2,
-        Thursday_3,
-        Friday_4_vs_3
-    }
-
     [SerializeField] private Image[] numberBackgrounds;
     [SerializeField] private TextMeshProUGUI[] notes;
 
@@ -60,7 +52,7 @@ public class ScrimResultsMenu : MonoBehaviour
     /// Set up the stats and comments for the players for a desired match day.
     /// </summary>
     /// <param name="matchDay">The day to display scrim results for.</param>
-    public void SetupScrimResults(MatchDay matchDay)
+    public void SetupScrimResults(PrepPhaseMenuController.MatchDay matchDay)
     {
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
