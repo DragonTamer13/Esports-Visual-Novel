@@ -4,21 +4,21 @@ using UnityEngine;
 
 namespace Fungus
 {
-    [CommandInfo("Flow",
-                 "Set Scrim Results",
-                 "Set which scrim results get shown for this day.")]
+    [CommandInfo("EVN",
+                 "Set Up Prep Phase",
+                 "Set what is shown on the prep phase for today.")]
     [AddComponentMenu("")]
     [ExecuteInEditMode]
-    public class SetScrimResults : Command
+    public class SetUpPrepPhase : Command
     {
         [Tooltip("This day")]
-        [SerializeField] protected PrepPhaseMenuController.MatchDay scrimResultsDay;
+        [SerializeField] protected PrepPhaseMenuController.MatchDay day;
 
         #region Public members
         public override void OnEnter()
         {
             // TODO: Do this better
-            FindObjectOfType<ScrimResultsMenu>().SetupScrimResults(scrimResultsDay);
+            FindObjectOfType<PrepPhaseMenuController>().SetUpPrepPhase(day);
 
             Continue();
         }

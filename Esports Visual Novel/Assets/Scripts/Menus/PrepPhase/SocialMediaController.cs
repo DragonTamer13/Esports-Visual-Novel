@@ -12,12 +12,33 @@ public class SocialMediaController : MonoBehaviour
     [SerializeField] private GameObject postContainer;
     [SerializeField] private GameObject postPrefab;
 
-    // TODO: Testing
+    private CanvasGroup canvasGroup;
+
     void Start()
     {
-        SetSocialMediaPosts(PrepPhaseMenuController.MatchDay.Wednesday_2);
+        canvasGroup = GetComponent<CanvasGroup>();
+        Hide();
     }
 
+    /// <summary>
+    /// Show this menu.
+    /// </summary>
+    public void Show()
+    {
+        canvasGroup.alpha = 1.0f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    /// <summary>
+    /// Hide this menu.
+    /// </summary>
+    public void Hide()
+    {
+        canvasGroup.alpha = 0.0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+    }
 
     /// <summary>
     /// Reads and sets all the social media posts for a certain day.

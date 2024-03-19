@@ -14,6 +14,8 @@ public class PrepPhaseMenuController : MonoBehaviour
 
     // The Save Menu UI in this scene.
     [SerializeField] private GameObject saveMenu;
+    [SerializeField] private ScrimResultsMenu scrimResultsMenu;
+    [SerializeField] private SocialMediaController socialMediaController;
 
     private CanvasGroup canvasGroup;
 
@@ -57,5 +59,15 @@ public class PrepPhaseMenuController : MonoBehaviour
         canvasGroup.alpha = 0.0f;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+    }
+
+    /// <summary>
+    /// Sets up all the data that is displayed for today on the prep phase sub-menus: the bracket, Deets, and scrim results menus.
+    /// </summary>
+    /// <param name="matchDay">The day to set up for.</param>
+    public void SetUpPrepPhase(MatchDay matchDay)
+    {
+        scrimResultsMenu.SetupScrimResults(matchDay);
+        socialMediaController.SetSocialMediaPosts(matchDay);
     }
 }
