@@ -6,7 +6,10 @@ using UnityEngine.Events;
 
 public class SocialMediaController : MonoBehaviour
 {
+    // Leading string for all social media CSV files.
     private readonly string PostsCSVPrefix = "/Deets_";
+    // Special string indicating to insert the player team's name into a social media message.
+    private readonly string PlayerTeamNameKey = "[PlayerTeam]";
 
     // Parent of created Post UI objects.
     [SerializeField] private GameObject postContainer;
@@ -45,7 +48,7 @@ public class SocialMediaController : MonoBehaviour
     /// </summary>
     /// <param name="matchDay">The day to display social media posts results for.</param>
     /// <param name="teamName">The player team's name.</param>
-    public void SetSocialMediaPosts(PrepPhaseMenuController.MatchDay matchDay)
+    public void SetSocialMediaPosts(PrepPhaseMenuController.MatchDay matchDay, string teamName)
     {
         string postsCSVPath = Application.streamingAssetsPath + PostsCSVPrefix;
 
@@ -83,12 +86,13 @@ public class SocialMediaController : MonoBehaviour
                 {
                     // Assumes the attachment doesn't have quotes. Gets more complicated if it does.
                     rightChar = line.LastIndexOf('"');
+                    leftChar++;
                 }
                 else
                 {
                     rightChar = line.IndexOf(',', leftChar + 1);
                 }
-                message = line.Substring(leftChar, rightChar - leftChar);
+                message = line.Substring(leftChar, rightChar - leftChar).Replace(PlayerTeamNameKey, teamName);
                 
                 parsedEndOfLine = line.Substring(rightChar + 1).Split(',');
 

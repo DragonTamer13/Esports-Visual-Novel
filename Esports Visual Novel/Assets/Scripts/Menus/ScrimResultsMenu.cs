@@ -52,7 +52,7 @@ public class ScrimResultsMenu : MonoBehaviour
     /// Set up the stats and comments for the players for a desired match day.
     /// </summary>
     /// <param name="matchDay">The day to display scrim results for.</param>
-    public void SetupScrimResults(PrepPhaseMenuController.MatchDay matchDay, string teamName)
+    public void SetupScrimResults(PrepPhaseMenuController.MatchDay matchDay)
     {
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {

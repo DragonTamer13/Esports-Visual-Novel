@@ -879,7 +879,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.299957
+      value: 14.299959
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -2684,6 +2684,7 @@ GameObject:
   - component: {fileID: 1012937971}
   - component: {fileID: 1012937970}
   - component: {fileID: 1012937973}
+  - component: {fileID: 1012937974}
   m_Layer: 0
   m_Name: Thursday3Flowchart
   m_TagString: Untagged
@@ -2846,9 +2847,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012938135}
-  selectedCommands:
-  - {fileID: 1012937973}
+  - {fileID: 1012937974}
+  selectedCommands: []
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -4623,6 +4623,32 @@ MonoBehaviour:
   teamName:
     stringRef: {fileID: 48012}
     stringVal: 
+--- !u!114 &1012937974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -1128.4216
+    y: -624.30286
+    width: 111.42854
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1046
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 0}
+  commandList: []
+  suppressAllAutoSelections: 0
 --- !u!114 &1012937976
 MonoBehaviour:
   m_ObjectHideFlags: 2

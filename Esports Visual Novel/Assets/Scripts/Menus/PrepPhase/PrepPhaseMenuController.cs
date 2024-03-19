@@ -68,7 +68,7 @@ public class PrepPhaseMenuController : MonoBehaviour
     /// <param name="teamName">The player team's name.</param>
     public void SetUpPrepPhase(MatchDay matchDay, string teamName)
     {
-        scrimResultsMenu.SetupScrimResults(matchDay, teamName);
-        socialMediaController.SetSocialMediaPosts(matchDay);
+        scrimResultsMenu.SetupScrimResults(matchDay);
+        socialMediaController.SetSocialMediaPosts(matchDay, teamName);
     }
 }
