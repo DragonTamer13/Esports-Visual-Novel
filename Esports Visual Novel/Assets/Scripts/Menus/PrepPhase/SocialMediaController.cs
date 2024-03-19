@@ -44,6 +44,7 @@ public class SocialMediaController : MonoBehaviour
     /// Reads and sets all the social media posts for a certain day.
     /// </summary>
     /// <param name="matchDay">The day to display social media posts results for.</param>
+    /// <param name="teamName">The player team's name.</param>
     public void SetSocialMediaPosts(PrepPhaseMenuController.MatchDay matchDay)
     {
         string postsCSVPath = Application.streamingAssetsPath + PostsCSVPrefix;
@@ -53,8 +54,11 @@ public class SocialMediaController : MonoBehaviour
             case PrepPhaseMenuController.MatchDay.Wednesday_2:
                 postsCSVPath += "Wednesday2";
                 break;
+            case PrepPhaseMenuController.MatchDay.Thursday_3:
+                postsCSVPath += "Thursday3";
+                break;
             default:
-                Debug.LogError("No social media posts for " + matchDay.ToString());
+                Debug.LogWarning("No social media posts for " + matchDay.ToString());
                 return;
         }
 

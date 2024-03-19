@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1244,7 +1244,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 14.299992
       objectReference: {fileID: 0}
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -1275,6 +1275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672638925261826558, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1165063083594321923, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -6287,6 +6292,11 @@ PrefabInstance:
       objectReference: {fileID: 537909463}
     - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379299805334510528, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
       propertyPath: selectedCommands.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6470,6 +6480,11 @@ PrefabInstance:
       propertyPath: _targetGameObject.gameObjectVal
       value: 
       objectReference: {fileID: 1636055305}
+    - target: {fileID: 7164794410057927673, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 72.14936
+      objectReference: {fileID: 0}
     - target: {fileID: 7418197168107430221, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetView
@@ -6505,12 +6520,18 @@ PrefabInstance:
       propertyPath: _targetGameObject.gameObjectVal
       value: 
       objectReference: {fileID: 1636055305}
+    - target: {fileID: 8592312553945550281, guid: fe3aee5cf3b3ae2488a111121cb87c45,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8728176593161084324, guid: fe3aee5cf3b3ae2488a111121cb87c45,
         type: 3}
       propertyPath: targetObject
       value: 
       objectReference: {fileID: 914052325}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8202058518472009956, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe3aee5cf3b3ae2488a111121cb87c45, type: 3}
 --- !u!1001 &5453997684830459717
 PrefabInstance:

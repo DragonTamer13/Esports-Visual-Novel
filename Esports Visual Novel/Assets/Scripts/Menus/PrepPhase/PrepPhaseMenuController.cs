@@ -65,9 +65,10 @@ public class PrepPhaseMenuController : MonoBehaviour
     /// Sets up all the data that is displayed for today on the prep phase sub-menus: the bracket, Deets, and scrim results menus.
     /// </summary>
     /// <param name="matchDay">The day to set up for.</param>
-    public void SetUpPrepPhase(MatchDay matchDay)
+    /// <param name="teamName">The player team's name.</param>
+    public void SetUpPrepPhase(MatchDay matchDay, string teamName)
     {
-        scrimResultsMenu.SetupScrimResults(matchDay);
+        scrimResultsMenu.SetupScrimResults(matchDay, teamName);
         socialMediaController.SetSocialMediaPosts(matchDay);
     }
 }

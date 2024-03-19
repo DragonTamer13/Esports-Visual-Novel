@@ -14,11 +14,14 @@ namespace Fungus
         [Tooltip("This day")]
         [SerializeField] protected PrepPhaseMenuController.MatchDay day;
 
+        [Tooltip("The player team's name")]
+        [SerializeField] protected StringData teamName;
+
         #region Public members
         public override void OnEnter()
         {
             // TODO: Do this better
-            FindObjectOfType<PrepPhaseMenuController>().SetUpPrepPhase(day);
+            FindObjectOfType<PrepPhaseMenuController>().SetUpPrepPhase(day, teamName);
 
             Continue();
         }
