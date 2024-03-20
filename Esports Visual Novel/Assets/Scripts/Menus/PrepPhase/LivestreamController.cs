@@ -46,6 +46,7 @@ public class LivestreamController : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         chatMessages = new List<TMP_Text>(chat.GetComponentsInChildren<TMP_Text>());
         Normal();
+        Hide();
 
         // Read the chat messages from a CSV file.
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + "/LivestreamMessages.csv"))
@@ -116,6 +117,11 @@ public class LivestreamController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canvasGroup.alpha < 1.0f)
+        {
+            return;
+        }
+
         if (curTime > maxTime)
         {
             CreateChatMessage();
