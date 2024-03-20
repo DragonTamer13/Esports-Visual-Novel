@@ -5,22 +5,16 @@ using UnityEngine;
 namespace Fungus
 {
     [CommandInfo("EVN",
-                 "Set Up Prep Phase",
-                 "Set what is shown on the prep phase for today.")]
+                 "Livestream Normal",
+                 "Regular chat behavior.")]
     [AddComponentMenu("")]
     [ExecuteInEditMode]
-    public class SetUpPrepPhase : Command
+    public class LivestreamNormal : Command
     {
-        [Tooltip("This day")]
-        [SerializeField] protected PrepPhaseMenuController.MatchDay day;
-
-        [Tooltip("The player team's name")]
-        [SerializeField] protected StringData teamName;
-
         #region Public members
         public override void OnEnter()
         {
-            FindObjectOfType<PrepPhaseMenuController>().SetUpPrepPhase(day, teamName);
+            FindObjectOfType<LivestreamController>().Normal();
 
             Continue();
         }
