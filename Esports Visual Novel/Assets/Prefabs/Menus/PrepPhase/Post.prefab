@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 950.52, y: 0}
+  m_SizeDelta: {x: 931.39, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7069501522570035521
 CanvasRenderer:
@@ -127,7 +127,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 256.35, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 931.39, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5495443561739180795
 CanvasRenderer:
@@ -180,6 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameText: {fileID: 2118906006462112978}
   messageText: {fileID: 7864212932711482653}
+  likesText: {fileID: 1844595313000274617}
+  redeetsText: {fileID: 7462780647046358681}
 --- !u!114 &7345212737060996398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +308,7 @@ GameObject:
   - component: {fileID: 7462780647046358681}
   - component: {fileID: 3333828150638402804}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Redeets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +485,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -9, y: 0}
-  m_SizeDelta: {x: 54.900024, y: 45.200012}
+  m_SizeDelta: {x: 55, y: 45}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &3225651213727269552
 CanvasRenderer:
@@ -709,7 +711,7 @@ GameObject:
   - component: {fileID: 1844595313000274617}
   - component: {fileID: 6772744126928087693}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Likes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,7 +883,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 25, y: 0}
-  m_SizeDelta: {x: 754.52, y: 0}
+  m_SizeDelta: {x: 735.39, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3340499969103746630
 CanvasRenderer:
@@ -910,14 +912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Normally when positioning a UI element with its Rect Transform, its position
-    and size is specified manually (optionally including behavior to stretch with
-    the parent Rect Transform). However, sometimes you may want the rectangle to
-    be automatically sized to fit the content of the UI element. This can be done
-    by adding a component called Content Size Fitter. In order to make a Rect Transform
-    with a Text component on it fit the text content, add a Content Size Fitter component
-    to the same Game Object which has the Text component. Then set both the Horizontal
-    Fit and Vertical Fit dropdowns to the Preferred setting.
+  m_text: Normally when positiet both the Horizontal Fit and Ve
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1d40e484d8497cb4099459713acf7ccd, type: 2}
   m_sharedMaterial: {fileID: -1326105597653318113, guid: 1d40e484d8497cb4099459713acf7ccd,
