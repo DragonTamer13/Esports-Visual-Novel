@@ -8,13 +8,23 @@ using TMPro;
 public class ScrimResultsMenu : MonoBehaviour
 {
     private readonly string ScrimResultsCSVPath = "/ScrimResults.csv";
+    // Contains the color to highlight each Pantheon character's name with.
+    private readonly Dictionary<string, string> characterNamesToHighlight = new Dictionary<string, string>() 
+    { 
+        {"Artemis", "60DE65"},
+        {"Athena", "3191D8"},
+        {"Hades", "8650BB"},
+        {"Helios", "C10000"},
+        {"Persephone", "E86100"},
+        {"Ra", "C200C6"},
+    };
 
-    // Image components for displaying numerical stat values.
-    [SerializeField] private Image[] values;
-    // Text component for displaying notes.
-    [SerializeField] private TextMeshProUGUI[] notes;
-    // Sprites for each possible numerical stat value, in decreasing order.
+    [Tooltip("Sprites for each possible numerical stat value, in decreasing order.")]
     [SerializeField] private Sprite[] valueImages;
+    [Tooltip("Image components for displaying numerical stat values.")]
+    [SerializeField] private Image[] values;
+    [Tooltip("Text component for displaying notes.")]
+    [SerializeField] private TextMeshProUGUI[] notes;
 
     private CanvasGroup canvasGroup;
 
@@ -54,6 +64,7 @@ public class ScrimResultsMenu : MonoBehaviour
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
             string line = "";
+            string note = "";
             int linesToSkip = 5 * ((int)matchDay);  // There are 5 rows for each match day.
             int numberCounter = 0;
             int notesCounter = 0;
@@ -93,13 +104,21 @@ public class ScrimResultsMenu : MonoBehaviour
                     }
                     numberCounter++;
                 }
-                notes[notesCounter].text = line.Substring(8);
+
+                note = line.Substring(8);
                 // Trim off quotes if the string has them.
-                if (notes[notesCounter].text[0] == '"')
+                if (note[0] == '"')
                 {
-                    notes[notesCounter].text = notes[notesCounter].text.Substring(1, notes[notesCounter].text.Length - 2);
+                    note = note.Substring(1, note.Length - 2);
+                }
+                // Highlight all character names in the note.
+                foreach (KeyValuePair<string, string> pair in characterNamesToHighlight)
+                {
+                    // TODO: Pray that none of the notes are prefixed with a character's name.
+                    note = note.Replace(pair.Key, "<color=#" + pair.Value + ">" + pair.Key + "</color>");
                 }
 
+                notes[notesCounter].text = note;
                 notesCounter++;
             }
         }

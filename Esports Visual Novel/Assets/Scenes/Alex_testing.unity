@@ -121,18 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &67262655 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6387954688776927454, guid: 0a148b30a82b48c46a30c2f18ff0dff8,
-    type: 3}
-  m_PrefabInstance: {fileID: 405294423}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &122644939
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 67262655}
+  selectedFlowchart: {fileID: 2084291233}
 --- !u!4 &770755147
 Transform:
   m_ObjectHideFlags: 1
@@ -1079,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25.000061
+      value: 24.999947
       objectReference: {fileID: 0}
     - target: {fileID: 2150456953617053537, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -5849,6 +5837,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2084291233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6387954688776927454, guid: 0a148b30a82b48c46a30c2f18ff0dff8,
+    type: 3}
+  m_PrefabInstance: {fileID: 405294423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &672638923970570125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6229,7 +6229,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000017166138
+      value: -0.00006484985
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
