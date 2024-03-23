@@ -2454,7 +2454,7 @@ GameObject:
   - component: {fileID: 4403707319660907004}
   - component: {fileID: 5912778246111238462}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Cooperation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4312,7 +4312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00002861023, y: 0}
+  m_AnchoredPosition: {x: 0.0000038146973, y: 0}
   m_SizeDelta: {x: -25, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4489975982839943958
@@ -4889,7 +4889,7 @@ GameObject:
   - component: {fileID: 8091160173045958180}
   - component: {fileID: 8864207568025659946}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Communication
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5198,7 +5198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Communication:'
+  m_text: 'Attitude:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e2ebdd361b9f444f9215dec43c0454b, type: 2}
   m_sharedMaterial: {fileID: -1446418926992698494, guid: 5e2ebdd361b9f444f9215dec43c0454b,
@@ -6646,7 +6646,7 @@ GameObject:
   - component: {fileID: 2920290673882096519}
   - component: {fileID: 7399108857229157400}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Attitude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7619,7 +7619,7 @@ GameObject:
   - component: {fileID: 6401494601667180930}
   - component: {fileID: 3591291710494968554}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12071,33 +12071,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e69efeb85431b041a5948341b0bd7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberBackgrounds:
+  values:
   - {fileID: 3591291710494968554}
+  - {fileID: 5912778246111238462}
+  - {fileID: 8864207568025659946}
+  - {fileID: 7399108857229157400}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 589196696329501860}
-  - {fileID: 709424713691723657}
-  - {fileID: 5038179763361702365}
-  - {fileID: 5672824286431231895}
-  - {fileID: 2933541312232009280}
-  - {fileID: 6382774104757785352}
-  - {fileID: 651016093741560992}
-  - {fileID: 5741178822224492464}
-  - {fileID: 1676599911967668717}
-  - {fileID: 7318261817128536774}
-  - {fileID: 5811088942037346602}
-  - {fileID: 470230374235015376}
-  - {fileID: 1354930677250625886}
-  - {fileID: 5246892704191747156}
-  - {fileID: 5559738155022139879}
-  - {fileID: 6031965092755771969}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   notes:
-  - {fileID: 0}
+  - {fileID: 4768467810318044440}
   - {fileID: 455819460830743520}
   - {fileID: 3229788278592433312}
   - {fileID: 8442641069518125456}
   - {fileID: 4614798359231721202}
+  valueImages:
+  - {fileID: 21300000, guid: 771e469071fd52142ade1ae2b71b1338, type: 3}
+  - {fileID: 21300000, guid: a18f77b6593ba1046851951904d1763b, type: 3}
+  - {fileID: 21300000, guid: e3a563eb84fca4141a175e3b9439e0a4, type: 3}
+  - {fileID: 21300000, guid: dec11ff7a167e85409558848c3cf62cf, type: 3}
+  - {fileID: 21300000, guid: 493935e45e4d7bd44adb209330f85c5a, type: 3}
 --- !u!225 &712252095000551240
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13918,11 +13924,11 @@ RectTransform:
   m_Father: {fileID: 2103877804085404937}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 720}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &6993329174363462620
 CanvasRenderer:
   m_ObjectHideFlags: 0
