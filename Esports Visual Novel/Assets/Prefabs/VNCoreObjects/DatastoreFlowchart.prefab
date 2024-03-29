@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6387954688776927455}
   - component: {fileID: 6387954688776927454}
   - component: {fileID: 6387954688776927453}
-  - component: {fileID: 829209645245301372}
   - component: {fileID: 568945787}
   - component: {fileID: 216710699248166025}
+  - component: {fileID: 2039316565}
   m_Layer: 0
   m_Name: DatastoreFlowchart
   m_TagString: Datastore
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 0.6221657, y: -0.19365907}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -62,10 +62,10 @@ MonoBehaviour:
   selectedBlocks: []
   selectedCommands: []
   variables:
-  - {fileID: 6387954688776927453}
-  - {fileID: 829209645245301372}
   - {fileID: 568945787}
   - {fileID: 216710699248166025}
+  - {fileID: 6387954688776927453}
+  - {fileID: 2039316565}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -89,22 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 1
-  key: Day1Win
-  value: 0
---- !u!114 &829209645245301372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6387954688776927452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 1
-  key: Day2Win
+  key: Friday4Win
   value: 0
 --- !u!114 &568945787
 MonoBehaviour:
@@ -134,5 +119,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 1
-  key: TeamName
+  key: PlayerTeam
   value: Team
+--- !u!114 &2039316565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387954688776927452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Friday4WinningComp
+  value: 0
