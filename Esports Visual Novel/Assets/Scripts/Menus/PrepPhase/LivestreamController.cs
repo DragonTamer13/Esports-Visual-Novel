@@ -13,6 +13,8 @@ public class LivestreamController : MonoBehaviour
 {
     private readonly string[] Colors = { "red", "blue", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", 
                                          "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F" };
+    // Special string indicating to insert the player team's name into some text.
+    private readonly string PlayerTeamNameKey = "[PlayerTeam]";
     // Time between messages for the different chat states.
     private const float NormalMessageTime = 0.25f;
     private const float PogMessageTime = 0.05f;
@@ -27,6 +29,8 @@ public class LivestreamController : MonoBehaviour
 
     // Parent object of chat messages
     [SerializeField] private Transform chat;
+    // The title text object.
+    [SerializeField] private TMP_Text streamTitleText;
     // The prefab that is created for each chat message
     [SerializeField] private GameObject chatMessage;
 
@@ -48,65 +52,17 @@ public class LivestreamController : MonoBehaviour
         Normal();
         Hide();
 
-        // Read the chat messages from a CSV file.
-        using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + "/LivestreamMessages.csv"))
+        // Read the chat usernames from a CSV file.
+        using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + "/MinMax_Usernames.csv"))
         {
-            int deliminator = 0;
-            string username = "";
-            string message = "";
             string line = reader.ReadLine();
             line = reader.ReadLine();
 
             while (line != null)
             {
-                deliminator = line.IndexOf(',');
-                if (deliminator >= 0)
+                if (line != "")
                 {
-                    username = line.Substring(0, deliminator);
-                    message = line.Substring(deliminator + 1);
-                    if (username != "")
-                    {
-                        usernames.Add(username);
-                    }
-
-                    // Remove extra characters from the message while keeping its formatting.
-                    if (message.IndexOf('"') >= 0)
-                    {
-                        // The message is in quotes.
-                        int messageEnd = message.LastIndexOf("\"");
-                        if (messageEnd == message.Length - 1)
-                        {
-                            message = message.Substring(1, messageEnd - 1);
-                        }
-                        else
-                        {
-                            // The message spans multiple lines
-                            message = message.Substring(1);
-                            while (line != null)
-                            {
-                                message += "\n";
-                                line = reader.ReadLine();
-                                messageEnd = line.LastIndexOf("\"");
-
-                                if (messageEnd > 0)
-                                {
-                                    message += line.Substring(0, messageEnd-1);
-                                    break;
-                                }
-                                else
-                                {
-                                    message += line;
-                                }
-                            }
-                        }
-                        // Reading in a CSV will change quotes in the original text into double quotes, so change those back.
-                        message = message.Replace("\"\"", "\"");
-                    }
-
-                    if (message != "")
-                    {
-                        messages.Add(message);
-                    }
+                    usernames.Add(line);
                 }
 
                 line = reader.ReadLine();
@@ -136,8 +92,79 @@ public class LivestreamController : MonoBehaviour
     /// <summary>
     /// Show this menu.
     /// </summary>
-    public void Show()
+    /// <param name="day">Which CSV to read for the chat messages for this day. Value should have a corresponding chat messages CSV.</param>
+    /// <param name="streamTitle">What is shown on the screen for the title of this stream.</param>
+    /// <param name="playerTeam">The chosen name for the player's team.</param>
+    public void Show(PrepPhaseMenuController.MatchDay day, string streamTitle, string playerTeam)
     {
+        // Read the chat messages for this match from a CSV file.
+        string fileToOpen = Application.streamingAssetsPath + "/MinMax_";
+        switch (day)
+        {
+            case PrepPhaseMenuController.MatchDay.Friday_4_vs_3:
+                fileToOpen += "Friday4vs3";
+                break;
+            default:
+                break;
+        }
+        fileToOpen += ".csv";
+
+        using (StreamReader reader = File.OpenText(fileToOpen))
+        {
+            string message = "";
+            string line = reader.ReadLine();
+            line = reader.ReadLine();   // Skip the header line
+
+            while (line != null)
+            {
+                message = line;
+                // Remove extra characters from the message while keeping its formatting.
+                if (message.IndexOf('"') >= 0)
+                {
+                    // The message is in quotes.
+                    int messageEnd = message.LastIndexOf("\"");
+                    if (messageEnd == message.Length - 1)
+                    {
+                        message = message.Substring(1, messageEnd - 1);
+                    }
+                    else
+                    {
+                        // The message spans multiple lines
+                        message = message.Substring(1);
+                        while (line != null)
+                        {
+                            message += "\n";
+                            line = reader.ReadLine();
+                            messageEnd = line.LastIndexOf("\"");
+
+                            if (messageEnd > 0)
+                            {
+                                message += line.Substring(0, messageEnd - 1);
+                                break;
+                            }
+                            else
+                            {
+                                message += line;
+                            }
+                        }
+                    }
+                    // Reading in a CSV will change quotes in the original text into double quotes, so change those back.
+                    message = message.Replace("\"\"", "\"");
+                }
+
+                message.Replace(PlayerTeamNameKey, playerTeam);
+
+                if (message != "")
+                {
+                    messages.Add(message);
+                }
+
+                line = reader.ReadLine();
+            }
+        }
+
+        // Make the livestream visible
+        streamTitleText.text = streamTitle.Replace(PlayerTeamNameKey, playerTeam);
         canvasGroup.alpha = 1.0f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
