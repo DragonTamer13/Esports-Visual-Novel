@@ -23,6 +23,6 @@ public class PlayerNameMenu : MonoBehaviour
     /// </summary>
     public void SetTeamName()
     {
-        datastoreFlowchart.SetStringVariable("TeamName", teamNameInputField.text);
+        datastoreFlowchart.SetStringVariable("PlayerTeam", teamNameInputField.text);
     }
 }
