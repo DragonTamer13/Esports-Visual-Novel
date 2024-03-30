@@ -52,6 +52,8 @@ namespace Fungus
             saveManager.Save(AutosavePrefix + "0");
             StartCoroutine(saveManager.TakeSaveScreenshot(AutosavePrefix + "0"));
 
+            print("Autosave worked");
+
             Continue();
 
 
