@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class PlayerNameMenu : MonoBehaviour
 {
     [SerializeField] private Flowchart datastoreFlowchart;
-    [SerializeField] private Text nameInputField;
-    [SerializeField] private Text teamNameInputField;
+    [SerializeField] private InputField nameInputField;
+    [SerializeField] private InputField teamNameInputField;
 
     /// <summary>
     /// Set value for player name in the datastore flowchart.
     /// </summary>
     public void SetPlayerName()
     {
-        datastoreFlowchart.SetStringVariable("PlayerName", "Coach " + nameInputField.text);
+        datastoreFlowchart.SetStringVariable("PlayerName", nameInputField.text);
     }
 
     /// <summary>
