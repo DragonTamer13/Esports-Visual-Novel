@@ -11,10 +11,7 @@ public class InfoMenuController : MonoBehaviour
     private List<GameObject> covers = new List<GameObject>();
     int currentCover = -1;
 
-    /// <summary>
-    /// Highlight the next area of the screen.
-    /// </summary>
-    public void ShowNextCover()
+    private void Start()
     {
         // Initialize covers 
         if (covers.Count == 0)
@@ -25,7 +22,13 @@ public class InfoMenuController : MonoBehaviour
                 t.gameObject.SetActive(false);
             }
         }
+    }
 
+    /// <summary>
+    /// Highlight the next area of the screen.
+    /// </summary>
+    public void ShowNextCover()
+    {
         if (currentCover >= 0)
         {
             covers[currentCover].SetActive(false);
@@ -53,5 +56,23 @@ public class InfoMenuController : MonoBehaviour
         }
 
         covers[currentCover].SetActive(false);
+    }
+
+    /// <summary>
+    /// Show a cover with a specific name.
+    /// </summary>
+    public void ShowNamedCover(string name)
+    {
+        int namedCover = covers.FindIndex(go => go.name == name);
+        if (namedCover < 0)
+        {
+            return;
+        }
+        if (currentCover >= 0)
+        {
+            covers[currentCover].SetActive(false);
+        }
+        currentCover = namedCover;
+        covers[currentCover].SetActive(true);
     }
 }
