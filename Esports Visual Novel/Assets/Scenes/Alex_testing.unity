@@ -1079,7 +1079,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0000019073486
+      value: 25.000027
       objectReference: {fileID: 0}
     - target: {fileID: 2150456953617053537, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -2454,7 +2454,9 @@ GameObject:
   - component: {fileID: 1462965354}
   - component: {fileID: 1462965358}
   - component: {fileID: 1462965356}
-  - component: {fileID: 1462965361}
+  - component: {fileID: 1462965365}
+  - component: {fileID: 1462965367}
+  - component: {fileID: 1462965368}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2498,8 +2500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -464.94815
-    y: 63.865013
+    x: -499.99948
+    y: 193.76193
     width: 79
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2537,7 +2539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1186.8002, y: 124.96756}
+  scrollPos: {x: 1184.9557, y: 79.66682}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 504
@@ -2549,9 +2551,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1462965353}
+  - {fileID: 1462965365}
   selectedCommands:
-  - {fileID: 1462965360}
+  - {fileID: 1462965368}
   variables: []
   description: My flowchart
   stepPause: 0
@@ -3493,8 +3495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -638.9623
-    y: 152.07242
+    x: -653.3954
+    y: 281.9693
     width: 240
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3818,7 +3820,7 @@ MonoBehaviour:
   itemId: 51
   blockName: LivestreamTesting
   description: 
-  eventHandler: {fileID: 1462965361}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1462965360}
   - {fileID: 1462965362}
@@ -3982,21 +3984,6 @@ MonoBehaviour:
   playerTeam:
     stringRef: {fileID: 779117468}
     stringVal: 
---- !u!114 &1462965361
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462965305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1462965353}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
 --- !u!114 &1462965362
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4050,6 +4037,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 64
   indentLevel: 0
+--- !u!114 &1462965365
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -512.5992
+    y: 99.35186
+    width: 111
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 68
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 1462965367}
+  commandList:
+  - {fileID: 1462965368}
+  suppressAllAutoSelections: 0
+--- !u!114 &1462965367
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1462965365}
+  suppressBlockAutoSelect: 0
+  waitForFrames: 1
+--- !u!114 &1462965368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'narrator: Hello here again.'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!1001 &1533655148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6236,7 +6294,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0000076293945
+      value: 14.299989
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
