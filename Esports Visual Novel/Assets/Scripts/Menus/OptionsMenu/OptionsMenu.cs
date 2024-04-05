@@ -308,7 +308,7 @@ public class OptionsMenu : MonoBehaviour
             if (previewCharacter == null)
             {
                 GameObject preview = Instantiate(previewCharacterPrefab);
-                preview.transform.parent = transform;
+                preview.transform.SetParent(transform, false);
                 previewCharacter = preview.GetComponent<Character>();
             }
             previewSayDialog.SetCharacter(previewCharacter);
