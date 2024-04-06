@@ -448,6 +448,9 @@ namespace Fungus
                 var subbedName = stringSubstituter.SubstituteStrings(name);
                 NameText = subbedName;
                 nameTextAdapter.SetTextColor(color);
+
+                // Force update to work with scaling UI elements.
+                Canvas.ForceUpdateCanvases();
             }
         }
 
