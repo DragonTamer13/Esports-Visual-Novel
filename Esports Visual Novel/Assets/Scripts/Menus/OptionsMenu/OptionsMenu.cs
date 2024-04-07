@@ -208,7 +208,7 @@ public class OptionsMenu : MonoBehaviour
         GameObject previewGO = GameObject.Instantiate(optionsSayDialogPrefab);
         previewSayDialog = previewGO.GetComponent<SayDialog>();
         previewWriter = previewGO.GetComponent<CustomWriter>();
-        previewNameText = previewGO.transform.Find("Panel").Find("NameText").GetComponent<Text>();
+        previewNameText = previewGO.transform.Find("Panel").Find("Nametag").Find("NameText").GetComponent<Text>();
         previewStoryText = previewGO.transform.Find("Panel").Find("StoryText").GetComponent<Text>();
         previewGO.GetComponent<Canvas>().sortingOrder = GetComponent<Canvas>().sortingOrder + 1;
 
