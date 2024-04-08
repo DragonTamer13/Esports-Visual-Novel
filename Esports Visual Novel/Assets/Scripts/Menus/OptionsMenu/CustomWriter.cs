@@ -58,17 +58,43 @@ namespace Fungus
         public void ToggleSkip()
         {
             skipping = !skipping;
+
+            // Advance the dialogue line that we're on right now since skipping only gets checked at the start of a line.
+            if (skipping)
+            {
+                dialogInput.SetNextLineFlag();
+            }
+
             /*
+             * NOTE: dialogue advancement code flow:
              * - When you click, DialogInput.SetNextLineFlag() is called.
              * - DialogInput.SetNextLineFlag() sets DialogInput.nextLineInputFlag
              * - DialogInput.nextLineInputFlag calls Writer.OnNextLineEvent() 
              * - Writer.OnNextLineEvent() sets Writer.inputFlag = true and notifies other input listeners.
-             * - Writer.inputFlag = true causes the text to instantly finish writing and for the next line to show up
-             * 
-             * - Auto calls DialogInput.SetNextLineFlag()
-             * 
-             * TODO: call SetNextLineFlag() when the writer starts writing, and in DoWaitForInput()
+             * - Writer.inputFlag = true causes the text to instantly finish writing OR for the next line to show up
              */
+        }
+
+        /// <summary>
+        /// Writes text using a typewriter effect to a UI text object. Skips writing if in skip mode.
+        /// </summary>
+        /// <param name="content">Text to be written</param>
+        /// <param name="clear">If true clears the previous text.</param>
+        /// <param name="waitForInput">Writes the text and then waits for player input before calling onComplete.</param>
+        /// <param name="stopAudio">Stops any currently playing audioclip.</param>
+        /// <param name="waitForVO">Wait for the Voice over to complete before proceeding</param>
+        /// <param name="audioClip">Audio clip to play when text starts writing.</param>
+        /// <param name="onComplete">Callback to call when writing is finished.</param>
+        public override IEnumerator Write(string content, bool clear, bool waitForInput, bool stopAudio, bool waitForVO, AudioClip audioClip, System.Action onComplete)
+        {
+            Coroutine result = StartCoroutine(base.Write(content, clear, waitForInput, stopAudio, waitForVO, audioClip, onComplete));
+
+            if (skipping)
+            {
+                dialogInput.SetNextLineFlag();
+            }
+
+            yield return result;
         }
 
         /// <summary>
@@ -96,8 +122,12 @@ namespace Fungus
             inputFlag = false;
             isWaitingForInput = true;
 
+            if (skipping)
+            {
+                dialogInput.SetNextLineFlag();
+            }
             // Continue after some time if auto is on
-            if (autoText)
+            else if (autoText)
             {
                 autoCoroutine = StartCoroutine(AutoContinue(textAdapter.Text.Length * autoDelayPerCharacter));
             }
