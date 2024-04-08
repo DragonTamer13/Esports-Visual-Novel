@@ -10,8 +10,9 @@ namespace Fungus
     /// </summary>
     public class CustomWriter : Writer
     {
-        // true to have text continue automatically after a delay
+        // True to have text continue automatically after a delay
         protected bool autoText = false;
+        protected bool skipping = false;
         // How long to delay auto continuing per character in the most recent story text.
         protected float autoDelayPerCharacter = 0.03f;
         protected DialogInput dialogInput;
@@ -52,6 +53,25 @@ namespace Fungus
         }
 
         /// <summary>
+        /// Quickly progress through dialogue until a menu shows up, the scene changes, or dialogue ends.
+        /// </summary>
+        public void ToggleSkip()
+        {
+            skipping = !skipping;
+            /*
+             * - When you click, DialogInput.SetNextLineFlag() is called.
+             * - DialogInput.SetNextLineFlag() sets DialogInput.nextLineInputFlag
+             * - DialogInput.nextLineInputFlag calls Writer.OnNextLineEvent() 
+             * - Writer.OnNextLineEvent() sets Writer.inputFlag = true and notifies other input listeners.
+             * - Writer.inputFlag = true causes the text to instantly finish writing and for the next line to show up
+             * 
+             * - Auto calls DialogInput.SetNextLineFlag()
+             * 
+             * TODO: call SetNextLineFlag() when the writer starts writing, and in DoWaitForInput()
+             */
+        }
+
+        /// <summary>
         /// Resets Writer variables. Call when disabling the Writer before it finishes displaying a line.
         /// Taken from end of Writer.ProcessTokens(), which doesn't get called if the Writer is disabled 
         /// before it finishes writing.
@@ -65,7 +85,7 @@ namespace Fungus
         }
 
         /// <summary>
-        /// NOTE: Same as base function, except with additional code to continue automatically if auto is on.
+        /// NOTE: Same as base function, except with additional code for "auto" and "skip" modes.
         /// </summary>
         /// <param name="clear"></param>
         /// <returns></returns>
