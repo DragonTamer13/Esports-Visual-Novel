@@ -15,6 +15,9 @@ namespace Fungus
     /// </summary>
     public class MenuDialog : MonoBehaviour
     {
+        // Character object whose name to display when adding a chosen menu option to the narrative log. 
+        protected const string PlayerName = "Coach";
+
         [Tooltip("Automatically select the first interactable button when the menu is shown.")]
         [SerializeField] protected bool autoSelectFirstButton = false;
 
@@ -245,6 +248,11 @@ namespace Fungus
                     // Have to use the Flowchart gameobject as the MenuDialog is now inactive
                     flowchart.StartCoroutine(CallBlock(block));
                 }
+                // Add chosen option to the narrative log
+                NarrativeLogEntry entry = new NarrativeLogEntry();
+                entry.name = GameObject.Find(PlayerName).GetComponent<Character>().NameText;
+                entry.text = text;
+                FungusManager.Instance.NarrativeLog.AddLine(entry);
             };
 
             return AddOption(text, interactable, hideOption, action);
