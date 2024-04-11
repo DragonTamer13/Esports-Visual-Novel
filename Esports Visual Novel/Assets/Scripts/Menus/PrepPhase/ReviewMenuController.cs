@@ -9,7 +9,11 @@ using Fungus;
 /// </summary>
 public class ReviewMenuController : Menu
 {
+    [SerializeField] private Button atroposButton;
     [SerializeField] private Button boigaButton;
+    [SerializeField] private Button hajoonButton;
+    [SerializeField] private Button maedayButton;
+    [SerializeField] private Button velocityButton;
     [SerializeField] private Text reviewsRemainingText;
 
     // Flowchart containing the data and dialogue nodes for this day.
@@ -36,11 +40,10 @@ public class ReviewMenuController : Menu
         {
             // NOTE: To find the flowchart, we assume that the day flowchart isn't named "DatastoreFlowchart"
             // and contains a variable called "CoachingsLeft". All flowcharts with player coaching sequences
-            // should have a collection of variables that are all named the same. This menu shouldn't be accessible
-            // when the player can't coach any more players.
+            // should have a collection of variables that are all named the same.
             foreach (Flowchart flowchart in FindObjectsOfType<Flowchart>())
             {
-                if (flowchart.gameObject.name != "DatastoreFlowchart" && flowchart.GetIntegerVariable("CoachingsLeft") != 0)
+                if (flowchart.gameObject.name != "DatastoreFlowchart" && flowchart.GetVariable("CoachingsLeft") != null)
                 {
                     dayFlowchart = flowchart;
                 }
@@ -52,12 +55,32 @@ public class ReviewMenuController : Menu
             }
         }
 
+        if (dayFlowchart.GetBooleanVariable("TalkedToAtropos"))
+        {
+            atroposButton.enabled = false;
+            atroposButton.transform.Find("DisabledCover").gameObject.SetActive(true);
+        }
         if (dayFlowchart.GetBooleanVariable("TalkedToBoiga"))
         {
             boigaButton.enabled = false;
             boigaButton.transform.Find("DisabledCover").gameObject.SetActive(true);
         }
+        if (dayFlowchart.GetBooleanVariable("TalkedToHajoon"))
+        {
+            hajoonButton.enabled = false;
+            hajoonButton.transform.Find("DisabledCover").gameObject.SetActive(true);
+        }
+        if (dayFlowchart.GetBooleanVariable("TalkedToMaeday"))
+        {
+            maedayButton.enabled = false;
+            maedayButton.transform.Find("DisabledCover").gameObject.SetActive(true);
+        }
+        if (dayFlowchart.GetBooleanVariable("TalkedToVelocity"))
+        {
+            velocityButton.enabled = false;
+            velocityButton.transform.Find("DisabledCover").gameObject.SetActive(true);
+        }
 
-        reviewsRemainingText.text = dayFlowchart.GetStringVariable("CoachingsLeft");
+        reviewsRemainingText.text = dayFlowchart.GetIntegerVariable("CoachingsLeft").ToString();
     }
 }
