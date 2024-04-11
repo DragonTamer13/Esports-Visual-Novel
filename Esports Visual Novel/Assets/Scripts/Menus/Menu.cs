@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class Menu : MonoBehaviour
 {
+    // Will this menu be disabled when the game starts?
+    [SerializeField] protected bool startHidden = true;
+
     CanvasGroup canvasGroup;
 
     // Start is called before the first frame update
@@ -17,13 +20,21 @@ public class Menu : MonoBehaviour
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
-        Hide();
+
+        if (startHidden)
+        {
+            Hide();
+        }
+        else
+        {
+            Show();
+        }
     }
 
     /// <summary>
     /// Make this menu visible and intertactable.
     /// </summary>
-    public void Show()
+    public virtual void Show()
     {
         canvasGroup.alpha = 1.0f;
         canvasGroup.interactable = true;
@@ -33,7 +44,7 @@ public class Menu : MonoBehaviour
     /// <summary>
     /// Make this menu invisible and unintertactable.
     /// </summary>
-    public void Hide()
+    public virtual void Hide()
     {
         canvasGroup.alpha = 0.0f;
         canvasGroup.interactable = false;
