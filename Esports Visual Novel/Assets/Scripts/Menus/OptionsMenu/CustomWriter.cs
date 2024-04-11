@@ -10,6 +10,15 @@ namespace Fungus
     /// </summary>
     public class CustomWriter : Writer
     {
+        /*
+         * NOTE: dialogue advancement code flow:
+         * - When you click, DialogInput.SetNextLineFlag() is called.
+         * - DialogInput.SetNextLineFlag() sets DialogInput.nextLineInputFlag
+         * - DialogInput.nextLineInputFlag calls Writer.OnNextLineEvent() 
+         * - Writer.OnNextLineEvent() sets Writer.inputFlag = true and notifies other input listeners.
+         * - Writer.inputFlag = true causes the text to instantly finish writing OR for the next line to show up
+         */
+
         // True to have text continue automatically after a delay
         protected bool autoText = false;
         protected bool skipping = false;
@@ -64,15 +73,6 @@ namespace Fungus
             {
                 dialogInput.SetNextLineFlag();
             }
-
-            /*
-             * NOTE: dialogue advancement code flow:
-             * - When you click, DialogInput.SetNextLineFlag() is called.
-             * - DialogInput.SetNextLineFlag() sets DialogInput.nextLineInputFlag
-             * - DialogInput.nextLineInputFlag calls Writer.OnNextLineEvent() 
-             * - Writer.OnNextLineEvent() sets Writer.inputFlag = true and notifies other input listeners.
-             * - Writer.inputFlag = true causes the text to instantly finish writing OR for the next line to show up
-             */
         }
 
         /// <summary>

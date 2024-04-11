@@ -344,7 +344,7 @@ namespace Fungus
                 var prevSpeakingCharacter = speakingCharacter;
                 speakingCharacter = character;
 
-                // Dim portraits of non-speaking characters
+                // Dim portraits of non-speaking characters unless the speaker doesn't have a portrait
                 var activeStages = Stage.ActiveStages;
                 for (int i = 0; i < activeStages.Count; i++)
                 {
@@ -357,7 +357,7 @@ namespace Fungus
                             var c = charactersOnStage[j];
                             if (prevSpeakingCharacter != speakingCharacter)
                             {
-                                if (c != null && !c.Equals(speakingCharacter))
+                                if (c != null && speakingCharacter.State.portraitImage != null && !c.Equals(speakingCharacter))
                                 {
                                     stage.SetDimmed(c, true);
                                 }
