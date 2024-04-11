@@ -1148,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25.000011
+      value: -0.00001335144
       objectReference: {fileID: 0}
     - target: {fileID: 2150456953617053537, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -2598,6 +2598,8 @@ GameObject:
   - component: {fileID: 1462965366}
   - component: {fileID: 1462965369}
   - component: {fileID: 1462965361}
+  - component: {fileID: 1462965372}
+  - component: {fileID: 1462965371}
   - component: {fileID: 1462965367}
   m_Layer: 0
   m_Name: Flowchart
@@ -2681,7 +2683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1199.3411, y: 198.00046}
+  scrollPos: {x: 1285.4161, y: 157.49411}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 504
@@ -2693,8 +2695,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1462965351}
-  selectedCommands: []
+  - {fileID: 1462965372}
+  selectedCommands:
+  - {fileID: 1462965371}
   variables: []
   description: My flowchart
   stepPause: 0
@@ -3895,8 +3898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -505.6761
-    y: -18.212337
+    x: -496.81543
+    y: -40.997154
     width: 156.3291
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3904,7 +3907,7 @@ MonoBehaviour:
   itemId: 48
   blockName: PrepPhaseTesting
   description: 
-  eventHandler: {fileID: 1462965367}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1462965345}
   - {fileID: 1462965348}
@@ -4127,7 +4130,7 @@ MonoBehaviour:
     stringVal: 
 --- !u!114 &1462965361
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4222,7 +4225,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -505.78107
-    y: 77.76102
+    y: 76.49519
     width: 171.51897
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4275,7 +4278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1462965351}
+  parentBlock: {fileID: 1462965372}
   suppressBlockAutoSelect: 0
   waitForFrames: 1
 --- !u!114 &1462965368
@@ -4304,7 +4307,12 @@ MonoBehaviour:
       Maeday right neutral: Hello.
 
       Hajoon
-      right2 neutral: Hello.'
+      right2 neutral: Hello.
+
+
+      boiga hide:
+
+      atropos hide:'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -4367,6 +4375,99 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &1462965371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 78
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'atropos neutral left2:
+
+      boiga neutral left:
+
+      hajoon neutral
+      middle:
+
+      maeday neutral right:
+
+      velocity neutral right2: Hello
+      world.
+
+
+      velocity hide:
+
+      maeday hide:
+
+      hajoon hide:
+
+      atropos
+      hide:
+
+
+      boiga neutral middle:
+
+      Hello world.
+
+
+      atropos hide:
+
+      maeday
+      hide:
+
+      hajoon hide:
+
+      velocity hide:
+
+      boiga hide:'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1462965372
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -505.6688
+    y: 23.51851
+    width: 179.1139
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 77
+  blockName: ConversationTesting3
+  description: 
+  eventHandler: {fileID: 1462965367}
+  commandList:
+  - {fileID: 1462965371}
+  suppressAllAutoSelections: 0
 --- !u!1001 &1533655148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6553,7 +6654,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.300004
+      value: 14.299981
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -7647,7 +7748,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 225.65218
+      value: 227.57365
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}

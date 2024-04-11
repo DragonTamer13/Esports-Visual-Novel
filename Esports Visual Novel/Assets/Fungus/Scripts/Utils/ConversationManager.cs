@@ -431,8 +431,10 @@ namespace Fungus
                     yield break;
                 }
 
+                // Only update the SayDialog character if the current speaker has something to say.
                 if (currentCharacter != null && 
-                    currentCharacter != previousCharacter)
+                    (currentCharacter != previousCharacter || currentCharacter.name != sayDialog.NameText) &&
+                    !string.IsNullOrEmpty(item.Text))
                 {
                     sayDialog.SetCharacter(currentCharacter);
                 }
