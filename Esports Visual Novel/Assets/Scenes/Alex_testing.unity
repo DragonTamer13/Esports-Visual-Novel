@@ -2601,8 +2601,10 @@ GameObject:
   - component: {fileID: 1462965372}
   - component: {fileID: 1462965371}
   - component: {fileID: 1462965373}
-  - component: {fileID: 1462965374}
   - component: {fileID: 1462965367}
+  - component: {fileID: 1462965376}
+  - component: {fileID: 1462965375}
+  - component: {fileID: 1462965374}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2648,7 +2650,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -499.99948
     y: 193.76193
-    width: 79.11392
+    width: 77.63158
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2685,21 +2687,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1276.555, y: 205.5954}
+  scrollPos: {x: 1420.8129, y: 359.32437}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 504
-  zoom: 0.79000014
+  zoom: 0.76000017
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1462965373}
-  selectedCommands:
-  - {fileID: 1462965367}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: My flowchart
   stepPause: 0
@@ -2843,7 +2843,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -154.78578
     y: 156.56218
-    width: 91.77214
+    width: 88.15788
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2873,7 +2873,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -311.04752
     y: 156.21007
-    width: 89.24049
+    width: 86.8421
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3036,7 +3036,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0.9185333
     y: 86.12964
-    width: 79.11392
+    width: 77.63158
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3063,7 +3063,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 12.440209
     y: 224.34616
-    width: 72.784805
+    width: 71.05263
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3294,7 +3294,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -476.92148
     y: 346.01056
-    width: 94.30379
+    width: 90.78946
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3799,7 +3799,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -303.4735
     y: 339.82562
-    width: 76.582275
+    width: 74.99999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3900,9 +3900,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -506.94193
-    y: -124.54148
-    width: 156.3291
+    x: -503.75037
+    y: -193.69035
+    width: 149.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3957,9 +3957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -504.71423
-    y: -171.97623
-    width: 157.59491
+    x: -501.52267
+    y: -241.12509
+    width: 151.31577
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4228,7 +4228,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -505.78107
     y: 76.49519
-    width: 171.51897
+    width: 163.15787
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4257,7 +4257,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -267.72644
     y: 75.68088
-    width: 179.1139
+    width: 169.73682
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4270,7 +4270,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1462965367
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4490,7 +4490,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -506.9346
     y: 23.51851
-    width: 179.1139
+    width: 171.05261
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4515,22 +4515,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -506.93433
-    y: -42.30429
-    width: 179.1139
+    x: -503.7428
+    y: -44.431953
+    width: 171.05261
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 79
   blockName: ConversationTesting4
   description: 
-  eventHandler: {fileID: 1462965374}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1462965367}
   suppressAllAutoSelections: 0
 --- !u!114 &1462965374
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4540,9 +4540,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1462965373}
+  parentBlock: {fileID: 1462965376}
   suppressBlockAutoSelect: 0
   waitForFrames: 1
+--- !u!114 &1462965375
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 82
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Boiga neutral middle: Hello world.\n\nBoiga neutral middle: Story
+      text Story text Story text Story text Story text Story text Story text Story
+      text Story text Story text Story text Story text Story text Story text Story
+      text Story text Story text Story text Story text Story text Story text Story
+      text Story text Story text Story text Story text Story text Story text Story
+      text Story text \n\nBoiga neutral middle: Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text Story text Story text Story text Story text Story text
+      Story text Story text \n\nVelocity neutral Right: Hello world."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1462965376
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462965305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -504.91516
+    y: -105.76655
+    width: 198.68417
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 81
+  blockName: DialogueBoxScalingTesting
+  description: 
+  eventHandler: {fileID: 1462965374}
+  commandList:
+  - {fileID: 1462965375}
+  suppressAllAutoSelections: 0
 --- !u!1001 &1533655148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6724,7 +6796,7 @@ PrefabInstance:
     - target: {fileID: 672638924886464788, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000034332275
+      value: -0.00002002716
       objectReference: {fileID: 0}
     - target: {fileID: 672638925261826553, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -7788,7 +7860,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 221.96014
+      value: 222.18748
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -7813,92 +7885,12 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1064.915
+      value: 957.88
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262536721117124961, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262536721117124961, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 39.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262536721117124961, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262536721117124961, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262536721117124961, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1064.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262536721117124961, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237033823406642236, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237033823406642236, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3528436174498724943, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3528436174498724943, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071944002760123000, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071944002760123000, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 39.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071944002760123000, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071944002760123000, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071944002760123000, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -904.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071944002760123000, guid: d8735b51633375445bf86c9676bbb982,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8735b51633375445bf86c9676bbb982, type: 3}
