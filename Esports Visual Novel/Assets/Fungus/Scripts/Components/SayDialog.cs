@@ -325,7 +325,8 @@ namespace Fungus
         /// Sets the active speaking character.
         /// </summary>
         /// <param name="character">The active speaking character.</param>
-        public virtual void SetCharacter(Character character)
+        /// <param name="updateCharacterName">Should the displayed character name be changed?</param>
+        public virtual void SetCharacter(Character character, bool updateCharacterName = true)
         {
             if (character == null)
             {
@@ -357,7 +358,7 @@ namespace Fungus
                             var c = charactersOnStage[j];
                             if (prevSpeakingCharacter != speakingCharacter)
                             {
-                                if (c != null && speakingCharacter.State.portraitImage != null && !c.Equals(speakingCharacter))
+                                if (c != null && speakingCharacter.Portraits.Count > 0 && !c.Equals(speakingCharacter))
                                 {
                                     stage.SetDimmed(c, true);
                                 }
@@ -378,7 +379,10 @@ namespace Fungus
                     characterName = character.GetObjectName();
                 }
                     
-                SetCharacterName(characterName, character.NameColor);
+                if (updateCharacterName)
+                {
+                    SetCharacterName(characterName, character.NameColor);
+                }
             }
         }
 

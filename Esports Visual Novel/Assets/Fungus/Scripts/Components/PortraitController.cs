@@ -438,9 +438,21 @@ namespace Fungus
 
             options.character.State.SetPortraitImageBySprite(options.portrait);
             options.character.State.portraitImage.rectTransform.gameObject.SetActive(true);
+
             // Cancel all other running tweens on this portrait before starting new ones.
-            LeanTween.cancel(options.character.State.portraitImage.rectTransform.gameObject, true);
-            options.character.State.portraitImage.rectTransform.gameObject.SetActive(true);
+            if (LeanTween.isTweening(options.character.State.portraitImage.rectTransform.gameObject))
+            {
+                LeanTween.cancel(options.character.State.portraitImage.rectTransform.gameObject, true);
+                if (options.character.State.dimmed == true)
+                {
+                    options.character.State.portraitImage.color = new Color(0.5f, 0.5f, 0.5f, 1f);
+                }
+                else
+                {
+                    options.character.State.portraitImage.color = Color.white;
+                }
+                options.character.State.portraitImage.rectTransform.gameObject.SetActive(true);
+            }
 
             if (options.character.State.portraitImage.color != Color.white)
             {
