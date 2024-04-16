@@ -7,7 +7,7 @@ using TMPro;
 /// <summary>
 /// Controls what is shown on the bracket window. Functions are desinged to be called from a Fungus flowchart.
 /// </summary>
-public class BracketMenuController : MonoBehaviour
+public class BracketMenuController : Menu
 {
     // All the text fields that can show the player team's name.
     [SerializeField] private List<TextMeshProUGUI> playerTeamNameTexts = new List<TextMeshProUGUI>();
