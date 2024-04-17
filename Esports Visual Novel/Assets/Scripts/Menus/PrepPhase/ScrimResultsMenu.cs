@@ -15,8 +15,9 @@ public class ScrimResultsMenu : MonoBehaviour
         {"Athena", "3191D8"},
         {"Hades", "8650BB"},
         {"Helios", "C10000"},
-        {"Persephone", "E86100"},
-        {"Ra", "C200C6"},
+        {"Hermes", "FACD6B"},
+        {"Persephone", "C200C6"},
+        {"Ra", "E86100"},
     };
 
     [Tooltip("Sprites for each possible numerical stat value, in decreasing order.")]

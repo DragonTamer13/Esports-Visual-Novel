@@ -118,14 +118,19 @@ public class CompositionChoiceMenuController : Menu
     /// Switch to a new composition preview for a given button. Call when switching to a new preview after pressing a button.
     /// </summary>
     /// <param name="selectedButton">The composition button associated with the preview to show.</param>
-    public void SwitchToPreview(Button selectedButton)
+    public void SwitchToPreview(Toggle selectedOption)
     {
+        if (!selectedOption.isOn)
+        {
+            return;
+        }
+
         if (selection >= 0)
         {
             previews[selection].SetActive(false);
             options[selection].interactable = true;
         }
-        selection = options.FindIndex(b => b == selectedButton);
+        selection = options.FindIndex(b => b == selectedOption);
         previews[selection].SetActive(true);
         options[selection].interactable = false;
         displayedPreview = selection;
