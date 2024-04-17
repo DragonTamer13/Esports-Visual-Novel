@@ -62,7 +62,7 @@ public class CompositionChoiceMenuController : Menu
         foreach (Transform t in compositionPreviewHolder.transform) 
         { 
             previews.Add(t.gameObject);
-            //t.gameObject.SetActive(false);
+            t.gameObject.SetActive(false);
         }
 
         doneButton.interactable = false;
