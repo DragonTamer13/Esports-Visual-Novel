@@ -9,7 +9,7 @@ using Fungus;
 /// Allows the Player to select a team composition for the upcoming game. Shows a preview of the players' positions
 /// and characters they will be playing.
 /// </summary>
-public class VODReviewMenuController : MonoBehaviour
+public class CompositionChoiceMenuController : Menu
 {
     // The flowchart for this day.
     [SerializeField] private Flowchart dayFlowchart;
@@ -33,7 +33,6 @@ public class VODReviewMenuController : MonoBehaviour
     private List<GameObject> previews = new List<GameObject>();
     // isWinning[i] == true when button[i] is for a winning composition.
     private List<bool> isWinning = new List<bool>();
-    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
@@ -56,8 +55,10 @@ public class VODReviewMenuController : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
+
         foreach (Transform t in compositionPreviewHolder.transform) 
         { 
             previews.Add(t.gameObject);
@@ -65,7 +66,6 @@ public class VODReviewMenuController : MonoBehaviour
         }
 
         doneButton.interactable = false;
-        canvasGroup = GetComponent<CanvasGroup>();
         Hide();
     }
 
@@ -79,26 +79,6 @@ public class VODReviewMenuController : MonoBehaviour
         {
             b.gameObject.SetActive(false);
         }
-    }
-
-    /// <summary>
-    /// Shows the VOD Review menu.
-    /// </summary>
-    public void Show()
-    {
-        canvasGroup.alpha = 1.0f;
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-    }
-
-    /// <summary>
-    /// Hides the VOD Review menu.
-    /// </summary>
-    public void Hide()
-    {
-        canvasGroup.alpha = 0.0f;
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
     }
 
     /// <summary>
