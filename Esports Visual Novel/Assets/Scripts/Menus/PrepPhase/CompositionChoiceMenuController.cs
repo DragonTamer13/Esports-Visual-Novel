@@ -27,8 +27,8 @@ public class CompositionChoiceMenuController : Menu
     private int displayedPreview = -1;
     // Number of composition options.
     private int activeButtons = 0;
-    // Composition button components 
-    private List<Button> buttons = new List<Button>();
+    // Composition selectors
+    private List<Toggle> options = new List<Toggle>();
     // Composition preview objects
     private List<GameObject> previews = new List<GameObject>();
     // isWinning[i] == true when button[i] is for a winning composition.
@@ -36,7 +36,7 @@ public class CompositionChoiceMenuController : Menu
 
     private void Awake()
     {
-        if (buttons.Count <= 0)
+        if (options.Count <= 0)
         {
             FindCompositionButtons();
         }
@@ -45,7 +45,7 @@ public class CompositionChoiceMenuController : Menu
         {
             foreach (Flowchart f in GameObject.FindObjectsOfType<Flowchart>())
             {
-                if (f.gameObject.name.Contains("Day"))
+                if (f.gameObject.name != "DatastoreFlowchart" && f.gameObject.name.Contains("day"))
                 {
                     dayFlowchart = f;
                     break;
@@ -62,7 +62,7 @@ public class CompositionChoiceMenuController : Menu
         foreach (Transform t in compositionPreviewHolder.transform) 
         { 
             previews.Add(t.gameObject);
-            t.gameObject.SetActive(false);
+            //t.gameObject.SetActive(false);
         }
 
         doneButton.interactable = false;
@@ -70,14 +70,15 @@ public class CompositionChoiceMenuController : Menu
     }
 
     /// <summary>
-    /// Shouldn't be called if "buttons" is already set.
+    /// Get all choice buttons that are a child of this object.
     /// </summary>
     private void FindCompositionButtons()
     {
-        buttons.AddRange(compositionButtonHolder.transform.GetComponentsInChildren<Button>());
-        foreach (Button b in buttons)
+        options.Clear();
+        options.AddRange(compositionButtonHolder.transform.GetComponentsInChildren<Toggle>());
+        foreach (Toggle t in options)
         {
-            b.gameObject.SetActive(false);
+            t.gameObject.SetActive(false);
         }
     }
 
@@ -92,7 +93,7 @@ public class CompositionChoiceMenuController : Menu
         {
             previews[selection].SetActive(false);
         }
-        displayedPreview = buttons.FindIndex(b => b == hoveredButton);
+        displayedPreview = options.FindIndex(b => b == hoveredButton);
         previews[displayedPreview].SetActive(true);
     }
 
@@ -122,11 +123,11 @@ public class CompositionChoiceMenuController : Menu
         if (selection >= 0)
         {
             previews[selection].SetActive(false);
-            buttons[selection].interactable = true;
+            options[selection].interactable = true;
         }
-        selection = buttons.FindIndex(b => b == selectedButton);
+        selection = options.FindIndex(b => b == selectedButton);
         previews[selection].SetActive(true);
-        buttons[selection].interactable = false;
+        options[selection].interactable = false;
         displayedPreview = selection;
 
         // Update the flowchart variable for the composition wincon.
@@ -146,13 +147,13 @@ public class CompositionChoiceMenuController : Menu
     /// </summary>
     public void CreateCompositionOption(string name, string description, bool winning)
     {
-        if (buttons.Count <= 0)
+        if (options.Count <= 0)
         {
             FindCompositionButtons();
         }
 
-        buttons[activeButtons].gameObject.SetActive(true);
-        buttons[activeButtons].GetComponent<CompositionButton>().SetText(name, description);
+        options[activeButtons].gameObject.SetActive(true);
+        options[activeButtons].GetComponent<CompositionButton>().SetText(name, description);
         isWinning.Add(winning);
         activeButtons++;
     }
