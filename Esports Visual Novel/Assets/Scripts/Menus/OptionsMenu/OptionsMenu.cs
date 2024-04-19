@@ -33,6 +33,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     // Slider for setting the text speed.
     [SerializeField] private Slider masterVolumeSlider;
+    [SerializeField] private InputField masterVolumeInputField;
     // Slider for setting the text speed.
     [SerializeField] private Slider musicVolumeSlider;
     // Slider for setting the text speed.
@@ -151,8 +152,23 @@ public class OptionsMenu : MonoBehaviour
     // Call after changing the master volume option.
     public void OnMasterVolumeChanged()
     {
+        // TODO: Convert sound values from [0, 100] to some DB log scale
         audioMixer.SetFloat("MasterVolume", masterVolumeSlider.value);
+        masterVolumeInputField.text = masterVolumeSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for master volume was edited.
+    public void OnMasterVolumeTextChanged()
+    {
+        if (masterVolumeInputField.text == "")
+        {
+            masterVolumeSlider.value = 0;
+        }
+        else
+        {
+            masterVolumeSlider.value = Mathf.Clamp(int.Parse(masterVolumeInputField.text), 0, 100);
+        }
     }
 
     // Call after changing the music volume option.
