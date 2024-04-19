@@ -31,16 +31,15 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown displayModeDropdown;
     // Dropdown for resolution options.
     [SerializeField] private TMP_Dropdown resolutionDropdown;
-    // Slider for setting the text speed.
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private InputField masterVolumeInputField;
-    // Slider for setting the text speed.
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private InputField musicVolumeInputField;
-    // Slider for setting the text speed.
     [SerializeField] private Slider sfxVolumeSlider;
+    [SerializeField] private InputField sfxVolumeInputField;
     // Slider for setting the text speed.
     [SerializeField] private Slider messageSpeedSlider;
+    [SerializeField] private InputField messageSpeedInputField;
     // Slider for setting the auto continue speed.
     [SerializeField] private Slider autoDelaySlider;
     // Dropdown for font size options.
@@ -197,7 +196,21 @@ public class OptionsMenu : MonoBehaviour
     public void OnSFXVolumeChanged()
     {
         audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
+        sfxVolumeInputField.text = sfxVolumeSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for effects volume was edited.
+    public void OnSFXVolumeTextChanged()
+    {
+        if (sfxVolumeInputField.text == "")
+        {
+            sfxVolumeSlider.value = 0;
+        }
+        else
+        {
+            sfxVolumeSlider.value = Mathf.Clamp(int.Parse(sfxVolumeInputField.text), sfxVolumeSlider.minValue, sfxVolumeSlider.maxValue);
+        }
     }
 
     // Call when message speed option is changed.
@@ -207,7 +220,21 @@ public class OptionsMenu : MonoBehaviour
         {
             previewWriter.SetWritingSpeed(messageSpeedSlider.value);
         }
+        messageSpeedInputField.text = messageSpeedSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for message speed was edited.
+    public void OnMessageSpeedTextChanged()
+    {
+        if (messageSpeedInputField.text == "")
+        {
+            messageSpeedSlider.value = messageSpeedSlider.minValue;
+        }
+        else
+        {
+            messageSpeedSlider.value = Mathf.Clamp(int.Parse(messageSpeedInputField.text), messageSpeedSlider.minValue, messageSpeedSlider.maxValue);
+        }
     }
 
     // Call when font size option is changed.
