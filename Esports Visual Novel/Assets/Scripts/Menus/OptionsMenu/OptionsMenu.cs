@@ -36,6 +36,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private InputField masterVolumeInputField;
     // Slider for setting the text speed.
     [SerializeField] private Slider musicVolumeSlider;
+    [SerializeField] private InputField musicVolumeInputField;
     // Slider for setting the text speed.
     [SerializeField] private Slider sfxVolumeSlider;
     // Slider for setting the text speed.
@@ -167,7 +168,7 @@ public class OptionsMenu : MonoBehaviour
         }
         else
         {
-            masterVolumeSlider.value = Mathf.Clamp(int.Parse(masterVolumeInputField.text), 0, 100);
+            masterVolumeSlider.value = Mathf.Clamp(int.Parse(masterVolumeInputField.text), masterVolumeSlider.minValue, masterVolumeSlider.maxValue);
         }
     }
 
@@ -175,7 +176,21 @@ public class OptionsMenu : MonoBehaviour
     public void OnMusicVolumeChanged()
     {
         audioMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
+        musicVolumeInputField.text = musicVolumeSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for music volume was edited.
+    public void OnMusicVolumeTextChanged()
+    {
+        if (musicVolumeInputField.text == "")
+        {
+            musicVolumeSlider.value = 0;
+        }
+        else
+        {
+            musicVolumeSlider.value = Mathf.Clamp(int.Parse(musicVolumeInputField.text), musicVolumeSlider.minValue, musicVolumeSlider.maxValue);
+        }
     }
 
     // Call after changing the SFX volume option.
