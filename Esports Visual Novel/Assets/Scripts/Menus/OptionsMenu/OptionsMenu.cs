@@ -278,10 +278,6 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void OnShow()
     {
-        canvasGroup.alpha = 1;
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-
         // Create the preview SayDialog when opening the menu. This is to prevent Fungus from writing actual story text to
         // the Options Menu preview.
         GameObject previewGO = GameObject.Instantiate(optionsSayDialogPrefab);
@@ -301,6 +297,10 @@ public class OptionsMenu : MonoBehaviour
         autoDelaySlider.value = (int)(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value) / MaxAutoDelayPerCharacter * 100.0f);
         fontSizeDropdown.value = PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value);
         continueModeDropdown.value = PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value);
+
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 
     // Stop the preview running when the user exits the menu.
