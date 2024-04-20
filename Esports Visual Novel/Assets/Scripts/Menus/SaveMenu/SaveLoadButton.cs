@@ -34,8 +34,7 @@ public class SaveLoadButton : MonoBehaviour
     /// </summary>
     public string GetSaveName()
     {
-        // TODO: Fix this. Parse date into two strings.
-        return saveNameText.text + " " +saveDateText.text;
+        return saveNameText.text + " (" + saveDateText.text + ")";
     }
 
     public void OnClick()
@@ -93,8 +92,10 @@ public class SaveLoadButton : MonoBehaviour
         {
             button.interactable = isSaving;
             deleteButton.interactable = false;
-            saveNameText.text = "No save";
+            saveNameText.text = "";
+            saveDateText.text = "";
             saveGameImage.sprite = null;
+            saveGameImage.color = Color.clear;
             return;
         }
         else
@@ -124,7 +125,8 @@ public class SaveLoadButton : MonoBehaviour
             {
                 // JSON of save data
                 var savePointData = JsonUtility.FromJson<SavePointData>(tempSaveHistory.GetLastSavePoint());
-                saveNameText.text = savePointData.SavePointKey + " (" + savePointData.SavePointDescription + ")";
+                saveNameText.text = savePointData.SavePointKey;
+                saveDateText.text = savePointData.SavePointDescription;
             }
         }
 
@@ -139,10 +141,12 @@ public class SaveLoadButton : MonoBehaviour
                                          new Rect(0f, 0f, texture.width, texture.height),
                                          new Vector2(0.5f, 0.5f));
             saveGameImage.sprite = image;
+            saveGameImage.color = Color.white;
         }
         else
         {
             saveGameImage.sprite = null;
+            saveGameImage.color = Color.clear;
         }
     }
 }
