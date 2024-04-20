@@ -27,21 +27,25 @@ public class OptionsMenu : MonoBehaviour
     private const string FontSizeKey = "FontSize";
     private const string ContinueModeKey = "ContinueMode";
 
+    // Most time in seconds that the writer will wait before continuing per character in the shown dialogue line.
+    private const float MaxAutoDelayPerCharacter = 0.06f;
+
     // Dropdown for screen mode options.
     [SerializeField] private TMP_Dropdown displayModeDropdown;
     // Dropdown for resolution options.
     [SerializeField] private TMP_Dropdown resolutionDropdown;
-    // Slider for setting the text speed.
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private InputField masterVolumeInputField;
-    // Slider for setting the text speed.
     [SerializeField] private Slider musicVolumeSlider;
-    // Slider for setting the text speed.
+    [SerializeField] private InputField musicVolumeInputField;
     [SerializeField] private Slider sfxVolumeSlider;
+    [SerializeField] private InputField sfxVolumeInputField;
     // Slider for setting the text speed.
     [SerializeField] private Slider messageSpeedSlider;
+    [SerializeField] private InputField messageSpeedInputField;
     // Slider for setting the auto continue speed.
     [SerializeField] private Slider autoDelaySlider;
+    [SerializeField] private InputField autoDelayInputField;
     // Dropdown for font size options.
     [SerializeField] private TMP_Dropdown fontSizeDropdown;
     // Dropdown for continue mode options.
@@ -167,7 +171,7 @@ public class OptionsMenu : MonoBehaviour
         }
         else
         {
-            masterVolumeSlider.value = Mathf.Clamp(int.Parse(masterVolumeInputField.text), 0, 100);
+            masterVolumeSlider.value = Mathf.Clamp(int.Parse(masterVolumeInputField.text), masterVolumeSlider.minValue, masterVolumeSlider.maxValue);
         }
     }
 
@@ -175,14 +179,42 @@ public class OptionsMenu : MonoBehaviour
     public void OnMusicVolumeChanged()
     {
         audioMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
+        musicVolumeInputField.text = musicVolumeSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for music volume was edited.
+    public void OnMusicVolumeTextChanged()
+    {
+        if (musicVolumeInputField.text == "")
+        {
+            musicVolumeSlider.value = 0;
+        }
+        else
+        {
+            musicVolumeSlider.value = Mathf.Clamp(int.Parse(musicVolumeInputField.text), musicVolumeSlider.minValue, musicVolumeSlider.maxValue);
+        }
     }
 
     // Call after changing the SFX volume option.
     public void OnSFXVolumeChanged()
     {
         audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
+        sfxVolumeInputField.text = sfxVolumeSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for effects volume was edited.
+    public void OnSFXVolumeTextChanged()
+    {
+        if (sfxVolumeInputField.text == "")
+        {
+            sfxVolumeSlider.value = 0;
+        }
+        else
+        {
+            sfxVolumeSlider.value = Mathf.Clamp(int.Parse(sfxVolumeInputField.text), sfxVolumeSlider.minValue, sfxVolumeSlider.maxValue);
+        }
     }
 
     // Call when message speed option is changed.
@@ -192,7 +224,38 @@ public class OptionsMenu : MonoBehaviour
         {
             previewWriter.SetWritingSpeed(messageSpeedSlider.value);
         }
+        messageSpeedInputField.text = messageSpeedSlider.value.ToString();
         SayPreviewMessage();
+    }
+
+    // The text field for message speed was edited.
+    public void OnMessageSpeedTextChanged()
+    {
+        if (messageSpeedInputField.text == "")
+        {
+            messageSpeedSlider.value = messageSpeedSlider.minValue;
+        }
+        else
+        {
+            messageSpeedSlider.value = Mathf.Clamp(int.Parse(messageSpeedInputField.text), messageSpeedSlider.minValue, messageSpeedSlider.maxValue);
+        }
+    }
+
+    public void OnAutoDelayChanged()
+    {
+        autoDelayInputField.text = autoDelaySlider.value.ToString();
+    }
+
+    public void OnAutoDelayTextChanged()
+    {
+        if (autoDelayInputField.text == "")
+        {
+            autoDelaySlider.value = autoDelaySlider.minValue;
+        }
+        else
+        {
+            autoDelaySlider.value = Mathf.Clamp(int.Parse(autoDelayInputField.text), autoDelaySlider.minValue, autoDelaySlider.maxValue);
+        }
     }
 
     // Call when font size option is changed.
@@ -215,10 +278,6 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void OnShow()
     {
-        canvasGroup.alpha = 1;
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-
         // Create the preview SayDialog when opening the menu. This is to prevent Fungus from writing actual story text to
         // the Options Menu preview.
         GameObject previewGO = GameObject.Instantiate(optionsSayDialogPrefab);
@@ -235,9 +294,13 @@ public class OptionsMenu : MonoBehaviour
         musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value);
         sfxVolumeSlider.value = PlayerPrefs.GetFloat(SFXVolumeKey, sfxVolumeSlider.value);
         messageSpeedSlider.value = PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value);
-        autoDelaySlider.value = PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value);
+        autoDelaySlider.value = (int)(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value) / MaxAutoDelayPerCharacter * 100.0f);
         fontSizeDropdown.value = PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value);
         continueModeDropdown.value = PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value);
+
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 
     // Stop the preview running when the user exits the menu.
@@ -260,7 +323,7 @@ public class OptionsMenu : MonoBehaviour
         PlayerPrefs.SetFloat(MusicVolumeKey, musicVolumeSlider.value);
         PlayerPrefs.SetFloat(SFXVolumeKey, sfxVolumeSlider.value);
         PlayerPrefs.SetFloat(MessageSpeedKey, messageSpeedSlider.value);
-        PlayerPrefs.SetFloat(AutoDelayKey, autoDelaySlider.value);
+        PlayerPrefs.SetFloat(AutoDelayKey, autoDelaySlider.value / 100.0f * MaxAutoDelayPerCharacter);
         PlayerPrefs.SetInt(FontSizeKey, fontSizeDropdown.value);
         PlayerPrefs.SetInt(ContinueModeKey, continueModeDropdown.value);
         PlayerPrefs.Save();
@@ -284,7 +347,7 @@ public class OptionsMenu : MonoBehaviour
         audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value));
         audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat(SFXVolumeKey, sfxVolumeSlider.value));
         writer.SetWritingSpeed(PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value));
-        writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value));
+        writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value / 100.0f * MaxAutoDelayPerCharacter));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
         storyText.fontSize = storyFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
         dialogInput.SwitchClickMode(PlayerPrefs.GetInt(ContinueModeKey, continueModeDropdown.value) == 0);
