@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using TMPro;
 
 /// <summary>
 /// Controller script for a button in the Save and Load Game menu.
@@ -16,15 +17,15 @@ public class SaveLoadButton : MonoBehaviour
     [SerializeField] private Image saveGameImage;
     // This button's smaller delete button.
     [SerializeField] private Button deleteButton;
- 
+    [SerializeField] private TMP_Text saveNameText;
+    [SerializeField] private TMP_Text saveDateText;
+
     private string saveDataKey = "";
     private bool isSaving; // True when button saves a game, false when button loads a game.
-    private Text saveNameText;
     private Button button;
 
     void Awake()
     {
-        saveNameText = GetComponentInChildren<Text>();
         button = GetComponent<Button>();
     }
 
@@ -33,7 +34,8 @@ public class SaveLoadButton : MonoBehaviour
     /// </summary>
     public string GetSaveName()
     {
-        return saveNameText.text;
+        // TODO: Fix this. Parse date into two strings.
+        return saveNameText.text + " " +saveDateText.text;
     }
 
     public void OnClick()
