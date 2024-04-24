@@ -60,6 +60,9 @@ public class SocialMediaController : MonoBehaviour
             case PrepPhaseMenuController.MatchDay.Thursday_3:
                 postsCSVPath += "Thursday3";
                 break;
+            case PrepPhaseMenuController.MatchDay.Credits:
+                postsCSVPath += "Credits";
+                break;
             default:
                 Debug.LogWarning("No social media posts for " + matchDay.ToString());
                 return;

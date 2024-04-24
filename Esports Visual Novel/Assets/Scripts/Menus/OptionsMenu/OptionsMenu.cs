@@ -100,7 +100,12 @@ public class OptionsMenu : MonoBehaviour
 
         if (sayDialog == null)
         {
-            Debug.LogError("TODO: Maybe fix why this is being called");
+            // Gets called if the SaveMenu loads into a scene that has no SayDialog, such as the main menu.
+            if (transform.parent.GetComponent<SaveMenu>() != null)
+            {
+                Debug.LogWarning("SaveMenu was loaded into a scene without a SayDialog, so it was destroyed.");
+                Destroy(transform.parent.gameObject);
+            }
             return;
         }
 

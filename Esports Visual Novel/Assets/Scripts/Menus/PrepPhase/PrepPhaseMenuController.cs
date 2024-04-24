@@ -9,7 +9,8 @@ public class PrepPhaseMenuController : MonoBehaviour
         Tuesday_1,
         Wednesday_2,
         Thursday_3,
-        Friday_4_vs_3
+        Friday_4_vs_3,
+        Credits
     }
 
     // The Save Menu UI in this scene.

@@ -62,6 +62,11 @@ public class ScrimResultsMenu : MonoBehaviour
     /// <param name="matchDay">The day to display scrim results for.</param>
     public void SetupScrimResults(PrepPhaseMenuController.MatchDay matchDay)
     {
+        if (matchDay == PrepPhaseMenuController.MatchDay.Credits)
+        {
+            return;
+        }
+
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
             string line = "";
