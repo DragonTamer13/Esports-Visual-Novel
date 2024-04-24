@@ -75,10 +75,12 @@ public class SocialMediaController : MonoBehaviour
             string username = "";
             string message = "";
             string[] parsedEndOfLine = { }; // Contains the message attachment, redeets, and likes
+            bool isMessageInQuotes = false;
             line = reader.ReadLine(); // Skip the first line because it's the header.
 
             while (line != null)
             {
+                isMessageInQuotes = false;
                 // Each line is: username (string, one word), message (string), attachment (string filepath), redeets (int), likes (int)
                 leftChar = line.IndexOf(',');
                 username = line.Substring(0, leftChar);
@@ -90,6 +92,7 @@ public class SocialMediaController : MonoBehaviour
                     // Assumes the attachment doesn't have quotes. Gets more complicated if it does.
                     rightChar = line.LastIndexOf('"');
                     leftChar++;
+                    isMessageInQuotes = true;
                 }
                 else
                 {
@@ -97,6 +100,12 @@ public class SocialMediaController : MonoBehaviour
                 }
                 message = line.Substring(leftChar, rightChar - leftChar).Replace(PlayerTeamNameKey, teamName);
                 
+                // Account for ending quote character.
+                if (isMessageInQuotes)
+                {
+                    rightChar++;
+                }
+
                 parsedEndOfLine = line.Substring(rightChar + 1).Split(',');
 
                 // Implement attachments if we ever use them.
