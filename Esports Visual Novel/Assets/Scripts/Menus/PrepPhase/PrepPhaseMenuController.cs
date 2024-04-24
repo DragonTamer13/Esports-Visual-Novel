@@ -34,11 +34,21 @@ public class PrepPhaseMenuController : MonoBehaviour
 
     public void ShowSaveMenu()
     {
+        if (saveMenu == null)
+        {
+            return;
+        }
+
         saveMenu.SetActive(true);
     }
 
     public void HideSaveMenu()
     {
+        if (saveMenu == null)
+        {
+            return;
+        }
+
         saveMenu.SetActive(false);
     }
 
