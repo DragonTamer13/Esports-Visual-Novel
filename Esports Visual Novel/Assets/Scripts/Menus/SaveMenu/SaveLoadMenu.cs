@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using TMPro;
 
 /// <summary>
 /// The main controller for saving and loading the game.
@@ -20,7 +21,7 @@ public class SaveLoadMenu : MonoBehaviour
     // Menu for confirming if the player wants to overwrite an existing save.
     [SerializeField] private GameObject overwriteConfirmMenu;
     // Text object on the overwrite menu displaying the name of the save to be overwritten.
-    [SerializeField] private Text overwriteConfirmMenuText;
+    [SerializeField] private TextMeshProUGUI overwriteConfirmMenuText;
 
     // All SaveLoadButton components in the menu buttons.
     private List<SaveLoadButton> buttons = new List<SaveLoadButton>();
