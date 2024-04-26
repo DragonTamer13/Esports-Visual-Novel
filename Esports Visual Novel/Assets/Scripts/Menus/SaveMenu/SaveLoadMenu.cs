@@ -17,7 +17,7 @@ public class SaveLoadMenu : MonoBehaviour
     // Menu for confirming if the player wants to delete a save.
     [SerializeField] private GameObject deleteConfirmMenu;
     // Text object displaying the save to be deleted.
-    [SerializeField] private Text deleteConfirmMenuText;
+    [SerializeField] private TextMeshProUGUI deleteConfirmMenuText;
     // Menu for confirming if the player wants to overwrite an existing save.
     [SerializeField] private GameObject overwriteConfirmMenu;
     // Text object on the overwrite menu displaying the name of the save to be overwritten.
