@@ -318,6 +318,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &108887188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2109153206094863843, guid: d8735b51633375445bf86c9676bbb982,
+    type: 3}
+  m_PrefabInstance: {fileID: 694835004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &141669689
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +857,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1189165121808548117, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.4000244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189165121879820562, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.4000244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189165122632130158, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.4000244
+      objectReference: {fileID: 0}
     - target: {fileID: 1243987973937840779, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -925,6 +946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983059761902466663, guid: 5659f40e860e21040af61c1dd18893dc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.4000244
       objectReference: {fileID: 0}
     - target: {fileID: 4029958688116865121, guid: 5659f40e860e21040af61c1dd18893dc,
         type: 3}
@@ -1765,7 +1791,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 224.01198
+      value: 225.82417
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1785,7 +1811,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1818.5629
+      value: 1628.7911
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1795,7 +1821,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 959.28143
+      value: 864.39557
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -2162,6 +2188,7 @@ GameObject:
   - component: {fileID: 1012938085}
   - component: {fileID: 1012938100}
   - component: {fileID: 1012938101}
+  - component: {fileID: 1012938102}
   m_Layer: 0
   m_Name: Friday4vs3Flowchart
   m_TagString: Untagged
@@ -2184,8 +2211,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -1312.6504
-    y: -463.2121
-    width: 102.747284
+    y: -462.18118
+    width: 101.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2268,8 +2295,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -1315.582
-    y: -376.51447
-    width: 102.747284
+    y: -379.6072
+    width: 101.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2315,11 +2342,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 2680.7466, y: 562.7905}
+  scrollPos: {x: -230.05829, y: 580.09344}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.90999943
+  zoom: 0.76000017
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2327,9 +2354,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012938014}
+  - {fileID: 1012938072}
   selectedCommands:
-  - {fileID: 1012938019}
+  - {fileID: 1012938102}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -2378,7 +2405,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1185.0865
     y: -416.4046
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2415,8 +2442,7 @@ MonoBehaviour:
 
 
       Velocity confused: Hmm, there''s a decent amount of buzz
-      for Team XLR8, not much for us. If we get some more sponsors, we could maybe
-      hire a marketing intern...'
+      for Team XLR8, but not much for us. We could use some better marketing...'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2520,9 +2546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1062.6538
-    y: -369.23438
-    width: 101.648384
+    x: -1060.592
+    y: -370.2653
+    width: 99.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2551,7 +2577,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1064.1538
     y: -464.73438
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2760,7 +2786,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -918.1538
     y: -466.79822
-    width: 101.648384
+    width: 99.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2946,7 +2972,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -766.58655
     y: -398.9046
-    width: 98.35168
+    width: 96.05262
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3099,7 +3125,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -916.08655
     y: -326.4046
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3128,7 +3154,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -918.58655
     y: -398.9046
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3237,8 +3263,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Narrator: Walking over to Hajoon, he darts his eyes towards you before
-      returning his gaze to his monitor. He gives a grunt of acknowledgement.'
+    stringVal: "Narrator: \rYou walk into the training room to find Hajoon. \r\n\r\nAs
+      you enter, he darts his eyes towards you before returning his gaze to his monitor.
+      He gives a grunt of acknowledgement."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3344,7 +3371,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -634.58655
     y: -330.9046
-    width: 102.747284
+    width: 101.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3373,7 +3400,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -635.58655
     y: -482.9046
-    width: 101.648384
+    width: 99.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3400,7 +3427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1095
   indentLevel: 0
-  text: '"Already practicing I see."'
+  text: '"Already warming up I see."'
   description: 
   targetBlock: {fileID: 1012937945}
   hideIfVisited: 0
@@ -3452,18 +3479,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon: No, that will just make me tired during the match.
-
-
-      Coach:
-      "If you say so"
-
-
-      Narrator: He does not respond, he wouldn''t have accepted
-      your offer of more sleep anyways. Sleeping gets in the way of practicing, and
-      practicing is the most important thing right now.
-
-'
+    stringVal: "Hajoon: No, that will just make me tired during the match.\n\nCoach:
+      \"If you say so.\"\n\nNarrator: \rHe doesn't respond.\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3501,7 +3518,7 @@ MonoBehaviour:
 
       Narrator:
       He doesn''t react, his mind is only concerned with winning today''s game. Food
-      can wait, it''s a reward, not a necessity.'
+      can wait.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3580,7 +3597,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -509.58655
     y: -443.9046
-    width: 106.04399
+    width: 103.94736
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3607,8 +3624,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -508.58655
-    y: -522.9046
-    width: 101.648384
+    y: -523.93555
+    width: 99.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3753,7 +3770,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -506.58655
     y: -283.9046
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3802,7 +3819,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -508.08655
     y: -369.4046
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3880,12 +3897,12 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon angry: We should have started practicing hours ago, in my
-      view.
+    stringVal: 'Hajoon angry: Everyone should be warming up right now.
 
 
 
-      Narrator: His comment drips with passive-aggressiveness.'
+      Narrator:
+      His comment drips with passive-aggressiveness.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3914,7 +3931,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 522.6692
     y: -351.46652
-    width: 152.19788
+    width: 152.63156
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3948,7 +3965,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 526.2257
     y: -466.62366
-    width: 160.98907
+    width: 159.21051
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4367,13 +4384,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon neutral: Being well prepared is more important than being
-      well rested.
-
-
-
-      Narrator: His logic seems flawed, but in his eyes, it
-      makes perfect sense.'
+    stringVal: "Hajoon neutral: Being well prepared is more important than being
+      well rested.\n\n\nNarrator: \rYou know he's wrong, but there's no use arguing
+      right now."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5184,8 +5197,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -356.58655
-    y: -411.4046
-    width: 102.747284
+    y: -410.34076
+    width: 101.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5279,7 +5292,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -232.59155
     y: -372.15796
-    width: 102.747284
+    width: 101.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5307,7 +5320,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -231.09155
     y: -450.65796
-    width: 103.84619
+    width: 102.63157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5333,7 +5346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1125
   indentLevel: 0
-  text: Give a few words of encouragement
+  text: Give a few words of advice
   description: 
   targetBlock: {fileID: 1012938002}
   hideIfVisited: 0
@@ -5385,9 +5398,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Narrator: You give a short speech as a motivator, although the team
-      seems anxious to start warming up. You wrap up quickly and start getting to
-      work.'
+    stringVal: "Narrator: \rYou repeat the advice you've given to them so far, although
+      the team seems anxious to start warming up. You wrap up quickly and start getting
+      to work."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5447,21 +5460,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Narrator: The team practices well enough, taking a game or two to
-      find their footing. But, the results of today''s match will be their first
-      real indicator on how effective your coaching truly is.
-
-
-      Atropos hide:
-
-      Boiga
-      hide:
-
-      Hajoon hide:
-
-      Maeday hide:
-
-      Velocity hide:'
+    stringVal: "Narrator: \rWarm up goes well enough. The team takes a game or two
+      to find their footing. But the results of today's match is what truly matters.\n\nAtropos
+      hide:\nBoiga hide:\nHajoon hide:\nMaeday hide:\nVelocity hide:"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5546,7 +5547,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 990.9184
     y: -340.97696
-    width: 85.164856
+    width: 84.21052
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5575,7 +5576,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -106.09155
     y: -412.65796
-    width: 102.747284
+    width: 101.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5602,9 +5603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1544.3729
+    x: -1544.5615
     y: -429.46527
-    width: 181.86821
+    width: 177.63156
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5649,9 +5650,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 30.759785
-    y: -413.29874
-    width: 232.4177
+    x: 32.759785
+    y: -412.29874
+    width: 226.31575
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5689,10 +5690,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Narrator: With a few hours of practice under your belt, you and the
-      team head out to the arena. Filing in from the staff entrance, you catch a
-      few glimpses of the rapidly growing crowd outside...next to none holding any
-      signs cheering your team on.'
+    stringVal: 'Narrator: With warmup over, you and the team head out to the arena.
+      Filing in from the staff entrance, you catch a few glimpses of the rapidly
+      growing crowd outside...next to none holding any signs cheering your team on.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5735,15 +5735,15 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Narrator: Day 4 - Friday\n\nNarrator: It's only been a few days since
-      you first arrived to the team house, and your first playoffs match is already
-      here. You slept fitfully, anxious about how well your players will perform.
-      \n\nBut, worrying won't get you anywhere. It's time for one more round of training
-      before the real thing.\n\nVelocity neutral:\nNarrator: You freshen up and exit
-      your room, bumping into Velocity on the way to the living room. Per usual,
-      his phone has his undivided attention\r\n\r\nCoach: \"Morning Velocity, how'd
-      you sleep?\"\n\nVelocity neutral: \"Eh, slept alright. Spent longer than I
-      should have scrolling through Deets, but besides that it was fine.\""
+    stringVal: "Narrator: Day 4 - Friday\n\nNarrator: \r\nIt's only been a few days
+      since you started coaching {$PlayerTeam}, and your first playoffs match is
+      already here. You slept fitfully, anxious about how well your players will
+      perform. \n\nBut worrying won't get you anywhere. It's time for one more round
+      of training before the real thing.\n\nVelocity neutral:\nNarrator: You freshen
+      up and exit your room, bumping into Velocity in the living room. Per usual,
+      his phone has his undivided attention\r.\n\r\nCoach: \"Morning Velocity, how'd
+      you sleep?\"\n\nVelocity neutral: Eh, slept alright. Spent longer than I should
+      have scrolling through Deets, but besides that it was fine."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5832,8 +5832,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 988.8565
-    y: -479.2243
-    width: 85.164856
+    y: -480.28815
+    width: 84.21052
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6035,26 +6035,25 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Narrator: In the backstage area, you see all your future opponents,
-      decked out in new jerseys covered in sponsors. \n\nOne team, a group of serious
-      looking, well-manicured players pose against a wall with a large trophy, taking
-      photos for media. You recognize them as last year's champions, and your biggest
-      hurdle in the playoffs.\r\n\r\nA man sporting a green jersey and a dad cap
-      with \"MEATY\" emblazoned on it approaches you, giving you a vigorous handshake.\n\nMeaty:
-      \"Welcome! You must be {$PlayerTeam}'s new coach! Good on ya for taking on
-      the responsibility on short notice!\"\r\n\r\nMeaty: \"I'm Coach Meaty for Team
-      XLR8! I'm certain you'll do great!\"\r\n\r\nNarrator: His positive attitude
-      is infectious, it helps put your mind at ease.\n\nCoach: \"Nice to meet you,
-      and thanks for the encouragement.\"\n\nMeaty: \"Of course! My team and I love
-      playing against all you guys, ain't that right?\"\r\n\r\nNarrator: He turns
-      toward a group of players in similarly colored jerseys near the refreshments
-      table, who turn to wave at you eagerly.\r\n\r\nMeaty: \"'Course, free snacks
-      are always a nice bonus too, ha!\"\r\n\r\nNarrator: The backstage intercom
-      blares on to announce the next two teams to come onto the stage: Team XLR8...and
-      your team.\n\nCoach: \"Oh wow, already?\"\n\nMeaty: \"Yup! Trial by fire and
-      all that, welp, good luck and have fun!\"\r\n\r\nNarrator: Coach Meaty says
-      before giving a strong pat on the shoulder and turning to round up his team.
-      You gather your team to send them off onto the stage as well."
+    stringVal: "Narrator: In the backstage area, you see your future opponents with
+      all their sponsor-covered jerseys. \n\nOne team, a group of serious looking
+      players, pose against a wall, taking photos for media. You recognize them as
+      Event Horizon, last year's champions, and everyone's greatest hurdle in the
+      playoffs.\n\r\nA man sporting a green jersey and a dad cap with \"MEATY\" emblazoned
+      on it approaches you, giving you a vigorous handshake.\n\nMeaty: \"Welcome!
+      You must be {$PlayerTeam}'s new coach! Good on ya for taking on the responsibility
+      on short notice!\"\r\n\r\nMeaty: \"I'm Coach Meaty for Team XLR8! Excited to
+      play against yall!\"\n\r\nNarrator: His positive attitude is infectious, it
+      helps put your mind at ease.\n\nCoach: \"Nice to meet you, and I'm looking
+      forward to the match as well.\"\n\nMeaty: \"Of course! We're all looking forward
+      to a good match, ain't that right guys?\"\n\r\nNarrator: He turns towards the
+      refreshments table, where a group of players in the same green jerseys wave
+      at you.\n\r\nMeaty: \"'Course, free snacks are always a nice bonus too, ha!\"\r\n\r\nNarrator:
+      The backstage intercom blares on to announce the next two teams to come onto
+      the stage: Team XLR8 and {$PlayerTeam}.\n\nCoach: \"Oh wow, already?\"\n\nMeaty:
+      \"Yup! Trial by fire and all that, welp, good luck and have fun!\"\r\n\r\nNarrator:
+      Coach Meaty gives you a strong pat on the shoulder and turns to round up his
+      team. You gather your team to send them off onto the stage as well."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -6160,7 +6159,7 @@ MonoBehaviour:
   indentLevel: 0
   duration: 0.75
   fadeOut: 0
-  targetView: {fileID: 8075563730695877046}
+  targetView: {fileID: 9208407291245903661}
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
@@ -6258,7 +6257,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 311.10468
     y: -411.95303
-    width: 171.97809
+    width: 168.42102
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6690,9 +6689,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 725.88745
+    x: 726.88745
     y: -416.12253
-    width: 223.62648
+    width: 217.10522
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6769,7 +6768,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 740.8565
     y: -262.52374
-    width: 193.95613
+    width: 194.73682
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6813,33 +6812,15 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon neutral left2:
-
-      Velocity happy left:
-
-      Boiga happy
-      middle:
-
-      Maeday smile right:
-
-      Atropos happy right2:
-
-
-      Narrator:
-      Against the crowd''s expectations, your team pulls through and defeats Team
-      XLR8, The crowd applauds {$PlayerTeam}''s performance, who seem dumbfounded
-      themselves. Coach Meaty reappears.
-
-
-
-      Meaty: "Well done! Guess you got
-      us good, haha! Ah well, hopefully we''ll see you in the grand finals!"
-
-
-      Narrator:
-      Meaty claps for his players as they exit the stage, redirecting them towards
-      the snack table for post-match munchies, which seems to instantly uplift their
-      mood. Your team exits the stage, still surprised by their victory.'
+    stringVal: "Hajoon neutral left2:\nVelocity happy left:\nBoiga happy middle:\nMaeday
+      smile right:\nAtropos happy right2:\n\nNarrator: \rAgainst the crowd's expectations,
+      your team pulls through and defeats Team XLR8. The crowd applauds your team's
+      performance, who seem dumbfounded themselves. Coach Meaty reappears.\n\n\nMeaty:
+      \"Well done! Guess you got us good, haha! Ah well, hopefully we'll see you
+      in the grand finals!\"\n\nNarrator: Meaty claps for his players as they exit
+      the stage, redirecting them towards the snack table for post-match munchies,
+      which seems to instantly uplift their mood. Your team exits the stage, still
+      surprised by their victory."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -6893,7 +6874,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 40.132607
     y: -335.54895
-    width: 178.5715
+    width: 178.94734
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6963,7 +6944,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1106.5372
     y: -443.52286
-    width: 86.26376
+    width: 85.526306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6991,7 +6972,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1102.4143
     y: -520.84247
-    width: 86.26376
+    width: 85.526306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7172,7 +7153,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1539.402
     y: -317.3613
-    width: 174.1759
+    width: 174.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7249,7 +7230,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1371.6207
     y: -415.84283
-    width: 69.78023
+    width: 69.73684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7263,6 +7244,7 @@ MonoBehaviour:
   - {fileID: 1012938091}
   - {fileID: 1012938090}
   - {fileID: 1012938089}
+  - {fileID: 1012938102}
   - {fileID: 1012938101}
   - {fileID: 1012938098}
   suppressAllAutoSelections: 0
@@ -7476,7 +7458,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1229.7947
     y: -354.98737
-    width: 86.26376
+    width: 85.526306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7540,7 +7522,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1120.1967
     y: -304.84305
-    width: 84.065956
+    width: 82.89473
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7568,7 +7550,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1117.568
     y: -382.60583
-    width: 84.065956
+    width: 82.89473
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7619,7 +7601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1210
   indentLevel: 0
-  text: '"Well...we still have one more chance."'
+  text: '"We still have one more chance."'
   description: 
   targetBlock: {fileID: 1012938082}
   hideIfVisited: 0
@@ -7708,7 +7690,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1486.2897
     y: -422.13113
-    width: 112.637405
+    width: 111.84209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7974,6 +7956,27 @@ MonoBehaviour:
   destroyInXSeconds:
     floatRef: {fileID: 0}
     floatVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1012938102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1235
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 108887188}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
 --- !u!1001 &1117178931
 PrefabInstance:
@@ -9600,7 +9603,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 24.999943
+      value: 24.999975
       objectReference: {fileID: 0}
     - target: {fileID: 2150456953617053537, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
