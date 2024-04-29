@@ -11,8 +11,8 @@ public class OptionsMenu : MonoBehaviour
 {
     private const string previewText = "The quick brown fox jumps over the lazy dog.";
     private readonly FullScreenMode[] fullScreenModes = { FullScreenMode.ExclusiveFullScreen, FullScreenMode.FullScreenWindow, FullScreenMode.Windowed };
-    private readonly int[] resolutionWidth  = { 1024, 1152, 1280, 1280, 1280, 1280, 1360, 1440, 1440, 1600, 1600, 1680, 1920, 1920, 2560, 2560, 3200, 3840, 3840 };
-    private readonly int[] resolutionHeight = { 768,  864,  720,  800,  960,  1024, 768,  900,  1080, 900,  1024, 1050, 1080, 1200, 1440, 1600, 1800, 2160, 2400 };
+    private readonly int[] resolutionWidth  = { 1280, 1280, 1360, 1440, 1600, 1600, 1680, 1920, 1920, 2560, 2560, 3200, 3840, 3840 };
+    private readonly int[] resolutionHeight = { 720,  800,  768,  900,  900,  1024, 1050, 1080, 1200, 1440, 1600, 1800, 2160, 2400 };
     private readonly int[] nameFontSizes = { 50, 60, 70 };
     private readonly int[] storyFontSizes = { 45, 50, 55 };
 
