@@ -345,6 +345,7 @@ namespace Fungus
         public System.Collections.IEnumerator TakeSaveScreenshot(string saveDataKey, CanvasGroup canvasGroup = null, System.Action onCompleteAction = null)
         {
             float canvasAlpha = 0;
+            string saveImageName = GetSaveImageName(saveDataKey);
 
             if (canvasGroup != null)
             {
@@ -353,7 +354,11 @@ namespace Fungus
             }
             yield return new WaitForEndOfFrame();
 
-            ScreenCapture.CaptureScreenshot(GetSaveImageName(saveDataKey));
+            if (System.IO.File.Exists(saveImageName))
+            {
+                System.IO.File.Delete(saveImageName);
+            }
+            ScreenCapture.CaptureScreenshot(saveImageName);
 
             if (canvasGroup != null)
             {

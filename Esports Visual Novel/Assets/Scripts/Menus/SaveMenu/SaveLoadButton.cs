@@ -11,6 +11,11 @@ using TMPro;
 /// </summary>
 public class SaveLoadButton : MonoBehaviour
 {
+    // How many times the button will attempt to load the save image.
+    private const int MaxImageLoadAttempts = 5;
+    // Time in seconds between attempting to load the save image.
+    private const float TimeBetweenImageLoadAttempts = 1.0f;
+
     // The menu controller script associated with this button.
     [SerializeField] private SaveLoadMenu saveLoadMenu;
     // The image component associated with this save file.
@@ -27,6 +32,37 @@ public class SaveLoadButton : MonoBehaviour
     void Awake()
     {
         button = GetComponent<Button>();
+    }
+
+    /// <summary>
+    /// Attempt to load the save image file. If it fails, wait some time before trying again.
+    /// </summary>
+    /// <param name="imagePath">Full file path to the image to load.</param>
+    private IEnumerator SetSaveImage(string imagePath)
+    {
+        for (int i = 0; i < MaxImageLoadAttempts; i++)
+        {
+            if (System.IO.File.Exists(imagePath))
+            {
+                Texture2D texture = new Texture2D(2, 2);
+                byte[] imageData = System.IO.File.ReadAllBytes(imagePath);
+                texture.LoadImage(imageData);
+                Sprite image = Sprite.Create(texture,
+                                             new Rect(0f, 0f, texture.width, texture.height),
+                                             new Vector2(0.5f, 0.5f));
+                saveGameImage.sprite = image;
+                saveGameImage.color = Color.white;
+                yield break;
+            }
+            saveGameImage.sprite = null;
+            saveGameImage.color = Color.gray;
+            yield return new WaitForSeconds(TimeBetweenImageLoadAttempts);
+        }
+
+        saveGameImage.sprite = null;
+        saveGameImage.color = Color.clear;
+
+        yield break;
     }
 
     /// <summary>
@@ -132,21 +168,6 @@ public class SaveLoadButton : MonoBehaviour
 
         // Load the image for this save slot if it exists.
         string imagePath = Application.persistentDataPath + "/" + saveDataKey + ".png";
-        if (System.IO.File.Exists(imagePath))
-        {
-            Texture2D texture = new Texture2D(2, 2);
-            byte[] imageData = System.IO.File.ReadAllBytes(imagePath);
-            texture.LoadImage(imageData);
-            Sprite image = Sprite.Create(texture,
-                                         new Rect(0f, 0f, texture.width, texture.height),
-                                         new Vector2(0.5f, 0.5f));
-            saveGameImage.sprite = image;
-            saveGameImage.color = Color.white;
-        }
-        else
-        {
-            saveGameImage.sprite = null;
-            saveGameImage.color = Color.clear;
-        }
+        StartCoroutine(SetSaveImage(imagePath));
     }
 }
