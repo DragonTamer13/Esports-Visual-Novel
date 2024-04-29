@@ -43,8 +43,15 @@ namespace Fungus
                 {
                     // NOTE: There might be a race condition where a save file is overwritten before it is done being copied to the next save slot.
                     //       Didn't happen while testing.
-                    System.IO.File.Move(SaveManager.GetFullFilePath(fromName), SaveManager.GetFullFilePath(toName));
-                    System.IO.File.Move(GetSaveImageName(fromName), GetSaveImageName(toName));
+                    // Checking if the files exist becausae it might try to move a file that doesn't exist sometimes.
+                    if (System.IO.File.Exists(SaveManager.GetFullFilePath(fromName)))
+                    {
+                        System.IO.File.Move(SaveManager.GetFullFilePath(fromName), SaveManager.GetFullFilePath(toName));
+                    }
+                    if (System.IO.File.Exists(GetSaveImageName(fromName)))
+                    {
+                        System.IO.File.Move(GetSaveImageName(fromName), GetSaveImageName(toName));
+                    }
                 }
             }
 
