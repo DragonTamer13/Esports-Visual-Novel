@@ -433,6 +433,9 @@ namespace Fungus
 
             if (options.character.State.portrait != null && options.character.State.portrait != options.portrait)
             {
+                LeanTween.cancelColor(options.character.State.portraitImage.gameObject);
+                Color c = options.character.State.portraitImage.color;
+                options.character.State.portraitImage.color = new Color(c.r, c.g, c.b, 1.0f);
                 HidePortrait(options.character.State.portraitImage.rectTransform, duration);
             }
 
@@ -454,11 +457,13 @@ namespace Fungus
                 options.character.State.portraitImage.rectTransform.gameObject.SetActive(true);
             }
 
-            if (options.character.State.portraitImage.color != Color.white)
+            // Set the color to white if it should be undimmed, but isn't.
+            if (options.character.State.portraitImage.color != Color.white && !options.character.State.dimmed)
             {
-                LeanTween.color(options.character.State.portraitImage.rectTransform, Color.white, duration)
-                    .setEase(stage.FadeEaseType)
-                    .setRecursive(false);
+                options.character.State.portraitImage.color = new Color(1.0f, 1.0f, 1.0f, options.character.State.portraitImage.color.a);
+                //LeanTween.color(options.character.State.portraitImage.rectTransform, Color.white, duration)
+                //    .setEase(stage.FadeEaseType)
+                //    .setRecursive(false);
             }
 
             LeanTween.alpha(options.character.State.portraitImage.rectTransform, 1f, duration)
@@ -532,12 +537,23 @@ namespace Fungus
         {
             if (character.State.dimmed == dimmedState)
             {
+                // Skip the dimming lerp, but set the color in case it wasn't set correctly anyways.
+                if (dimmedState)
+                {
+                    character.State.portraitImage.color = new Color(stage.DimColor.r, stage.DimColor.g, stage.DimColor.b, character.State.portraitImage.color.a);
+                }
+                else
+                {
+                    character.State.portraitImage.color = new Color(1.0f, 1.0f, 1.0f, character.State.portraitImage.color.a);
+                }
                 return;
             }
 
             character.State.dimmed = dimmedState;
 
             Color targetColor = dimmedState ? stage.DimColor : Color.white;
+
+            character.State.portraitImage.color = dimmedState ? Color.white : stage.DimColor;
 
             // LeanTween doesn't handle 0 duration properly
             float duration = (stage.FadeDuration > 0f) ? stage.FadeDuration : float.Epsilon;

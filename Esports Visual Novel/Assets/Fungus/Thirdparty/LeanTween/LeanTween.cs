@@ -609,6 +609,20 @@ public class LeanTween : MonoBehaviour {
         }
     }
 
+    public static void cancelColor(GameObject gameObject)
+    {
+        init();
+        Transform trans = gameObject.transform;
+        for (int i = 0; i <= tweenMaxSearch; i++)
+        {
+            if (tweens[i].toggle && tweens[i].type == TweenAction.CANVAS_COLOR && tweens[i].trans == trans)
+            {
+                print("Cancelled lerp on " + gameObject.transform.parent.name + " " + gameObject.name);
+                cancel(tweens[i].uniqueId);
+            }
+        }
+    }
+
     /**
     * Retrieve a tweens LTDescr object to modify <summary>Retrieve a tweens LTDescr object to modify</summary>
     * 

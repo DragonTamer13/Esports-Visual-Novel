@@ -356,7 +356,8 @@ namespace Fungus
                         for (int j = 0; j < charactersOnStage.Count; j++)
                         {
                             var c = charactersOnStage[j];
-                            if (prevSpeakingCharacter != speakingCharacter)
+                            // Only change dimming if the character has spoken lines
+                            if (prevSpeakingCharacter != speakingCharacter && updateCharacterName)
                             {
                                 if (c != null && speakingCharacter.Portraits.Count > 0 && !c.Equals(speakingCharacter))
                                 {

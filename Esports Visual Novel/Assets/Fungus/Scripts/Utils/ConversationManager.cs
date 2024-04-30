@@ -431,13 +431,6 @@ namespace Fungus
                     yield break;
                 }
 
-                // Only update the SayDialog character if the current speaker has something to say.
-                if (currentCharacter != null && 
-                    currentCharacter != previousCharacter)
-                {
-                    sayDialog.SetCharacter(currentCharacter, !string.IsNullOrEmpty(item.Text));
-                }
-
                 //Handle stage changes
                 var stage = Stage.GetActiveStage();
 
@@ -450,6 +443,7 @@ namespace Fungus
                     item.Hide = true;
                 }
 
+                // Handle changes to the character's portrait, position, or "Hide" state
                 if (stage != null && currentCharacter != null &&
                     (currentPortrait != currentCharacter.State.portrait ||
                         currentPosition != currentCharacter.State.position ||
@@ -480,6 +474,13 @@ namespace Fungus
                     {
                         stage.Show(portraitOptions);
                     }
+                }
+
+                // Only update the SayDialog character if the current speaker has something to say.
+                if (currentCharacter != null &&
+                    currentCharacter != previousCharacter)
+                {
+                    sayDialog.SetCharacter(currentCharacter, !string.IsNullOrEmpty(item.Text));
                 }
 
                 if (stage == null &&
