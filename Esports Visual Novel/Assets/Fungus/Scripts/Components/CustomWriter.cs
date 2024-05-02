@@ -47,9 +47,9 @@ namespace Fungus
         /// <summary>
         /// Change dialog automatically progressing on/off. Continue immediately if we have finished writing.
         /// </summary>
-        public void ToggleAutoText()
+        public void ToggleAutoText(bool isOn)
         {
-            autoText = !autoText;
+            autoText = isOn;
 
             if (autoText && isWaitingForInput)
             {
@@ -64,9 +64,9 @@ namespace Fungus
         /// <summary>
         /// Quickly progress through dialogue until a menu shows up, the scene changes, or dialogue ends.
         /// </summary>
-        public void ToggleSkip()
+        public void ToggleSkip(bool isOn)
         {
-            skipping = !skipping;
+            skipping = isOn;
 
             // Advance the dialogue line that we're on right now since skipping only gets checked at the start of a line.
             if (skipping)

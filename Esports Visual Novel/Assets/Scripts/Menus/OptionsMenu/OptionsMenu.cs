@@ -110,8 +110,8 @@ public class OptionsMenu : MonoBehaviour
         }
 
         writer = sayDialog.GetComponent<CustomWriter>();
-        nameText = sayDialog.transform.Find("Panel").Find("Nametag").Find("NameText").GetComponent<Text>();
-        storyText = sayDialog.transform.Find("Panel").Find("StoryText").GetComponent<Text>();
+        nameText = sayDialog.transform.Find("DialogBox").Find("Nametag").Find("NameText").GetComponent<Text>();
+        storyText = sayDialog.transform.Find("DialogBox").Find("StoryText").GetComponent<Text>();
         dialogInput = sayDialog.GetComponent<CustomDialogInput>();
     }
 

@@ -47,10 +47,15 @@ namespace Fungus
         [Tooltip("The button which restarts the game.")]
         [SerializeField] protected Button restartButton;
 
+        [Tooltip("The button which skips through dialogue.")]
+        [SerializeField] protected Toggle skipButton;
+
+        [Tooltip("The button which automatically progresses through dialogue.")]
+        [SerializeField] protected Toggle autoButton;
+
         [Tooltip("A scrollable text field used for debugging the save data. The text field should be disabled in normal use.")]
         [SerializeField] protected ScrollRect debugView;
 
-        // By Alex G: Start with the save menu visible instead of disabled.
         protected static bool saveMenuActive = true;
 
         protected AudioSource clickAudioSource;
@@ -60,6 +65,8 @@ namespace Fungus
         protected static SaveMenu instance;
 
         protected static bool hasLoadedOnStart = false;
+
+        protected CustomWriter customWriter;
 
         protected virtual void Awake()
         {
@@ -75,6 +82,7 @@ namespace Fungus
             if (transform.parent == null)
             {
                 GameObject.DontDestroyOnLoad(this);
+                SceneManager.sceneLoaded += UpdateSkipAndAutoOnWriter;
             }
             else
             {
@@ -117,8 +125,7 @@ namespace Fungus
             // Hide the Save and Load buttons if autosave is on
 
             bool showSaveAndLoad = !autoSave;
-            // By Alex G: Added save and load button null checks so that these fields can be blank. Might redo this all later
-            //            to work with the save and load menu.
+            
             if ((saveButton != null && loadButton != null) && saveButton.IsActive() != showSaveAndLoad)
             {
                 saveButton.gameObject.SetActive(showSaveAndLoad);
@@ -192,7 +199,47 @@ namespace Fungus
             }
         }
 
+        protected void OnDestroy()
+        {
+            SceneManager.sceneLoaded -= UpdateSkipAndAutoOnWriter;
+        }
+
         #region Public methods
+
+        /// <summary>
+        /// Toggle if the writer skips quickly through dialogue.
+        /// </summary>
+        public virtual void ToggleSkip()
+        {
+            customWriter.ToggleSkip(skipButton.isOn);
+        }
+
+        /// <summary>
+        /// Toggle if the writer automatically progresses through the dialogue.
+        /// </summary>
+        public virtual void ToggleAutoText()
+        {
+            customWriter.ToggleAutoText(autoButton.isOn);
+        }
+
+        /// <summary>
+        /// Sets if the writer in the scene is skipping or auto progressing.
+        /// </summary>
+        public void UpdateSkipAndAutoOnWriter(Scene scene, LoadSceneMode loadSceneMode)
+        {
+            customWriter = SayDialog.GetSayDialog().GetComponent<CustomWriter>();
+            if (customWriter != null)
+            {
+                if (skipButton.isOn)
+                {
+                    customWriter.ToggleSkip(true);
+                }
+                if (autoButton.isOn)
+                {
+                    customWriter.ToggleAutoText(true);
+                }
+            }
+        }
 
         /// <summary>
         /// Gets the string key used to store save game data in Player Prefs. 

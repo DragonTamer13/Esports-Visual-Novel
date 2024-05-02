@@ -617,7 +617,6 @@ public class LeanTween : MonoBehaviour {
         {
             if (tweens[i].toggle && tweens[i].type == TweenAction.CANVAS_COLOR && tweens[i].trans == trans)
             {
-                print("Cancelled lerp on " + gameObject.transform.parent.name + " " + gameObject.name);
                 cancel(tweens[i].uniqueId);
             }
         }
