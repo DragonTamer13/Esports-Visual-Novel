@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class StatManager : MonoBehaviour
 {
-    Flowchart datastoreFlowhcart;
+    // The UI element that shows up and displays what stat was changed.
+    [SerializeField] private GameObject statChangedPopup;
+
+    private Flowchart datastoreFlowhcart;
 
     // Start is called before the first frame update
     void Start()
@@ -62,5 +65,9 @@ public class StatManager : MonoBehaviour
 
         characterStatsVariable.Apply(SetOperator.Assign, characterStats);
         datastoreFlowhcart.SetVariable<Vector4Variable>(characterName + "Stats", characterStatsVariable);
+
+        // Make the popup
+        GameObject popup = Instantiate(statChangedPopup, transform);
+        popup.GetComponent<StatChangedPopup>().SetText(characterName + "'s " + attribute.ToString() + " " + (statChange > 0 ? "increased" : "decreased"));
     }
 }

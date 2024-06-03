@@ -149,7 +149,7 @@ public class ScrimResultsMenu : MonoBehaviour
      *     change stats through the conversation node.
      * X Create a custom Conversation keyword that will tell the Stat Manager to change a stat. The keyword comes with player name, stat
      *   and the integer change in that stat which can be positive or negative, and can be greater than 1.
-     * - Create a Stat Changed Popup prefab UI element to display the change in stats.
+     * X Create a Stat Changed Popup prefab UI element to display the change in stats.
      * - Modify ScrimResultsMenu.SetupScrimResults to read from DatastoreFlowchart instead of CSV.
      * - Remove Scrim Results CSVs as we won't need them anymore.
      * 
@@ -158,10 +158,10 @@ public class ScrimResultsMenu : MonoBehaviour
      *   X The conversation block finds the Stat Manager in the scene and calls a function to change a stat
      * X Stat Manager updates the variable for that player's stat in the scene's DatastoreFlowchart
      *   X Will need to figure out how to change Flowchart variables from code
-     * - Stat Manager instantiates a new Stat Changed Popup and tells it whose stat was changed, what stat was changed, and if that
+     * X Stat Manager instantiates a new Stat Changed Popup and tells it whose stat was changed, what stat was changed, and if that
      *   stat went up or down.
      * - Stat Changed Popup animates onto the screen, remains for a set lifetime, animates off the screen, then destroys itself.
-     * - Stat Changed Popups will be a child of a vertical scrollbox, which itself is a child of the SayDialog and the parent of 
+     * X Stat Changed Popups will be a child of a vertical scrollbox, which itself is a child of the SayDialog and the parent of 
      *   the Stat Manager script. This will make it easy to scale and organize multiple Stat Changed Popups if multiple stat changes
      *   happen close together.
      * 
