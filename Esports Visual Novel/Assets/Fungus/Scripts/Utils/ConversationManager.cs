@@ -60,6 +60,10 @@ namespace Fungus
         public bool FadeDone { get; set; }
         public FloatData WaitForSeconds { get; internal set; }
 
+        // FFOD StatManager delegate. Bind function to change stats when keywords are used in dialogue.
+        public delegate void ChangeStatsDelegate(string characterName, StatAttribute attribute, int statChange);
+        public ChangeStatsDelegate changeStatsDelegate;
+
         public ConversationManager()
         {
             ClearPrev = true;
@@ -576,8 +580,11 @@ namespace Fungus
                 {
                     if (item.StatChange != 0)
                     {
-                        Debug.Log("Changing " + currentCharacter.name + "'s " + item.Stat.ToString() + " attribute by " + item.StatChange.ToString());
-
+                        if (changeStatsDelegate.GetInvocationList().Length == 0)
+                        {
+                            Debug.LogWarning("Trying to change stats but delegate is not bound. Bind function call to changeStatsDelegate to change stats.");
+                        }
+                        changeStatsDelegate(currentCharacter.name, item.Stat, item.StatChange);
                     }
                     else
                     {

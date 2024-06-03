@@ -144,7 +144,7 @@ public class ScrimResultsMenu : MonoBehaviour
      * = Not at runtime =
      * X Add new data properties to DatastoreFlowchart for storing current and previous stat values.
      * X Create a new Stat Manager class for handing stat increases and showing the Stat Changed Popup.
-     *   - We will make the Stat Manager and its associated UI a child of the SayDialog. This has the downside of that we can only show 
+     *   X We will make the Stat Manager and its associated UI a child of the SayDialog. This has the downside of that we can only show 
      *     stat changes while dialogue is running (ie. the SayDialog is visible), but this is ok because we will only be trying to 
      *     change stats through the conversation node.
      * X Create a custom Conversation keyword that will tell the Stat Manager to change a stat. The keyword comes with player name, stat
@@ -154,8 +154,8 @@ public class ScrimResultsMenu : MonoBehaviour
      * - Remove Scrim Results CSVs as we won't need them anymore.
      * 
      * = While in dialogue =
-     * - Use conversation keyword to change a stat for a player
-     *   - The conversation block finds the Stat Manager in the scene and calls a function to change a stat
+     * X Use conversation keyword to change a stat for a player
+     *   X The conversation block finds the Stat Manager in the scene and calls a function to change a stat
      * - Stat Manager updates the variable for that player's stat in the scene's DatastoreFlowchart
      *   - Will need to figure out how to change Flowchart variables from code
      * - Stat Manager instantiates a new Stat Changed Popup and tells it whose stat was changed, what stat was changed, and if that

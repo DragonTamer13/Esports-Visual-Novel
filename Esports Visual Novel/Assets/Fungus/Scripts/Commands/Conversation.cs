@@ -26,6 +26,13 @@ namespace Fungus
         [SerializeField] protected FloatData waitForSeconds = new FloatData(0);
         [SerializeField] protected BooleanData fadeWhenDone = new BooleanData(true);
 
+        // FFOD: Get the changeStatsDelegate in this Conversation node's ConversationManager
+        public ConversationManager.ChangeStatsDelegate changeStatsDelegate 
+        {
+            get { return conversationManager.changeStatsDelegate; }
+            set { conversationManager.changeStatsDelegate = value; }
+        }
+
         protected virtual void Start()
         {
             conversationManager.PopulateCharacterCache();
