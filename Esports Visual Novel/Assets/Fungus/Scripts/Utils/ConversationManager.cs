@@ -10,6 +10,18 @@ using System.Text;
 namespace Fungus
 {
     /// <summary>
+    /// The four categories for grading FFOD players.
+    /// </summary>
+    public enum StatAttribute
+    {
+        None,
+        Attitude,
+        Communication,
+        Cooperation,
+        Skill
+    }
+
+    /// <summary>
     /// Helper class to manage parsing and executing the conversation format.
     /// </summary>
     public class ConversationManager
@@ -36,6 +48,8 @@ namespace Fungus
             public bool FadeDone { get; set; }
             public bool Jump { get; set; }
             public bool Shake { get; set; }
+            public StatAttribute Stat { get; set; }
+            public int StatChange { get; set; }
         }
 
         protected Character[] characters;
@@ -249,6 +263,16 @@ namespace Fungus
                 else if (string.Compare(sayParams[i], "shake", true) == 0)
                 {
                     item.Shake = true;
+                }
+                // For FFOD stat changes
+                else if (string.Compare(sayParams[i], "attitude", true) == 0)
+                {
+                    item.Stat = StatAttribute.Attitude;
+                }
+                // System assumes that any int in the params is a stat change since there aren't any other int params right now.
+                else if (int.TryParse(sayParams[i], out int statChange))
+                {
+                    item.StatChange = statChange;
                 }
             }
 
@@ -545,6 +569,20 @@ namespace Fungus
                     tweenParams.Add("oncompletetarget", currentCharacter.State.holder.gameObject);
                     tweenParams.Add("oncompleteparams", this);
                     iTween.ShakePosition(currentCharacter.State.holder.gameObject, tweenParams);
+                }
+
+                // Handle FFOD stat changes
+                if (item.Stat != StatAttribute.None)
+                {
+                    if (item.StatChange != 0)
+                    {
+                        Debug.Log("Changing " + currentCharacter.name + "'s " + item.Stat.ToString() + " attribute by " + item.StatChange.ToString());
+
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Stat attribute set but stat change is 0. Add an integer to this line's parameters if you want to change this character's stats.");
+                    }
                 }
 
                 if (!string.IsNullOrEmpty(item.Text)) { 
