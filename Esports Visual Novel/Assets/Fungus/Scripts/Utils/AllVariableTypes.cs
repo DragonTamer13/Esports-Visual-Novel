@@ -47,6 +47,7 @@ namespace Fungus
             typeof(Vector2Variable),
             typeof(Vector3Variable),
             typeof(Vector4Variable),
+            typeof(StatsVariable),
         };
     }
 
@@ -87,6 +88,7 @@ namespace Fungus
         public Vector2Data vector2Data;
         public Vector3Data vector3Data;
         public Vector4Data vector4Data;
+        public StatsData statsData;
 
         public bool HasReference(Variable var)
         {
@@ -112,7 +114,8 @@ namespace Fungus
                    transformData.transformRef == var ||
                    vector2Data.vector2Ref == var ||
                    vector3Data.vector3Ref == var ||
-                   vector4Data.vector4Ref == var;
+                   vector4Data.vector4Ref == var ||
+                   statsData.statsRef == var;
         }
     }
 
@@ -285,6 +288,11 @@ namespace Fungus
                     (anyVar, compareOperator) => {return anyVar.variable.Evaluate(compareOperator, anyVar.data.vector4Data.Value); },
                     (anyVar) => anyVar.data.vector4Data.GetDescription(),
                     (anyVar, setOperator) => anyVar.variable.Apply(setOperator, anyVar.data.vector4Data.Value)) },
+            { typeof(StatsVariable),
+                new TypeActions( "statsData",
+                    (anyVar, compareOperator) => {return anyVar.variable.Evaluate(compareOperator, anyVar.data.statsData.Value); },
+                    (anyVar) => anyVar.data.statsData.GetDescription(),
+                    (anyVar, setOperator) => anyVar.variable.Apply(setOperator, anyVar.data.statsData.Value)) },
         };
 
         public bool HasReference(Variable variable)
