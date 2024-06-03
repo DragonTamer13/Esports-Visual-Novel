@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Fungus;
 using UnityEngine;
-using Fungus;
 
 public class StatManager : MonoBehaviour
 {
+    Flowchart datastoreFlowhcart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,8 @@ public class StatManager : MonoBehaviour
         {
             conversationNode.changeStatsDelegate = ChangeStat;
         }
+
+        datastoreFlowhcart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
     }
 
     /// <summary>
@@ -25,7 +27,40 @@ public class StatManager : MonoBehaviour
     /// <param name="statChange">Any integer change. Will be clamped between stat max and min values.</param>
     public void ChangeStat(string characterName, StatAttribute attribute, int statChange)
     {
-        print("We have called our delegate");
-        //Debug.Log("Changing " + currentCharacter.name + "'s " + item.Stat.ToString() + " attribute by " + item.StatChange.ToString());
+        Vector4Variable characterStatsVariable = datastoreFlowhcart.GetVariable<Vector4Variable>(characterName + "Stats");
+        Vector4 characterStats = characterStatsVariable.Value;
+
+        if (characterStats == null)
+        {
+            Debug.LogError("Could not find stats variable for " + characterName + ". Check that the character name is correct and that DatastoreFlowchart has a Vector4 stats variable with their name.");
+            return;
+        }
+
+        // NOTE: Attributes in the Vector4 are listed by how they appear in the game, not in alphabetical order.
+        //       Therefore, characterStats.x => Skill
+        //                  characterStats.y => Cooperation
+        //                  characterStats.z => Communication
+        //                  characterStats.w => Attitude
+        switch (attribute)
+        {
+            case StatAttribute.Skill:
+                characterStats.x = Mathf.Clamp(characterStats.x + statChange, 1, 5);
+                break;
+            case StatAttribute.Cooperation:
+                characterStats.y = Mathf.Clamp(characterStats.y + statChange, 1, 5);
+                break;
+            case StatAttribute.Communication:
+                characterStats.z = Mathf.Clamp(characterStats.z + statChange, 1, 5);
+                break;
+            case StatAttribute.Attitude:
+                characterStats.w = Mathf.Clamp(characterStats.w + statChange, 1, 5);
+                break;
+            default:
+                Debug.LogError("No functionality for changing attribute " + attribute.ToString() + ". Add functionality to StatManager.ChangeStat if it is missing.");
+                break;
+        }
+
+        characterStatsVariable.Apply(SetOperator.Assign, characterStats);
+        datastoreFlowhcart.SetVariable<Vector4Variable>(characterName + "Stats", characterStatsVariable);
     }
 }

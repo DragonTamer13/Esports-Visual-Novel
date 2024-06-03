@@ -156,8 +156,8 @@ public class ScrimResultsMenu : MonoBehaviour
      * = While in dialogue =
      * X Use conversation keyword to change a stat for a player
      *   X The conversation block finds the Stat Manager in the scene and calls a function to change a stat
-     * - Stat Manager updates the variable for that player's stat in the scene's DatastoreFlowchart
-     *   - Will need to figure out how to change Flowchart variables from code
+     * X Stat Manager updates the variable for that player's stat in the scene's DatastoreFlowchart
+     *   X Will need to figure out how to change Flowchart variables from code
      * - Stat Manager instantiates a new Stat Changed Popup and tells it whose stat was changed, what stat was changed, and if that
      *   stat went up or down.
      * - Stat Changed Popup animates onto the screen, remains for a set lifetime, animates off the screen, then destroys itself.
