@@ -273,6 +273,18 @@ namespace Fungus
                 {
                     item.Stat = StatAttribute.Attitude;
                 }
+                else if (string.Compare(sayParams[i], "communication", true) == 0)
+                {
+                    item.Stat = StatAttribute.Communication;
+                }
+                else if (string.Compare(sayParams[i], "cooperation", true) == 0)
+                {
+                    item.Stat = StatAttribute.Cooperation;
+                }
+                else if (string.Compare(sayParams[i], "skill", true) == 0)
+                {
+                    item.Stat = StatAttribute.Skill;
+                }
                 // System assumes that any int in the params is a stat change since there aren't any other int params right now.
                 else if (int.TryParse(sayParams[i], out int statChange))
                 {
