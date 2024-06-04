@@ -23,6 +23,12 @@ public class ScrimResultsMenu : MonoBehaviour
     // Names of Flowchart variables containing the Vector4s with each player's stats.
     private readonly string[] FlowchartStatVariableNames = { "MaedayStats", "HajoonStats", "VelocityStats", "AtroposStats", "BoigaStats" };
 
+    [Tooltip("Sprites for indicating that a stat went up.")]
+    [SerializeField] private Sprite statUpArrow;
+    [Tooltip("Sprites for indicating that a stat went down.")]
+    [SerializeField] private Sprite statDownArrow;
+    [Tooltip("Sprites for indicating that a stat didn't change.")]
+    [SerializeField] private Sprite statsNeutralArrow;
     [Tooltip("Sprites for each possible numerical stat value, in decreasing order.")]
     [SerializeField] private Sprite[] valueImages;
     [Tooltip("Image components for displaying numerical stat values.")]
@@ -32,12 +38,19 @@ public class ScrimResultsMenu : MonoBehaviour
 
     private CanvasGroup canvasGroup;
     private Flowchart datastoreFlowchart;
+    // Image components for indicating if a stat went up or down.
+    private List<Image> valueArrows = new List<Image>();
 
     // Start is called before the first frame update
     void Start()
     {
         datastoreFlowchart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
         canvasGroup = GetComponent<CanvasGroup>();
+        // Find the arrow image component on Start so we don't have to set it in inspector.
+        foreach (Image image in values)
+        {
+            valueArrows.Add(image.transform.parent.Find("Arrow").GetComponent<Image>());
+        }
         Hide();
     }
 
@@ -75,6 +88,7 @@ public class ScrimResultsMenu : MonoBehaviour
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
             Vector4 characterStats;
+            Vector4 prevCharacterStats;
             string line = "";
             string note = "";
             int linesToSkip = 5 * ((int)matchDay);  // There are 5 rows for each match day.
@@ -84,6 +98,7 @@ public class ScrimResultsMenu : MonoBehaviour
             for (int player = 0; player < FlowchartStatVariableNames.Length; player++)
             {
                 characterStats = datastoreFlowchart.GetVariable<Vector4Variable>(FlowchartStatVariableNames[player]).Value;
+                prevCharacterStats = datastoreFlowchart.GetVariable<Vector4Variable>("Prev" + FlowchartStatVariableNames[player]).Value;
 
                 if (characterStats.x < 1 || characterStats.y < 1 || characterStats.z < 1 || characterStats.w < 1)
                 {
@@ -96,6 +111,11 @@ public class ScrimResultsMenu : MonoBehaviour
                 values[player * 4 + 1].sprite = valueImages[Mathf.RoundToInt(characterStats.y) - 1];
                 values[player * 4 + 2].sprite = valueImages[Mathf.RoundToInt(characterStats.z) - 1];
                 values[player * 4 + 3].sprite = valueImages[Mathf.RoundToInt(characterStats.w) - 1];
+
+                SetValueArrowImage(valueArrows[player * 4 + 0], Mathf.RoundToInt(characterStats.x), Mathf.RoundToInt(prevCharacterStats.x));
+                SetValueArrowImage(valueArrows[player * 4 + 1], Mathf.RoundToInt(characterStats.y), Mathf.RoundToInt(prevCharacterStats.y));
+                SetValueArrowImage(valueArrows[player * 4 + 2], Mathf.RoundToInt(characterStats.z), Mathf.RoundToInt(prevCharacterStats.z));
+                SetValueArrowImage(valueArrows[player * 4 + 3], Mathf.RoundToInt(characterStats.w), Mathf.RoundToInt(prevCharacterStats.w));
             }
 
             // The scrim results for this day will be 5 contiguous rows in the CSV. Skip all rows that come before the desired day.
@@ -125,6 +145,26 @@ public class ScrimResultsMenu : MonoBehaviour
                 notes[notesCounter].text = note;
                 notesCounter++;
             }
+        }
+    }
+
+    /// <summary>
+    /// Set the image indicating if the corresponding stat value went up or down.
+    /// </summary>
+    /// <param name="image">Image component to display the arrow image.</param>
+    private void SetValueArrowImage(Image image, int curValue, int prevValue)
+    {
+        if (curValue > prevValue)
+        {
+            image.sprite = statUpArrow;
+        }
+        else if (curValue < prevValue)
+        {
+            image.sprite = statDownArrow;
+        }
+        else
+        {
+            image.sprite = statsNeutralArrow;
         }
     }
 
@@ -166,7 +206,7 @@ public class ScrimResultsMenu : MonoBehaviour
      * = Start of prep phase =
      * X ScrimResultsMenu reads from DatastoreFlowchart in SetupScrimResults().
      *   X Set numbers, icons, text, and color of the attribute part of the prep phase menu to reflect the value read.
-     *   - Compare to the previous stat values and set an icon showing if the stat went up, down, or (optionally) stayed the same.
+     *   X Compare to the previous stat values and set an icon showing if the stat went up, down, or (optionally) stayed the same.
      * 
      * = End of prep phase =
      * - Set DatastoreFlowchart previous stat values to the current stat values
