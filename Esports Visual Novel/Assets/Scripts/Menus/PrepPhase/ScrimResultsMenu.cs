@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Fungus;
 
 public class ScrimResultsMenu : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class ScrimResultsMenu : MonoBehaviour
         {"Persephone", "C200C6"},
         {"Ra", "E86100"},
     };
+    // Names of Flowchart variables containing the Vector4s with each player's stats.
+    private readonly string[] FlowchartStatVariableNames = { "MaedayStats", "HajoonStats", "VelocityStats", "AtroposStats", "BoigaStats" };
 
     [Tooltip("Sprites for each possible numerical stat value, in decreasing order.")]
     [SerializeField] private Sprite[] valueImages;
@@ -28,10 +31,12 @@ public class ScrimResultsMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] notes;
 
     private CanvasGroup canvasGroup;
+    private Flowchart datastoreFlowchart;
 
     // Start is called before the first frame update
     void Start()
     {
+        datastoreFlowchart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
         canvasGroup = GetComponent<CanvasGroup>();
         Hide();
     }
@@ -69,13 +74,32 @@ public class ScrimResultsMenu : MonoBehaviour
 
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
+            Vector4 characterStats;
             string line = "";
             string note = "";
             int linesToSkip = 5 * ((int)matchDay);  // There are 5 rows for each match day.
-            int numberCounter = 0;
             int notesCounter = 0;
 
+            // Read stat variables from DatastoreFlowchart
+            for (int player = 0; player < FlowchartStatVariableNames.Length; player++)
+            {
+                characterStats = datastoreFlowchart.GetVariable<Vector4Variable>(FlowchartStatVariableNames[player]).Value;
+
+                if (characterStats.x < 1 || characterStats.y < 1 || characterStats.z < 1 || characterStats.w < 1)
+                {
+                    Debug.LogError("A character's stat value is less than 1. Check stat variables in DatastoreFlowchart.");
+                    continue;
+                }
+
+                // Set each image to be a sprite displaying the player's rating for each stat. Stat values are between 1 and 5, inclusive.
+                values[player * 4 + 0].sprite = valueImages[Mathf.RoundToInt(characterStats.x) - 1];
+                values[player * 4 + 1].sprite = valueImages[Mathf.RoundToInt(characterStats.y) - 1];
+                values[player * 4 + 2].sprite = valueImages[Mathf.RoundToInt(characterStats.z) - 1];
+                values[player * 4 + 3].sprite = valueImages[Mathf.RoundToInt(characterStats.w) - 1];
+            }
+
             // The scrim results for this day will be 5 contiguous rows in the CSV. Skip all rows that come before the desired day.
+            // TODO: Read only notes from CSV. Just get rid of the stats columns.
             for (int skip = 0; skip < linesToSkip; skip++)
             {
                 reader.ReadLine();
@@ -84,32 +108,6 @@ public class ScrimResultsMenu : MonoBehaviour
             for (int dataLine = 0; dataLine < 5; dataLine++)
             {
                 line = reader.ReadLine();
-
-                for (int i = 0; i < 4; i++)
-                {
-                    switch (line.Substring(i * 2, 1))
-                    {
-                        case "1":
-                            values[numberCounter].sprite = valueImages[0];
-                            break;
-                        case "2":
-                            values[numberCounter].sprite = valueImages[1];
-                            break;
-                        case "3":
-                            values[numberCounter].sprite = valueImages[2];
-                            break;
-                        case "4":
-                            values[numberCounter].sprite = valueImages[3];
-                            break;
-                        case "5":
-                            values[numberCounter].sprite = valueImages[4];
-                            break;
-                        default:
-                            values[numberCounter].color = Color.white;
-                            break;
-                    }
-                    numberCounter++;
-                }
 
                 note = line.Substring(8);
                 // Trim off quotes if the string has them.
@@ -150,8 +148,8 @@ public class ScrimResultsMenu : MonoBehaviour
      * X Create a custom Conversation keyword that will tell the Stat Manager to change a stat. The keyword comes with player name, stat
      *   and the integer change in that stat which can be positive or negative, and can be greater than 1.
      * X Create a Stat Changed Popup prefab UI element to display the change in stats.
-     * - Modify ScrimResultsMenu.SetupScrimResults to read from DatastoreFlowchart instead of CSV.
-     * - Remove Scrim Results CSVs as we won't need them anymore.
+     * X Modify ScrimResultsMenu.SetupScrimResults to read from DatastoreFlowchart instead of CSV.
+     * - Scrim results CSV should only have notes section now.
      * 
      * = While in dialogue =
      * X Use conversation keyword to change a stat for a player
@@ -166,8 +164,8 @@ public class ScrimResultsMenu : MonoBehaviour
      *   happen close together.
      * 
      * = Start of prep phase =
-     * - ScrimResultsMenu reads from DatastoreFlowchart in SetupScrimResults().
-     *   - Set numbers, icons, text, and color of the attribute part of the prep phase menu to reflect the value read.
+     * X ScrimResultsMenu reads from DatastoreFlowchart in SetupScrimResults().
+     *   X Set numbers, icons, text, and color of the attribute part of the prep phase menu to reflect the value read.
      *   - Compare to the previous stat values and set an icon showing if the stat went up, down, or (optionally) stayed the same.
      * 
      * = End of prep phase =

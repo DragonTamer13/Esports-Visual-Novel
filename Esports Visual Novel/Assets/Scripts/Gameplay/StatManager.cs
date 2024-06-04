@@ -6,7 +6,7 @@ public class StatManager : MonoBehaviour
     // The UI element that shows up and displays what stat was changed.
     [SerializeField] private GameObject statChangedPopup;
 
-    private Flowchart datastoreFlowhcart;
+    private Flowchart datastoreFlowchart;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class StatManager : MonoBehaviour
             conversationNode.changeStatsDelegate = ChangeStat;
         }
 
-        datastoreFlowhcart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
+        datastoreFlowchart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
     }
 
     /// <summary>
@@ -30,7 +30,7 @@ public class StatManager : MonoBehaviour
     /// <param name="statChange">Any integer change. Will be clamped between stat max and min values.</param>
     public void ChangeStat(string characterName, StatAttribute attribute, int statChange)
     {
-        Vector4Variable characterStatsVariable = datastoreFlowhcart.GetVariable<Vector4Variable>(characterName + "Stats");
+        Vector4Variable characterStatsVariable = datastoreFlowchart.GetVariable<Vector4Variable>(characterName + "Stats");
         Vector4 characterStats = characterStatsVariable.Value;
 
         if (characterStats == null)
@@ -64,7 +64,7 @@ public class StatManager : MonoBehaviour
         }
 
         characterStatsVariable.Apply(SetOperator.Assign, characterStats);
-        datastoreFlowhcart.SetVariable<Vector4Variable>(characterName + "Stats", characterStatsVariable);
+        datastoreFlowchart.SetVariable<Vector4Variable>(characterName + "Stats", characterStatsVariable);
 
         // Make the popup
         GameObject popup = Instantiate(statChangedPopup, transform);
