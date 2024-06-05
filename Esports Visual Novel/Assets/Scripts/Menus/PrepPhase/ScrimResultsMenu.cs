@@ -209,7 +209,7 @@ public class ScrimResultsMenu : MonoBehaviour
      *   X Compare to the previous stat values and set an icon showing if the stat went up, down, or (optionally) stayed the same.
      * 
      * = End of prep phase =
-     * - Set DatastoreFlowchart previous stat values to the current stat values
+     * X Set DatastoreFlowchart previous stat values to the current stat values
      * 
      */
 }

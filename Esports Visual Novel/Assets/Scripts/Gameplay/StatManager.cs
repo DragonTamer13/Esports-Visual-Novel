@@ -64,7 +64,6 @@ public class StatManager : MonoBehaviour
         }
 
         characterStatsVariable.Apply(SetOperator.Assign, characterStats);
-        datastoreFlowchart.SetVariable<Vector4Variable>(characterName + "Stats", characterStatsVariable);
 
         // Make the popup
         GameObject popup = Instantiate(statChangedPopup, transform);
