@@ -67,6 +67,7 @@ public class StatManager : MonoBehaviour
 
         // Make the popup
         GameObject popup = Instantiate(statChangedPopup, transform);
+        popup.transform.SetAsFirstSibling();
         popup.GetComponent<StatChangedPopup>().SetText(characterName + "'s " + attribute.ToString() + " " + (statChange > 0 ? "increased" : "decreased"));
     }
 }
