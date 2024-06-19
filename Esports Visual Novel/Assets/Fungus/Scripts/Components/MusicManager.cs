@@ -41,6 +41,16 @@ namespace Fungus
 
         #region Public members
 
+        public float GetMusicVolume()
+        {
+            return audioSourceMusic.volume;
+        }
+
+        public float GetSoundEffectVolume()
+        {
+            return audioSourceSoundEffect.volume;
+        }
+
         /// <summary>
         /// Plays game music using an audio clip.
         /// One music clip may be played at a time.
@@ -153,6 +163,7 @@ namespace Fungus
                 }
                 audioSourceMusic.volume = volume;
                 audioSourceAmbiance.volume = volume;
+                audioSourceSoundEffect.volume = volume;
                 return;
             }
 
@@ -162,6 +173,7 @@ namespace Fungus
                 duration).setOnUpdate((v) => {
                     audioSourceMusic.volume = v;
                     audioSourceAmbiance.volume = v;
+                    audioSourceSoundEffect.volume = v;
                 }).setOnComplete(() => {
                     if (onComplete != null)
                     {

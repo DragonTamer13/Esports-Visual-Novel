@@ -457,7 +457,7 @@ namespace Fungus
                         }
                         if (audioSource != null)
                         {
-                            audioSource.PlayOneShot(audioSource.clip);
+                            audioSource.PlayOneShot(audioSource.clip, FungusManager.Instance.MusicManager.GetSoundEffectVolume());
                         }
                     }
                     break;
