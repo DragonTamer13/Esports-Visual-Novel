@@ -167,49 +167,4 @@ public class ScrimResultsMenu : MonoBehaviour
             image.sprite = statsNeutralArrow;
         }
     }
-
-    /*
-     * === Skill System Techincal Design ===
-     * X DatastoreFlowchart needs 20 variables for current stats: 4 stats * 5 characters
-     *   X We can conveniently hack this by using instead 5 of the Vector4 datatype. It may even be possible to create our own
-     *     5x4 array datatype specifically for storing player stats.
-     *     / This new datatype would need to be settable in inspector. Ideally, the inspector should have the player name next to each row
-     *       that corresponds to their stats.
-     * X DatastoreFlowchart needs an additions 20 variables to store the previous values of all of the stats,
-     *   X This way, we can show if a stat increasd or decreased since the last prep phase.
-     * 
-     * == Code flow ==
-     * = Not at runtime =
-     * X Add new data properties to DatastoreFlowchart for storing current and previous stat values.
-     * X Create a new Stat Manager class for handing stat increases and showing the Stat Changed Popup.
-     *   X We will make the Stat Manager and its associated UI a child of the SayDialog. This has the downside of that we can only show 
-     *     stat changes while dialogue is running (ie. the SayDialog is visible), but this is ok because we will only be trying to 
-     *     change stats through the conversation node.
-     * X Create a custom Conversation keyword that will tell the Stat Manager to change a stat. The keyword comes with player name, stat
-     *   and the integer change in that stat which can be positive or negative, and can be greater than 1.
-     * X Create a Stat Changed Popup prefab UI element to display the change in stats.
-     * X Modify ScrimResultsMenu.SetupScrimResults to read from DatastoreFlowchart instead of CSV.
-     * - Scrim results CSV should only have notes section now.
-     * 
-     * = While in dialogue =
-     * X Use conversation keyword to change a stat for a player
-     *   X The conversation block finds the Stat Manager in the scene and calls a function to change a stat
-     * X Stat Manager updates the variable for that player's stat in the scene's DatastoreFlowchart
-     *   X Will need to figure out how to change Flowchart variables from code
-     * X Stat Manager instantiates a new Stat Changed Popup and tells it whose stat was changed, what stat was changed, and if that
-     *   stat went up or down.
-     * - Stat Changed Popup animates onto the screen, remains for a set lifetime, animates off the screen, then destroys itself.
-     * X Stat Changed Popups will be a child of a vertical scrollbox, which itself is a child of the SayDialog and the parent of 
-     *   the Stat Manager script. This will make it easy to scale and organize multiple Stat Changed Popups if multiple stat changes
-     *   happen close together.
-     * 
-     * = Start of prep phase =
-     * X ScrimResultsMenu reads from DatastoreFlowchart in SetupScrimResults().
-     *   X Set numbers, icons, text, and color of the attribute part of the prep phase menu to reflect the value read.
-     *   X Compare to the previous stat values and set an icon showing if the stat went up, down, or (optionally) stayed the same.
-     * 
-     * = End of prep phase =
-     * X Set DatastoreFlowchart previous stat values to the current stat values
-     * 
-     */
 }

@@ -54,8 +54,6 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private GameObject previewCharacterPrefab;
     // The SayDialog object to instantiate to show a preview of the current options.
     [SerializeField] private GameObject optionsSayDialogPrefab;
-    // The main game audio mixer.
-    [SerializeField] private AudioMixer audioMixer;
 
     private SayDialog previewSayDialog;
     private CustomWriter previewWriter;
@@ -161,8 +159,7 @@ public class OptionsMenu : MonoBehaviour
     // Call after changing the master volume option.
     public void OnMasterVolumeChanged()
     {
-        // TODO: Convert sound values from [0, 100] to some DB log scale
-        audioMixer.SetFloat("MasterVolume", masterVolumeSlider.value);
+        FungusManager.Instance.MusicManager.SetMainVolume(masterVolumeSlider.value / 100.0f);
         masterVolumeInputField.text = masterVolumeSlider.value.ToString();
         SayPreviewMessage();
     }
@@ -183,7 +180,7 @@ public class OptionsMenu : MonoBehaviour
     // Call after changing the music volume option.
     public void OnMusicVolumeChanged()
     {
-        audioMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
+        FungusManager.Instance.MusicManager.SetMusicVolume(musicVolumeSlider.value / 100.0f);
         musicVolumeInputField.text = musicVolumeSlider.value.ToString();
         SayPreviewMessage();
     }
@@ -204,7 +201,7 @@ public class OptionsMenu : MonoBehaviour
     // Call after changing the SFX volume option.
     public void OnSFXVolumeChanged()
     {
-        audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
+        FungusManager.Instance.MusicManager.SetSoundEffectVolume(sfxVolumeSlider.value / 100.0f);
         sfxVolumeInputField.text = sfxVolumeSlider.value.ToString();
         SayPreviewMessage();
     }
@@ -348,9 +345,9 @@ public class OptionsMenu : MonoBehaviour
             return;
         }
 
-        audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat(MasterVolumeKey, masterVolumeSlider.value));
-        audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat(MusicVolumeKey, musicVolumeSlider.value));
-        audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat(SFXVolumeKey, sfxVolumeSlider.value));
+        FungusManager.Instance.MusicManager.SetMainVolume(PlayerPrefs.GetFloat(MasterVolumeKey, 100.0f) / 100.0f);
+        FungusManager.Instance.MusicManager.SetMusicVolume(PlayerPrefs.GetFloat(MusicVolumeKey, 100.0f) / 100.0f);
+        FungusManager.Instance.MusicManager.SetSoundEffectVolume(PlayerPrefs.GetFloat(SFXVolumeKey, 100.0f) / 100.0f);
         writer.SetWritingSpeed(PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value));
         writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value / 100.0f * MaxAutoDelayPerCharacter));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];
