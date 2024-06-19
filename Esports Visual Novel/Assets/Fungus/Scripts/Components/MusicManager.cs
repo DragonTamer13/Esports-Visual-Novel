@@ -16,6 +16,12 @@ namespace Fungus
         protected AudioSource audioSourceAmbiance;
         protected AudioSource audioSourceSoundEffect;
 
+        protected float mainVolume = 1.0f;
+        // Music volume setting, which is multiplied by the main volume setting to get the audio source volume.
+        protected float musicVolume = 1.0f;
+        // Sound effect volume setting, which is multiplied by the main volume setting to get the audio source volume.
+        protected float soundEffectVolume = 1.0f;
+
         void Reset()
         {
             int audioSourceCount = this.GetComponents<AudioSource>().Length;
@@ -145,6 +151,40 @@ namespace Fungus
                         onComplete();
                     }
                 });
+        }
+
+        /// <summary>
+        /// Sets the main volume setting and adjusts music and sound effect audio source volume.
+        /// </summary>
+        /// <param name="newVolume">The new volume vlaue [0..1]</param>
+        public virtual void SetMainVolume(float newVolume)
+        {
+            mainVolume = Mathf.Clamp01(newVolume);
+
+            audioSourceMusic.volume = mainVolume * musicVolume;
+            audioSourceSoundEffect.volume = mainVolume * soundEffectVolume;
+        }
+
+        /// <summary>
+        /// Sets the music volume setting and adjusts audio source volume.
+        /// </summary>
+        /// <param name="newVolume">The new volume vlaue [0..1]</param>
+        public virtual void SetMusicVolume(float newVolume)
+        {
+            musicVolume = Mathf.Clamp01(newVolume);
+
+            audioSourceMusic.volume = mainVolume * musicVolume;
+        }
+
+        /// <summary>
+        /// Sets the sound effect volume setting and adjusts audio source volume.
+        /// </summary>
+        /// <param name="newVolume">The new volume vlaue [0..1]</param>
+        public virtual void SetSoundEffectVolume(float newVolume)
+        {
+            soundEffectVolume = Mathf.Clamp01(newVolume);
+
+            audioSourceSoundEffect.volume = mainVolume * soundEffectVolume;
         }
 
         /// <summary>
