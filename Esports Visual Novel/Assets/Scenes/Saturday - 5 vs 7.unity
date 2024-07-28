@@ -2241,6 +2241,22 @@ GameObject:
   - component: {fileID: 1012937951}
   - component: {fileID: 1012937953}
   - component: {fileID: 1012937943}
+  - component: {fileID: 1012937994}
+  - component: {fileID: 1012937993}
+  - component: {fileID: 1012937992}
+  - component: {fileID: 1012937974}
+  - component: {fileID: 1012937965}
+  - component: {fileID: 1012937964}
+  - component: {fileID: 1012937963}
+  - component: {fileID: 1012937962}
+  - component: {fileID: 1012937960}
+  - component: {fileID: 1012937956}
+  - component: {fileID: 1012937955}
+  - component: {fileID: 1012937954}
+  - component: {fileID: 1012937952}
+  - component: {fileID: 1012937941}
+  - component: {fileID: 1012937995}
+  - component: {fileID: 1012937996}
   m_Layer: 0
   m_Name: Saturday5vs7Flowchart
   m_TagString: Untagged
@@ -2369,7 +2385,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1162.244
     y: -422.63995
-    width: 125.51013
+    width: 137.14282
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2394,11 +2410,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1340.6465, y: 590.213}
+  scrollPos: {x: 1345.5728, y: 597.01447}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.49000046
+  zoom: 0.7000003
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2406,8 +2422,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012937936}
-  selectedCommands: []
+  - {fileID: 1012937956}
+  selectedCommands:
+  - {fileID: 1012937996}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -2506,7 +2523,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1158.8749
     y: -359.78625
-    width: 125.51013
+    width: 137.14282
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2586,7 +2603,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1168.9075
     y: -481.6417
-    width: 127.55095
+    width: 138.5714
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2635,7 +2652,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -929.5475
     y: -424.5602
-    width: 139.79584
+    width: 152.8571
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2819,7 +2836,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1326.6897
     y: -299.06732
-    width: 127.55095
+    width: 138.5714
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2877,7 +2894,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1331.9272
     y: -426.31635
-    width: 127.55095
+    width: 138.5714
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2938,7 +2955,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1325.8546
     y: -552.28705
-    width: 127.55095
+    width: 138.5714
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2984,7 +3001,8 @@ MonoBehaviour:
       we have a match to win!\r\n\r\nAtropos neutral:\nHajoon neutral:\nNarrator:
       Everyone sits down at their setups and begins to warm up for today\u2019s match.
       The mood is slightly better than before thanks to you and Boiga but still could
-      use some work.\r\n"
+      use some work.\r\n\nAtropos hide:\nBoiga hide:\nHajoon hide:\nMaeday hide:\nVelocity
+      hide:\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3065,7 +3083,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -449.54736
     y: -385.56018
-    width: 133.6734
+    width: 145.71425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3112,9 +3130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -277.48486
-    y: -431.56018
-    width: 133.6734
+    x: -276.21906
+    y: -435.46167
+    width: 145.71425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3125,6 +3143,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1012937931}
   - {fileID: 1012937951}
+  - {fileID: 1012937965}
   suppressAllAutoSelections: 0
 --- !u!114 &1012937937
 MonoBehaviour:
@@ -3171,7 +3190,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -450.04736
     y: -479.56018
-    width: 133.6734
+    width: 145.71425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3233,6 +3252,67 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &1012937941
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1305
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Velocity neutral left2:\nAtropos neutral left:\nMaeday neutral middle:\nHajoon
+      neutral right:\nBoiga neutral right2:\n\nNarrator: You begin to congratulate
+      the team on a job well done. However there\u2019s a slight tension in the air.\r\n\r\nCoach:
+      (Continue to hype the team up)\r\n\r\nNarrator: A few smiles and claps are
+      heard. However, Maeday is noticeably quiet and looks as if she\u2019s wanting
+      to say something.\r\n\r\n\r\nCoach: We won. What\u2019s with the long face?\r\n\r\nMae
+      Angry: We won, yeah, but {i}somebody{/i} completely threw out everything we
+      practiced during the match. \r\n\r\nNarrator: She glares straight at Hajoon
+      who responds back with a dismissing shrug. \r\n\r\nMaeday Angry: Don\u2019t
+      give me that, you know if the enemy was better we would\u2019ve easily lost
+      that match with your ridiculous plays. You can\u2019t expect to get away with
+      that against competent players.\r\n\r\nHajoon Angry: Yeah but we won, and it
+      was all thanks to me. \r\n\r\nMaeday Angry: If you mean all thanks to us covering
+      your ass when you went on your own then sure, I\u2019d agree with you.\r\n\r\nHajoon
+      Angry: This team would be nothing without me. The only reason we\u2019ve even
+      gotten this far is thanks to my skills.\r\n\r\nNarrator: Maeday gets noticeably
+      angrier and furrows her brows.\r\n\r\nMaeday Angry: How far up your ass is
+      your head??? The only reason we\u2019ve gotten this far is because all four
+      of us put up with your insufferable attitude!\r\n\r\nBoiga neutral:\nAtropos
+      sad:\nNarrator: Boiga tries to calm both of them down but to no avail, neither
+      of them even acknowledge anyone else\u2019s presence. Atropos is on the side
+      trembling in nervousness, unable to handle the conflict. Meanwhile, Velocity
+      is in the corner secretly recording the argument. Hopefully not for malicious
+      intent\u2026\r\n\r\nHajoon Angry: Maybe if you could keep up with my skill
+      I wouldn\u2019t have to go for hero plays all the time. If you had even half
+      of (Hajoon\u2019s old tank\u2019s name) abilities then we would be winning
+      all our matches with ease!\r\n\r\nMaeday Angry: If all you\u2019re going to
+      do is bring up useless points then there\u2019s I\u2019m done here. No point
+      wasting my time arguing with a child who can\u2019t accept his own flaws.\r\n\r\nMaeday
+      hide:\nNarrator: With tension at an all-time high, Maeday storms out of the
+      room furious. After some awkward silence eventually everyone retreats back
+      to their rooms, leaving you alone to try and figure out how to resolve this
+      mess in the morning.\n"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!114 &1012937942
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3396,7 +3476,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -700.54736
     y: -288.56018
-    width: 160.20398
+    width: 174.28566
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3423,7 +3503,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -711.0475
     y: -425.56018
-    width: 190.8162
+    width: 209.99994
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3479,6 +3559,26 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &1012937952
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1304
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!114 &1012937953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3493,6 +3593,90 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1290
   indentLevel: 0
+--- !u!114 &1012937954
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1303
+  indentLevel: 0
+  duration: 1
+  fadeOut: 0
+  targetView: {fileID: 1466004160}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &1012937955
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1302
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Narrator: The match comes to a conclusion. A mixture of satisfaction
+      and relief pours out from the players in your team as they soak in the victory.
+      Today didn\u2019t mark the end of their dreams, but a continuation of the road
+      towards it. "
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1012937956
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 220.9704
+    y: -384.4177
+    width: 114.28569
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1301
+  blockName: AfterLoseA
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937996}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012937957
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3542,6 +3726,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1155
   indentLevel: 0
+--- !u!114 &1012937960
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 218.3388
+    y: -485.73346
+    width: 108.5714
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1300
+  blockName: AfterWinA
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937955}
+  - {fileID: 1012937952}
+  - {fileID: 1012937954}
+  - {fileID: 1012937941}
+  - {fileID: 1012937995}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012937961
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3563,6 +3778,106 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &1012937962
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1299
+  indentLevel: 0
+  text: Lose
+  description: 
+  targetBlock: {fileID: 1012937956}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012937963
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1298
+  indentLevel: 0
+  text: Win
+  description: 
+  targetBlock: {fileID: 1012937960}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012937964
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1297
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'Narrator: [Match happens]'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012937965
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1296
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1012937994}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!114 &1012937966
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3577,9 +3892,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 522.6692
-    y: -351.46652
-    width: 145.91827
+    x: 519.3905
+    y: -728.51544
+    width: 157.14282
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3611,9 +3926,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 526.2257
-    y: -466.62366
-    width: 152.04071
+    x: 522.947
+    y: -843.6726
+    width: 165.71423
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4020,6 +4335,20 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &1012937974
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b4eb787b6aa844ca0172f1948d99a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1295
+  indentLevel: 0
 --- !u!114 &1012937975
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4640,6 +4969,171 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
+--- !u!114 &1012937992
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1294
+  indentLevel: 0
+  duration: 1
+  fadeOut: 0
+  targetView: {fileID: 9208407291245903661}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &1012937993
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b115619cb83b4d6ab8047d0e9407403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1293
+  indentLevel: 0
+  isStartPoint: 0
+  keyMode: 0
+  customKey: 
+  keySeparator: _
+  descriptionMode: 0
+  customDescription: 
+  fireEvent: 0
+  resumeOnLoad: 1
+--- !u!114 &1012937994
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -18.080479
+    y: -436.6558
+    width: 164.28568
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1292
+  blockName: 'Saturday - 5: Match'
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937993}
+  - {fileID: 1012937992}
+  - {fileID: 1012937974}
+  - {fileID: 1012937964}
+  - {fileID: 1012937963}
+  - {fileID: 1012937962}
+  suppressAllAutoSelections: 0
+--- !u!114 &1012937995
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1306
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'Narrator: End of day 5.'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1012937996
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1307
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Velocity sad left2:\nBoiga sad left:\nMaeday angry middle:\nHajoon
+      angry right:\nAtropos sad right2:\n\nNarrator: The match comes to a conclusion.
+      The team is dejected and everyone\u2019s expressions are in shambles. Even
+      Boiga, the usual beacon of hope, has never looked more depressed than he does
+      now. \r\n\r\nNarrator: Everyone feels as though they made mistakes they never
+      should have made in a million years during the match. You can\u2019t even begin
+      to grasp at the necessary words to speak to the team to make things better.\r\n\r\nHajoon
+      Angry: I can\u2019t believe we lost to Flying Grizzlies of all teams. How insanely
+      bad do we have to be to lose to them? How did you guys fuck up so bad during
+      the match?\r\n\r\nMaeday Angry: WE fucked up? How about you then huh? What
+      were you doing half the time going off on your own making your own plays and
+      inting? How can you expect us to win when almost every fight we took was 4v5?!\r\n\r\nBoiga
+      Concerned: Come on guys the match is over there\u2019s no use arguing over
+      it right now when we\u2019re all down\u2014\r\n\r\nMaeday Angry: No Boiga,
+      Hajoon needs to get his head out of his ass and get a reality check. If he
+      thinks that us four are the reason we lost today then I don\u2019t want to
+      play with him anymore. Either he\u2019s gone or I\u2019m gone.\r\n\r\nVelocity
+      Concerned: Come on guys we don\u2019t have to take it this far, let\u2019s
+      just wait until we all calm down like Boiga said and then talk about it after.\r\n\r\nNarrator:
+      The tension is so high you could cut it. Atropos is off to the side scared
+      to death about what might happen and can\u2019t even utter a single word in
+      response. \r\n\r\nHajoon Neutral: No, it\u2019s OK. I\u2019ve made my decision
+      already. There\u2019s no use playing with her when I know what a real tank
+      can do in the game. I\u2019ll save you all the trouble and just leave right
+      now.\r\n\r\nHajoon hide:\nNarrator: Hajoon walks out of the arena, leaving
+      everyone stunned at his sudden decision to leave the team. Unfortunately your
+      loss to Flying Grizzlies has caused irreparable damage to the team and your
+      journey to becoming world champions has stopped here.\r\n\nNarrator: ENDING
+      - Skill Issue\n"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!114 &1012938008
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4699,9 +5193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 990.9184
-    y: -340.97696
-    width: 84.69385
+    x: 987.6396
+    y: -718.0259
+    width: 87.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4728,9 +5222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -116.96111
-    y: -673.5263
-    width: 98.979546
+    x: -118.45365
+    y: -763.07874
+    width: 105.714264
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4759,7 +5253,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1542.4998
     y: -430.46527
-    width: 158.16316
+    width: 174.28566
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4805,9 +5299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 32.759785
-    y: -412.29874
-    width: 215.30597
+    x: 39.22064
+    y: -773.309
+    width: 238.57135
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4981,9 +5475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 988.8565
-    y: -480.28815
-    width: 84.69385
+    x: 985.5779
+    y: -857.3371
+    width: 87.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5405,9 +5899,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 311.10468
-    y: -411.95303
-    width: 160.20398
+    x: 307.826
+    y: -789.002
+    width: 175.71423
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5843,9 +6337,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 726.88745
-    y: -416.12253
-    width: 207.14272
+    x: 722.4724
+    y: -792.0351
+    width: 228.57135
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5922,7 +6416,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 740.8565
     y: -262.52374
-    width: 186.73457
+    width: 204.28564
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6026,9 +6520,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 40.132607
-    y: -335.54895
-    width: 170.40805
+    x: 46.593464
+    y: -696.55914
+    width: 185.71423
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6096,9 +6590,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1106.5372
-    y: -443.52286
-    width: 84.69385
+    x: 1103.2578
+    y: -820.5718
+    width: 87.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6124,9 +6618,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1102.4143
-    y: -520.84247
-    width: 84.69385
+    x: 1099.135
+    y: -897.8914
+    width: 87.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6307,7 +6801,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1550.7545
     y: -271.0198
-    width: 166.32642
+    width: 181.42851
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6384,7 +6878,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1371.6207
     y: -415.84283
-    width: 68.36733
+    width: 71.42856
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6610,9 +7104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1229.7947
-    y: -354.98737
-    width: 84.69385
+    x: 1226.5154
+    y: -732.0363
+    width: 87.14284
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6674,9 +7168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1120.1967
-    y: -304.84305
-    width: 82.65303
+    x: 1116.9172
+    y: -681.89197
+    width: 85.71427
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6702,9 +7196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1117.568
-    y: -382.60583
-    width: 82.65303
+    x: 1114.2886
+    y: -759.6548
+    width: 85.71427
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6844,7 +7338,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1486.2897
     y: -422.13113
-    width: 107.14281
+    width: 112.85712
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9037,7 +9531,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25.000017
+      value: 24.999979
       objectReference: {fileID: 0}
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
