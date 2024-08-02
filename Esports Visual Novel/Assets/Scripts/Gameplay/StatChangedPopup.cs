@@ -25,6 +25,7 @@ public class StatChangedPopup : MonoBehaviour
 
     public void SetText(string newText)
     {
+        // TODO: Add vars for images. Change signature to tell if the stat went up or down.
         text.text = newText;
     }
 
