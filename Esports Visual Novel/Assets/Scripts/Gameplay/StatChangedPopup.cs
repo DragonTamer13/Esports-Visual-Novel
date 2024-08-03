@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class StatChangedPopup : MonoBehaviour
@@ -12,6 +13,10 @@ public class StatChangedPopup : MonoBehaviour
 
     // The popup's text component
     [SerializeField] private TMP_Text text;
+    // Icon for if a stat went up or down
+    [SerializeField] private Image arrowIcon;
+    [SerializeField] private Sprite upArrow;
+    [SerializeField] private Sprite downArrow;
 
     private CanvasGroup canvasGroup;
 
@@ -23,10 +28,17 @@ public class StatChangedPopup : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    public void SetText(string newText)
+    public void SetText(string newText, int statChange)
     {
-        // TODO: Add vars for images. Change signature to tell if the stat went up or down.
         text.text = newText;
+        if (statChange > 0)
+        {
+            arrowIcon.sprite = upArrow;
+        }
+        else if (statChange < 0)
+        {
+            arrowIcon.sprite = downArrow;
+        }
     }
 
     private IEnumerator FadeIn()
