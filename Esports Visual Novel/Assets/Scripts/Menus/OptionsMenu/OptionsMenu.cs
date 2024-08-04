@@ -54,6 +54,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private GameObject previewCharacterPrefab;
     // The SayDialog object to instantiate to show a preview of the current options.
     [SerializeField] private GameObject optionsSayDialogPrefab;
+    // Audio mixer for custom sounds not done through Fungus
+    [SerializeField] private AudioMixer audioMixer;
 
     private SayDialog previewSayDialog;
     private CustomWriter previewWriter;
@@ -339,6 +341,10 @@ public class OptionsMenu : MonoBehaviour
     /// </summary>
     public void ApplyOptions()
     {
+        FungusManager.Instance.MusicManager.SetSoundEffectVolume(PlayerPrefs.GetFloat(SFXVolumeKey, 100.0f) / 100.0f);
+        // Convert the 0 -> 1 stored float value to -80dB -> 0dB
+        audioMixer.SetFloat("SFX", -80.0f * (1.0f - FungusManager.Instance.MusicManager.GetSoundEffectVolume()));
+
         // There isn't a writer in this scene, so there isn't a SayDialog. Don't try changing any settings.
         if (writer == null)
         {
@@ -347,7 +353,6 @@ public class OptionsMenu : MonoBehaviour
 
         FungusManager.Instance.MusicManager.SetMainVolume(PlayerPrefs.GetFloat(MasterVolumeKey, 100.0f) / 100.0f);
         FungusManager.Instance.MusicManager.SetMusicVolume(PlayerPrefs.GetFloat(MusicVolumeKey, 100.0f) / 100.0f);
-        FungusManager.Instance.MusicManager.SetSoundEffectVolume(PlayerPrefs.GetFloat(SFXVolumeKey, 100.0f) / 100.0f);
         writer.SetWritingSpeed(PlayerPrefs.GetFloat(MessageSpeedKey, messageSpeedSlider.value));
         writer.SetAutoDelay(PlayerPrefs.GetFloat(AutoDelayKey, autoDelaySlider.value / 100.0f * MaxAutoDelayPerCharacter));
         nameText.fontSize = nameFontSizes[PlayerPrefs.GetInt(FontSizeKey, fontSizeDropdown.value)];

@@ -44,7 +44,12 @@ public class ScrimResultsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        datastoreFlowchart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
+        GameObject datastoreGameObject = GameObject.Find("DatastoreFlowchart");
+        if (datastoreGameObject != null)
+        {
+            datastoreFlowchart = datastoreGameObject.GetComponent<Flowchart>();
+        }
+
         canvasGroup = GetComponent<CanvasGroup>();
         // Find the arrow image component on Start so we don't have to set it in inspector.
         foreach (Image image in values)

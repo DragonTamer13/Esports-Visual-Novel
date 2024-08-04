@@ -19,7 +19,11 @@ public class StatManager : MonoBehaviour
             conversationNode.changeStatsDelegate = ChangeStat;
         }
 
-        datastoreFlowchart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
+        GameObject datastoreGameObject = GameObject.Find("DatastoreFlowchart");
+        if (datastoreGameObject != null)
+        {
+            datastoreFlowchart = datastoreGameObject.GetComponent<Flowchart>();
+        }
     }
 
     /// <summary>
