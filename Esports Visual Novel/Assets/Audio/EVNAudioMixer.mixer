@@ -14,6 +14,26 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-3055336247076793053
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9f6d3c3e87c5b2f45869260e7c5fdc32
+  m_EffectName: ParamEQ
+  m_MixLevel: b03e57e4656b9654cbb099d8b94487cc
+  m_Parameters:
+  - m_ParameterName: Center freq
+    m_GUID: f327e337173ae8f4cb7649829515e949
+  - m_ParameterName: Octave range
+    m_GUID: ca2fd04502737044d88ff3b303a7e492
+  - m_ParameterName: Frequency gain
+    m_GUID: a87a7a3e9c6245846a2291309be43d7c
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-1596691308530481198
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -50,7 +70,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 62fb0b3ab7683154faff3740065b0cf5
-    name: MyExposedParam
+    name: SFX
   m_AudioMixerGroupViews:
   - guids:
     - 8e4a9b8c7a0215a41b69f4ee6040b460

@@ -342,10 +342,10 @@ public class OptionsMenu : MonoBehaviour
     public void ApplyOptions()
     {
         FungusManager.Instance.MusicManager.SetSoundEffectVolume(PlayerPrefs.GetFloat(SFXVolumeKey, 100.0f) / 100.0f);
-        // Convert the 0 -> 1 stored float value to -80dB -> 0dB
-        audioMixer.SetFloat("SFX", -80.0f * (1.0f - FungusManager.Instance.MusicManager.GetSoundEffectVolume()));
+        // Convert the 0 -> 1 stored float value to -21.3dB -> 0dB
+        audioMixer.SetFloat("SFX", 20.0f * Mathf.Log10(FungusManager.Instance.MusicManager.GetSoundEffectVolume()));
 
-        // There isn't a writer in this scene, so there isn't a SayDialog. Don't try changing any settings.
+        // There isn't a writer in this scene, so there isn't a SayDialog. Don't try changing any other settings.
         if (writer == null)
         {
             return;
