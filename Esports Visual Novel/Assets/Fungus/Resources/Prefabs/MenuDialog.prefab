@@ -122,13 +122,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3270138024670528878}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -263,7 +262,7 @@ GameObject:
   - component: {fileID: 11415088}
   - component: {fileID: 22515124}
   - component: {fileID: 11415064}
-  - component: {fileID: 11415124}
+  - component: {fileID: 7981308882066827231}
   m_Layer: 5
   m_Name: MenuDialog
   m_TagString: Untagged
@@ -364,7 +363,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11415124
+--- !u!114 &7981308882066827231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,10 +372,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 115102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8371d2b2fe14a9ca0a9465140027de, type: 3}
+  m_Script: {fileID: 11500000, guid: d06530e5bb9a8864b84177c89c34f5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   autoSelectFirstButton: 0
+  buttonPressSound: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032, type: 3}
 --- !u!1 &115108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,13 +1085,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4246584396136249607}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1335,13 +1334,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5221259098681660292}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1741,13 +1739,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1256881182772514342}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1991,13 +1988,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2541269188368355121}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2397,13 +2393,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2295630720967671275}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2725,13 +2720,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6048103701897435134}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 7981308882066827231}
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f64d3e51a3af07e499d3cc089680a032,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
