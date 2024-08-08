@@ -203,6 +203,10 @@ public class SaveLoadMenu : MonoBehaviour
         {
             if (saveManager.SaveDataExists(saveDataKey))
             {
+                // Stop music if it is playing. All music should be played through Fungus.
+                var musicManager = FungusManager.Instance.MusicManager;
+                musicManager.StopMusic();
+
                 // Do a fade transition if we're on the main menu. Otherwise, just load the game.
                 GameObject mainMenu = GameObject.Find("MainMenu");
                 if (mainMenu != null)
