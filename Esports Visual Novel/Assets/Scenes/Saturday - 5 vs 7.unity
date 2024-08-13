@@ -1851,7 +1851,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 225.82417
+      value: 221.61292
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1871,7 +1871,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1628.7911
+      value: 1628.3872
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1881,7 +1881,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 864.39557
+      value: 864.1936
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -2198,8 +2198,6 @@ GameObject:
   - component: {fileID: 1012938103}
   - component: {fileID: 1012937921}
   - component: {fileID: 1012937920}
-  - component: {fileID: 1012937930}
-  - component: {fileID: 1012937929}
   - component: {fileID: 1012937928}
   - component: {fileID: 1012937927}
   - component: {fileID: 1012937926}
@@ -2208,7 +2206,6 @@ GameObject:
   - component: {fileID: 1012937923}
   - component: {fileID: 1012937922}
   - component: {fileID: 1012937919}
-  - component: {fileID: 1012937918}
   - component: {fileID: 1012937917}
   - component: {fileID: 1012937916}
   - component: {fileID: 1012937915}
@@ -2220,13 +2217,11 @@ GameObject:
   - component: {fileID: 1012937907}
   - component: {fileID: 1012937906}
   - component: {fileID: 1012937905}
-  - component: {fileID: 1012937950}
   - component: {fileID: 1012937949}
   - component: {fileID: 1012937948}
   - component: {fileID: 1012937947}
   - component: {fileID: 1012937946}
   - component: {fileID: 1012937945}
-  - component: {fileID: 1012937944}
   - component: {fileID: 1012937942}
   - component: {fileID: 1012937940}
   - component: {fileID: 1012937939}
@@ -2238,14 +2233,12 @@ GameObject:
   - component: {fileID: 1012937933}
   - component: {fileID: 1012937932}
   - component: {fileID: 1012937931}
-  - component: {fileID: 1012937951}
   - component: {fileID: 1012937953}
   - component: {fileID: 1012937943}
   - component: {fileID: 1012937994}
   - component: {fileID: 1012937993}
   - component: {fileID: 1012937992}
   - component: {fileID: 1012937974}
-  - component: {fileID: 1012937965}
   - component: {fileID: 1012937964}
   - component: {fileID: 1012937963}
   - component: {fileID: 1012937962}
@@ -2257,6 +2250,29 @@ GameObject:
   - component: {fileID: 1012937941}
   - component: {fileID: 1012937995}
   - component: {fileID: 1012937996}
+  - component: {fileID: 1012938001}
+  - component: {fileID: 1012938000}
+  - component: {fileID: 1012937999}
+  - component: {fileID: 1012937998}
+  - component: {fileID: 1012937997}
+  - component: {fileID: 1012937930}
+  - component: {fileID: 1012937929}
+  - component: {fileID: 1012937918}
+  - component: {fileID: 1012937944}
+  - component: {fileID: 1012938002}
+  - component: {fileID: 1012937965}
+  - component: {fileID: 1012937951}
+  - component: {fileID: 1012937950}
+  - component: {fileID: 1012938007}
+  - component: {fileID: 1012938006}
+  - component: {fileID: 1012938005}
+  - component: {fileID: 1012938004}
+  - component: {fileID: 1012938003}
+  - component: {fileID: 1012938010}
+  - component: {fileID: 1012938009}
+  - component: {fileID: 1012938106}
+  - component: {fileID: 1012938105}
+  - component: {fileID: 1012938104}
   m_Layer: 0
   m_Name: Saturday5vs7Flowchart
   m_TagString: Untagged
@@ -2284,8 +2300,8 @@ MonoBehaviour:
       the kitchen looking a little dejected. She gives you and Boiga a quick nod
       and goes to make herself breakfast.\n\nCoach: Good morning Maeday! Hope you
       slept well, we have a big day ahead of us.\n\nMaeday neutral: I\u2019m doing
-      alright Coach, thanks for asking.\r\n\nMaeday Happy: I\u2019ll do my best today.\n\nBoiga
-      Happy: {i}Our{/i} best.\n\nboiga hide:\nmaeday hide:"
+      alright Coach, thanks for asking.\r\n\nMaeday Happy: I\u2019ll do my best today.\n\n\n\nboiga
+      hide:\nmaeday hide:"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2297,7 +2313,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &1012937906
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2383,9 +2399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1162.244
-    y: -422.63995
-    width: 137.14282
+    x: -1369.561
+    y: -425.26758
+    width: 135.88235
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2410,11 +2426,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1345.5728, y: 597.01447}
+  scrollPos: {x: 630.85895, y: 685.27264}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.7000003
+  zoom: 0.85
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2422,9 +2438,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012937956}
+  - {fileID: 1012938010}
   selectedCommands:
-  - {fileID: 1012937996}
+  - {fileID: 1012938104}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -2521,9 +2537,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1158.8749
-    y: -359.78625
-    width: 137.14282
+    x: -1366.1919
+    y: -362.41388
+    width: 135.88235
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2601,9 +2617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1168.9075
-    y: -481.6417
-    width: 138.5714
+    x: -1376.2245
+    y: -484.26932
+    width: 138.23529
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2624,18 +2640,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1249
+  itemId: 1315
   indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1012937919}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  text: "\u201CMorning, Maeday! Hope you slept well, we have a big day ahead of us.\u201D"
+  description: 
+  targetBlock: {fileID: 1012937998}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937919
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2650,9 +2670,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -929.5475
-    y: -424.5602
-    width: 152.8571
+    x: -1138.8955
+    y: -428.21875
+    width: 150
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2662,8 +2682,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1012937905}
-  - {fileID: 1012937950}
-  - {fileID: 1012937944}
+  - {fileID: 1012937929}
+  - {fileID: 1012937918}
   suppressAllAutoSelections: 0
 --- !u!114 &1012937920
 MonoBehaviour:
@@ -2679,7 +2699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1238
   indentLevel: 0
-  text: Morning! You got some for me?
+  text: "\u201CMorning, Boiga! What\u2019s for breakfast?\u201D"
   description: 
   targetBlock: {fileID: 1012937928}
   hideIfVisited: 0
@@ -2704,7 +2724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1237
   indentLevel: 0
-  text: "Hey Boiga. Hope you\u2019re doing OK."
+  text: "\u201CHey Boiga, hope you\u2019re doing okay.\u201D"
   description: 
   targetBlock: {fileID: 1012937926}
   hideIfVisited: 0
@@ -2729,7 +2749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1247
   indentLevel: 0
-  text: ' Sunny side up.'
+  text: '"Sunny side up."'
   description: 
   targetBlock: {fileID: 1012937909}
   hideIfVisited: 0
@@ -2754,7 +2774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1246
   indentLevel: 0
-  text: Hard boiled.
+  text: '"Hard boiled."'
   description: 
   targetBlock: {fileID: 1012937914}
   hideIfVisited: 0
@@ -2779,7 +2799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1245
   indentLevel: 0
-  text: Scrambled.
+  text: '"Scrambled."'
   description: 
   targetBlock: {fileID: 1012937917}
   hideIfVisited: 0
@@ -2806,8 +2826,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Boiga Happy: Chin up coach, we have a match to win today. I\u2019ll
-      cook you breakfast to get your day started.\r\n"
+    stringVal: "Boiga Happy: Don\u2019t sweat it coach, I\u2019m focused on the match
+      today. I\u2019ll cook you breakfast to get your day started.\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2834,9 +2854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1326.6897
-    y: -299.06732
-    width: 138.5714
+    x: -1533.0067
+    y: -301.69495
+    width: 138.23529
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2864,8 +2884,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Boiga Happy: I\u2019ll cook something up for you, how do you like
-      your eggs?"
+    stringVal: 'Boiga Happy: Cooking up some eggs, how do you like yours?'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2892,9 +2911,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1331.9272
-    y: -426.31635
-    width: 138.5714
+    x: -1538.2443
+    y: -428.94397
+    width: 137.05882
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2917,28 +2936,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1240
+  itemId: 1314
   indentLevel: 0
-  conversationText:
-    stringRef: {fileID: 0}
-    stringVal: "Boiga Happy: Doing great! Gonna go on a quick run before warming
-      up for our match later. Wanna join me?\n\nCoach: Sure I\u2019d love to, just
-      let me grab something to eat and check in on everyone first."
-  clearPrevious:
+  text: "\u201CGood morning, Maeday! How are you doing?\u201D"
+  description: 
+  targetBlock: {fileID: 1012938001}
+  hideIfVisited: 0
+  interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  waitForInput:
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
     booleanRef: {fileID: 0}
-    booleanVal: 1
-  waitForSeconds:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  fadeWhenDone:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &1012937930
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2948,25 +2961,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: -1325.8546
-    y: -552.28705
-    width: 138.5714
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 1239
-  blockName: MorningBoigaA
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1012937929}
-  - {fileID: 1012937918}
-  suppressAllAutoSelections: 0
+  itemId: 1313
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1012937949}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!114 &1012937931
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2984,10 +2990,10 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: "Narrator: You step back to give Hajoon some space. His clicks are
-      still as loud and agitated as before, and posture as rigid as ever.\r\n\r\nNarrator:
-      After a brief moment you hear someone walk into the practice room behind you.\r\n\r\nHajoon
-      left:\nVelocity Happy right: Good morning everyone! I hope everyone is ready
-      to win today! I really need it to recuperate my followers\u2026 \r\n\r\nNarrator:
+      still as agitated as before, with posture as rigid as ever.\n\r\nNarrator:
+      After a brief moment, you hear someone walk into the practice room behind you.\n\r\nHajoon
+      left:\nVelocity Happy right: Good morning, everyone! I hope everyone is ready
+      to win today! I really need it to recuperate my followers\u2026\n\r\nNarrator:
       \u2026\r\n\r\nVelocity Happy: Come on guys get your energy up we have a match
       to win today!\r\n\r\nNarrator: Hajoon snaps his head back at Velocity.\r\n\r\nHajoon
       Angry: Shut up, I\u2019m trying to concentrate here.\r\n\r\nVelocity Annoyed:
@@ -3014,7 +3020,7 @@ MonoBehaviour:
     floatVal: 0
   fadeWhenDone:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
 --- !u!114 &1012937932
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3082,8 +3088,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -449.54736
-    y: -385.56018
-    width: 145.71425
+    y: -384.52927
+    width: 145.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3130,9 +3136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -276.21906
+    x: -277.24997
     y: -435.46167
-    width: 145.71425
+    width: 146.47058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3142,8 +3148,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1012937931}
+  - {fileID: 1012938002}
   - {fileID: 1012937951}
-  - {fileID: 1012937965}
   suppressAllAutoSelections: 0
 --- !u!114 &1012937937
 MonoBehaviour:
@@ -3190,7 +3196,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -450.04736
     y: -479.56018
-    width: 145.71425
+    width: 145.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3216,7 +3222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1276
   indentLevel: 0
-  text: "(Stand there and watch for a bit to see if he\u2019s ok)"
+  text: Stand there and watch for a bit
   description: 
   targetBlock: {fileID: 1012937934}
   hideIfVisited: 0
@@ -3241,7 +3247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1275
   indentLevel: 0
-  text: Hey uh, you doing ok?
+  text: "Hey uh, you doing ok?\u201CHey Hajoon, are you doing okay?\u201D"
   description: 
   targetBlock: {fileID: 1012937938}
   hideIfVisited: 0
@@ -3329,12 +3335,12 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon angry middle:
+    stringVal: 'Hajoon neutral middle:
 
 
-      Narrator: You go to the practice room
-      and Hajoon is already there playing. His keyboard and mouse clicks are louder
-      than usual and seems a little on edge.'
+      Narrator: After breakfast, you head
+      to the training room, where Hajoon is already playing. His keyboard and mouse
+      clicks are louder than usual.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3381,18 +3387,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1271
+  itemId: 1316
   indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1012937949}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!114 &1012937945
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3476,7 +3481,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -700.54736
     y: -288.56018
-    width: 174.28566
+    width: 174.70587
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3502,8 +3507,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -711.0475
-    y: -425.56018
-    width: 209.99994
+    y: -426.5911
+    width: 211.17647
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3512,6 +3517,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1012937944}
   - {fileID: 1012937945}
   - {fileID: 1012937943}
   - {fileID: 1012937953}
@@ -3528,17 +3534,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1266
+  itemId: 1320
   indentLevel: 0
-  duration: 1
-  targetAlpha: 1
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  fadeTweenType: 4
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Velocity Happy: See? I can be a positive influence too.\r\n\r\nVelocity
+      Happy: Come on Hajoon, get your energy up! It\u2019s match day!\r\n\r\nNarrator:
+      Hajoon snaps his head back at Velocity.\r\n\r\nHajoon Angry: Shut up, I\u2019m
+      trying to concentrate here.\r\n\r\nVelocity Annoyed: Tssk. Fine.\r\n\r\nVelocity
+      right2:\nHajoon left2:\nMaeday neutral left:\nAtropos SadLookingSide middle:\nmaeday
+      neutral right:\nNarrator: Boiga, Maeday, and Atropos enter. \r\n\r\nNarrator:
+      Atropos seems to be muttering something under their breath.\r\n\r\nAtropos
+      SadlookingSide: If only I\u2019d saved Boiga during that play we might\u2019ve
+      won yesterday\u2026 Or maybe if I stuck closer to Maeday I wouldn\u2019t have
+      gotten picked off\u2026 Oh no\u2026\r\n\r\nBoiga Happy: Come on, you know yesterday
+      wasn\u2019t your fault. Focus on today we have a match to win!\r\n\r\nVelocity
+      Neutral: Yeah Atropos, don\u2019t worry about yesterday. Fighting the Flying
+      Grizzlies today will be a piece of cake. Everyone knows they\u2019re falling
+      apart.\r\n\r\nMaeday Neutral: Yeah, I heard their team isn\u2019t really getting
+      along.\r\n\r\nBoiga Confused: Well, even if that\u2019s true, let\u2019s stay
+      focused on our game.\r\n\r\nHajoon Neutral: If we need that much concentration
+      for a bottom tier team, then we\u2019ve already lost.\r\n\r\nCoach: Alright
+      everyone, you have an hour to warm up and then we\u2019re heading out to the
+      arena!\r\n"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937951
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3548,17 +3581,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1285
+  itemId: 1319
   indentLevel: 0
-  duration: 1
-  targetAlpha: 1
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  fadeTweenType: 4
+  text: "\u201CNot sure about the follower part, but yes, let\u2019s win this match
+    today!\u201D"
+  description: 
+  targetBlock: {fileID: 1012937965}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937952
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3664,9 +3703,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 220.9704
-    y: -384.4177
-    width: 114.28569
+    x: 1046.8413
+    y: -387.62473
+    width: 111.17647
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3740,9 +3779,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 218.3388
-    y: -485.73346
-    width: 108.5714
+    x: 1044.2098
+    y: -488.9405
+    width: 105.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3866,18 +3905,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1296
-  indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1012937994}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  nodeRect:
+    serializedVersion: 2
+    x: -48.128212
+    y: -434.17886
+    width: 151.17647
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1318
+  blockName: MorningVelocityA
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937950}
+  - {fileID: 1012938005}
+  - {fileID: 1012938004}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012937966
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3894,7 +3941,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 519.3905
     y: -728.51544
-    width: 157.14282
+    width: 157.05882
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3928,7 +3975,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 522.947
     y: -843.6726
-    width: 165.71423
+    width: 165.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5030,9 +5077,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -18.080479
-    y: -436.6558
-    width: 164.28568
+    x: 807.7903
+    y: -440.86282
+    width: 162.94116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5134,6 +5181,309 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
+--- !u!114 &1012937997
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1312
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Maeday Happy: I\u2019ll do my best today.\n\nBoiga Happy: {i}Our{/i}
+      best."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1012937998
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -919.3039
+    y: -361.61984
+    width: 151.17647
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1329
+  blockName: MorningMaedayC
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937997}
+  - {fileID: 1012937930}
+  suppressAllAutoSelections: 0
+--- !u!114 &1012937999
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1310
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1012937949}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1012938000
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1309
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Maeday neutral: I\u2019m doing alright Coach, thanks for asking."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1012938001
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -936.05615
+    y: -485.434
+    width: 150
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1308
+  blockName: MorningMaedayB
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012938000}
+  - {fileID: 1012937999}
+  suppressAllAutoSelections: 0
+--- !u!114 &1012938002
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1317
+  indentLevel: 0
+  text: Give Velocity a smile and a pat on the back
+  description: 
+  targetBlock: {fileID: 1012937965}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012938003
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1326
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &1012938004
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1325
+  indentLevel: 0
+  text: "\u201CDon\u2019t underestimate our opponent today. Keep it clean.\u201D"
+  description: 
+  targetBlock: {fileID: 1012938007}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012938005
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1323
+  indentLevel: 0
+  text: "\u201CI want us to stomp the Flying Grizzlies and make this a swift match.\u201D"
+  description: 
+  targetBlock: {fileID: 1012938007}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012938006
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1322
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'Boiga Happy: Yes, Coach!
+
+
+      Atropos hide:
+
+      Boiga hide:
+
+      Hajoon
+      hide:
+
+      maeday hide:
+
+      Velocity hide:
+
+'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1012938007
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 172.19324
+    y: -435.41315
+    width: 151.17647
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1321
+  blockName: MorningVelocityB
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012938006}
+  - {fileID: 1012938003}
+  - {fileID: 1012938009}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012938008
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5165,6 +5515,56 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
+--- !u!114 &1012938009
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1328
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1012938010}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1012938010
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 398.3845
+    y: -434.17905
+    width: 224.11765
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1327
+  blockName: 'Saturday - 5: Before the Match'
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012938106}
+  - {fileID: 1012938105}
+  - {fileID: 1012938104}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012938011
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5195,7 +5595,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 987.6396
     y: -718.0259
-    width: 87.14284
+    width: 84.117645
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5224,7 +5624,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -118.45365
     y: -763.07874
-    width: 105.714264
+    width: 104.117645
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5251,9 +5651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1542.4998
-    y: -430.46527
-    width: 174.28566
+    x: -1760.8168
+    y: -430.0929
+    width: 173.52942
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5301,7 +5701,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 39.22064
     y: -773.309
-    width: 238.57135
+    width: 238.23529
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5385,9 +5785,9 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: "Narrator: Day 5 - Saturday\n\nNarrator: It's a quiet morning after
-      a loss to XLR8. You don\u2019t hear the usual sounds from everyone waking up
-      around the house until you get to the kitchen where Boiga is preparing breakfast
-      like usual.\r\n\r\nBoiga Happy Middle: Heya coach, good morning!\r\n"
+      the loss to XLR8. \r\n\r\nNarrator: You don\u2019t hear the usual morning commotion
+      until you get to the kitchen where Boiga is preparing breakfast.\r\n\r\nBoiga
+      Happy Middle: Heya coach, good morning!\r\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5477,7 +5877,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 985.5779
     y: -857.3371
-    width: 87.14284
+    width: 84.117645
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5901,7 +6301,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 307.826
     y: -789.002
-    width: 175.71423
+    width: 177.05882
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6339,7 +6739,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 722.4724
     y: -792.0351
-    width: 228.57135
+    width: 227.64705
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6416,7 +6816,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 740.8565
     y: -262.52374
-    width: 204.28564
+    width: 201.7647
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6442,8 +6842,7 @@ MonoBehaviour:
   parentBlock: {fileID: 1012938059}
   suppressBlockAutoSelect: 0
   savePointKeys:
-  - 'Friday - 4 vs 3: Before the Match'
-  - 'Friday - 4 vs 3: Match'
+  - 'Saturday - 5: Before the Match'
 --- !u!114 &1012938057
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6520,9 +6919,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 46.593464
-    y: -696.55914
-    width: 185.71423
+    x: 408.022
+    y: -299.41638
+    width: 185.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6592,7 +6991,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1103.2578
     y: -820.5718
-    width: 87.14284
+    width: 85.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6620,7 +7019,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1099.135
     y: -897.8914
-    width: 87.14284
+    width: 85.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6799,9 +7198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1550.7545
-    y: -271.0198
-    width: 181.42851
+    x: -1758.0715
+    y: -273.64743
+    width: 180.58823
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6878,7 +7277,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1371.6207
     y: -415.84283
-    width: 71.42856
+    width: 71.17647
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7106,7 +7505,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1226.5154
     y: -732.0363
-    width: 87.14284
+    width: 85.29411
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7170,7 +7569,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1116.9172
     y: -681.89197
-    width: 85.71427
+    width: 82.94118
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7198,7 +7597,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1114.2886
     y: -759.6548
-    width: 85.71427
+    width: 82.94118
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7338,7 +7737,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1486.2897
     y: -422.13113
-    width: 112.85712
+    width: 113.52941
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7642,7 +8041,7 @@ MonoBehaviour:
   indentLevel: 0
   text: Morning Boiga, how are you doing?
   description: 
-  targetBlock: {fileID: 1012937930}
+  targetBlock: {fileID: 0}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -7651,6 +8050,67 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &1012938104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b4eb787b6aa844ca0172f1948d99a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1332
+  indentLevel: 0
+--- !u!114 &1012938105
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1331
+  indentLevel: 0
+  duration: 1
+  fadeOut: 1
+  targetView: {fileID: 9208407291245903661}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &1012938106
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b115619cb83b4d6ab8047d0e9407403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1330
+  indentLevel: 0
+  isStartPoint: 0
+  keyMode: 0
+  customKey: 
+  keySeparator: _
+  descriptionMode: 0
+  customDescription: 
+  fireEvent: 1
+  resumeOnLoad: 1
 --- !u!1001 &1117178931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9156,22 +9616,22 @@ PrefabInstance:
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -288.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 921703828871837162, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -9531,7 +9991,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 24.999979
+      value: 0.000005722046
       objectReference: {fileID: 0}
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -9566,22 +10026,22 @@ PrefabInstance:
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -501.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2252560182506916695, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -9821,22 +10281,22 @@ PrefabInstance:
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -394.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2997234535287016365, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -10566,22 +11026,22 @@ PrefabInstance:
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -181.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5043627288162694423, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -11431,22 +11891,22 @@ PrefabInstance:
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8396774805783140005, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
