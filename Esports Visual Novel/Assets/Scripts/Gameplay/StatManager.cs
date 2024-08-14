@@ -74,4 +74,19 @@ public class StatManager : MonoBehaviour
         popup.transform.SetAsFirstSibling();
         popup.GetComponent<StatChangedPopup>().SetText(characterName + "'s " + attribute.ToString() + " " + (statChange > 0 ? "increased" : "decreased"), statChange);
     }
+
+    /// <summary>
+    /// Distroy all popups if the Say Dialog is disabled before the popups have time to fade out on their own.
+    /// Else, the fade out enumerator is unbound and they never fade out.
+    /// </summary>
+    private void OnDisable()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.gameObject.GetComponent<StatChangedPopup>() != null)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+    }
 }
