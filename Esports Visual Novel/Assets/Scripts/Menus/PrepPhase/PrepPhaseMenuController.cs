@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class PrepPhaseMenuController : MonoBehaviour
 {
@@ -30,6 +31,37 @@ public class PrepPhaseMenuController : MonoBehaviour
 
         canvasGroup = GetComponent<CanvasGroup>();
         Hide();
+    }
+
+    /// <summary>
+    /// Returns true if all field of A are greater than or equal to their corresponding fields in B.
+    /// </summary>
+    /// <returns></returns>
+    private static bool CompareStats(Vector4 A, Vector4 B)
+    {
+        return A.w >= B.w 
+            && A.x >= B.x 
+            && A.y >= B.y 
+            && A.z >= B.z;
+    }
+
+    /// <summary>
+    /// Returns the number of fields of A that are greater than or equal to their corresponding fields in B.
+    /// </summary>
+    private static int CountStats(Vector4 A, Vector4 B)
+    {
+        int result = 0;
+
+        if (A.w >= B.w)
+            result++;
+        if (A.x >= B.x)
+            result++;
+        if (A.y >= B.y)
+            result++;
+        if (A.z >= B.z)
+            result++;
+
+        return result;
     }
 
     public void ShowSaveMenu()
@@ -81,5 +113,55 @@ public class PrepPhaseMenuController : MonoBehaviour
     {
         scrimResultsMenu.SetupScrimResults(matchDay);
         socialMediaController.SetSocialMediaPosts(matchDay, teamName);
+    }
+
+    /// <summary>
+    /// Returns true if all players' stats are greater than or equal to a threshold. DatastoreFlowchart is used to get the players' current
+    /// stats, while DayFlowchart is used to get the threshold values, formatted [CharacterName]Target; ie. "AtroposTarget".
+    /// </summary>
+    public bool CheckAllStatsAboveThreshold(Flowchart datastoreFlowchart, Flowchart dayFlowchart)
+    {
+        Vector4 AtroposCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("AtroposStats").Value;
+        Vector4 BoigaCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("BoigaStats").Value;
+        Vector4 HajoonCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("HajoonStats").Value;
+        Vector4 MaedayCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("MaedayStats").Value;
+        Vector4 VelocityCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("VelocityStats").Value;
+
+        Vector4 AtroposTarget = dayFlowchart.GetVariable<Vector4Variable>("AtroposTarget").Value;
+        Vector4 BoigaTarget = dayFlowchart.GetVariable<Vector4Variable>("BoigaTarget").Value;
+        Vector4 HajoonTarget = dayFlowchart.GetVariable<Vector4Variable>("HajoonTarget").Value;
+        Vector4 MaedayTarget = dayFlowchart.GetVariable<Vector4Variable>("MaedayTarget").Value;
+        Vector4 VelocityTarget = dayFlowchart.GetVariable<Vector4Variable>("VelocityTarget").Value;
+
+        return CompareStats(AtroposCurrent, AtroposTarget)
+            && CompareStats(BoigaCurrent, BoigaTarget)
+            && CompareStats(HajoonCurrent, HajoonTarget)
+            && CompareStats(MaedayCurrent, MaedayTarget)
+            && CompareStats(VelocityCurrent, VelocityTarget);
+    }
+
+    /// <summary>
+    /// Returns the number of stat attributes that are greater than or equal to a threshold. DatastoreFlowchart is used to get the players' 
+    /// current stats, while DayFlowchart is used to get the threshold values, formatted [CharacterName]Target; ie. "AtroposTarget".
+    /// </summary>
+    public int CountStatsAboveThreshold(Flowchart datastoreFlowchart, Flowchart dayFlowchart)
+    {
+        Vector4 AtroposCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("AtroposStats").Value;
+        Vector4 BoigaCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("BoigaStats").Value;
+        Vector4 HajoonCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("HajoonStats").Value;
+        Vector4 MaedayCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("MaedayStats").Value;
+        Vector4 VelocityCurrent = datastoreFlowchart.GetVariable<Vector4Variable>("VelocityStats").Value;
+
+        Vector4 AtroposTarget = dayFlowchart.GetVariable<Vector4Variable>("AtroposTarget").Value;
+        Vector4 BoigaTarget = dayFlowchart.GetVariable<Vector4Variable>("BoigaTarget").Value;
+        Vector4 HajoonTarget = dayFlowchart.GetVariable<Vector4Variable>("HajoonTarget").Value;
+        Vector4 MaedayTarget = dayFlowchart.GetVariable<Vector4Variable>("MaedayTarget").Value;
+        Vector4 VelocityTarget = dayFlowchart.GetVariable<Vector4Variable>("VelocityTarget").Value;
+
+        return CountStats(AtroposCurrent, AtroposTarget)
+            + CountStats(BoigaCurrent, BoigaTarget)
+            + CountStats(HajoonCurrent, HajoonTarget)
+            + CountStats(MaedayCurrent, MaedayTarget)
+            + CountStats(VelocityCurrent, VelocityTarget);
     }
 }
