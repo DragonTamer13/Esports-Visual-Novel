@@ -11,6 +11,10 @@ public class PrepPhaseMenuController : MonoBehaviour
         Wednesday_2,
         Thursday_3,
         Friday_4_vs_3,
+        Saturday_5_vs_7,
+        Sunday_6,
+        WeekBreak_7,
+        Thursday_8_vs_4,
         Credits
     }
 

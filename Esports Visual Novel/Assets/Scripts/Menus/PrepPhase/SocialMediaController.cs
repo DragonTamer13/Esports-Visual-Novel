@@ -60,6 +60,12 @@ public class SocialMediaController : MonoBehaviour
             case PrepPhaseMenuController.MatchDay.Thursday_3:
                 postsCSVPath += "Thursday3";
                 break;
+            case PrepPhaseMenuController.MatchDay.Sunday_6:
+                postsCSVPath += "Sunday6";
+                break;
+            case PrepPhaseMenuController.MatchDay.WeekBreak_7:
+                postsCSVPath += "WeekBreak7";
+                break;
             case PrepPhaseMenuController.MatchDay.Credits:
                 postsCSVPath += "Credits";
                 break;
