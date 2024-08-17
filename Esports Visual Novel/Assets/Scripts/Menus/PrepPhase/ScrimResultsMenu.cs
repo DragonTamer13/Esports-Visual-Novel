@@ -136,15 +136,18 @@ public class ScrimResultsMenu : MonoBehaviour
 
                 note = line.Substring(8);
                 // Trim off quotes if the string has them.
-                if (note[0] == '"')
+                if (note != "")
                 {
-                    note = note.Substring(1, note.Length - 2);
-                }
-                // Highlight all character names in the note.
-                foreach (KeyValuePair<string, string> pair in characterNamesToHighlight)
-                {
-                    // TODO: Pray that none of the notes are prefixed with a character's name.
-                    note = note.Replace(pair.Key, "<color=#" + pair.Value + ">" + pair.Key + "</color>");
+                    if (note[0] == '"')
+                    {
+                        note = note.Substring(1, note.Length - 2);
+                    }
+                    // Highlight all character names in the note.
+                    foreach (KeyValuePair<string, string> pair in characterNamesToHighlight)
+                    {
+                        // TODO: Pray that none of the notes are prefixed with a character's name.
+                        note = note.Replace(pair.Key, "<color=#" + pair.Value + ">" + pair.Key + "</color>");
+                    }
                 }
 
                 notes[notesCounter].text = note;
