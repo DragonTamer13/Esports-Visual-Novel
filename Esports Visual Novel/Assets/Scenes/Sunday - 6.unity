@@ -2286,9 +2286,6 @@ GameObject:
   - component: {fileID: 1012937961}
   - component: {fileID: 1012937959}
   - component: {fileID: 1012937957}
-  - component: {fileID: 1012937972}
-  - component: {fileID: 1012937971}
-  - component: {fileID: 1012937970}
   - component: {fileID: 1012937973}
   - component: {fileID: 1012937991}
   - component: {fileID: 1012937990}
@@ -2416,6 +2413,23 @@ GameObject:
   - component: {fileID: 1012937946}
   - component: {fileID: 1012937945}
   - component: {fileID: 1012937944}
+  - component: {fileID: 1012937955}
+  - component: {fileID: 1012937954}
+  - component: {fileID: 1012937953}
+  - component: {fileID: 1012937952}
+  - component: {fileID: 1012938013}
+  - component: {fileID: 1012938010}
+  - component: {fileID: 1012938009}
+  - component: {fileID: 1012937974}
+  - component: {fileID: 1012937972}
+  - component: {fileID: 1012937971}
+  - component: {fileID: 1012937970}
+  - component: {fileID: 1012937965}
+  - component: {fileID: 1012937964}
+  - component: {fileID: 1012937963}
+  - component: {fileID: 1012937962}
+  - component: {fileID: 1012937960}
+  - component: {fileID: 1012937956}
   m_Layer: 0
   m_Name: Thursday3Flowchart
   m_TagString: Untagged
@@ -2896,7 +2910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -622.35693, y: 1080.9469}
+  scrollPos: {x: -417.67355, y: 812.34753}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 513
@@ -2908,9 +2922,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012938023}
+  - {fileID: 1012937955}
   selectedCommands:
-  - {fileID: 1012938026}
+  - {fileID: 1012937952}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -6537,6 +6551,123 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1012937952
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1183
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: MainMenu
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
+--- !u!114 &1012937953
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1182
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1321710317}
+  targetComponentAssemblyName: DatastoreLink, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: DatastoreLink
+  targetMethod: LoadNextScene
+  targetMethodText: 'LoadNextScene (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1012937954
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1181
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &1012937955
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1538.3861
+    y: -429.56442
+    width: 107.14283
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1180
+  blockName: ExitScene
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937954}
+  - {fileID: 1012937953}
+  - {fileID: 1012937952}
+  suppressAllAutoSelections: 0
+--- !u!114 &1012937956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1196
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1012937955}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!114 &1012937957
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6589,6 +6720,47 @@ MonoBehaviour:
   indentLevel: 0
   commenterName: 
   commentText: to the start of the prep phase.
+--- !u!114 &1012937960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1195
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Narrator: Hajoon continues to grimace.\r\n\r\nNarrator: You sit down
+      with Hajoon at one of the training room\u2019s computers and open the replays
+      of today\u2019s scrims.\r\n\r\nNarrator: Slowly, you make your way through
+      the entire scrim, pausing at each play Hajoon makes.\r\n\r\nHajoon neutral:\r\nNarrator:
+      At first, he attempts to defend his decisions, but as you continue, he gradually
+      grows quiet. You\u2019re unsure how well he\u2019s taking the criticism and
+      advice.\r\n\r\nNarrator: Finally, the replay comes to an end. You turn to Hajoon,
+      and wait for him to speak.\r\n\r\nHajoon NeutralLookingSide: You\u2026may have
+      a point. I need some time to consider things. I\u2019d like to be left alone
+      for a bit.\r\n\r\nHajoon hide:\r\nNarrator: You respect his request and walk
+      out of the practice room. You briefly glance back to see him replay the VODs,
+      staring attentively at the screen. You hold hope that this will mark a better
+      turn for both him and the rest of the team. \r\n"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!114 &1012937961
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6606,6 +6778,119 @@ MonoBehaviour:
   commenterName: 
   commentText: A connecting node meant to be only called once when the player goes
     from the previous cutscene
+--- !u!114 &1012937962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1194
+  indentLevel: 0
+  text: "\u201CWe\u2019re going to sit down and review everything you did this game.\u201D"
+  description: 
+  targetBlock: {fileID: 1012937964}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012937963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1193
+  indentLevel: 0
+  text: "\u201CWe\u2019re going to sit down and review every mistake you made this
+    game.\u201D"
+  description: 
+  targetBlock: {fileID: 1012937964}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012937964
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1370.5295
+    y: -430.91922
+    width: 104.28569
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1192
+  blockName: EveningC
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937960}
+  - {fileID: 1012937956}
+  suppressAllAutoSelections: 0
+--- !u!114 &1012937965
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1191
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: 'Hajoon angry:
+
+      Narrator: He remains quiet with a scowl. His
+      stubborn pride makes it difficult for him to admit his mistakes.
+
+'
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937966
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6835,25 +7120,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1044
+  itemId: 1190
   indentLevel: 0
+  text: "\u201CThis is a team game, and the rest of the team needs you just as much
+    as you need them.\u201D"
   description: 
-  targetObject: {fileID: 1321710317}
-  targetComponentAssemblyName: DatastoreLink, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: DatastoreLink
-  targetMethod: LoadNextScene
-  targetMethodText: 'LoadNextScene (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
+  targetBlock: {fileID: 1012937972}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937971
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6863,16 +7146,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1043
+  itemId: 1189
   indentLevel: 0
-  _sceneName:
-    stringRef: {fileID: 0}
-    stringVal: Friday - 4 vs 3
-  loadingImage: {fileID: 0}
-  sceneNameOLD: 
+  text: "\u201CThere won\u2019t be a next time for anyone in this team if you keep
+    acting like this.\u201D"
+  description: 
+  targetBlock: {fileID: 1012937972}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937972
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6882,17 +7172,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012937904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1042
-  indentLevel: 0
-  duration: 1
-  targetAlpha: 1
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
-  fadeTweenType: 4
+  nodeRect:
+    serializedVersion: 2
+    x: 1223.3867
+    y: -426.63364
+    width: 104.28569
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1188
+  blockName: EveningB
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937965}
+  - {fileID: 1012937963}
+  - {fileID: 1012937962}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012937973
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6911,6 +7210,38 @@ MonoBehaviour:
   teamName:
     stringRef: {fileID: 48012}
     stringVal: 
+--- !u!114 &1012937974
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1187
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Hajoon NeutralLookingSide: \u2026I wanted to prove them wrong. \r\n\r\nHajoon
+      NeutralLookingSide: We both know this team is.. lacking, to say the least.
+      So I need to do everything I can to carry them. Clearly I just wasn\u2019t
+      good enough today, but that won\u2019t be the case next time."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012937975
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8305,6 +8636,60 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1012938009
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1186
+  indentLevel: 0
+  text: "\u201CWhy didn\u2019t you play with the rest of the team?\u201D"
+  description: 
+  targetBlock: {fileID: 1012938010}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1012938010
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1066.2438
+    y: -418.0625
+    width: 104.28569
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1185
+  blockName: EveningA
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012937974}
+  - {fileID: 1012937971}
+  - {fileID: 1012937970}
+  suppressAllAutoSelections: 0
 --- !u!114 &1012938011
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8354,6 +8739,31 @@ MonoBehaviour:
   indentLevel: 0
   commenterName: 
   commentText: "=== Change for each day ===\tSet up the bracket view\n"
+--- !u!114 &1012938013
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1184
+  indentLevel: 0
+  text: "\u201CWhat did you think of today\u2019s practice?\u201D"
+  description: 
+  targetBlock: {fileID: 1012938010}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1012938014
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8587,7 +8997,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 843.52673
-    y: -420.45746
+    y: -423.15182
     width: 161.42853
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8605,9 +9015,8 @@ MonoBehaviour:
   - {fileID: 1012938026}
   - {fileID: 1012938025}
   - {fileID: 1012938024}
-  - {fileID: 1012937972}
-  - {fileID: 1012937970}
-  - {fileID: 1012937971}
+  - {fileID: 1012938013}
+  - {fileID: 1012938009}
   suppressAllAutoSelections: 0
 --- !u!114 &1012938024
 MonoBehaviour:
@@ -8625,32 +9034,12 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Atropos neutral left2:\nBoiga neutral middle:\nHajoon neutral right:\nMaeday
-      neutral left:\nVelocity neutral right2:\n\nNarrator: This concludes the last
-      practice before playoffs begin. It would be wise for everyone to get some much-needed
-      rest and sleep early. \r\n\r\nYou give a short speech in an attempt to raise
-      team morale. Afterwards everyone begins to clean and disperse.\r\n\r\nVelocity
-      happy: We totally got this, guys! A full sweep for {$TeamName}!\r\n\r\nVelocity
-      neutral:\nMaeday: I wish we could have had a little more practice, but I think
-      it\u2019ll go well\u2026 Hopefully.\r\n\r\nBoiga happy: Don\u2019t sweat it,
-      Mae! You all have me and Atropos watching your back. \r\n\r\nAtropos happy:
-      Y-yeah\u2026 I\u2019ll do my best to make sure to keep everyone safe.\r\n\r\nHajoon:
-      \u2026 \u2026\r\n\r\nBoiga hide:\nAtropos left:\nMaeday hide:\nVelocity hide:\nNarrator:
-      As people start to leave, Hajoon stays behind and tugs at the back of Atropos\u2019
-      sleeve.\r\n\r\nHajoon neutral: I considered what you said earlier.\r\n\r\nAtropos
-      confused: Oh\u2026? Uh, about that\u2026 I\u2026\r\n\r\nHajoon neutral: I may
-      have been too harsh on you.\r\n\r\nAtropos confused:\nNarrator: Atropos looks
-      surprised. \r\n\r\nHajoon sad: It\u2019s thanks to you that I can continue
-      to make the plays that I do. I\u2019ll\u2026\r\n\r\nNarrator: It looks as though
-      his pride is making it difficult to admit his own shortcomings. \r\n\r\nHajoon
-      sad: \u2026try to make an effort to be more conscious of what you said. \r\n\r\nHajoon
-      hide:\nNarrator: He leaves without any further explanation.\r\n\r\nAtropos
-      confused: Wait, what? \u2026Thanks?\r\n\r\nMaeday confused right: What was
-      that about?\r\n\r\nAtropos confused: I\u2019m not sure\u2026 \r\n\r\nAtropos
-      neutral:\nMaeday neutral: Kind of weird coming from him\u2026 But it isn\u2019t
-      bad, I guess.\r\n\r\nMaeday smile: Nevermind. Atropos want to clear some more
-      levels in KallaX before we sleep to unwind?\r\n\r\nAtropos happy: Yeah, s-sure!
-      That\u2019ll be nice.\r\n"
+    stringVal: "Narrator: Today\u2019s practice ended with the same story as yesterday\u2019s
+      match: Hajoon continued to play for himself, but this time, none of his plays
+      found any success. The enemy team had swiftly denied and punished his selfish
+      plays. \r\n\r\nNarrator: You had asked Hajoon to stay after practice, and now
+      only you and him remain in the training room.\r\n\r\nHajoon middle neutral:
+      \u2026\r\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -9514,6 +9903,7 @@ MonoBehaviour:
   suppressBlockAutoSelect: 0
   savePointKeys:
   - 'Sunday - 6: Training Room'
+  - 'Sunday - 6: Evening'
 --- !u!114 &1012938057
 MonoBehaviour:
   m_ObjectHideFlags: 2
