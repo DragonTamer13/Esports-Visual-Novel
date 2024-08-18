@@ -75,6 +75,23 @@ namespace Fungus
     }
 
     /// <summary>
+    /// Serializable container for a vector4 variable
+    /// </summary>
+    [System.Serializable]
+    public class Vector4Var
+    {
+        [SerializeField] protected string key;
+        [SerializeField] protected Vector4 value;
+
+        #region Public methods
+
+        public string Key { get { return key; } set { key = value; } }
+        public Vector4 Value { get { return value; } set { this.value = value; } }
+
+        #endregion
+    }
+
+    /// <summary>
     /// Serializable container for encoding the state of a Flowchart's variables.
     /// </summary>
     [System.Serializable]
@@ -85,6 +102,7 @@ namespace Fungus
         [SerializeField] protected List<IntVar> intVars = new List<IntVar>();
         [SerializeField] protected List<FloatVar> floatVars = new List<FloatVar>();
         [SerializeField] protected List<BoolVar> boolVars = new List<BoolVar>();
+        [SerializeField] protected List<Vector4Var> vector4Vars = new List<Vector4Var>();
 
         #region Public methods
 
@@ -112,6 +130,11 @@ namespace Fungus
         /// Gets or sets the list of encoded boolean variables.
         /// </summary>
         public List<BoolVar> BoolVars { get { return boolVars; } set { boolVars = value; } }
+
+        /// <summary>
+        /// Gets or sets the list of encoded vector4 variables.
+        /// </summary>
+        public List<Vector4Var> Vector4Vars { get { return vector4Vars; } set { vector4Vars = value; } }
 
         /// <summary>
         /// Encodes the data in a Flowchart into a structure that can be stored by the save system.
@@ -165,6 +188,16 @@ namespace Fungus
                     d.Value = boolVariable.Value;
                     flowchartData.BoolVars.Add(d);
                 }
+
+                // Save Vector4
+                var vector4Variable = v as Vector4Variable;
+                if (vector4Variable != null)
+                {
+                    var d = new Vector4Var();
+                    d.Key = vector4Variable.Key;
+                    d.Value = vector4Variable.Value;
+                    flowchartData.Vector4Vars.Add(d);
+                }
             }
 
             return flowchartData;
@@ -208,6 +241,11 @@ namespace Fungus
             {
                 var stringVar = flowchartData.StringVars[i];
                 flowchart.SetStringVariable(stringVar.Key, stringVar.Value);
+            }
+            for (int i = 0; i < flowchartData.Vector4Vars.Count; i++)
+            {
+                var vector4Var = flowchartData.Vector4Vars[i];
+                flowchart.SetVector4Variable(vector4Var.Key, vector4Var.Value);
             }
         }
 

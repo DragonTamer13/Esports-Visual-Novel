@@ -1013,6 +1013,36 @@ namespace Fungus
         }
 
         /// <summary>
+        /// Gets the value of a vector4 variable.
+        /// Returns the Vector4.zero if the variable key does not exist.
+        /// </summary>
+        public virtual Vector4 GetVector4Variable(string key)
+        {
+            var variable = GetVariable<Vector4Variable>(key);
+            if (variable != null)
+            {
+                return GetVariable<Vector4Variable>(key).Value;
+            }
+            else
+            {
+                return Vector4.zero;
+            }
+        }
+
+        /// <summary>
+        /// Sets the value of a vector4 variable.
+        /// The variable must already be added to the list of variables for this Flowchart.
+        /// </summary>
+        public virtual void SetVector4Variable(string key, Vector4 value)
+        {
+            var variable = GetVariable<Vector4Variable>(key);
+            if (variable != null)
+            {
+                variable.Value = value;
+            }
+        }
+
+        /// <summary>
         /// Gets the value of a GameObject variable.
         /// Returns null if the variable key does not exist.
         /// </summary>
