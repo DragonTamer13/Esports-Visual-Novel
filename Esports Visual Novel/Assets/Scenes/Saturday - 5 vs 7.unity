@@ -1863,7 +1863,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 223.19373
+      value: 225.82417
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1883,7 +1883,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1628.377
+      value: 1818.6813
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1893,7 +1893,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 864.1885
+      value: 959.34064
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -2330,6 +2330,9 @@ GameObject:
   - component: {fileID: 1012937963}
   - component: {fileID: 1012937962}
   - component: {fileID: 1012938152}
+  - component: {fileID: 1012938154}
+  - component: {fileID: 1012938153}
+  - component: {fileID: 1012937964}
   m_Layer: 0
   m_Name: Saturday5vs7Flowchart
   m_TagString: Untagged
@@ -2353,12 +2356,14 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Boiga left:\nMaeday sad right:\n\nNarrator: Maeday comes down to
-      the kitchen looking a little dejected. She gives you and Boiga a quick nod
-      and goes to make herself breakfast.\n\nCoach: Good morning Maeday! Hope you
-      slept well, we have a big day ahead of us.\n\nMaeday neutral: I\u2019m doing
-      alright Coach, thanks for asking.\r\n\nMaeday Happy: I\u2019ll do my best today.\n\n\n\nboiga
-      hide:\nmaeday hide:"
+    stringVal: 'Boiga left:
+
+      Maeday sad right:
+
+
+      Narrator: Maeday comes
+      down to the kitchen looking a little dejected. She gives you and Boiga a quick
+      nod and goes to make herself breakfast.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2458,7 +2463,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1369.561
     y: -425.26758
-    width: 137.62888
+    width: 135.2273
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2483,11 +2488,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 36.7247, y: 557.7361}
+  scrollPos: {x: 936.42145, y: 533.22974}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.9699998
+  zoom: 0.8799998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2495,8 +2500,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012938110}
-  selectedCommands: []
+  - {fileID: 1012937965}
+  selectedCommands:
+  - {fileID: 1012937950}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -2601,7 +2607,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1366.1919
     y: -362.41388
-    width: 137.62888
+    width: 135.2273
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2681,7 +2687,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1376.2245
     y: -484.26932
-    width: 139.69073
+    width: 137.50002
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2732,9 +2738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1138.8955
+    x: -1137.7592
     y: -428.21875
-    width: 153.0928
+    width: 150.00003
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2918,7 +2924,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1533.0067
     y: -301.69495
-    width: 139.69073
+    width: 137.50002
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2975,7 +2981,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1538.2443
     y: -428.94397
-    width: 138.65982
+    width: 136.36365
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3055,22 +3061,7 @@ MonoBehaviour:
       still as agitated as before, with posture as rigid as ever.\n\r\nNarrator:
       After a brief moment, you hear someone walk into the practice room behind you.\n\r\nHajoon
       left:\nVelocity Happy right: Good morning, everyone! I hope everyone is ready
-      to win today! I really need it to recuperate my followers\u2026\n\r\nNarrator:
-      \u2026\r\n\r\nVelocity Happy: Come on guys get your energy up we have a match
-      to win today!\r\n\r\nNarrator: Hajoon snaps his head back at Velocity.\r\n\r\nHajoon
-      Angry: Shut up, I\u2019m trying to concentrate here.\r\n\r\nVelocity Annoyed:
-      Tssk. Fine.\r\n\r\nHajoon left2:\nVelocity right2:\nBoiga neutral left:\nAtropos
-      sad middle:\nMaeday neutral right:\nNarrator: Boiga, Maeday, and Atropos come
-      into the room to warm up. Atropos seems to be muttering something under their
-      breath.\r\n\r\nAtropos Sad: If only I\u2019d saved Hajoon during that play
-      we might\u2019ve won yesterday\u2026 Or maybe if I stuck closer to Maeday I
-      wouldn\u2019t have gotten picked off\u2026 Oh no\u2026\r\n\r\nBoiga Happy:
-      Come on, you know yesterday\u2019s match wasn\u2019t your fault. Focus on today
-      we have a match to win!\r\n\r\nAtropos neutral:\nHajoon neutral:\nNarrator:
-      Everyone sits down at their setups and begins to warm up for today\u2019s match.
-      The mood is slightly better than before thanks to you and Boiga but still could
-      use some work.\r\n\nAtropos hide:\nBoiga hide:\nHajoon hide:\nMaeday hide:\nVelocity
-      hide:\n"
+      to win today! I really need it to recuperate my followers\u2026\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3151,7 +3142,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -449.54736
     y: -384.52927
-    width: 146.90723
+    width: 144.3182
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3200,7 +3191,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -277.24997
     y: -435.46167
-    width: 147.93817
+    width: 145.45456
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3258,7 +3249,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -450.04736
     y: -479.56018
-    width: 146.90723
+    width: 144.3182
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3309,7 +3300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1275
   indentLevel: 0
-  text: "Hey uh, you doing ok?\u201CHey Hajoon, are you doing okay?\u201D"
+  text: "\u201CHey Hajoon, are you doing okay?\u201D"
   description: 
   targetBlock: {fileID: 1012937938}
   hideIfVisited: 0
@@ -3541,7 +3532,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -700.54736
     y: -288.56018
-    width: 175.77322
+    width: 171.59094
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3567,8 +3558,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -711.0475
-    y: -426.5911
-    width: 211.8557
+    y: -423.18204
+    width: 209.09094
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3605,7 +3596,7 @@ MonoBehaviour:
       Happy: Come on Hajoon, get your energy up! It\u2019s match day!\r\n\r\nNarrator:
       Hajoon snaps his head back at Velocity.\r\n\r\nHajoon Angry: Shut up, I\u2019m
       trying to concentrate here.\r\n\r\nVelocity Annoyed: Tssk. Fine.\r\n\r\nVelocity
-      right2:\nHajoon left2:\nMaeday neutral left:\nAtropos SadLookingSide middle:\nmaeday
+      right2:\nHajoon left2:\nBoiga neutral left:\nAtropos SadLookingSide middle:\nmaeday
       neutral right:\nNarrator: Boiga, Maeday, and Atropos enter. \r\n\r\nNarrator:
       Atropos seems to be muttering something under their breath.\r\n\r\nAtropos
       SadlookingSide: If only I\u2019d saved Boiga during that play we might\u2019ve
@@ -3749,7 +3740,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1172.2365
     y: -381.2725
-    width: 176.80415
+    width: 175.00003
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3831,7 +3822,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1170.4626
     y: -489.09854
-    width: 180.92786
+    width: 180.68184
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3873,7 +3864,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1012937962
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3894,7 +3885,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1012937963
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3908,6 +3899,27 @@ MonoBehaviour:
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 1012938120}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1012937964
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1388
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1012937919}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -3929,7 +3941,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -48.128212
     y: -434.17886
-    width: 153.0928
+    width: 151.13638
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3958,7 +3970,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 519.3905
     y: -728.51544
-    width: 159.27838
+    width: 155.68184
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3992,7 +4004,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 520.74927
     y: -842.5737
-    width: 167.52579
+    width: 164.77275
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5114,7 +5126,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 924.9956
     y: -434.02817
-    width: 109.79382
+    width: 107.95456
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5227,7 +5239,7 @@ MonoBehaviour:
   conversationText:
     stringRef: {fileID: 0}
     stringVal: "Maeday Happy: I\u2019ll do my best today.\n\nBoiga Happy: {i}Our{/i}
-      best."
+      best.\n\nboiga hide:\nmaeday hide:"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5254,9 +5266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -919.3039
-    y: -361.61984
-    width: 154.12373
+    x: -945.44006
+    y: -360.4835
+    width: 151.13638
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5305,7 +5317,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Maeday neutral: I\u2019m doing alright Coach, thanks for asking."
+    stringVal: "Maeday neutral: I\u2019m doing alright Coach, thanks for asking.\n\nboiga
+      hide:\nmaeday hide:"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5333,8 +5346,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -936.05615
-    y: -485.434
-    width: 153.0928
+    y: -486.57034
+    width: 150.00003
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5498,9 +5511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 172.19324
-    y: -435.41315
-    width: 153.0928
+    x: 171.05687
+    y: -436.5495
+    width: 151.13638
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5581,7 +5594,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 398.3845
     y: -434.17905
-    width: 228.35056
+    width: 226.1364
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5630,7 +5643,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 987.6396
     y: -718.0259
-    width: 86.08248
+    width: 86.36365
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5659,7 +5672,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -118.45365
     y: -763.07874
-    width: 105.67012
+    width: 104.54547
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5686,9 +5699,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1760.8168
+    x: -1759.6804
     y: -430.0929
-    width: 175.77322
+    width: 173.86366
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5736,7 +5749,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 39.22064
     y: -773.309
-    width: 240
+    width: 238.6364
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5912,7 +5925,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 985.5779
     y: -859.53485
-    width: 86.08248
+    width: 86.36365
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6336,7 +6349,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 307.826
     y: -789.002
-    width: 177.83508
+    width: 176.13638
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6774,7 +6787,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 722.4724
     y: -793.134
-    width: 230.41241
+    width: 229.54549
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6851,7 +6864,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 875.00323
     y: -290.57254
-    width: 205.67014
+    width: 198.86366
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6956,7 +6969,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 408.022
     y: -299.41638
-    width: 188.14436
+    width: 182.95457
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7026,7 +7039,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1103.2578
     y: -820.5718
-    width: 87.11341
+    width: 87.50001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7054,7 +7067,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1099.135
     y: -897.8914
-    width: 87.11341
+    width: 87.50001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7237,7 +7250,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1758.0715
     y: -273.64743
-    width: 184.02065
+    width: 178.40912
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7314,7 +7327,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1394.6989
     y: -734.524
-    width: 71.64949
+    width: 70.45455
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7542,7 +7555,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1226.5154
     y: -732.0363
-    width: 87.11341
+    width: 87.50001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7606,7 +7619,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1116.9172
     y: -681.89197
-    width: 85.05156
+    width: 85.22728
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7634,7 +7647,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1114.2886
     y: -759.6548
-    width: 85.05156
+    width: 85.22728
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7774,7 +7787,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1509.3678
     y: -740.81226
-    width: 114.94847
+    width: 114.77274
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8076,9 +8089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1236
   indentLevel: 0
-  text: Morning Boiga, how are you doing?
+  text: '"Morning Boiga, how are you doing?"'
   description: 
-  targetBlock: {fileID: 0}
+  targetBlock: {fileID: 1012938154}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -8242,7 +8255,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 672.5024
     y: -438.6538
-    width: 185.05157
+    width: 181.8182
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8412,7 +8425,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1057.5112
     y: -380.4396
-    width: 86.08248
+    width: 84.09091
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8524,7 +8537,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1057.5109
     y: -483.5462
-    width: 79.89691
+    width: 79.54546
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9661,7 +9674,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &1012938152
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9679,6 +9692,65 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &1012938153
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1387
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "Boiga Happy: Doing great! Gonna go on a quick run before warming
+      up for our match later. Wanna join me?\n\nCoach: Sure I\u2019d love to, just
+      let me grab something to eat and check in on everyone first."
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1012938154
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -1538.6935
+    y: -577.5478
+    width: 136.36365
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1386
+  blockName: MorningBoigaA
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1012938153}
+  - {fileID: 1012937964}
+  suppressAllAutoSelections: 0
 --- !u!1001 &1117178931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11559,12 +11631,12 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 24.999968
+      value: 25.00006
       objectReference: {fileID: 0}
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000002520559
+      value: -0.000117308125
       objectReference: {fileID: 0}
     - target: {fileID: 2150456953617053537, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
