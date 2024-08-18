@@ -1955,7 +1955,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 226.62521
+      value: 225.82417
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1975,7 +1975,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1628.3835
+      value: 1818.6813
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1985,7 +1985,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 864.1918
+      value: 959.34064
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -2432,6 +2432,7 @@ GameObject:
   - component: {fileID: 1012937956}
   - component: {fileID: 1012938109}
   - component: {fileID: 1012938110}
+  - component: {fileID: 1012938111}
   m_Layer: 0
   m_Name: Thursday3Flowchart
   m_TagString: Untagged
@@ -2912,7 +2913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 486.51904, y: 728.80975}
+  scrollPos: {x: -401.63858, y: 703.80963}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 513
@@ -2924,9 +2925,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012938011}
+  - {fileID: 1012937955}
   selectedCommands:
-  - {fileID: 1012937905}
+  - {fileID: 1012938111}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -6634,7 +6635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1539.5626
+    x: 1540.8784
     y: -429.56442
     width: 103.94735
     height: 40
@@ -6650,6 +6651,7 @@ MonoBehaviour:
   - {fileID: 1012938110}
   - {fileID: 1012938109}
   - {fileID: 1012937952}
+  - {fileID: 1012938111}
   suppressAllAutoSelections: 0
 --- !u!114 &1012937956
 MonoBehaviour:
@@ -11541,6 +11543,25 @@ MonoBehaviour:
   commentText: 'TODO: Take this out this unfade when we have the next scene created
 
 '
+--- !u!114 &1012938111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dbfe4972aeca44586df123f1a02ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1199
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
 --- !u!114 &1012938113
 MonoBehaviour:
   m_ObjectHideFlags: 2
