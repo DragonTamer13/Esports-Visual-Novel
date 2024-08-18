@@ -15,16 +15,36 @@ namespace Fungus
         public override void OnEnter()
         {
             Flowchart datastoreFlowchart = GameObject.Find("DatastoreFlowchart").GetComponent<Flowchart>();
+
+            // Set the recorded previous day's stat values to the stat values at the start of this day's prep phase.
             datastoreFlowchart.GetVariable<Vector4Variable>("PrevAtroposStats").Apply(SetOperator.Assign,
-                datastoreFlowchart.GetVariable<Vector4Variable>("AtroposStats"));
+                datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrepAtroposStats"));
             datastoreFlowchart.GetVariable<Vector4Variable>("PrevBoigaStats").Apply(SetOperator.Assign,
-                datastoreFlowchart.GetVariable<Vector4Variable>("BoigaStats"));
+                datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrepBoigaStats"));
             datastoreFlowchart.GetVariable<Vector4Variable>("PrevHajoonStats").Apply(SetOperator.Assign,
-                datastoreFlowchart.GetVariable<Vector4Variable>("HajoonStats"));
+                datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrepHajoonStats"));
             datastoreFlowchart.GetVariable<Vector4Variable>("PrevMaedayStats").Apply(SetOperator.Assign,
-                datastoreFlowchart.GetVariable<Vector4Variable>("MaedayStats"));
+                datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrepMaedayStats"));
             datastoreFlowchart.GetVariable<Vector4Variable>("PrevVelocityStats").Apply(SetOperator.Assign,
-                datastoreFlowchart.GetVariable<Vector4Variable>("VelocityStats"));
+                datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrepVelocityStats"));
+
+            // Set the current day's notes to the next day's notes. Notes will not be read again until the next day,
+            // so it shouldn't matter if the current/next day's notes are off.
+            datastoreFlowchart.GetVariable<StringVariable>("AtroposNotes").Apply(SetOperator.Assign,
+                datastoreFlowchart.GetVariable<StringVariable>("NextAtroposNotes"));
+            datastoreFlowchart.GetVariable<StringVariable>("NextAtroposNotes").Apply(SetOperator.Assign, "");
+            datastoreFlowchart.GetVariable<StringVariable>("BoigaNotes").Apply(SetOperator.Assign,
+                datastoreFlowchart.GetVariable<StringVariable>("NextBoigaNotes"));
+            datastoreFlowchart.GetVariable<StringVariable>("NextBoigaNotes").Apply(SetOperator.Assign, "");
+            datastoreFlowchart.GetVariable<StringVariable>("HajoonNotes").Apply(SetOperator.Assign,
+                datastoreFlowchart.GetVariable<StringVariable>("NextHajoonNotes"));
+            datastoreFlowchart.GetVariable<StringVariable>("NextHajoonNotes").Apply(SetOperator.Assign, "");
+            datastoreFlowchart.GetVariable<StringVariable>("MaedayNotes").Apply(SetOperator.Assign,
+                datastoreFlowchart.GetVariable<StringVariable>("NextMaedayNotes"));
+            datastoreFlowchart.GetVariable<StringVariable>("NextMaedayNotes").Apply(SetOperator.Assign, "");
+            datastoreFlowchart.GetVariable<StringVariable>("VelocityNotes").Apply(SetOperator.Assign,
+                datastoreFlowchart.GetVariable<StringVariable>("NextVelocityNotes"));
+            datastoreFlowchart.GetVariable<StringVariable>("NextVelocityNotes").Apply(SetOperator.Assign, "");
 
             Continue();
         }

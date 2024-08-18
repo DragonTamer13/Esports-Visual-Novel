@@ -20,8 +20,11 @@ public class ScrimResultsMenu : MonoBehaviour
         {"Persephone", "C200C6"},
         {"Ra", "E86100"},
     };
+
     // Names of Flowchart variables containing the Vector4s with each player's stats.
     private readonly string[] FlowchartStatVariableNames = { "MaedayStats", "HajoonStats", "VelocityStats", "AtroposStats", "BoigaStats" };
+    // Names of Flowchart variables containing the strings for player notes today, if they are different than the default notes.
+    private readonly string[] FlowchartNotesVariableNames = { "MaedayNotes", "HajoonNotes", "VelocityNotes", "AtroposNotes", "BoigaNotes" };
 
     [Tooltip("Sprites for indicating that a stat went up.")]
     [SerializeField] private Sprite statUpArrow;
@@ -92,35 +95,41 @@ public class ScrimResultsMenu : MonoBehaviour
 
         using (StreamReader reader = File.OpenText(Application.streamingAssetsPath + ScrimResultsCSVPath))
         {
-            Vector4 characterStats;
+            Vector4 startOfPrepCharacterStats;
             Vector4 prevCharacterStats;
             string line = "";
             string note = "";
             int linesToSkip = 5 * ((int)matchDay);  // There are 5 rows for each match day.
-            int notesCounter = 0;
 
             // Read stat variables from DatastoreFlowchart
             for (int player = 0; player < FlowchartStatVariableNames.Length; player++)
             {
-                characterStats = datastoreFlowchart.GetVariable<Vector4Variable>(FlowchartStatVariableNames[player]).Value;
+                // Copy the current stat values to the "StartOfPrep" variable. This is used to keep track of what the stat values were 
+                // at the beginning of this prep phase. Necessary because stat values will change during the prep phase, and the player
+                // can save and reload while in the middle of the prep phase.
+                datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrep" + FlowchartStatVariableNames[player]).Apply(SetOperator.Assign,
+                    datastoreFlowchart.GetVariable<Vector4Variable>(FlowchartStatVariableNames[player]));
+
+                startOfPrepCharacterStats = datastoreFlowchart.GetVariable<Vector4Variable>("StartOfPrep" + FlowchartStatVariableNames[player]).Value;
                 prevCharacterStats = datastoreFlowchart.GetVariable<Vector4Variable>("Prev" + FlowchartStatVariableNames[player]).Value;
 
-                if (characterStats.x < 1 || characterStats.y < 1 || characterStats.z < 1 || characterStats.w < 1)
+                if (startOfPrepCharacterStats.x < 1 || startOfPrepCharacterStats.y < 1 || startOfPrepCharacterStats.z < 1 || startOfPrepCharacterStats.w < 1)
                 {
                     Debug.LogError("A character's stat value is less than 1. Check stat variables in DatastoreFlowchart.");
                     continue;
                 }
 
                 // Set each image to be a sprite displaying the player's rating for each stat. Stat values are between 1 and 5, inclusive.
-                values[player * 4 + 0].sprite = valueImages[Mathf.RoundToInt(characterStats.x) - 1];
-                values[player * 4 + 1].sprite = valueImages[Mathf.RoundToInt(characterStats.y) - 1];
-                values[player * 4 + 2].sprite = valueImages[Mathf.RoundToInt(characterStats.z) - 1];
-                values[player * 4 + 3].sprite = valueImages[Mathf.RoundToInt(characterStats.w) - 1];
+                values[player * 4 + 0].sprite = valueImages[Mathf.RoundToInt(startOfPrepCharacterStats.x) - 1];
+                values[player * 4 + 1].sprite = valueImages[Mathf.RoundToInt(startOfPrepCharacterStats.y) - 1];
+                values[player * 4 + 2].sprite = valueImages[Mathf.RoundToInt(startOfPrepCharacterStats.z) - 1];
+                values[player * 4 + 3].sprite = valueImages[Mathf.RoundToInt(startOfPrepCharacterStats.w) - 1];
 
-                SetValueArrowImage(valueArrows[player * 4 + 0], Mathf.RoundToInt(characterStats.x), Mathf.RoundToInt(prevCharacterStats.x));
-                SetValueArrowImage(valueArrows[player * 4 + 1], Mathf.RoundToInt(characterStats.y), Mathf.RoundToInt(prevCharacterStats.y));
-                SetValueArrowImage(valueArrows[player * 4 + 2], Mathf.RoundToInt(characterStats.z), Mathf.RoundToInt(prevCharacterStats.z));
-                SetValueArrowImage(valueArrows[player * 4 + 3], Mathf.RoundToInt(characterStats.w), Mathf.RoundToInt(prevCharacterStats.w));
+                // Set image if stat went up or down
+                SetValueArrowImage(valueArrows[player * 4 + 0], Mathf.RoundToInt(startOfPrepCharacterStats.x), Mathf.RoundToInt(prevCharacterStats.x));
+                SetValueArrowImage(valueArrows[player * 4 + 1], Mathf.RoundToInt(startOfPrepCharacterStats.y), Mathf.RoundToInt(prevCharacterStats.y));
+                SetValueArrowImage(valueArrows[player * 4 + 2], Mathf.RoundToInt(startOfPrepCharacterStats.z), Mathf.RoundToInt(prevCharacterStats.z));
+                SetValueArrowImage(valueArrows[player * 4 + 3], Mathf.RoundToInt(startOfPrepCharacterStats.w), Mathf.RoundToInt(prevCharacterStats.w));
             }
 
             // The scrim results for this day will be 5 contiguous rows in the CSV. Skip all rows that come before the desired day.
@@ -130,28 +139,32 @@ public class ScrimResultsMenu : MonoBehaviour
                 reader.ReadLine();
             }
 
-            for (int dataLine = 0; dataLine < 5; dataLine++)
+            for (int notesIndex = 0; notesIndex < 5; notesIndex++)
             {
                 line = reader.ReadLine();
 
-                note = line.Substring(8);
-                // Trim off quotes if the string has them.
-                if (note != "")
+                // First, see if there is a notes override string in the DatastoreFlowchart. Otherwise, read the default value from the CSV.
+                note = datastoreFlowchart.GetVariable<StringVariable>(FlowchartNotesVariableNames[notesIndex]).Value;
+                if (note == "")
                 {
-                    if (note[0] == '"')
+                    note = line.Substring(8);
+                    // Trim off quotes if the string has them.
+                    if (note != "")
                     {
-                        note = note.Substring(1, note.Length - 2);
-                    }
-                    // Highlight all character names in the note.
-                    foreach (KeyValuePair<string, string> pair in characterNamesToHighlight)
-                    {
-                        // TODO: Pray that none of the notes are prefixed with a character's name.
-                        note = note.Replace(pair.Key, "<color=#" + pair.Value + ">" + pair.Key + "</color>");
+                        if (note[0] == '"')
+                        {
+                            note = note.Substring(1, note.Length - 2);
+                        }
+                        // Highlight all character names in the note.
+                        foreach (KeyValuePair<string, string> pair in characterNamesToHighlight)
+                        {
+                            // TODO: Pray that none of the notes are prefixed with a character's name.
+                            note = note.Replace(pair.Key, "<color=#" + pair.Value + ">" + pair.Key + "</color>");
+                        }
                     }
                 }
 
-                notes[notesCounter].text = note;
-                notesCounter++;
+                notes[notesIndex].text = note;
             }
         }
     }
