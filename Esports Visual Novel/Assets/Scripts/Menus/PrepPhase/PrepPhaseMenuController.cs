@@ -168,4 +168,29 @@ public class PrepPhaseMenuController : MonoBehaviour
             + CountStats(MaedayCurrent, MaedayTarget)
             + CountStats(VelocityCurrent, VelocityTarget);
     }
+
+    /// <summary>
+    /// Sets some of the values of a stat Vector4 instead of all of them. 
+    /// </summary>
+    public Vector4 SetPartialStats(Vector4 stats, int newSkill, int newCooperation, int newCommunication, int newAttitude)
+    {
+        if (newSkill > 0)
+        {
+            stats.w = newSkill;
+        }
+        if (newCooperation > 0)
+        {
+            stats.x = newCooperation;
+        }
+        if (newCommunication > 0)
+        {
+            stats.y = newCommunication;
+        }
+        if (newAttitude > 0)
+        {
+            stats.z = newAttitude;
+        }
+
+        return stats;
+    }
 }
