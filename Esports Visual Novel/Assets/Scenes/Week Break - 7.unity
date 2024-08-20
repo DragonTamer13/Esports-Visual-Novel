@@ -1907,7 +1907,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 219
+      value: 224.625
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1927,7 +1927,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1819.4546
+      value: 1819.25
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1937,7 +1937,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 959.7273
+      value: 959.625
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -2526,6 +2526,7 @@ GameObject:
   - component: {fileID: 1012937905}
   - component: {fileID: 1012937912}
   - component: {fileID: 1012937909}
+  - component: {fileID: 1012937931}
   m_Layer: 0
   m_Name: WeekBreak7Flowchart
   m_TagString: Untagged
@@ -2646,7 +2647,7 @@ MonoBehaviour:
   commentText: === Optional for each day ===                    Set player stats
 --- !u!114 &1012937909
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2686,11 +2687,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 633.7546, y: 591.7068}
+  scrollPos: {x: 98.85635, y: 665.70636}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 423
-  zoom: 0.90999955
+  zoom: 0.9399996
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2698,9 +2699,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1012937968}
+  - {fileID: 1012938135}
   selectedCommands:
-  - {fileID: 1012937909}
+  - {fileID: 1012937973}
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -2738,7 +2739,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1012937912
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2768,7 +2769,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2148.4795
     y: -371.48074
-    width: 102.747284
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2796,7 +2797,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2148.1882
     y: -482.11438
-    width: 102.747284
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3054,7 +3055,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2342.599
     y: -312.84512
-    width: 122.52751
+    width: 129.78726
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3164,7 +3165,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1867.2373
     y: -371.99814
-    width: 101.64838
+    width: 105.31917
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3192,7 +3193,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1715.433
     y: -427.77133
-    width: 101.64838
+    width: 105.31917
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3206,6 +3207,86 @@ MonoBehaviour:
   - {fileID: 1012938251}
   - {fileID: 1012938252}
   suppressAllAutoSelections: 0
+--- !u!114 &1012937931
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1303
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 667196210}
+  targetComponentAssemblyName: CompositionChoiceMenuController, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CompositionChoiceMenuController
+  targetMethod: CreateCompositionOption
+  targetMethodText: 'CreateCompositionOption (String, String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Korean-style
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: A new composition that has been gaining popularity in tier two
+        of Korea. Everyone looks to take angles, then isolate a target for the kill.
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &1012937942
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3292,8 +3373,7 @@ MonoBehaviour:
         spriteVal: {fileID: 0}
       stringData:
         stringRef: {fileID: 0}
-        stringVal: Lots of great energy in scrims today. Has been working well with
-          everyone and keeping up the positivity.
+        stringVal: 
       textureData:
         textureRef: {fileID: 0}
         textureVal: {fileID: 0}
@@ -3447,8 +3527,7 @@ MonoBehaviour:
         spriteVal: {fileID: 0}
       stringData:
         stringRef: {fileID: 0}
-        stringVal: "Played great in scrims today. Some of the best we\u2019ve seen
-          from him."
+        stringVal: 
       textureData:
         textureRef: {fileID: 0}
         textureVal: {fileID: 0}
@@ -4373,8 +4452,7 @@ MonoBehaviour:
         spriteVal: {fileID: 0}
       stringData:
         stringRef: {fileID: 0}
-        stringVal: An all-rounded player. Has been a joy to work with and always
-          takes feedback to heart.
+        stringVal: 
       textureData:
         textureRef: {fileID: 0}
         textureVal: {fileID: 0}
@@ -4528,8 +4606,7 @@ MonoBehaviour:
         spriteVal: {fileID: 0}
       stringData:
         stringRef: {fileID: 0}
-        stringVal: "They\u2019ve been playing well, and they seem to be having a
-          lot more fun with the team working together now."
+        stringVal: 
       textureData:
         textureRef: {fileID: 0}
         textureVal: {fileID: 0}
@@ -4683,8 +4760,7 @@ MonoBehaviour:
         spriteVal: {fileID: 0}
       stringData:
         stringRef: {fileID: 0}
-        stringVal: "They\u2019ve been playing well, and even with the rest of the
-          team talking more, they\u2019ve still found space to give their input."
+        stringVal: 
       textureData:
         textureRef: {fileID: 0}
         textureVal: {fileID: 0}
@@ -4835,7 +4911,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1540.8784
     y: -429.56442
-    width: 103.846176
+    width: 109.57449
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5049,7 +5125,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1370.5295
     y: -430.91922
-    width: 101.64838
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5286,7 +5362,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 234.44249
     y: -427.4682
-    width: 237.91219
+    width: 240
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5389,7 +5465,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1223.3867
     y: -426.63364
-    width: 100.54948
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5416,7 +5492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1045
   indentLevel: 0
-  day: 5
+  day: 6
   teamName:
     stringRef: {fileID: 48012}
     stringVal: 
@@ -5468,8 +5544,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Atropos Communication 1:\nAtropos happy: Thank you! I\u2019ll keep
-      trying my best."
+    stringVal: "Atropos Attitude 1:\nAtropos happy: O-of course! I never want to
+      make things worse\u2026"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5513,8 +5589,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Atropos Attitude 1:\nAtropos neutralLookingSide: I guess you\u2019re
-      right. I hope they get along soon\u2026"
+    stringVal: "Atropos Communication 1:\nAtropos surprised: Y-yes, coach! I\u2019ll
+      do my best."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5593,8 +5669,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Boiga Skill 1:\nBoiga neutral: Got it, coach. I\u2019ll work on it
-      in ranked some more."
+    stringVal: "Boiga Skill 1:\nBoiga neutral: Aye aye, captain! I\u2019ll see if
+      I can get anyone help to hop on the ranked grind with me."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5900,8 +5976,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Boiga Attitude 1:\nBoiga neutral: Thanks, coach. I\u2019ll do my
-      best."
+    stringVal: "Boiga Cooperation 1:\nBoiga happy: Of course! I\u2019ll wrangle them
+      all together if I have to."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5930,10 +6006,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon cooperation 1:
-
-      hajoon angry: "I said I know what I''m
-      doing, I can handle myself."'
+    stringVal: "Hajoon cooperation 1:\nhajoon neutralLookingSide: \u2026Yes, your
+      advice worked. \u2026Thanks."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5962,10 +6036,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon Skill 1:
-
-      Hajoon neutral: "Was going to keep doing so
-      regardless."'
+    stringVal: "Hajoon communication 1:\nhajoon neutralLookingSide: \u2026Yes, your
+      advice worked. \u2026Thanks."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -5994,8 +6066,9 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Velocity Attitude 1:\nVelocity happy: You think I\u2019m worried?
-      Nah, we needed some more fun around here."
+    stringVal: "Velocity Attitude 1:\nVelocity neutral: Velocity: Ha, well we\u2019ll
+      see how long it lasts.\n\nVelocity happy: Velocity: \u2026Don\u2019t look at
+      me like that. I\u2019m not gonna start anything!"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -6024,8 +6097,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Velocity Skill 1:\nVelocity happy: No problem. I\u2019ll get plenty
-      of practice while I\u2019m streaming."
+    stringVal: "Velocity Skill 1:\nVelocity happy: Velocity: No need to worry about
+      me. I\u2019m getting all that practice in during my streams."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -6054,8 +6127,10 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Maeday communication 1:\nMaeday angry: Fine by me. I don\u2019t want
-      to deal with him anymore."
+    stringVal: 'Maeday cooperation 1:
+
+      Maeday smile: Yeah, when it works out,
+      things are easier that way.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -6084,8 +6159,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Maeday Cooperation 1:\nmaeday RollingEyesMouthClosed: Fine. Unlike
-      him, I\u2019m capable of putting things aside so this team can win."
+    stringVal: "Maeday Attitude 1:\nmaeday RollingEyesMouthClosed: Sure, as long
+      as Hajoon doesn\u2019t int anymore."
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -6181,7 +6256,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1416.9574
     y: -427.9555
-    width: 220.32976
+    width: 232.9788
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6417,9 +6492,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 858.20074
-    y: -555.5347
-    width: 133.51653
+    x: 855.7618
+    y: -557.0273
+    width: 139.36174
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6432,6 +6507,7 @@ MonoBehaviour:
   - {fileID: 1012938006}
   - {fileID: 1012938008}
   - {fileID: 1012938007}
+  - {fileID: 1012937931}
   - {fileID: 1012938018}
   - {fileID: 1012938017}
   suppressAllAutoSelections: 0
@@ -6451,7 +6527,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1033.3064
     y: -526.11
-    width: 135.71432
+    width: 142.55322
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6647,7 +6723,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1032.9426
     y: -586.8678
-    width: 144.50554
+    width: 150.00005
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6749,7 +6825,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Boolean
       intValue: 0
-      boolValue: 1
+      boolValue: 0
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -6829,7 +6905,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Boolean
       intValue: 0
-      boolValue: 0
+      boolValue: 1
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -6887,7 +6963,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1066.2438
     y: -418.0625
-    width: 100.54948
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6916,7 +6992,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 543.1745
     y: -428.9447
-    width: 202.74733
+    width: 215.95752
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6986,7 +7062,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2366.7554
     y: -424.249
-    width: 186.26381
+    width: 195.74475
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7189,7 +7265,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 843.52673
     y: -423.15182
-    width: 155.49457
+    width: 167.02133
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7383,7 +7459,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 24.951187
     y: -938.3939
-    width: 199.45062
+    width: 209.57454
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7898,7 +7974,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 543.13074
     y: -536.4414
-    width: 202.74733
+    width: 218.08517
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8035,7 +8111,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 580.94116
     y: -1024.3136
-    width: 115.9341
+    width: 122.340454
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8164,7 +8240,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1403.4326
     y: -358.1027
-    width: 180.7693
+    width: 192.55325
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8206,7 +8282,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 861.978
     y: -765.3893
-    width: 122.52751
+    width: 127.65961
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8403,7 +8479,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2373.047
     y: -214.01772
-    width: 174.17589
+    width: 186.17027
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8445,7 +8521,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 301.56848
     y: -1021.73254
-    width: 198.35172
+    width: 211.7022
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8519,7 +8595,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 861.23035
     y: -896.32446
-    width: 121.428604
+    width: 126.59578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8546,9 +8622,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1187.2318
+    x: 1185.8619
     y: -718.7126
-    width: 157.69235
+    width: 165.95749
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8621,7 +8697,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 864.51184
     y: -1012.0155
-    width: 115.9341
+    width: 120.2128
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8715,7 +8791,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 872.7123
     y: -1162.8937
-    width: 108.24179
+    width: 112.76598
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8744,7 +8820,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1189.0582
     y: -797.7539
-    width: 157.69235
+    width: 165.95749
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8817,7 +8893,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 859.8656
     y: -1298.7892
-    width: 119.230804
+    width: 124.46812
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8896,7 +8972,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1006.1428
     y: -1299.9431
-    width: 146.70334
+    width: 154.25537
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9005,7 +9081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: TalkedToHajoon
-  value: 1
+  value: 0
 --- !u!114 &1012938095
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9051,7 +9127,7 @@ MonoBehaviour:
   itemId: 917
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1012938023}
+  targetBlock: {fileID: 1012938001}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -9743,7 +9819,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1859.7628
     y: -481.37958
-    width: 103.846176
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9771,7 +9847,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1189.9855
     y: -1264.098
-    width: 154.39566
+    width: 162.766
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9800,7 +9876,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1192.8119
     y: -1328.1393
-    width: 154.39566
+    width: 162.766
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9981,8 +10057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 897
   indentLevel: 0
-  text: "\u201CEverything will be fine. It\u2019s normal for a team to argue, and
-    once we\u2019re past this, we\u2019ll be a stronger team for it.\u201D"
+  text: "\u201CMe too. Let\u2019s try our best to keep this momentum up. Keep practicing
+    on your callouts in-game, alright?\u201D"
   description: 
   targetBlock: {fileID: 1012938113}
   hideIfVisited: 0
@@ -10007,8 +10083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 896
   indentLevel: 0
-  text: "\u201CYou\u2019re doing a great job in keeping the team together in-game.
-    Just keep focusing on that.\u201D"
+  text: "\u201CMe too. It\u2019s always good to see the team in high spirits. Thanks
+    for keeping your chin up these past few days.\u201D"
   description: 
   targetBlock: {fileID: 1012938114}
   hideIfVisited: 0
@@ -10035,8 +10111,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Atropos middle SadLookingSide: Is everything gonna be alright, coach?
-      All this arguing\u2026"
+    stringVal: "Atropos middle happyLookingSide: I\u2019m glad everyone is feeling
+      better today\u2026"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -10063,8 +10139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 961
   indentLevel: 0
-  text: "\u201CIt\u2019ll cool down soon. Keep your head up, and don\u2019t worry
-    too much about it.\u201D"
+  text: "\u201CNormal is good. We don\u2019t want any more drama this playoffs. Let\u2019s
+    try to keep a positive outlook.\u201D"
   description: 
   targetBlock: {fileID: 1012938075}
   hideIfVisited: 0
@@ -10089,8 +10165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 960
   indentLevel: 0
-  text: "\u201CDon\u2019t focus on it too much. Let me handle it and just keep up
-    your practice.\u201D"
+  text: "\u201CThis is better than normal, best teamwork we\u2019ve seen so far.
+    Everyone just has to do their part and get the individual practice in now.\u201D"
   description: 
   targetBlock: {fileID: 1012938083}
   hideIfVisited: 0
@@ -10117,8 +10193,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Velocity middle happyPhone: Been a lot of drama these past few days,
-      am I right?'
+    stringVal: 'Velocity middle SmileClosedMouth: I guess things are back to normal
+      now? Too bad, it was just getting interesting.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -10453,9 +10529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1003.41797
+    x: 1004.78784
     y: -764.0724
-    width: 150.00005
+    width: 157.44685
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10507,7 +10583,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1183.7028
     y: -849.3007
-    width: 156.59346
+    width: 164.89368
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10556,8 +10632,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1179.8231
-    y: -924.8998
-    width: 156.59346
+    y: -926.32837
+    width: 164.89368
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10584,8 +10660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 951
   indentLevel: 0
-  text: "\u201CYou\u2019re right about Hajoon\u2019s play, but I need you to stop
-    arguing and let me handle it.\u201D"
+  text: "\u201CYes, things are a lot better when we\u2019re acting like a team, in
+    and out of game.\u201D"
   description: 
   targetBlock: {fileID: 1012938126}
   hideIfVisited: 0
@@ -10610,8 +10686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 950
   indentLevel: 0
-  text: '"Hajoon is your teammate, and as frustrating as he can be, you both need
-    to work together."'
+  text: "\u201CThey are. Keep up the positive attitude, and we\u2019ll win this next
+    game.\u201C"
   description: 
   targetBlock: {fileID: 1012938128}
   hideIfVisited: 0
@@ -10638,7 +10714,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Maeday middle SideGaze: "..."'
+    stringVal: 'Maeday middle SideGaze: I guess things are going better now.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -10992,7 +11068,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 262.04565
     y: -356.16745
-    width: 182.9671
+    width: 194.68091
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11026,7 +11102,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 997.7187
     y: -897.19214
-    width: 148.90115
+    width: 156.38303
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11103,7 +11179,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1187.3992
     y: -977.3313
-    width: 151.09895
+    width: 158.51068
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11151,9 +11227,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1184.2256
+    x: 1185.6542
     y: -1049.1792
-    width: 151.09895
+    width: 158.51068
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11180,8 +11256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 941
   indentLevel: 0
-  text: '"Agreed, your flanking has been pretty good. Keep focusing enemy supports
-    and Maeday should be able to clean up the rest..."'
+  text: "\u201CSee what you\u2019re able to do when you work together as a team?
+    Now you just gotta keep the comms up, and things will go smoothly.\u201D"
   description: 
   targetBlock: {fileID: 1012938139}
   hideIfVisited: 0
@@ -11206,8 +11282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 940
   indentLevel: 0
-  text: '"Yes, but sooner or later your overextension is going to become a problem.
-    I suggest not going as far into enemy lines."'
+  text: "\u201CHow are you feeling? Scrims are a lot nicer when you\u2019re working
+    together, isn\u2019t it?\u201D"
   description: 
   targetBlock: {fileID: 1012938141}
   hideIfVisited: 0
@@ -11234,8 +11310,7 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: 'Hajoon middle neutral: "What about it? Artemis is in the meta, and
-      I know what I''m doing with her."'
+    stringVal: 'Hajoon middle neutral: ...'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -11572,7 +11647,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1004.8854
     y: -1017.0716
-    width: 143.40665
+    width: 150.00005
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11622,9 +11697,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1184.7997
-    y: -1110.0626
-    width: 143.40665
+    x: 1186.1696
+    y: -1108.6927
+    width: 151.06387
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11672,9 +11747,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1185.712
+    x: 1187.0819
     y: -1192.8098
-    width: 143.40665
+    width: 151.06387
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11701,8 +11776,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 931
   indentLevel: 0
-  text: "\u201CWe got this, Boiga. You\u2019re a bright spot on the team, and your
-    attitude will help keep everyone together.\""
+  text: "\u201CI think so, too. The team is working well together. Let\u2019s keep
+    that up, and making sure we\u2019re sticking together in-game.\u201D"
   description: 
   targetBlock: {fileID: 1012938149}
   hideIfVisited: 0
@@ -11727,8 +11802,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 930
   indentLevel: 0
-  text: "\u201CDon\u2019t stress about it, Boiga. I want you to focus on your gameplay
-    and playing your heroes well.\u201D"
+  text: "\u201CI agree, Boiga. Let\u2019s keep making progress. Now that the team
+    is getting along, let\u2019s make sure our individual plays are sharp.\u201D"
   description: 
   targetBlock: {fileID: 1012938151}
   hideIfVisited: 0
@@ -11755,8 +11830,8 @@ MonoBehaviour:
   indentLevel: 0
   conversationText:
     stringRef: {fileID: 0}
-    stringVal: "Boiga middle SadSmile: Hey, coach. We\u2019re up for a tough week,
-      aren\u2019t we?"
+    stringVal: 'Boiga middle happy: Hey Coach! That was a great scrim today! I think
+      things are looking up for us!'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -12091,9 +12166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1000.17145
+    x: 998.8016
     y: -1160.2177
-    width: 135.71432
+    width: 142.55322
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12560,7 +12635,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 27.222778
     y: -1004.428
-    width: 186.26381
+    width: 197.8724
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12641,7 +12716,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 35.097046
     y: -1063.2219
-    width: 159.89017
+    width: 167.02133
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12715,7 +12790,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 41.08435
     y: -1177.6951
-    width: 170.87918
+    width: 179.7873
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12787,7 +12862,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 36.320923
     y: -1127.4401
-    width: 198.35172
+    width: 207.44688
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12997,7 +13072,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1998.0107
     y: -428.71365
-    width: 103.846176
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13140,7 +13215,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 89.65198
     y: -427.51797
-    width: 90.65936
+    width: 91.48938
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13221,7 +13296,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -32.700836
     y: -487.518
-    width: 89.560455
+    width: 91.48938
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13402,7 +13477,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -166.50302
     y: -427.60397
-    width: 89.560455
+    width: 91.48938
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13555,7 +13630,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -384.14948
     y: -425.25113
-    width: 173.07698
+    width: 180.85112
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13640,7 +13715,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -529.14294
     y: -423.3239
-    width: 103.846176
+    width: 107.44684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13720,7 +13795,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -650.4193
     y: -488.21756
-    width: 103.846176
+    width: 107.44684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14021,7 +14096,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -894.56836
     y: -357.1537
-    width: 101.64838
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14049,7 +14124,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -770.0999
     y: -424.17493
-    width: 101.64838
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14081,7 +14156,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -894.03687
     y: -485.02603
-    width: 103.846176
+    width: 107.44684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14242,7 +14317,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1156.2716
     y: -359.28137
-    width: 102.747284
+    width: 107.44684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14270,7 +14345,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1022.7605
     y: -423.32388
-    width: 103.846176
+    width: 107.44684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14353,7 +14428,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1155.7396
     y: -490.34512
-    width: 102.747284
+    width: 107.44684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14502,7 +14577,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1574.7151
     y: -484.9732
-    width: 103.846176
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14586,7 +14661,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1577.7866
     y: -557.7498
-    width: 103.846176
+    width: 106.383
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15102,22 +15177,22 @@ PrefabInstance:
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -288.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 921703828871837162, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -15477,7 +15552,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25.000061
+      value: 0.0000743866
       objectReference: {fileID: 0}
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -15512,22 +15587,22 @@ PrefabInstance:
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -501.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2252560182506916695, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -15767,22 +15842,22 @@ PrefabInstance:
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -394.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2997234535287016365, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -16512,23 +16587,28 @@ PrefabInstance:
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -181.56
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5043627287279516261, guid: 2cd48535cc8f4b145b2957178fdf0b94,
+        type: 3}
+      propertyPath: dayFlowchart
+      value: 
+      objectReference: {fileID: 1012937910}
     - target: {fileID: 5043627288162694423, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -17377,22 +17457,22 @@ PrefabInstance:
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8396774805783140005, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
