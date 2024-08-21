@@ -20,6 +20,8 @@ public class CompositionChoiceMenuController : Menu
     [SerializeField] private GameObject compositionPreviewHolder;
     // Button to leave the menu once a composition is selected.
     [SerializeField] private Button doneButton;
+    // Sound to play when a selection button is clicked.
+    [SerializeField] private AudioClip buttonClickNoise;
  
     // The currently selected composition button.
     private int selection = -1;
@@ -33,6 +35,7 @@ public class CompositionChoiceMenuController : Menu
     private List<GameObject> previews = new List<GameObject>();
     // isWinning[i] == true when button[i] is for a winning composition.
     private List<bool> isWinning = new List<bool>();
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -66,6 +69,8 @@ public class CompositionChoiceMenuController : Menu
         }
 
         doneButton.interactable = false;
+        audioSource = GetComponent<AudioSource>();
+
         Hide();
     }
 
@@ -116,6 +121,8 @@ public class CompositionChoiceMenuController : Menu
 
     /// <summary>
     /// Switch to a new composition preview for a given button. Call when switching to a new preview after pressing a button.
+    /// Additionally, plays a sound for pushing a button. Cannot be done on the buttons because they are toggles and fire their event
+    /// when their value changes. Toggle value needs to be changed here to turn off the unselected toggles.
     /// </summary>
     /// <param name="selectedButton">The composition button associated with the preview to show.</param>
     public void SwitchToPreview(Toggle selectedOption)
@@ -145,6 +152,12 @@ public class CompositionChoiceMenuController : Menu
             dayFlowchart.SendFungusMessage("SetLosingComp");
         }
         doneButton.interactable = true;
+
+        // Play the button press sound.
+        if (audioSource != null && buttonClickNoise != null)
+        {
+            audioSource.PlayOneShot(buttonClickNoise);
+        }
     }
 
     /// <summary>
