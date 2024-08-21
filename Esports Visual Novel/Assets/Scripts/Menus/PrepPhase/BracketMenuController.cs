@@ -22,7 +22,6 @@ public class BracketMenuController : Menu
     /// </summary>
     /// <param name="newBracketImage">Background image to display.</param>
     /// <param name="teamName">The player team name.</param>
-    /// <param name="teamNameIndicies">Which text boxes should display the player team's name.</param>
     public void DesignBracket(Sprite newBracketImage, string teamName)
     {
         bracketImage.sprite = newBracketImage;
