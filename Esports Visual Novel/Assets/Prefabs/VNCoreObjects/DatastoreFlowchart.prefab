@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 2308761797422394390}
   - component: {fileID: 9030187641365720056}
   - component: {fileID: 1706368340338273362}
+  - component: {fileID: 7674696666310352686}
+  - component: {fileID: 3741987083798404572}
   m_Layer: 0
   m_Name: DatastoreFlowchart
   m_TagString: Datastore
@@ -75,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   scrollPos: {x: 0.6221657, y: -0.19365907}
-  variablesScrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 250}
   variablesExpanded: 1
   blockViewHeight: 400
   zoom: 1
@@ -91,8 +93,10 @@ MonoBehaviour:
   - {fileID: 568945787}
   - {fileID: 216710699248166025}
   - {fileID: 6387954688776927453}
-  - {fileID: 2039316565}
   - {fileID: 342151110106422448}
+  - {fileID: 3741987083798404572}
+  - {fileID: 2039316565}
+  - {fileID: 7674696666310352686}
   - {fileID: 4508824471691257755}
   - {fileID: 8636887907568896209}
   - {fileID: 6384845222551290099}
@@ -440,7 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516fbed763cd80c44835637e64a1da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: StartOfPrepAtroposStats
   value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &8657901418552274356
@@ -455,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516fbed763cd80c44835637e64a1da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: StartOfPrepBoigaStats
   value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &6811745913795913152
@@ -470,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516fbed763cd80c44835637e64a1da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: StartOfPrepHajoonStats
   value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2247093318600598770
@@ -485,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516fbed763cd80c44835637e64a1da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: StartOfPrepMaedayStats
   value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &3337059693245835806
@@ -500,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516fbed763cd80c44835637e64a1da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: StartOfPrepVelocityStats
   value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &566443646725250612
@@ -515,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: AtroposNotes
   value: 
 --- !u!114 &1668079214048765724
@@ -530,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: BoigaNotes
   value: 
 --- !u!114 &2308761797422394390
@@ -545,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
+  scope: 1
   key: HajoonNotes
   value: 
 --- !u!114 &9030187641365720056
@@ -578,3 +582,33 @@ MonoBehaviour:
   scope: 0
   key: VelocityNotes
   value: 
+--- !u!114 &7674696666310352686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387954688776927452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Thursday8WinningComp
+  value: 0
+--- !u!114 &3741987083798404572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387954688776927452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Thursday8Win
+  value: 0

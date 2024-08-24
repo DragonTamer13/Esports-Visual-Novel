@@ -214,18 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &48013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2039316565, guid: 0a148b30a82b48c46a30c2f18ff0dff8,
-    type: 3}
-  m_PrefabInstance: {fileID: 48010}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &48020 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6090914128908341074, guid: 0a148b30a82b48c46a30c2f18ff0dff8,
@@ -1907,7 +1895,7 @@ PrefabInstance:
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 227.3077
+      value: 222.85715
       objectReference: {fileID: 0}
     - target: {fileID: 2109153206699831454, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1927,7 +1915,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1819.0769
+      value: 1819.3143
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -1937,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 959.53845
+      value: 959.65717
       objectReference: {fileID: 0}
     - target: {fileID: 2109153207596017550, guid: d8735b51633375445bf86c9676bbb982,
         type: 3}
@@ -2511,7 +2499,6 @@ GameObject:
   - component: {fileID: 1012937905}
   - component: {fileID: 1012937912}
   - component: {fileID: 1012937909}
-  - component: {fileID: 1012937931}
   - component: {fileID: 1012938254}
   - component: {fileID: 1012938016}
   - component: {fileID: 1012937974}
@@ -2537,8 +2524,9 @@ GameObject:
   - component: {fileID: 1012938255}
   - component: {fileID: 1012938256}
   - component: {fileID: 1012938257}
-  - component: {fileID: 1012938258}
   - component: {fileID: 1012938018}
+  - component: {fileID: 1012937952}
+  - component: {fileID: 1012937931}
   m_Layer: 0
   m_Name: WeekBreak7Flowchart
   m_TagString: Untagged
@@ -2699,7 +2687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -693.18945, y: 558.97437}
+  scrollPos: {x: -295.25153, y: 753.8211}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 423
@@ -2710,10 +2698,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1012937955}
-  selectedCommands:
-  - {fileID: 1012938111}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1012937976}
   - {fileID: 1012938028}
@@ -3231,69 +3217,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1303
+  itemId: 1333
   indentLevel: 0
   description: 
-  targetObject: {fileID: 667196210}
-  targetComponentAssemblyName: CompositionChoiceMenuController, Assembly-CSharp,
-    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetObject: {fileID: 1636055300}
+  targetComponentAssemblyName: PrepPhaseMenuController, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: CompositionChoiceMenuController
-  targetMethod: CreateCompositionOption
-  targetMethodText: 'CreateCompositionOption (String, String, Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: Korean-style
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.String
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: A new composition that has been gaining popularity in tier two
-        of Korea. Everyone looks to take angles, then isolate a target for the kill.
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
+  targetComponentText: PrepPhaseMenuController
+  targetMethod: Show
+  targetMethodText: 'Show (): Void'
+  methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -5104,6 +5038,86 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1012937952
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012937904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1332
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 667196210}
+  targetComponentAssemblyName: CompositionChoiceMenuController, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CompositionChoiceMenuController
+  targetMethod: CreateCompositionOption
+  targetMethodText: 'CreateCompositionOption (String, String, Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Korean-style
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: A new composition that has been gaining popularity in tier two
+        of Korea. Everyone looks to take angles, then isolate a target for the kill.
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &1012937953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6584,7 +6598,7 @@ MonoBehaviour:
   itemId: 1069
   indentLevel: 0
   anyVar:
-    variable: {fileID: 48013}
+    variable: {fileID: 1607905233}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -6737,8 +6751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 855.7618
-    y: -557.0273
+    x: 856.7927
+    y: -555.99634
     width: 138.65979
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6752,8 +6766,8 @@ MonoBehaviour:
   - {fileID: 1012938006}
   - {fileID: 1012938008}
   - {fileID: 1012938007}
-  - {fileID: 1012938017}
   - {fileID: 1012937931}
+  - {fileID: 1012938017}
   suppressAllAutoSelections: 0
 --- !u!114 &1012938002
 MonoBehaviour:
@@ -6770,7 +6784,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1033.3064
-    y: -526.11
+    y: -525.07904
     width: 141.75256
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6797,7 +6811,7 @@ MonoBehaviour:
   itemId: 1067
   indentLevel: 0
   anyVar:
-    variable: {fileID: 48013}
+    variable: {fileID: 1607905233}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -6965,7 +6979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1032.9426
+    x: 1035.0044
     y: -586.8678
     width: 150
     height: 40
@@ -15106,8 +15120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 862.3959
-    y: -635.70435
+    x: 844.86993
+    y: -636.7353
     width: 179.8969
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -15118,36 +15132,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1012938018}
-  - {fileID: 1012938258}
+  - {fileID: 1012937952}
   suppressAllAutoSelections: 0
---- !u!114 &1012938258
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012937904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1330
-  indentLevel: 0
-  description: 
-  targetObject: {fileID: 1636055300}
-  targetComponentAssemblyName: PrepPhaseMenuController, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: PrepPhaseMenuController
-  targetMethod: Show
-  targetMethodText: 'Show (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!114 &1160223046 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6780162299744843790, guid: 2cd48535cc8f4b145b2957178fdf0b94,
@@ -15287,6 +15273,18 @@ Transform:
   m_Father: {fileID: 1201251118}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607905233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7674696666310352686, guid: 0a148b30a82b48c46a30c2f18ff0dff8,
+    type: 3}
+  m_PrefabInstance: {fileID: 48010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1636055299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15577,22 +15575,22 @@ PrefabInstance:
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816228761776223654, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -288.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 921703828871837162, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -15952,7 +15950,7 @@ PrefabInstance:
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25.000032
+      value: 0.00005340576
       objectReference: {fileID: 0}
     - target: {fileID: 2114668976900657214, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -15987,22 +15985,22 @@ PrefabInstance:
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157817182710864137, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -501.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2252560182506916695, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -16242,22 +16240,22 @@ PrefabInstance:
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984376864934307457, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -394.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2997234535287016365, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -16987,22 +16985,22 @@ PrefabInstance:
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031321737055623013, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -181.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5043627287279516261, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
@@ -17857,22 +17855,22 @@ PrefabInstance:
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400.09998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8147049708401584253, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8396774805783140005, guid: 2cd48535cc8f4b145b2957178fdf0b94,
         type: 3}
